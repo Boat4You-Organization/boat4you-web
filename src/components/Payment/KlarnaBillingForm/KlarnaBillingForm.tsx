@@ -124,7 +124,7 @@ const KlarnaBillingForm = ({ value, onChange, countries, showAllErrors = false, 
 
   return (
     <Box data-clarity-mask="true">
-      <Typography variant="body1" fontWeight={700} mb={1.5}>
+      <Typography variant="body1" fontWeight={600} mb={1.5}>
         {t('billingTitle')}
       </Typography>
       <Box

@@ -63,7 +63,7 @@ const CookieModalContent = ({
       <Stack direction="column" pb={3}>
         <Stack direction="row" justifyContent="space-between" alignItems="center">
           <Stack direction="row" spacing={1} alignItems="center">
-            <Typography component="p" variant="h3" fontStyle="italic" fontWeight={700}>
+            <Typography component="p" variant="h3" fontStyle="italic" fontWeight={600}>
               {t('mainTitle')}
             </Typography>
             <Box className={styles.imageWrapper}>

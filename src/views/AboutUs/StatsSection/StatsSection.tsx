@@ -51,7 +51,7 @@ const StatsSection = ({ catalogue }: StatsSectionProps) => {
         <Grid container spacing={{ xs: 10.5, lg: 16 }}>
           <Grid size={{ xs: 12, lg: 6 }}>
             <Stack direction="column" spacing={2}>
-              <Typography component="h2" variant="h4" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+              <Typography component="h2" variant="h4" fontWeight={600} fontStyle="italic" color={colors.blue500}>
                 {t('title')}
               </Typography>
               <Typography

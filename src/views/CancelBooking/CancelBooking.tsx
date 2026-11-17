@@ -56,7 +56,7 @@ const CancelBooking = ({ reservationId }: CancelBookingProps) => {
 
   return (
     <Container component="section" maxWidth="md" disableGutters className={styles.container}>
-      <Typography variant="h1" fontWeight={700}>
+      <Typography variant="h1" fontWeight={600}>
         {tCommon('cancelBookingPage.confirmCancellation')}
       </Typography>
       <Typography variant="body1">{tCommon('cancelBookingPage.beforeWeCancelYourBooking')}</Typography>

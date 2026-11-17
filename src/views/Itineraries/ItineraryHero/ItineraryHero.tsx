@@ -56,9 +56,7 @@ const ItineraryHero = ({ kicker, eyebrow, title, italic, lede, image }: Itinerar
           component="span"
           sx={{
             fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
+            fontWeight: 600,
             color: colors.blue200,
           }}
         >
@@ -73,7 +71,7 @@ const ItineraryHero = ({ kicker, eyebrow, title, italic, lede, image }: Itinerar
           component="h1"
           sx={{
             fontSize: { xs: 36, sm: 36, md: 62 },
-            fontWeight: 800,
+            fontWeight: 600,
             lineHeight: 1.1,
             color: colors.white,
             m: 0,

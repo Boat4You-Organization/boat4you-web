@@ -58,7 +58,7 @@ const TrustBadges = ({ stats = null }: TrustBadgesProps) => {
       >
         {items.map(({ value, label }) => (
           <Stack key={label} alignItems="center" className={styles.statItem}>
-            <Typography variant="h3" fontWeight={700} color={colors.blue500}>
+            <Typography variant="h3" fontWeight={600} color={colors.blue500}>
               {value}
             </Typography>
             <Typography variant="body2" color={colors.black600} textAlign="center">

@@ -12,7 +12,7 @@ const InternationalSupportSection = () => {
 
   return (
     <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
-      <Typography variant="body1" component="h2" fontWeight={700} textTransform="uppercase">
+      <Typography variant="body1" component="h2" fontWeight={600} textTransform="uppercase">
         {t('internationalSupport.title')}
       </Typography>
       <Stack direction={{ xs: 'column', lg: 'row' }} gap={10} mt={7}>
@@ -24,7 +24,7 @@ const InternationalSupportSection = () => {
                 {t(titleKey)}
               </Typography>
               <Link href={link.href}>
-                <Typography variant="h3" fontWeight={700} component="p" color={colors.blue500}>
+                <Typography variant="h3" fontWeight={600} component="p" color={colors.blue500}>
                   {link.text}
                 </Typography>
               </Link>

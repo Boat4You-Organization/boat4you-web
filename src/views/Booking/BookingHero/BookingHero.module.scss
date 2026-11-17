@@ -42,11 +42,6 @@
     border-radius: rem-calc(10);
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: scale(1.02);
-    }
 
     .thumbImage {
       object-fit: cover;

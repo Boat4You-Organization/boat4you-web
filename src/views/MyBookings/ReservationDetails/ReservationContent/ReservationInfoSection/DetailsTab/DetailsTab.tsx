@@ -168,7 +168,7 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
             {badge}
           </Box>
         )}
-        <Typography variant="body2" fontWeight={700} color={colors.black950}>
+        <Typography variant="body2" fontWeight={600} color={colors.black950}>
           {value}
         </Typography>
       </Stack>
@@ -180,7 +180,7 @@ const DetailsTab = ({ reservationDetails }: DetailsTabProps) => {
       <Typography
         component="h2"
         variant="h3"
-        fontWeight={700}
+        fontWeight={600}
         display="flex"
         flexDirection="row"
         alignItems="center"

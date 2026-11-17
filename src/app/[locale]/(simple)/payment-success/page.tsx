@@ -230,7 +230,7 @@ const PaymentSuccessPage = () => {
         gap={{ xs: 2.5, md: 4 }}
       >
         <Box flex={1}>
-          <Typography variant="h2" component="h2" fontWeight={700} mb={1} sx={{ color: colors.white }}>
+          <Typography variant="h2" component="h2" fontWeight={600} mb={1} sx={{ color: colors.white }}>
             {t('createAccountToManageBooking')}
           </Typography>
           <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.9)' }}>

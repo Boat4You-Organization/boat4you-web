@@ -17,7 +17,7 @@ const ContactCard = ({ icon: ContactIcon, title, description, linkTo, linkText }
       <ContactIcon size={24} />
     </Icon>
     <Stack spacing={1}>
-      <Typography variant="h4" component="p" fontWeight={700}>
+      <Typography variant="h4" component="p" fontWeight={600}>
         {title}
       </Typography>
       <Typography variant="body1" sx={{ maxWidth: { xs: '100%', md: 314 } }}>

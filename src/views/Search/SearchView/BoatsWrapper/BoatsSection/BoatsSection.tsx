@@ -364,7 +364,7 @@ const BoatsSection = ({
           {breadcrumbSlot}
           <Stack width="100%" direction="row" justifyContent="space-between" alignItems="flex-start">
             <Stack>
-              <Typography variant="h2" component="h1" fontWeight={700}>
+              <Typography variant="h2" component="h1" fontWeight={600}>
                 {(() => {
                   // SEO H1: the server's landing heading (same text as the
                   // <title>); boat type only → plural label ("Catamarans").
@@ -463,7 +463,7 @@ const BoatsSection = ({
               Visually muted (small font, secondary colour) — keeps the
               UX subtle while giving crawlers the structural anchor. */}
           {!isEmpty && totalElements > 0 && (
-            <Typography component="h2" variant="body2" fontWeight={700} color={colors.black700} sx={{ mt: 1, mb: 1 }}>
+            <Typography component="h2" variant="body2" fontWeight={600} color={colors.black700} sx={{ mt: 1, mb: 1 }}>
               {countHeading}
             </Typography>
           )}

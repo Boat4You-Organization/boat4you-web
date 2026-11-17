@@ -100,7 +100,6 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
             background: sc.bg,
             padding: '3px 8px',
             borderRadius: '4px',
-            textTransform: 'uppercase',
             whiteSpace: 'nowrap',
           }}
         >
@@ -119,7 +118,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         <Typography
           sx={{
             ...boatType.subtitle,
-            fontWeight: 700,
+            fontWeight: 600,
             color: T.ink,
             lineHeight: 1.2,
             whiteSpace: 'nowrap',
@@ -139,7 +138,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         <Typography
           sx={{
             ...boatType.subtitle,
-            fontWeight: 700,
+            fontWeight: 600,
             color: T.ink,
             lineHeight: 1.2,
             whiteSpace: 'nowrap',

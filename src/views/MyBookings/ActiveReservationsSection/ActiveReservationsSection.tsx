@@ -23,7 +23,7 @@ const ActiveReservationsSection = async ({ reservations }: ActiveReservationsSec
 
   return (
     <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
-      <Typography component="h1" sx={{ typography: { xs: 'h2', sm: 'h1' }, fontWeight: '700 !important' }}>
+      <Typography component="h1" sx={{ typography: { xs: 'h2', sm: 'h1' }, fontWeight: '600 !important' }}>
         {t('reservations')}
       </Typography>
       <Stack gap={3} mt={3}>

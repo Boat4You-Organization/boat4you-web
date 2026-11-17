@@ -60,7 +60,7 @@ const KlarnaPaymentOption = ({
             sx={{ p: 0 }}
             slotProps={{ input: { 'aria-label': t('klarna.name') } }}
           />
-          <Typography variant="body1" fontWeight={700}>
+          <Typography variant="body1" fontWeight={600}>
             {t('klarna.name')}
           </Typography>
         </Stack>
@@ -88,10 +88,10 @@ const KlarnaPaymentOption = ({
           )}
           <Divider sx={{ my: 0.5 }} />
           <Stack direction="row" justifyContent="space-between">
-            <Typography variant="body2" fontWeight={700}>
+            <Typography variant="body2" fontWeight={600}>
               {t('totalToPay')}
             </Typography>
-            <Typography variant="body2" fontWeight={700} color={colors.blue500}>
+            <Typography variant="body2" fontWeight={600} color={colors.blue500}>
               {fmt(total)}
             </Typography>
           </Stack>

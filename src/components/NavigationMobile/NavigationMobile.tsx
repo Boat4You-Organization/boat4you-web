@@ -118,7 +118,7 @@ const NavigationMobile = ({ onNavigationToggle }: NavigationMobileProps) => {
         <List className={`${styles.list} ${!user ? styles.listLoggedOut : ''}`}>
           {navigationMobile.map((item, index) => (
             <Stack key={item.title}>
-              <Typography variant="h4" component="p" fontWeight={700} mb={2} px={2}>
+              <Typography variant="h4" component="p" fontWeight={600} mb={2} px={2}>
                 {t(item.title)}
               </Typography>
               {item.links.map(link => (
@@ -150,7 +150,7 @@ const NavigationMobile = ({ onNavigationToggle }: NavigationMobileProps) => {
                   },
                 }}
               />
-              <Typography variant="h4" component="h2" fontWeight={700} mb={2} px={2}>
+              <Typography variant="h4" component="h2" fontWeight={600} mb={2} px={2}>
                 {t('profile.title')}
               </Typography>
               <NavigationMobileItem

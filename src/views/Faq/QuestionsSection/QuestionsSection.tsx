@@ -64,7 +64,7 @@ const QuestionsSection = ({ user, faqGroups }: QuestionsSectionProps) => {
           sx={{
             typography: { xs: 'h1', md: 'hero' },
             '&': {
-              fontWeight: 800,
+              fontWeight: 600,
             },
           }}
         >
@@ -81,11 +81,11 @@ const QuestionsSection = ({ user, faqGroups }: QuestionsSectionProps) => {
           <Typography
             variant="h1"
             component="h2"
-            fontWeight={700}
+            fontWeight={600}
             sx={{
               typography: { xs: 'h2', md: 'h1' },
               '&': {
-                fontWeight: 800,
+                fontWeight: 600,
               },
             }}
           >

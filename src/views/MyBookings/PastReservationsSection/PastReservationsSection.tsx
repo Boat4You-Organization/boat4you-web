@@ -25,7 +25,7 @@ const PastReservationsSection = async ({ reservations }: PastReservationsSection
       {/* h2, not h1 — the page's h1 is the "Reservations" heading above; this
           is a subsection. (The page also only renders this section when there
           are past reservations, so no empty state is needed here.) */}
-      <Typography component="h2" sx={{ typography: { xs: 'h2', sm: 'h1' }, fontWeight: '700 !important' }}>
+      <Typography component="h2" sx={{ typography: { xs: 'h2', sm: 'h1' }, fontWeight: '600 !important' }}>
         {t('pastReservations')}
       </Typography>
       <Grid container spacing={3} mt={5}>

@@ -72,7 +72,7 @@ const SingleBlogContent = ({ slug, title, date, categories, featuredImage, conte
   return (
     <Container component="section" maxWidth="xl" disableGutters className={clsx('wp-container ', styles.container)}>
       <Stack maxWidth={846} marginInline="auto" pb={4} spacing={3}>
-        <Typography variant="h1" fontWeight={700}>
+        <Typography variant="h1" fontWeight={600}>
           {title}
         </Typography>
         <Stack direction="row" spacing={2}>

@@ -21,7 +21,7 @@ const Stepper = ({ activeStep, steps }: StepperProps) => (
               <Stack gap={1.5}>
                 <Typography
                   variant="body2"
-                  fontWeight={700}
+                  fontWeight={600}
                   display="flex"
                   alignItems="center"
                   gap={0.5}

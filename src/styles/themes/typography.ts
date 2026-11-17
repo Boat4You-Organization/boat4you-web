@@ -19,7 +19,7 @@ const typography: TypographyVariantsOptions = {
   },
   h2: {
     fontSize: '28px',
-    fontWeight: 700,
+    fontWeight: 600,
   },
   h3: {
     fontSize: '22px',
@@ -27,7 +27,7 @@ const typography: TypographyVariantsOptions = {
   },
   h4: {
     fontSize: '18px',
-    fontWeight: 700,
+    fontWeight: 600,
   },
   body1: {
     fontSize: '16px',
@@ -39,7 +39,7 @@ const typography: TypographyVariantsOptions = {
   },
   body3: {
     fontSize: '12px',
-    fontWeight: 700,
+    fontWeight: 600,
   },
   button: {
     textTransform: 'none',

@@ -54,7 +54,7 @@ const AccordionMenuItem = ({
         <Typography
           variant="h4"
           component="span"
-          fontWeight={700}
+          fontWeight={600}
           color={colors.black950}
           sx={dense ? boatType.subtitle : undefined}
         >

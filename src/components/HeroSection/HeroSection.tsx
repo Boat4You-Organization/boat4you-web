@@ -14,7 +14,7 @@ interface HeroSectionProps {
 }
 
 const TitleBoldText = (chunks: React.ReactNode): React.ReactNode => (
-  <Typography variant="hero" component="p" textAlign="center" fontWeight={800} fontStyle="italic" color="primary">
+  <Typography variant="hero" component="p" textAlign="center" fontWeight={600} fontStyle="italic" color="primary">
     {chunks}
   </Typography>
 );
@@ -22,7 +22,7 @@ const TitleBoldText = (chunks: React.ReactNode): React.ReactNode => (
 const LogoComponent = () => <LogoWithoutText />;
 
 const DescriptionBoldText = (chunks: React.ReactNode): React.ReactNode => (
-  <Typography variant="body1" component="span" fontWeight={700} color="primary">
+  <Typography variant="body1" component="span" fontWeight={600} color="primary">
     {chunks}
   </Typography>
 );

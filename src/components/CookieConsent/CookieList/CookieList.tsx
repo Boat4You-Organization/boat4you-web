@@ -34,7 +34,7 @@ const CookieList = ({ cookies, description }: CookieListProps) => {
               <Grid container>
                 <Grid size={{ xs: 6, md: 4 }}>
                   <Stack direction="column" gap={0.5}>
-                    <Typography variant="body2" fontWeight={700} color={colors.black950}>
+                    <Typography variant="body2" fontWeight={600} color={colors.black950}>
                       {t('name')}
                     </Typography>
                     <Typography variant="body2" color={colors.black800}>
@@ -44,7 +44,7 @@ const CookieList = ({ cookies, description }: CookieListProps) => {
                 </Grid>
                 <Grid size={{ xs: 6, md: 4 }}>
                   <Stack direction="column" gap={0.5}>
-                    <Typography variant="body2" fontWeight={700} color={colors.black950}>
+                    <Typography variant="body2" fontWeight={600} color={colors.black950}>
                       {t('domain')}
                     </Typography>
                     <Typography variant="body2" color={colors.black800}>
@@ -54,7 +54,7 @@ const CookieList = ({ cookies, description }: CookieListProps) => {
                 </Grid>
                 <Grid size={{ xs: 6, md: 4 }}>
                   <Stack direction="column" gap={0.5}>
-                    <Typography variant="body2" fontWeight={700} color={colors.black950}>
+                    <Typography variant="body2" fontWeight={600} color={colors.black950}>
                       {t('duration')}
                     </Typography>
                     <Typography variant="body2" color={colors.black800}>
@@ -64,7 +64,7 @@ const CookieList = ({ cookies, description }: CookieListProps) => {
                 </Grid>
               </Grid>
               <Stack direction="column" gap={0.5}>
-                <Typography variant="body2" fontWeight={700} color={colors.black950}>
+                <Typography variant="body2" fontWeight={600} color={colors.black950}>
                   {t('description')}
                 </Typography>
                 <Typography variant="body2" color={colors.black800}>

@@ -66,7 +66,7 @@ const SmartBarV2 = ({ liveCount, destination, startDate, endDate, compareCount =
     >
       <Stack direction="row" alignItems="center" justifyContent="space-between" gap={2}>
         <Box>
-          <Box sx={{ fontSize: 18, fontWeight: 800 }}>{summary || 'Searching boats'}</Box>
+          <Box sx={{ fontSize: 18, fontWeight: 600 }}>{summary || 'Searching boats'}</Box>
           <Box sx={{ fontSize: 12, color: 'rgba(255,255,255,.7)', mt: '2px' }}>Sorted by best fit</Box>
         </Box>
         <Stack direction="row" gap={1}>
@@ -94,7 +94,7 @@ const SmartBarV2 = ({ liveCount, destination, startDate, endDate, compareCount =
               padding: '7px 14px',
               borderRadius: '6px',
               fontSize: 12,
-              fontWeight: 800,
+              fontWeight: 600,
               fontFamily: searchV2Type.fontFamily,
               '&:hover': { background: '#1428e1' },
             }}

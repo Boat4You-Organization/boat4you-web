@@ -133,13 +133,13 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
   const siteStats = await getSiteStatsWithin(SITE_STATS_LAYOUT_BUDGET_MS);
   const localizedJsonLd = await getLocalizedJsonLd(locale as LocaleType, siteStats?.display);
 
-  // Hero H1 uses Raleway 500 (regular hero text) + 800 italic for the CTA
+  // Hero H1 uses Raleway 500 (regular hero text) + 600 italic for the CTA (unslop 17.11.2026, was 800)
   // span. Preloading those two weights eliminates the 3s FOIT window PSI
   // flagged. Through ReactDOM.preload: React 19 hoists a JSX <link
   // rel="preload"> as a resource AND kept the element, so every page sent
   // each font preload twice (audit B50).
   preload('/fonts/Raleway/Raleway-Medium.woff2', { as: 'font', type: 'font/woff2', crossOrigin: '' });
-  preload('/fonts/Raleway/Raleway-ExtraBoldItalic.woff2', { as: 'font', type: 'font/woff2', crossOrigin: '' });
+  preload('/fonts/Raleway/Raleway-SemiBoldItalic.woff2', { as: 'font', type: 'font/woff2', crossOrigin: '' });
 
   return (
     <html lang={locale} suppressHydrationWarning>

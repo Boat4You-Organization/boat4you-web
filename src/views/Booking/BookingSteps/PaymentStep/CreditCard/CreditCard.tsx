@@ -97,10 +97,10 @@ const CreditCard = ({
           </Stack>
           <Divider sx={{ my: 1, borderColor: colors.blue200 }} />
           <Stack direction="row" justifyContent="space-between" alignItems="baseline">
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {t('totalToPay')}
             </Typography>
-            <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+            <Typography variant="body1" fontWeight={600} color={colors.blue500}>
               {formatPriceWithCurrency({ clientPriceEur: totalAmountEur!, locale, cents: 'auto' })}
             </Typography>
           </Stack>

@@ -47,7 +47,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
                 <Typography
                   component="p"
                   variant="hero"
-                  fontWeight={800}
+                  fontWeight={600}
                   fontSize={{ xs: 18, md: searchPage ? 36 : 62 }}
                   fontStyle="italic"
                   color={colors.blue500}
@@ -68,7 +68,7 @@ const RiskFreeCTA = ({ searchPage, disableGutters }: RiskFreeCTAProps) => {
                   component="span"
                   sx={{
                     color: colors.blue500,
-                    fontWeight: 800,
+                    fontWeight: 600,
                     fontSize: { xs: 14, md: 16 },
                   }}
                 >

@@ -26,7 +26,7 @@ const CardBrands = ({ props, height = 20 }: { props?: SVGProps<SVGSVGElement>; h
       textAnchor="middle"
       fontFamily="Helvetica, Arial, sans-serif"
       fontSize="13"
-      fontWeight="bold"
+      fontWeight={600}
       fontStyle="italic"
       fill="#1A1F71"
       letterSpacing="0.5"
@@ -46,7 +46,7 @@ const CardBrands = ({ props, height = 20 }: { props?: SVGProps<SVGSVGElement>; h
       textAnchor="middle"
       fontFamily="Helvetica, Arial, sans-serif"
       fontSize="10.5"
-      fontWeight="bold"
+      fontWeight={600}
       fill="#fff"
       letterSpacing="1"
     >

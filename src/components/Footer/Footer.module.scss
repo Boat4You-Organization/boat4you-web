@@ -78,7 +78,7 @@ $lettering: #12345a;
   font-size: rem-calc(14);
 
   strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
@@ -126,7 +126,7 @@ $lettering: #12345a;
   gap: rem-calc(8 18);
   margin-top: rem-calc(8);
   font-size: rem-calc(14);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .column {
@@ -147,9 +147,7 @@ $lettering: #12345a;
 .label {
   color: $label;
   font-size: rem-calc(12);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .links {

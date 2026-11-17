@@ -7,21 +7,21 @@
   .body {
     h1 {
       font-size: rem-calc(36);
-      font-weight: 700;
+      font-weight: 600;
       color: $blue-500;
       margin-bottom: rem-calc(76);
     }
 
     h2 {
       font-size: rem-calc(28);
-      font-weight: 700;
+      font-weight: 600;
       color: $black-950;
       padding-block: rem-calc(48 24);
     }
 
     h3 {
       font-size: rem-calc(22);
-      font-weight: 700;
+      font-weight: 600;
       color: $black-950;
       padding-block: rem-calc(24);
     }
@@ -70,7 +70,7 @@
     }
 
     a {
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: underline;
     }
   }

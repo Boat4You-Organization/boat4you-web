@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import ResetPasswordVector from '@/components/SvgIcons/Vector/ResetPasswordVector';
 
 const strong = (chunks: React.ReactNode) => (
-  <Typography variant="body1" component="span" fontWeight={700}>
+  <Typography variant="body1" component="span" fontWeight={600}>
     {chunks}
   </Typography>
 );

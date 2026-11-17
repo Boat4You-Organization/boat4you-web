@@ -65,7 +65,7 @@ const AiHintStrip = ({ filterLabel, delta, onRelax }: AiHintStripProps) => {
           fontSize: 12,
           padding: '5px 10px',
           borderRadius: '4px',
-          fontWeight: 700,
+          fontWeight: 600,
           color: '#2d2408',
           fontFamily: searchV2Type.fontFamily,
         }}

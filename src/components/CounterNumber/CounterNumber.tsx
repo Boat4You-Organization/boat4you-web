@@ -61,7 +61,7 @@ const CounterNumber = ({ target, suffix = '+', decimals = 0 }: CounterNumberProp
   }, [target, started, step]);
 
   return (
-    <Typography ref={ref} component="p" variant="h1" fontWeight={800} color={colors.blue500}>
+    <Typography ref={ref} component="p" variant="h1" fontWeight={600} color={colors.blue500}>
       {format.format(count)}
       {suffix}
     </Typography>

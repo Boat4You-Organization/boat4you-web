@@ -55,7 +55,7 @@ const UnsubscribePage = () => {
 
         {status === 'done' && (
           <>
-            <Typography variant="h2" color={colors.blue950} fontWeight={700} gutterBottom>
+            <Typography variant="h2" color={colors.blue950} fontWeight={600} gutterBottom>
               You&apos;re unsubscribed
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>
@@ -67,7 +67,7 @@ const UnsubscribePage = () => {
 
         {status === 'error' && (
           <>
-            <Typography variant="h2" color={colors.blue950} fontWeight={700} gutterBottom>
+            <Typography variant="h2" color={colors.blue950} fontWeight={600} gutterBottom>
               Link not valid
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>

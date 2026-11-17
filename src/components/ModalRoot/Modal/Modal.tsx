@@ -88,7 +88,7 @@ const Modal = ({
             </IconButton>
           )}
           <Stack>
-            <Typography component="p" variant="h2" fontStyle="italic" fontWeight={800}>
+            <Typography component="p" variant="h2" fontStyle="italic" fontWeight={600}>
               {title}
             </Typography>
             {description && (

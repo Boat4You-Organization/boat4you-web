@@ -35,7 +35,7 @@ const ItineraryEndCta = ({ title, lede, action, to, secondaryAction, secondaryTo
     >
       <Typography
         component="h2"
-        sx={{ fontSize: { xs: 22, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.2, m: 0 }}
+        sx={{ fontSize: { xs: 22, md: 36 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.2, m: 0 }}
       >
         {title}
       </Typography>

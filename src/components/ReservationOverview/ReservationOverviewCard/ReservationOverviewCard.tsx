@@ -54,7 +54,7 @@ const ReservationOverviewCard = ({
           />
         </CardMedia>
         <CardContent className={styles.content}>
-          <Typography variant="h3" fontWeight={700} whiteSpace="wrap">
+          <Typography variant="h3" fontWeight={600} whiteSpace="wrap">
             {yachtLabel(model, toTitleCase(name))}
           </Typography>
           <Stack direction="row" alignItems="center" gap={1}>

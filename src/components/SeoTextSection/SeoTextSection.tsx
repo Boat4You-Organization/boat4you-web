@@ -70,7 +70,7 @@ const SeoTextSection = ({
 
   return (
     <Box component="section" sx={{ mt: 4, mb: 2 }} aria-label={title}>
-      <Typography variant="h3" component="h2" fontWeight={700} mb={1.5}>
+      <Typography variant="h3" component="h2" fontWeight={600} mb={1.5}>
         {title}
       </Typography>
 
@@ -81,11 +81,11 @@ const SeoTextSection = ({
         sx={{
           ...(expanded
             ? {
-                '& h2': { fontSize: 16, fontWeight: 700, mt: 2, mb: 1, color: colors.black800 },
-                '& h3': { fontSize: 14, fontWeight: 700, mt: 1.5, mb: 0.5, color: colors.black800 },
+                '& h2': { fontSize: 16, fontWeight: 600, mt: 2, mb: 1, color: colors.black800 },
+                '& h3': { fontSize: 14, fontWeight: 600, mt: 1.5, mb: 0.5, color: colors.black800 },
                 '& p': { fontSize: 14, lineHeight: 1.6, color: colors.black600, mb: 1 },
                 '& a': { color: colors.blue500, textDecoration: 'underline' },
-                '& strong': { fontWeight: 700, color: colors.black800 },
+                '& strong': { fontWeight: 600, color: colors.black800 },
               }
             : {
                 display: '-webkit-box',
@@ -155,7 +155,7 @@ const PopularDestinationsBlock = ({
   t: ReturnType<typeof useTranslations<'common'>>;
 }) => (
   <Box component="section" sx={{ mt: 3 }}>
-    <Typography component="h2" variant="h4" fontWeight={700} mb={1.5} sx={{ fontSize: 16 }}>
+    <Typography component="h2" variant="h4" fontWeight={600} mb={1.5} sx={{ fontSize: 16 }}>
       {t('popularDestinations.heading', { area: areaLabel })}
     </Typography>
     <Box

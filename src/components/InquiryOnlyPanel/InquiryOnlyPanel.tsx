@@ -27,7 +27,7 @@ const InquiryOnlyPanel = ({ variant = 'sidebar', allBooked = false }: InquiryOnl
 
   return (
     <Stack spacing={2} alignItems={variant === 'inline' ? { xs: 'stretch', sm: 'flex-start' } : 'stretch'}>
-      <Typography component="p" variant={variant === 'sidebar' ? 'h2' : 'h3'} fontWeight={700} color={colors.green500}>
+      <Typography component="p" variant={variant === 'sidebar' ? 'h2' : 'h3'} fontWeight={600} color={colors.green500}>
         {tCommon('priceOnRequest')}
       </Typography>
       <Typography variant="body1" color={colors.black500}>

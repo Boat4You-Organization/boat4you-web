@@ -118,7 +118,7 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
       hideCancelButton
       hideCloseButton
     >
-      <Typography variant="h3" fontWeight={700}>
+      <Typography variant="h3" fontWeight={600}>
         {t('enterVerificationCode')}
       </Typography>
       <Typography data-clarity-mask="true" variant="body1" mt={2}>
@@ -164,7 +164,7 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
       <Stack direction="row" alignItems="center" gap={0.5} mt={6}>
         <Typography variant="body1">{t('didNotGetEmail')}</Typography>
         <Button variant="text" onClick={handleResendVerificationCode}>
-          <Typography variant="body1" fontWeight={700} color={colors.blue950} sx={{ textDecoration: 'underline' }}>
+          <Typography variant="body1" fontWeight={600} color={colors.blue950} sx={{ textDecoration: 'underline' }}>
             {t('tryAgain')}
           </Typography>
         </Button>
@@ -172,7 +172,7 @@ const ConfirmAccountModal = ({ isOpen, onOpen, onClose }: ConfirmAccountModalPro
       <Stack direction="row" alignItems="center" gap={0.5} mt={1}>
         <Typography variant="body1">{t('haveAccount')}</Typography>
         <Button variant="text" onClick={handleSignIn}>
-          <Typography variant="body1" fontWeight={700} color={colors.blue950} sx={{ textDecoration: 'underline' }}>
+          <Typography variant="body1" fontWeight={600} color={colors.blue950} sx={{ textDecoration: 'underline' }}>
             {t('signIn')}
           </Typography>
         </Button>

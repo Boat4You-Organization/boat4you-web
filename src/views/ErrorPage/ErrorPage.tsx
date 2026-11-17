@@ -12,7 +12,7 @@ const ErrorPage = () => {
   return (
     <Container maxWidth="xl" disableGutters sx={{ height: '100dvh' }}>
       <Stack className={styles.container} alignItems="center" spacing={3}>
-        <Typography component="h1" variant="hero" fontWeight={700} color={colors.blue950} textAlign="center">
+        <Typography component="h1" variant="hero" fontWeight={600} color={colors.blue950} textAlign="center">
           {t('errorTitle')}
         </Typography>
         <Typography variant="body1" color={colors.black350} textAlign="center">

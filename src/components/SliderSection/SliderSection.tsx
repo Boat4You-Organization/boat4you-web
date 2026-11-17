@@ -54,7 +54,7 @@ const SliderSection = ({ title, emphasizedTitle, subtitle, SliderComponent, cust
           <Stack>
             <Typography variant="h1" component="h2" color={colors.blue950}>
               {title}{' '}
-              <Typography variant="h1" component="span" fontStyle="italic" fontWeight={800} color={colors.blue500}>
+              <Typography variant="h1" component="span" fontStyle="italic" fontWeight={600} color={colors.blue500}>
                 {emphasizedTitle}
               </Typography>
             </Typography>

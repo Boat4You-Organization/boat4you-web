@@ -107,7 +107,7 @@ const BookingReviewModal = ({
       <Stack>
         <Box className={styles.row}>
           <Typography className={styles.rowLabel}>{t('yachtName')}</Typography>
-          <Typography className={styles.rowValue} fontWeight={700}>
+          <Typography className={styles.rowValue} fontWeight={600}>
             {yachtLabel(yachtModel, toTitleCase(yachtName))}
           </Typography>
         </Box>
@@ -120,7 +120,7 @@ const BookingReviewModal = ({
         {appliedVoucher && (
           <Box className={styles.row}>
             <Typography className={styles.rowLabel}>{t('voucherRow')}</Typography>
-            <Typography className={styles.rowValue} sx={{ color: '#15803d', fontWeight: 700 }}>
+            <Typography className={styles.rowValue} sx={{ color: '#15803d', fontWeight: 600 }}>
               {appliedVoucher.code} · −{formatPriceWithCurrency({ clientPriceEur: appliedVoucher.value })}
             </Typography>
           </Box>

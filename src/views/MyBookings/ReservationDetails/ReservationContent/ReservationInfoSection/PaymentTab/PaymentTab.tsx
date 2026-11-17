@@ -148,7 +148,7 @@ const PaymentTab = ({
         <Typography
           component="h3"
           variant="body1"
-          fontWeight={700}
+          fontWeight={600}
           color={colors.black950}
           sx={{ wordBreak: 'break-word' }}
         >
@@ -169,7 +169,7 @@ const PaymentTab = ({
           color={colors.black950}
           component="p"
           variant="body1"
-          fontWeight={700}
+          fontWeight={600}
           sx={{ whiteSpace: 'nowrap' }}
         >
           {extraPriceLabel(extra)}
@@ -196,7 +196,7 @@ const PaymentTab = ({
       }}
     >
       <Box sx={{ flex: 1, minWidth: 0 }}>
-        <Typography component="h3" variant="body1" fontWeight={700} color={colors.black950}>
+        <Typography component="h3" variant="body1" fontWeight={600} color={colors.black950}>
           {label}
         </Typography>
         <Typography variant="body2" color={colors.black500} sx={{ fontSize: 12, mt: 0.25 }}>
@@ -212,7 +212,7 @@ const PaymentTab = ({
           color={colors.black950}
           component="p"
           variant="body1"
-          fontWeight={700}
+          fontWeight={600}
           sx={{ whiteSpace: 'nowrap' }}
         >
           {priceLabel}
@@ -228,12 +228,12 @@ const PaymentTab = ({
     <Stack component="section">
       <Stack direction="row" alignItems="center" gap={1}>
         <Money size={32} variant="secondary" />
-        <Typography variant="h3" component="h2" fontWeight={700}>
+        <Typography variant="h3" component="h2" fontWeight={600}>
           {t('reservationTabs.payment')}
         </Typography>
       </Stack>
       <Stack mt={3} bgcolor={colors.blue50} p={3} borderRadius={3}>
-        <Typography variant="h3" fontWeight={700} color={colors.blue500}>
+        <Typography variant="h3" fontWeight={600} color={colors.blue500}>
           {t('priceBreakdown')}
         </Typography>
         <Stack direction="row" justifyContent="space-between" alignItems="center" mt={2}>
@@ -245,7 +245,7 @@ const PaymentTab = ({
         <Stack gap={2} mt={2}>
           {extrasInAdvance.length > 0 && (
             <>
-              <Typography variant="body1" fontWeight={700}>
+              <Typography variant="body1" fontWeight={600}>
                 {t('paidInAdvance')}
               </Typography>
               {extrasInAdvance.map((item, index) => (
@@ -269,7 +269,7 @@ const PaymentTab = ({
           )}
           {extrasOnSite.length > 0 && (
             <>
-              <Typography variant="body1" fontWeight={700}>
+              <Typography variant="body1" fontWeight={600}>
                 {t('paidAtMarina')}
               </Typography>
               {extrasOnSite.map((item, index) => (
@@ -293,7 +293,7 @@ const PaymentTab = ({
           )}
           {extrasPayNow.length > 0 && (
             <>
-              <Typography variant="body1" fontWeight={700}>
+              <Typography variant="body1" fontWeight={600}>
                 {t('paidNow')}
               </Typography>
               {extrasPayNow.map((item, index) => (
@@ -332,18 +332,13 @@ const PaymentTab = ({
         <Stack mt={5} component="section">
           <Stack direction="row" alignItems="center" gap={1}>
             <Extras size={32} variant="secondary" />
-            <Typography component="h2" variant="h3" fontWeight={700}>
+            <Typography component="h2" variant="h3" fontWeight={600}>
               {tYacht('extrasTitle')}
             </Typography>
           </Stack>
           <Stack spacing={0} pt={3}>
             {(obligatoryServices.length > 0 || hasDeposit || hasInsurance) && (
-              <Typography
-                variant="body2"
-                fontWeight={700}
-                color={colors.black700}
-                sx={{ textTransform: 'uppercase', letterSpacing: 0.5, fontSize: 12, mb: 1 }}
-              >
+              <Typography variant="body2" fontWeight={600} color={colors.black700} sx={{ fontSize: 12, mb: 1 }}>
                 {tYacht('selectedServices')}
               </Typography>
             )}
@@ -379,7 +374,7 @@ const PaymentTab = ({
             )}
             {optionalServices.length > 0 && (
               <Typography variant="body2" color={colors.black700} sx={{ fontSize: 12, mt: 3, mb: 1, lineHeight: 1.5 }}>
-                <Box component="span" sx={{ textTransform: 'uppercase', letterSpacing: 0.5, fontWeight: 700 }}>
+                <Box component="span" sx={{ fontWeight: 600 }}>
                   {tYacht('optionalServices')}
                 </Box>
                 {!isAdditionalServicesDeadlinePast && (

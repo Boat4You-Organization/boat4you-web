@@ -33,7 +33,7 @@ const HowWeWorkStep = ({ step, titleKey, subtitleKey, itemsKeys, questionKey, an
         </Stack>
         <Stack mt={4}>
           {questionKey && (
-            <Typography variant="body1" component="h3" fontWeight={700} color={colors.blue500}>
+            <Typography variant="body1" component="h3" fontWeight={600} color={colors.blue500}>
               {t(questionKey)}
             </Typography>
           )}

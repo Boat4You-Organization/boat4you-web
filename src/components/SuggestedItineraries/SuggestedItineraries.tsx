@@ -98,8 +98,6 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
           sx={{
             color: colors.blue700,
             fontSize: 12,
-            letterSpacing: '0.14em',
-            textTransform: 'uppercase',
             fontWeight: 600,
             textDecoration: 'none',
             whiteSpace: 'nowrap',
@@ -144,7 +142,6 @@ const SuggestedItineraries: FC<SuggestedItinerariesProps> = ({
                   borderColor: colors.blue500,
                   boxShadow: '0 12px 32px -12px rgb(0 0 0 / 18%)',
                 },
-                '&:hover .suggested-route-img': { transform: 'scale(1.04)' },
               }}
             >
               <Box sx={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden' }}>

@@ -24,7 +24,7 @@ const ContactExpectSection = () => {
   return (
     <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
       <div className={styles.inner}>
-        <Typography component="h2" variant="h3" fontWeight={700} color={colors.blue950}>
+        <Typography component="h2" variant="h3" fontWeight={600} color={colors.blue950}>
           {t('expect.title')}
         </Typography>
         <Typography variant="body1" className={styles.intro}>
@@ -34,7 +34,7 @@ const ContactExpectSection = () => {
         <Stack component="ol" className={styles.steps} spacing={2}>
           {steps.map(step => (
             <li key={step.title} className={styles.step}>
-              <Typography component="h3" variant="body1" fontWeight={700} color={colors.blue950}>
+              <Typography component="h3" variant="body1" fontWeight={600} color={colors.blue950}>
                 {step.title}
               </Typography>
               <Typography variant="body1" className={styles.stepBody}>
@@ -44,7 +44,7 @@ const ContactExpectSection = () => {
           ))}
         </Stack>
 
-        <Typography component="h3" variant="h4" fontWeight={700} color={colors.blue950} className={styles.includeTitle}>
+        <Typography component="h3" variant="h4" fontWeight={600} color={colors.blue950} className={styles.includeTitle}>
           {t('expect.includeHeading')}
         </Typography>
         <ul className={styles.include}>

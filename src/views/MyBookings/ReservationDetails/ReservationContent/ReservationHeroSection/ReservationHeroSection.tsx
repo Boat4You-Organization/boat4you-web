@@ -173,7 +173,7 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
       {hasPendingCancellationRequest && (
         <Alert severity="warning" icon={<AccessTimeIcon />} sx={{ mt: 2, alignItems: 'flex-start' }}>
           <Stack gap={0.5}>
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {t('cancellationPendingTitle')}
             </Typography>
             <Typography variant="body2">
@@ -201,7 +201,7 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
           sx={{ mt: 2, alignItems: 'flex-start' }}
         >
           <Stack gap={0.5}>
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {isSystemCancelled
                 ? 'Your reservation has been cancelled — payment not received'
                 : isAgentCancelled
@@ -254,7 +254,7 @@ const ReservationHeroSection = ({ reservationDetails }: ReservationHeroSectionPr
           }
         >
           <Stack gap={0.5}>
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {t('yachtSwap.title')}
             </Typography>
             {swapInfo.action === 'AUTO_UPDATED' && swapInfo.newYachtName ? (

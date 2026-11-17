@@ -59,10 +59,8 @@ const RouteDetailSection = ({ route, activeDayId, onDaySelect }: Props) => {
           component="span"
           sx={{
             fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: '0.18em',
+            fontWeight: 600,
             color: colors.blue800,
-            textTransform: 'uppercase',
           }}
         >
           {t('detail.eyebrow')}
@@ -71,7 +69,7 @@ const RouteDetailSection = ({ route, activeDayId, onDaySelect }: Props) => {
           component="h2"
           sx={{
             fontSize: { xs: 22, md: 28 },
-            fontWeight: 700,
+            fontWeight: 600,
             color: colors.blue950,
             lineHeight: 1.2,
             m: 0,

@@ -28,7 +28,7 @@ const WhoWeAreSection = () => {
           </Grid>
           <Grid size={{ xs: 12, lg: 5 }}>
             <Stack direction="column" spacing={2}>
-              <Typography component="h2" variant="h4" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+              <Typography component="h2" variant="h4" fontWeight={600} fontStyle="italic" color={colors.blue500}>
                 {t('title')}
               </Typography>
               <Typography variant="h2" component="h3" fontWeight={500} color={colors.blue950}>

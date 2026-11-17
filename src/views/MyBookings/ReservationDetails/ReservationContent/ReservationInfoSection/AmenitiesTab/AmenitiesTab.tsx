@@ -54,7 +54,7 @@ const AmenitiesTab = ({ reservationDetails }: AmenitiesTabProps) => {
         {showDivider && <Divider sx={{ borderColor: colors.black100 }} />}
         <Grid container component="section" spacing={{ xs: 1.5, md: 3 }} py={2.5} alignItems="flex-start">
           <Grid size={{ xs: 12, md: 3 }}>
-            <Typography variant="body1" fontWeight={700} color={colors.black950}>
+            <Typography variant="body1" fontWeight={600} color={colors.black950}>
               {t(YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP[category])}
             </Typography>
           </Grid>
@@ -127,7 +127,7 @@ const AmenitiesTab = ({ reservationDetails }: AmenitiesTabProps) => {
       <Typography
         component="h2"
         variant="h3"
-        fontWeight={700}
+        fontWeight={600}
         display="flex"
         flexDirection="row"
         alignItems="center"

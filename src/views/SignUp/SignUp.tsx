@@ -63,7 +63,7 @@ const SignUp = ({ inviteCode, fromBooking }: SignUpProps) => {
 
   const renderForm = () => (
     <Stack direction="column" spacing={3} className={styles.form}>
-      <Typography variant="hero" fontWeight={800} fontStyle="italic" color="primary">
+      <Typography variant="hero" fontWeight={600} fontStyle="italic" color="primary">
         {t('createYourPassword')}
       </Typography>
       <Typography variant="body1">{t('createPasswordDescription')}</Typography>
@@ -75,7 +75,7 @@ const SignUp = ({ inviteCode, fromBooking }: SignUpProps) => {
 
   const renderCheckEmail = () => (
     <Stack className={styles.form} direction="column" spacing={3}>
-      <Typography variant="hero" fontWeight={800} fontStyle="italic" color="primary">
+      <Typography variant="hero" fontWeight={600} fontStyle="italic" color="primary">
         {t('guestPasswordLinkSentTitle')}
       </Typography>
       <Typography variant="body1" pt={3}>
@@ -87,7 +87,7 @@ const SignUp = ({ inviteCode, fromBooking }: SignUpProps) => {
 
   const renderErrorState = () => (
     <Stack className={styles.form} direction="column" spacing={3}>
-      <Typography variant="hero" fontWeight={800} fontStyle="italic" color="primary">
+      <Typography variant="hero" fontWeight={600} fontStyle="italic" color="primary">
         {t('inviteCodeInvalid')}
       </Typography>
       <Typography variant="body1" pt={3}>

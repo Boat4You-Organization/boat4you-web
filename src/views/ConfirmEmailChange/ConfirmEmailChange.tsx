@@ -54,7 +54,7 @@ const ConfirmEmailChange = ({ token }: ConfirmEmailChangeProps) => {
     >
       {status === 'success' && (
         <>
-          <Typography variant="h3" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+          <Typography variant="h3" fontWeight={600} fontStyle="italic" color={colors.blue500}>
             Email changed
           </Typography>
           <Typography variant="body1" color={colors.black950}>
@@ -66,7 +66,7 @@ const ConfirmEmailChange = ({ token }: ConfirmEmailChangeProps) => {
 
       {status === 'error' && (
         <>
-          <Typography variant="h3" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+          <Typography variant="h3" fontWeight={600} fontStyle="italic" color={colors.blue500}>
             Link invalid or expired
           </Typography>
           <Typography variant="body1" color={colors.black950}>
@@ -81,7 +81,7 @@ const ConfirmEmailChange = ({ token }: ConfirmEmailChangeProps) => {
 
       {(status === 'idle' || status === 'pending') && (
         <>
-          <Typography variant="h3" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+          <Typography variant="h3" fontWeight={600} fontStyle="italic" color={colors.blue500}>
             Confirm your new email
           </Typography>
           <Typography variant="body1" color={colors.black950}>

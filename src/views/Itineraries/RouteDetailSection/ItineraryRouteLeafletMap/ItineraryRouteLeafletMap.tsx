@@ -58,7 +58,7 @@ const buildPinIcon = (day: number, isActive: boolean): L.DivIcon =>
       align-items:center;
       justify-content:center;
       font-family:inherit;
-      font-weight:700;
+      font-weight: 600;
       font-size:14px;
       box-shadow:0 4px 12px rgba(0,0,0,0.25), 0 0 0 ${isActive ? 4 : 0}px ${colors.blue100};
       border:2px solid #fff;

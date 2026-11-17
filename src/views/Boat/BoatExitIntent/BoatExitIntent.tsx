@@ -95,7 +95,7 @@ const BoatExitIntent = ({ boatId, boatName, imageUrl, inquiryOnly }: BoatExitInt
             <Typography variant="body2" color={colors.blue500} fontWeight={600} textTransform="uppercase">
               {t('eyebrow')}
             </Typography>
-            <Typography id="exit-intent-title" component="h2" variant="h2" fontStyle="italic" fontWeight={800}>
+            <Typography id="exit-intent-title" component="h2" variant="h2" fontStyle="italic" fontWeight={600}>
               {t('title', { name: boatName })}
             </Typography>
           </Stack>

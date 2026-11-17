@@ -58,7 +58,7 @@ const InquiryYachtCard = ({ yacht }: InquiryYachtCardProps) => {
           </YachtCard>
         </Stack>
         <Stack alignSelf="flex-end" className={styles.priceContainer}>
-          <Typography variant="h3" component="p" fontWeight={700}>
+          <Typography variant="h3" component="p" fontWeight={600}>
             {formatPriceWithCurrency({ clientPriceEur, clientPriceInfo, locale })}
           </Typography>
           <Typography variant="body2" color={colors.black600} textAlign="end">

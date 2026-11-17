@@ -20,14 +20,14 @@
 /// The blue italic half of a section heading.
 @mixin emphasis {
   font-style: italic;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /// A caption on a photo tile: a country, a boat type.
 @mixin tile-title {
   font-size: rem-calc(22);
   font-style: italic;
-  font-weight: 800;
+  font-weight: 600;
 
   @include media(0, 'md') {
     font-size: rem-calc(18);
@@ -37,7 +37,7 @@
 /// A block heading that is not a section title: the link hub.
 @mixin heading {
   font-size: rem-calc(22);
-  font-weight: 700;
+  font-weight: 600;
 
   @include media(0, 'md') {
     font-size: rem-calc(18);
@@ -47,7 +47,7 @@
 /// A card or item title: a FAQ question, an SEO sub-heading.
 @mixin card-title {
   font-size: rem-calc(18);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /// Lead text: the paragraphs of the closing SEO text.
@@ -59,7 +59,7 @@
 /// A text button or "show more" link.
 @mixin button {
   font-size: rem-calc(16);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /// Running text.
@@ -71,7 +71,7 @@
 /// A label or link that has to stand out from running text.
 @mixin body-strong {
   font-size: rem-calc(14);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /// Small text: a count under a name.

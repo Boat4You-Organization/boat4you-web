@@ -147,7 +147,7 @@ const ReservationOverview = ({
           {children}
           {showContactCard && (
             <Box className={styles.contactCard}>
-              <Typography variant="h3" fontWeight={700}>
+              <Typography variant="h3" fontWeight={600}>
                 {t('contactTheSupport')}
               </Typography>
               <Stack

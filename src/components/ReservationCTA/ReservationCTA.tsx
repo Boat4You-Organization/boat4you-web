@@ -108,13 +108,13 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
       />
       <Stack gap={3}>
         <Stack gap={2}>
-          <Typography variant="h3" component="p" fontWeight={700}>
+          <Typography variant="h3" component="p" fontWeight={600}>
             {t('totalPrice')}
           </Typography>
           <Stack direction="row" gap={1.5}>
             <Calendar size={24} variant="secondary" />
             <Stack>
-              <Typography variant="h3" component="p" fontWeight={700} color={colors.blue500}>
+              <Typography variant="h3" component="p" fontWeight={600} color={colors.blue500}>
                 {formatPriceWithCurrency({
                   clientPriceEur: totalPriceInfo.amount,
                   clientPriceInfo: totalPriceInfo,
@@ -127,7 +127,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                       "Total amount [1/2 installments]" chip — the per-row
                       breakdown below already communicates progress, so the
                       summary chip was redundant. */}
-                  <Typography variant="body1" fontWeight={700} mt={1.5}>
+                  <Typography variant="body1" fontWeight={600} mt={1.5}>
                     {t('installments')}
                   </Typography>
                   {/* Per-installment breakdown — compact single-row-per-phase
@@ -178,7 +178,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                             </Stack>
                             <Typography
                               variant="body2"
-                              fontWeight={700}
+                              fontWeight={600}
                               sx={{
                                 whiteSpace: 'nowrap',
                                 color: paid ? colors.green500 : colors.black950,
@@ -207,7 +207,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
             Contact, Cancel, Download). */}
         {!isFullyPaid && nextInstallment && (
           <Stack gap={2}>
-            <Typography variant="h3" component="p" fontWeight={700}>
+            <Typography variant="h3" component="p" fontWeight={600}>
               {t('upcomingPayment')}
             </Typography>
             <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
@@ -215,7 +215,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                 {t('amount')}
               </Typography>
               <Stack gap={0.5} alignItems="flex-end">
-                <Typography variant="h3" component="p" fontWeight={700} color={colors.green500}>
+                <Typography variant="h3" component="p" fontWeight={600} color={colors.green500}>
                   {formatPriceWithCurrency({
                     clientPriceEur: nextInstallment.amount,
                     clientPriceInfo: totalPriceInfo
@@ -292,7 +292,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               }}
             >
               <Stack gap={1}>
-                <Typography variant="h4" component="p" fontWeight={700} color={colors.red500}>
+                <Typography variant="h4" component="p" fontWeight={600} color={colors.red500}>
                   {t('cancellationRejectedTitle')}
                 </Typography>
                 <Typography variant="body2" color={colors.mandalay800}>
@@ -301,7 +301,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               </Stack>
               {cancellationRejectedReason && (
                 <Stack gap={0.5}>
-                  <Typography variant="body2" fontWeight={700} color={colors.mandalay800}>
+                  <Typography variant="body2" fontWeight={600} color={colors.mandalay800}>
                     {t('cancellationRejectedReasonLabel')}:
                   </Typography>
                   <Typography variant="body2" color={colors.mandalay800} sx={{ whiteSpace: 'pre-wrap' }}>
@@ -311,7 +311,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               )}
               {cancellationRequest && (
                 <Stack gap={0.5}>
-                  <Typography variant="body2" fontWeight={700} color={colors.mandalay800}>
+                  <Typography variant="body2" fontWeight={600} color={colors.mandalay800}>
                     {t('cancellationRequestedReasonLabel')}:
                   </Typography>
                   <Typography variant="body2" color={colors.mandalay800} sx={{ whiteSpace: 'pre-wrap' }}>
@@ -338,7 +338,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
             }}
           >
             <Stack gap={1}>
-              <Typography variant="h4" component="p" fontWeight={700} color={colors.mandalay900}>
+              <Typography variant="h4" component="p" fontWeight={600} color={colors.mandalay900}>
                 {t('cancellationRequested')}
               </Typography>
               <Typography variant="body2" color={colors.mandalay800}>
@@ -350,7 +350,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
             </Typography>
             {cancellationRequest && (
               <Stack gap={0.5}>
-                <Typography variant="body2" fontWeight={700} color={colors.mandalay800}>
+                <Typography variant="body2" fontWeight={600} color={colors.mandalay800}>
                   {t('note')}:
                 </Typography>
                 <Typography variant="body2" color={colors.mandalay800}>
@@ -392,7 +392,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
             borderRadius: '12px',
           }}
         >
-          <Typography variant="h4" component="p" fontWeight={700} color={colors.yellow500} mb={1}>
+          <Typography variant="h4" component="p" fontWeight={600} color={colors.yellow500} mb={1}>
             {t('charterUpdateTitle')}
           </Typography>
           <Typography variant="body1" sx={{ whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
@@ -401,13 +401,13 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
         </Box>
       )}
       <Stack gap={3} mt={3}>
-        <Typography variant="h3" component="p" fontWeight={700}>
+        <Typography variant="h3" component="p" fontWeight={600}>
           {cancellationRequestAt ? t('questionsAboutCancellation') : t('contactTheSupport')}
         </Typography>
         <Stack direction="row" alignItems="flex-start" gap={1.5}>
           <Email size={24} />
           <Stack gap={0.5}>
-            <Typography variant="h4" component="p" fontWeight={700}>
+            <Typography variant="h4" component="p" fontWeight={600}>
               {t('email')}
             </Typography>
             <Typography variant="body1">{t('contactTheSupportDescription')}</Typography>
@@ -421,7 +421,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
         <Stack direction="row" alignItems="flex-start" gap={1.5}>
           <Phone size={24} />
           <Stack gap={0.5}>
-            <Typography variant="h4" component="p" fontWeight={700}>
+            <Typography variant="h4" component="p" fontWeight={600}>
               {t('phone')}
             </Typography>
             <Link href="tel:+385913000009">
@@ -480,7 +480,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
           alignItems: 'center',
           gap: 0.5,
           color: colors.blue500,
-          fontWeight: 700,
+          fontWeight: 600,
           fontSize: 14,
           flexShrink: 0,
           ml: 'auto',
@@ -497,7 +497,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
 
         return (
           <Stack spacing={1.25}>
-            <Typography variant="h3" component="p" fontWeight={700} sx={{ mb: 0.5 }}>
+            <Typography variant="h3" component="p" fontWeight={600} sx={{ mb: 0.5 }}>
               {t('documentsTitle')}
             </Typography>
 
@@ -517,7 +517,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
               }}
             >
               <Stack alignItems="flex-start" sx={{ minWidth: 0 }}>
-                <Typography variant="body1" fontWeight={700}>
+                <Typography variant="body1" fontWeight={600}>
                   {t('receiptRowTitle')}
                 </Typography>
                 <Typography variant="body2" color={colors.black500}>
@@ -547,7 +547,7 @@ const ReservationCTA = ({ reservationDetails }: ReservationCTAProps) => {
                   <Stack sx={{ minWidth: 0 }}>
                     <Typography
                       variant="body1"
-                      fontWeight={700}
+                      fontWeight={600}
                       sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
                     >
                       {typedLabel ?? doc.filename}

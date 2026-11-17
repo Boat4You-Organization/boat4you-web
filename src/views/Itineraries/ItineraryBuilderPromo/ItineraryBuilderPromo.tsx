@@ -53,7 +53,7 @@ const CourseArt = () => (
           y={p.cy + 4.5}
           textAnchor="middle"
           fontSize="12"
-          fontWeight="700"
+          fontWeight="600"
           fontFamily="inherit"
           fill={colors.white}
         >
@@ -102,9 +102,7 @@ const ItineraryBuilderPromo = ({
             component="span"
             sx={{
               fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
+              fontWeight: 600,
               color: colors.blue200,
             }}
           >
@@ -114,7 +112,7 @@ const ItineraryBuilderPromo = ({
             component="h2"
             sx={{
               fontSize: { xs: 28, sm: 36, md: 36 },
-              fontWeight: 800,
+              fontWeight: 600,
               lineHeight: 1.12,
               color: colors.white,
               m: 0,
@@ -143,7 +141,7 @@ const ItineraryBuilderPromo = ({
               sx={{
                 backgroundColor: colors.white,
                 color: colors.blue950,
-                fontWeight: 700,
+                fontWeight: 600,
                 px: 3.5,
                 whiteSpace: 'nowrap',
                 flexShrink: 0,

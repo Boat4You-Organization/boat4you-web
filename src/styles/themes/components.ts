@@ -17,7 +17,7 @@ const overrides: ThemeOptions['components'] = {
       root: {
         width: 'fit-content',
         borderRadius: 5,
-        fontWeight: 700,
+        fontWeight: 600,
         boxShadow: 'none',
         '&:hover': {
           boxShadow: 'none',
@@ -31,17 +31,17 @@ const overrides: ThemeOptions['components'] = {
       },
       sizeSmall: {
         ...typography.body3,
-        fontWeight: 700,
+        fontWeight: 600,
         padding: '4px 8px',
       },
       sizeMedium: {
         ...typography.body2,
-        fontWeight: 700,
+        fontWeight: 600,
         padding: '6px 12px',
       },
       sizeLarge: {
         ...typography.body1,
-        fontWeight: 700,
+        fontWeight: 600,
         padding: '10px 16px',
       },
       contained: {
@@ -642,7 +642,7 @@ const overrides: ThemeOptions['components'] = {
         backgroundColor: colors.white,
         color: colors.black950,
         ...typography.body2,
-        fontWeight: 700,
+        fontWeight: 600,
         '&:hover': {
           backgroundColor: colors.black100,
         },

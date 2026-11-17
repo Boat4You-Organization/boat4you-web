@@ -60,7 +60,7 @@ const ItineraryBoats = async ({ startingPoint, fallbacks, locale }: ItineraryBoa
         spacing={1}
         sx={{ mb: { xs: 2, sm: 3 } }}
       >
-        <Typography component="h2" variant="h3" fontWeight={700} color={colors.blue950}>
+        <Typography component="h2" variant="h3" fontWeight={600} color={colors.blue950}>
           {t('itinerary.boatsFromBase', { base: data.baseLabel, count: data.fleet })}
         </Typography>
         <Box component="a" href={data.seeAll.href} sx={linkSx}>
@@ -74,7 +74,7 @@ const ItineraryBoats = async ({ startingPoint, fallbacks, locale }: ItineraryBoa
       </BoatCardGrid>
       {data.typeHubs.length > 0 && (
         <Box sx={{ mt: { xs: 4, md: 5 } }}>
-          <Typography component="h3" variant="h4" fontWeight={700} color={colors.blue950}>
+          <Typography component="h3" variant="h4" fontWeight={600} color={colors.blue950}>
             {t('itinerary.bestTypes')}
           </Typography>
           <Stack

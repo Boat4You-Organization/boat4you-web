@@ -44,7 +44,7 @@ const FaqSection = () => {
     >
       <Stack direction="row" alignItems="center" gap={1}>
         <FAQ variant="secondary" size={32} />
-        <Typography variant="h3" fontWeight={700}>
+        <Typography variant="h3" fontWeight={600}>
           {t('title')}
         </Typography>
       </Stack>

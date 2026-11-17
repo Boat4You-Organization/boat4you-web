@@ -28,7 +28,7 @@
   background-color: $blue-500 !important;
   color: $white !important;
   font-size: rem-calc(26) !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   box-shadow: 0 rem-calc(4) rem-calc(12) rgba(89, 136, 255, 0.25);
 }
 
@@ -65,9 +65,7 @@
 
 .sectionTitle {
   font-size: rem-calc(13) !important;
-  font-weight: 700 !important;
-  letter-spacing: rem-calc(1);
-  text-transform: uppercase;
+  font-weight: 600 !important;
   color: $black-600 !important;
 }
 

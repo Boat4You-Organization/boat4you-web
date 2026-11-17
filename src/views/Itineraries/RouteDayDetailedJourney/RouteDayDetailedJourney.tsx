@@ -126,17 +126,15 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
             component="span"
             sx={{
               fontSize: 12,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
               color: colors.blue800,
-              fontWeight: 700,
+              fontWeight: 600,
             }}
           >
             {tUi('journey.eyebrow')}
           </Typography>
           <Typography
             component="h2"
-            sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.12, m: 0 }}
+            sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.12, m: 0 }}
           >
             {tUi('journey.heading')}
           </Typography>
@@ -173,9 +171,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                 px: 1.75,
                 py: 0.75,
                 fontSize: 12,
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.14em',
+                fontWeight: 600,
                 color: colors.white,
                 boxShadow: '0 8px 20px rgb(0 0 0 / 25%)',
                 backdropFilter: 'blur(4px)',
@@ -261,7 +257,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                             borderRadius: '50%',
                             backgroundColor: colors.blue600,
                             fontSize: 14,
-                            fontWeight: 700,
+                            fontWeight: 600,
                             color: colors.white,
                           }}
                         >
@@ -271,9 +267,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                           component="span"
                           sx={{
                             fontSize: 12,
-                            fontWeight: 700,
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.16em',
+                            fontWeight: 600,
                             color: colors.black600,
                           }}
                         >
@@ -284,7 +278,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                         component="h3"
                         sx={{
                           fontSize: { xs: 18, md: 22 },
-                          fontWeight: 700,
+                          fontWeight: 600,
                           color: colors.blue950,
                           lineHeight: 1.3,
                           m: 0,
@@ -303,9 +297,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                             sx={{
                               mb: 1.25,
                               fontSize: 12,
-                              fontWeight: 700,
-                              textTransform: 'uppercase',
-                              letterSpacing: '0.12em',
+                              fontWeight: 600,
                               color: colors.black600,
                             }}
                           >
@@ -359,9 +351,7 @@ const RouteDayDetailedJourney = ({ route }: Props) => {
                               sx={{
                                 mb: 0.25,
                                 fontSize: 12,
-                                fontWeight: 700,
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.12em',
+                                fontWeight: 600,
                                 color: colors.black600,
                               }}
                             >

@@ -61,7 +61,7 @@ const LayoutSection = ({ images, photoName }: LayoutSectionProps) => {
         id="boat-layout-title"
         component="h2"
         variant="h3"
-        fontWeight={700}
+        fontWeight={600}
         display="flex"
         flexDirection="row"
         alignItems="center"

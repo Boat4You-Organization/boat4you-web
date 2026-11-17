@@ -75,7 +75,6 @@ const HubAreaCard: FC<{
           borderColor: colors.blue500,
           boxShadow: '0 12px 32px -12px rgb(0 0 0 / 18%)',
         },
-        '&:hover .hub-card-img': { transform: 'scale(1.04)' },
       }}
     >
       <Box sx={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden' }}>
@@ -107,8 +106,6 @@ const HubAreaCard: FC<{
               py: 0.75,
               borderRadius: 99,
               fontSize: 12,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
               color: colors.blue950,
               fontWeight: 600,
             }}
@@ -122,8 +119,6 @@ const HubAreaCard: FC<{
           component="span"
           sx={{
             fontSize: 12,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
             color: colors.blue700,
             fontWeight: 600,
             mb: 1,
@@ -132,7 +127,7 @@ const HubAreaCard: FC<{
           {countryLabel}
           {days ? ` · ${days}` : ''}
         </Typography>
-        <Typography component="h3" sx={{ fontSize: { xs: 18, sm: 22 }, fontWeight: 700, color: colors.blue950, m: 0 }}>
+        <Typography component="h3" sx={{ fontSize: { xs: 18, sm: 22 }, fontWeight: 600, color: colors.blue950, m: 0 }}>
           {tUi('hub.sailingAreaCardTitle', { area: areaLabel })}
         </Typography>
         <Typography
@@ -155,8 +150,6 @@ const HubAreaCard: FC<{
             sx={{
               color: colors.blue600,
               fontSize: 12,
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
               fontWeight: 600,
             }}
           >
@@ -200,8 +193,6 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs; placeNames: 
               component="span"
               sx={{
                 fontSize: 12,
-                letterSpacing: '0.28em',
-                textTransform: 'uppercase',
                 color: colors.blue700,
                 fontWeight: 600,
               }}
@@ -210,7 +201,7 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs; placeNames: 
             </Typography>
             <Typography
               component="h2"
-              sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.1, mt: 1 }}
+              sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.1, mt: 1 }}
             >
               {t('hub.title')}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
@@ -227,8 +218,6 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs; placeNames: 
             sx={{
               color: colors.blue700,
               fontSize: 12,
-              letterSpacing: '0.16em',
-              textTransform: 'uppercase',
               fontWeight: 600,
               textDecoration: 'none',
               whiteSpace: 'nowrap',
@@ -252,7 +241,7 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs; placeNames: 
               >
                 <Typography
                   component="h3"
-                  sx={{ fontSize: { xs: 22, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.1, m: 0 }}
+                  sx={{ fontSize: { xs: 22, md: 36 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.1, m: 0 }}
                 >
                   {placeNames.countries[country] ?? country}{' '}
                   <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
@@ -263,8 +252,6 @@ const ItinerariesHub: FC<{ countrySearchHrefs?: CountrySearchHrefs; placeNames: 
                   component="span"
                   sx={{
                     fontSize: 12,
-                    letterSpacing: '0.2em',
-                    textTransform: 'uppercase',
                     color: colors.black600,
                     fontWeight: 600,
                   }}

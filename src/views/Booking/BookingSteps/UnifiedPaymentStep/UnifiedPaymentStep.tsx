@@ -287,7 +287,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             '& .MuiAlert-message': { width: '100%' },
           }}
         >
-          <Typography variant="body1" fontWeight={700} mb={0.5}>
+          <Typography variant="body1" fontWeight={600} mb={0.5}>
             {t('completeTheReservation')}
           </Typography>
           <Typography variant="body2" color={colors.black700}>
@@ -297,7 +297,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             })}
           </Typography>
           {appliedVoucher && (
-            <Typography variant="body2" sx={{ color: '#15803d', fontWeight: 700, mt: 0.5 }}>
+            <Typography variant="body2" sx={{ color: '#15803d', fontWeight: 600, mt: 0.5 }}>
               {t('voucherFirstPaymentNote', {
                 amount: formatPriceWithCurrency({ clientPriceEur: appliedVoucher.value }),
               })}
@@ -378,7 +378,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               sx={{ p: 0 }}
             />
             <CreditCardIcon />
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {t('onlinePaymentsCreditCard')}
             </Typography>
             {/* Brand acceptance marks — stronger trust cue than the
@@ -415,10 +415,10 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             </Stack>
             <Divider sx={{ my: 0.5 }} />
             <Stack direction="row" justifyContent="space-between">
-              <Typography variant="body2" fontWeight={700}>
+              <Typography variant="body2" fontWeight={600}>
                 {t('totalToPay')}
               </Typography>
-              <Typography variant="body2" fontWeight={700} color={colors.blue500}>
+              <Typography variant="body2" fontWeight={600} color={colors.blue500}>
                 {fmt(cardAdjusted)}
               </Typography>
             </Stack>
@@ -463,7 +463,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
                 sx={{ p: 0 }}
               />
               <BankTransferIcon />
-              <Typography variant="body1" fontWeight={700}>
+              <Typography variant="body1" fontWeight={600}>
                 {t('bankTransfer')}
               </Typography>
             </Stack>
@@ -486,10 +486,10 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
               </Stack>
               <Divider sx={{ my: 0.5 }} />
               <Stack direction="row" justifyContent="space-between">
-                <Typography variant="body2" fontWeight={700}>
+                <Typography variant="body2" fontWeight={600}>
                   {t('totalToPay')}
                 </Typography>
-                <Typography variant="body2" fontWeight={700} color={colors.blue500}>
+                <Typography variant="body2" fontWeight={600} color={colors.blue500}>
                   {fmt(bankAdjusted)}
                 </Typography>
               </Stack>
@@ -531,7 +531,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
                   {t('optionExpiryUnknownNotice')}
                 </Alert>
               )}
-              <Typography variant="body1" fontWeight={700} mb={1}>
+              <Typography variant="body1" fontWeight={600} mb={1}>
                 {t('bankTransferInfo')}
               </Typography>
               <BankDetailRow label={t('amount')} value={fmt(bankAdjusted)} />
@@ -550,7 +550,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
             "I pay and then… silence". Three concrete steps, no promises the
             emails don't actually deliver. */}
         <Box sx={{ border: cardBorder(false), borderRadius: 1.5, px: 2.5, py: 2 }}>
-          <Typography variant="body1" fontWeight={700} mb={1.5}>
+          <Typography variant="body1" fontWeight={600} mb={1.5}>
             {t('whatHappensNext')}
           </Typography>
           <Stack gap={1.25}>
@@ -564,7 +564,7 @@ const UnifiedPaymentStep = ({ reservationData }: UnifiedPaymentStepProps) => {
                     backgroundColor: colors.blue500,
                     color: '#fff',
                     fontSize: '0.75rem',
-                    fontWeight: 700,
+                    fontWeight: 600,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

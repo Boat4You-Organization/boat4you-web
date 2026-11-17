@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
-import { IconGift } from '@/components/SvgIcons/UiEmojiIcons';
+import { IconAnchor, IconGift, IconSailboat } from '@/components/SvgIcons/UiEmojiIcons';
 
 /**
  * Farewell page for dead trip links (expired / removed tokens). Installed
@@ -40,7 +40,7 @@ const TripNotFound = () => (
   >
     <div
       style={{
-        background: 'linear-gradient(160deg,#0a3d2e 0%,#16815f 60%,#3aa87c 100%)',
+        background: '#0f4a38',
         color: '#fff',
         padding: '18px 18px 34px',
       }}
@@ -50,15 +50,15 @@ const TripNotFound = () => (
         style={{ display: 'flex', alignItems: 'center', gap: 7, color: '#fff', textDecoration: 'none' }}
       >
         <LogoWithoutText size={24} />
-        <span style={{ fontWeight: 800, fontSize: 18, letterSpacing: '-0.01em' }}>boat4you</span>
+        <span style={{ fontWeight: 600, fontSize: 18, letterSpacing: '-0.01em' }}>boat4you</span>
       </a>
       <div aria-hidden="true" style={{ fontSize: 46, margin: '26px 0 6px' }}>
-        ⚓
+        <IconAnchor size="1em" />
       </div>
-      <h1 style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.2, margin: 0 }}>
+      <h1 style={{ fontSize: 26, fontWeight: 600, letterSpacing: '-0.01em', lineHeight: 1.2, margin: 0 }}>
         This voyage is complete.
       </h1>
-      <p style={{ fontSize: 17, fontWeight: 700, margin: '6px 0 0', opacity: 0.95 }}>
+      <p style={{ fontSize: 17, fontWeight: 600, margin: '6px 0 0', opacity: 0.95 }}>
         But the adventure isn&apos;t over.
       </p>
       <p style={{ fontSize: 13.5, margin: '12px 0 0', opacity: 0.85, lineHeight: 1.55 }}>
@@ -78,14 +78,14 @@ const TripNotFound = () => (
           textAlign: 'center',
           background: '#f3d300',
           color: '#442704',
-          fontWeight: 800,
+          fontWeight: 600,
           fontSize: 15,
           borderRadius: 12,
           padding: '14px 10px',
           textDecoration: 'none',
         }}
       >
-        <span aria-hidden="true">⛵</span> Find your next boat →
+        <IconSailboat size="1em" /> Find your next boat →
       </a>
       <a
         href={REVIEW_URL}
@@ -96,7 +96,7 @@ const TripNotFound = () => (
           textAlign: 'center',
           background: '#2856ff',
           color: '#fff',
-          fontWeight: 800,
+          fontWeight: 600,
           fontSize: 15,
           borderRadius: 12,
           padding: '14px 10px',
@@ -116,11 +116,11 @@ const TripNotFound = () => (
           lineHeight: 1.6,
         }}
       >
-        <div style={{ fontWeight: 800, fontSize: 14, marginBottom: 3 }}>
+        <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 3 }}>
           <IconGift /> €50 for your next adventure
         </div>
         Leave a review on Tripadvisor, then{' '}
-        <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 700 }}>
+        <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 600 }}>
           e-mail us the name you reviewed under
         </a>{' '}
         — we&apos;ll send you a <b>€50 voucher</b> for your next booking with Boat4You.
@@ -136,10 +136,10 @@ const TripNotFound = () => (
           lineHeight: 1.6,
         }}
       >
-        <div style={{ color: '#0f172a', fontWeight: 800, fontSize: 14, marginBottom: 3 }}>Trip still coming up?</div>
+        <div style={{ color: '#0f172a', fontWeight: 600, fontSize: 14, marginBottom: 3 }}>Trip still coming up?</div>
         Then this is just an outdated link — your booking is safe. Open the newest link from your booking e-mail, or
         find everything under{' '}
-        <a href="https://www.boat4you.com/my-bookings" style={{ color: '#2856ff', fontWeight: 700 }}>
+        <a href="https://www.boat4you.com/my-bookings" style={{ color: '#2856ff', fontWeight: 600 }}>
           My bookings
         </a>
         .
@@ -156,11 +156,11 @@ const TripNotFound = () => (
         }}
       >
         Boat4You support:{' '}
-        <a href="tel:+385913000009" style={{ color: '#2856ff', fontWeight: 700 }}>
+        <a href="tel:+385913000009" style={{ color: '#2856ff', fontWeight: 600 }}>
           +385 91 3000 009
         </a>{' '}
         ·{' '}
-        <a href="mailto:info@boat4you.com" style={{ color: '#2856ff', fontWeight: 700 }}>
+        <a href="mailto:info@boat4you.com" style={{ color: '#2856ff', fontWeight: 600 }}>
           info@boat4you.com
         </a>
       </div>

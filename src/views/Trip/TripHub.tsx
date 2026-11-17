@@ -5,6 +5,7 @@ import { type ReactNode, useCallback, useEffect, useMemo, useState } from 'react
 
 import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
 import {
+  IconAnchor,
   IconBell,
   IconCamera,
   IconChat,
@@ -18,6 +19,7 @@ import {
   IconPartlyCloudy,
   IconPhone,
   IconRain,
+  IconSailboat,
   IconShowers,
   IconSnow,
   IconSun,
@@ -184,7 +186,7 @@ type TabId = 'trip' | 'documents' | 'chat' | 'more';
 const TAB_ICON_STYLE = { display: 'block' } as const;
 
 const TABS: { id: TabId; label: string; icon: ReactNode }[] = [
-  { id: 'trip', label: 'Trip', icon: '⛵' },
+  { id: 'trip', label: 'Trip', icon: <IconSailboat size="1em" style={TAB_ICON_STYLE} /> },
   { id: 'documents', label: 'Documents', icon: <IconDocument size="1em" style={TAB_ICON_STYLE} /> },
   { id: 'chat', label: 'Chat', icon: <IconChat size="1em" style={TAB_ICON_STYLE} /> },
   { id: 'more', label: 'More', icon: '☰' },
@@ -449,7 +451,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
       textAlign: 'center' as const,
       background: '#f3d300',
       color: '#442704',
-      fontWeight: 800,
+      fontWeight: 600,
       fontSize: 15,
       borderRadius: 12,
       padding: '13px 10px',
@@ -460,14 +462,14 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
       textAlign: 'center' as const,
       background: '#2856ff',
       color: '#fff',
-      fontWeight: 800,
+      fontWeight: 600,
       fontSize: 15,
       borderRadius: 12,
       padding: '13px 10px',
       textDecoration: 'none',
     },
     sub: { color: '#5b6b82', fontSize: 13 } as const,
-    h2: { fontSize: 15, fontWeight: 800, margin: '18px 2px 8px' } as const,
+    h2: { fontSize: 15, fontWeight: 600, margin: '18px 2px 8px' } as const,
   };
 
   const isIos = now != null && /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -503,7 +505,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
               background: 'rgba(255,255,255,.18)',
               color: '#fff',
               fontSize: 15,
-              fontWeight: 800,
+              fontWeight: 600,
               lineHeight: 1,
               cursor: 'pointer',
             }}
@@ -530,7 +532,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
               border: 'none',
               borderRadius: 10,
               padding: '10px',
-              fontWeight: 800,
+              fontWeight: 600,
               fontSize: 14,
               cursor: 'pointer',
             }}
@@ -578,7 +580,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
             style={{ display: 'flex', alignItems: 'center', gap: 7, color: '#fff', textDecoration: 'none' }}
           >
             <LogoWithoutText size={24} />
-            <span style={{ fontWeight: 800, fontSize: 18, letterSpacing: '-0.01em' }}>boat4you</span>
+            <span style={{ fontWeight: 600, fontSize: 18, letterSpacing: '-0.01em' }}>boat4you</span>
           </a>
           <span
             style={{
@@ -586,7 +588,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
               borderRadius: 99,
               padding: '3px 11px',
               fontSize: 12,
-              fontWeight: 700,
+              fontWeight: 600,
             }}
           >
             #{trip.reservationNumber}
@@ -595,7 +597,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
 
         {cancelled ? (
           <>
-            <div style={{ fontSize: 21, fontWeight: 800 }}>This reservation was cancelled</div>
+            <div style={{ fontSize: 21, fontWeight: 600 }}>This reservation was cancelled</div>
             <div style={{ opacity: 0.85, fontSize: 13, marginTop: 6 }}>
               Questions? Call Boat4You:{' '}
               <a href="tel:+385913000009" style={{ color: '#fff' }}>
@@ -613,7 +615,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
               onClick={() => sendEvent('SITE_CLICK', 'hero')}
               style={{ color: '#fff', textDecoration: 'none' }}
             >
-              <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-0.01em', margin: '2px 0' }}>
+              <div style={{ fontSize: 24, fontWeight: 600, letterSpacing: '-0.01em', margin: '2px 0' }}>
                 {finished ? 'Thank you for sailing with us!' : `${trip.yacht.fullLabel} ↗`}
               </div>
             </a>
@@ -638,12 +640,10 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       textAlign: 'center',
                     }}
                   >
-                    <div style={{ fontSize: 22, fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>
+                    <div style={{ fontSize: 22, fontWeight: 600, fontVariantNumeric: 'tabular-nums' }}>
                       {v as number}
                     </div>
-                    <div style={{ fontSize: 10, opacity: 0.8, textTransform: 'uppercase', letterSpacing: '.08em' }}>
-                      {l as string}
-                    </div>
+                    <div style={{ fontSize: 12, opacity: 0.8 }}>{l as string}</div>
                   </div>
                 ))}
               </div>
@@ -677,7 +677,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                           />
                         ))}
                       </div>
-                      <div style={{ fontSize: 12.5, fontWeight: 800, color: '#2856ff', whiteSpace: 'nowrap' }}>
+                      <div style={{ fontSize: 12.5, fontWeight: 600, color: '#2856ff', whiteSpace: 'nowrap' }}>
                         View
                         <br />
                         boat ↗
@@ -699,7 +699,9 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
 
                 {finished && (
                   <>
-                    <div style={S.h2}>The adventure isn&apos;t over ⚓</div>
+                    <div style={S.h2}>
+                      The adventure isn&apos;t over <IconAnchor size="0.9em" />
+                    </div>
                     <a
                       href={boatUrl}
                       target="_blank"
@@ -707,7 +709,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       onClick={() => sendEvent('SITE_CLICK', 'rebook')}
                       style={S.btnYellow}
                     >
-                      ⛵ Sail {trip.yacht.name} again next year →
+                      <IconSailboat size="1em" /> Sail {trip.yacht.name} again next year →
                     </a>
                     <a
                       href="https://www.boat4you.com/?utm_source=trip&utm_medium=pwa&utm_campaign=post_charter"
@@ -726,12 +728,12 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                         borderColor: '#bce6cf',
                       }}
                     >
-                      <div style={{ fontWeight: 800, fontSize: 14 }}>
+                      <div style={{ fontWeight: 600, fontSize: 14 }}>
                         <IconGift /> Review us on Tripadvisor → get a €50 voucher
                       </div>
                       <div style={{ fontSize: 12.5, lineHeight: 1.6, marginTop: 3 }}>
                         Share your experience, then{' '}
-                        <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 700 }}>
+                        <a href={VOUCHER_MAILTO} style={{ color: '#16815f', fontWeight: 600 }}>
                           e-mail us the name you reviewed under
                         </a>{' '}
                         — we&apos;ll send you a €50 voucher for your next adventure.
@@ -747,7 +749,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                           marginTop: 9,
                           background: '#16815f',
                           color: '#fff',
-                          fontWeight: 800,
+                          fontWeight: 600,
                           fontSize: 14,
                           borderRadius: 10,
                           padding: '11px 10px',
@@ -795,7 +797,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       href={`https://www.boat4you.com/my-bookings/${ownerPayment.reservationId}`}
                       style={{ ...S.card, display: 'block', textDecoration: 'none', color: 'inherit' }}
                     >
-                      <div style={{ fontWeight: 800, fontSize: 14 }}>
+                      <div style={{ fontWeight: 600, fontSize: 14 }}>
                         Next installment:{' '}
                         {formatPriceWithCurrency({
                           clientPriceEur: ownerPayment.nextAmountEur,
@@ -805,7 +807,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       </div>
                       <div style={S.sub}>
                         {ownerPayment.nextDeadline ? `Due by ${fmtDate(ownerPayment.nextDeadline)} · ` : ''}
-                        <span style={{ color: '#2856ff', fontWeight: 700 }}>Pay on boat4you.com →</span>
+                        <span style={{ color: '#2856ff', fontWeight: 600 }}>Pay on boat4you.com →</span>
                       </div>
                     </a>
                   </>
@@ -817,13 +819,13 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                     <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 7 }}>
                       {forecast.map(day => (
                         <div key={day.date} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13 }}>
-                          <span style={{ width: 42, fontWeight: 700 }}>
+                          <span style={{ width: 42, fontWeight: 600 }}>
                             {new Date(day.date).toLocaleDateString('en-GB', { weekday: 'short' })}
                           </span>
                           <span style={{ fontSize: 17, lineHeight: 1 }}>
                             <WeatherGlyph code={day.code} />
                           </span>
-                          <span style={{ marginLeft: 'auto', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>
+                          <span style={{ marginLeft: 'auto', fontWeight: 600, fontVariantNumeric: 'tabular-nums' }}>
                             {day.tMax}°
                           </span>
                           <span style={{ width: 64, textAlign: 'right', color: '#5b6b82', fontSize: 12 }}>
@@ -864,7 +866,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                             style={{
                               flex: 1,
                               minWidth: 0,
-                              fontWeight: 700,
+                              fontWeight: 600,
                               whiteSpace: 'nowrap',
                               overflow: 'hidden',
                               textOverflow: 'ellipsis',
@@ -879,13 +881,13 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                               borderRadius: 99,
                               padding: '2px 8px',
                               fontSize: 11,
-                              fontWeight: 800,
+                              fontWeight: 600,
                               whiteSpace: 'nowrap',
                             }}
                           >
                             {route.numberOfDays ?? route.routeDays.length} days
                           </span>
-                          <span style={{ color: '#2856ff', fontWeight: 800 }}>↗</span>
+                          <span style={{ color: '#2856ff', fontWeight: 600 }}>↗</span>
                         </a>
                       ))}
                       <div style={{ ...S.sub, fontSize: 11 }}>
@@ -916,7 +918,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                         borderRadius: 11,
                         padding: '11px 10px',
                         textAlign: 'center',
-                        fontWeight: 800,
+                        fontWeight: 600,
                         fontSize: 14,
                         textDecoration: 'none',
                       }}
@@ -932,7 +934,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       borderRadius: 11,
                       padding: '11px 10px',
                       textAlign: 'center',
-                      fontWeight: 800,
+                      fontWeight: 600,
                       fontSize: 14,
                       textDecoration: 'none',
                     }}
@@ -942,14 +944,14 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                   {trip.agencyPhone && (
                     <a
                       href={`tel:${trip.agencyPhone.replace(/[^+\d]/g, '')}`}
-                      style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
+                      style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 600 }}
                     >
                       Charter base: {trip.agencyPhone}
                     </a>
                   )}
                   <a
                     href="tel:+385913000009"
-                    style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 700 }}
+                    style={{ ...S.sub, textDecoration: 'none', textAlign: 'center', fontWeight: 600 }}
                   >
                     Boat4You support: +385 91 3000 009
                   </a>
@@ -1007,7 +1009,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                     <div style={S.h2}>Trip reminders</div>
                     <div style={{ ...S.card, display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {pushState === 'subscribed' && (
-                        <div style={{ fontWeight: 800, fontSize: 14, color: '#16815f' }}>
+                        <div style={{ fontWeight: 600, fontSize: 14, color: '#16815f' }}>
                           <IconBell /> Reminders are on for this phone
                         </div>
                       )}
@@ -1055,7 +1057,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                 <div style={S.h2}>About &amp; support</div>
                 <div style={{ ...S.card, ...S.sub, fontSize: 12.5, lineHeight: 1.7 }}>
                   Boat4You support:{' '}
-                  <a href="tel:+385913000009" style={{ color: '#2856ff', fontWeight: 700 }}>
+                  <a href="tel:+385913000009" style={{ color: '#2856ff', fontWeight: 600 }}>
                     +385 91 3000 009
                   </a>
                   <br />
@@ -1100,7 +1102,7 @@ const TripHub = ({ trip, token, apiUrl, ownerPayment, ownerCredentials, yachtCap
                       border: 'none',
                       cursor: 'pointer',
                       color: active ? '#2856ff' : '#64748b',
-                      fontWeight: 700,
+                      fontWeight: 600,
                     }}
                   >
                     <span style={{ fontSize: 27, lineHeight: 1, opacity: active ? 1 : 0.85 }}>{item.icon}</span>

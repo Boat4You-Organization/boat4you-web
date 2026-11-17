@@ -24,7 +24,7 @@ const ListEmptyState = ({ title, description, buttonConfig }: ListEmptyStateProp
       <Typography
         component="h2"
         textAlign="center"
-        sx={{ typography: { xs: 'h3', sm: 'h2' }, fontWeight: '700 !important' }}
+        sx={{ typography: { xs: 'h3', sm: 'h2' }, fontWeight: '600 !important' }}
       >
         {title}
       </Typography>

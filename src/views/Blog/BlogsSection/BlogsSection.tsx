@@ -44,7 +44,7 @@ const BlogsSection = ({ initial }: { initial?: InitialBlogList }) => {
 
   return (
     <Container maxWidth="xl" component="section" disableGutters>
-      <Typography variant="h2" fontWeight={700} pb={3}>
+      <Typography variant="h2" fontWeight={600} pb={3}>
         {t('title')}
       </Typography>
       <Tabs
@@ -91,7 +91,7 @@ const BlogsSection = ({ initial }: { initial?: InitialBlogList }) => {
                   size="large"
                   onClick={handlePageChange}
                   disabled={isLoadingMore}
-                  sx={{ minWidth: { xs: '100%', sm: 280 }, py: 1.75, fontWeight: 700 }}
+                  sx={{ minWidth: { xs: '100%', sm: 280 }, py: 1.75, fontWeight: 600 }}
                 >
                   {t('ctaButton')}
                 </Button>

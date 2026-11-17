@@ -85,7 +85,7 @@ const BlogHeroSection = ({ initialFeatured }: { initialFeatured?: BlogTeaser }) 
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <Typography variant="h2" fontWeight={700} className={clsx({ [styles.linkActive]: isHovered })}>
+              <Typography variant="h2" fontWeight={600} className={clsx({ [styles.linkActive]: isHovered })}>
                 {featureBlog.title}
               </Typography>
             </Link>

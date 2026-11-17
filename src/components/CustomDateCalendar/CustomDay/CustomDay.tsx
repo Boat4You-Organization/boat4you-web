@@ -232,7 +232,7 @@ const CustomDay = ({
             backgroundColor: getBackgroundColor(),
             color: getTextColor(),
             borderRadius: getBorderRadius(),
-            fontWeight: 700,
+            fontWeight: 600,
             '&:hover': shouldShowHover
               ? {
                   backgroundColor: colors.blue50,
@@ -245,7 +245,7 @@ const CustomDay = ({
             '&.Mui-disabled': {
               backgroundColor: getBackgroundColor(),
               color: colors.black950,
-              fontWeight: 700,
+              fontWeight: 600,
               opacity: '1 !important',
               cursor: 'not-allowed',
               textDecoration: 'none',

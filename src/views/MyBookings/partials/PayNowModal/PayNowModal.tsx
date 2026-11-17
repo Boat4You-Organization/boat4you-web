@@ -318,7 +318,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
             '& .MuiAlert-message': { width: '100%' },
           }}
         >
-          <Typography variant="body1" fontWeight={700} mb={0.5}>
+          <Typography variant="body1" fontWeight={600} mb={0.5}>
             {t('completeTheReservation')}
           </Typography>
           <Typography variant="body2" color={colors.black700}>
@@ -360,7 +360,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
               sx={{ p: 0 }}
             />
             <CreditCardIcon />
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {t('onlinePaymentsCreditCard')}
             </Typography>
           </Stack>
@@ -383,10 +383,10 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
             </Stack>
             <Divider sx={{ my: 0.5 }} />
             <Stack direction="row" justifyContent="space-between">
-              <Typography variant="body2" fontWeight={700}>
+              <Typography variant="body2" fontWeight={600}>
                 {t('totalToPay')}
               </Typography>
-              <Typography variant="body2" fontWeight={700} color={colors.blue500}>
+              <Typography variant="body2" fontWeight={600} color={colors.blue500}>
                 {fmt(cardAdjusted)}
               </Typography>
             </Stack>
@@ -431,7 +431,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
                 sx={{ p: 0 }}
               />
               <BankTransferIcon />
-              <Typography variant="body1" fontWeight={700}>
+              <Typography variant="body1" fontWeight={600}>
                 {t('bankTransfer')}
               </Typography>
             </Stack>
@@ -454,10 +454,10 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
               </Stack>
               <Divider sx={{ my: 0.5 }} />
               <Stack direction="row" justifyContent="space-between">
-                <Typography variant="body2" fontWeight={700}>
+                <Typography variant="body2" fontWeight={600}>
                   {t('totalToPay')}
                 </Typography>
-                <Typography variant="body2" fontWeight={700} color={colors.blue500}>
+                <Typography variant="body2" fontWeight={600} color={colors.blue500}>
                   {fmt(bankAdjusted)}
                 </Typography>
               </Stack>
@@ -471,7 +471,7 @@ const PayNowModal = ({ isOpen, onClose, reservationId, reservationNumber, paymen
           <Collapse in={paymentMethod === PaymentMethod.BANK_TRANSFER} unmountOnExit>
             <Divider />
             <Box ref={bankInfoRef} sx={{ backgroundColor: colors.black100, px: 2.5, py: 1.5 }}>
-              <Typography variant="body1" fontWeight={700} mb={1}>
+              <Typography variant="body1" fontWeight={600} mb={1}>
                 {t('bankTransferInfo')}
               </Typography>
               <BankDetailRow label={t('amount')} value={fmt(bankAdjusted)} />

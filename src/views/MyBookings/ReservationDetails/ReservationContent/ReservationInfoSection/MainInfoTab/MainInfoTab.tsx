@@ -53,7 +53,7 @@ const TimeBand = ({ time, anchor }: { time: string; anchor: 'start' | 'end' }) =
         <Typography variant="body2" color={colors.black500} fontSize={11}>
           0:00
         </Typography>
-        <Typography variant="body2" fontWeight={700} color={colors.black950} fontSize={12}>
+        <Typography variant="body2" fontWeight={600} color={colors.black950} fontSize={12}>
           {anchor === 'start' ? `${t('from')} ${time}` : `${t('by')} ${time}`}
         </Typography>
         <Typography variant="body2" color={colors.black500} fontSize={11}>
@@ -85,7 +85,7 @@ const MainInfoTab = ({
       <Stack>
         <Stack direction="row" alignItems="center" gap={1}>
           <Information size={32} variant="secondary" />
-          <Typography variant="h3" component="h2" fontWeight={700}>
+          <Typography variant="h3" component="h2" fontWeight={600}>
             {t('reservationTabs.mainInfo')}
           </Typography>
         </Stack>
@@ -97,7 +97,7 @@ const MainInfoTab = ({
             <Typography variant="body2" color={colors.black600}>
               {t('yachtPickUp')}
             </Typography>
-            <Typography variant="body1" fontWeight={700} textTransform="capitalize" mt={0.5}>
+            <Typography variant="body1" fontWeight={600} textTransform="capitalize" mt={0.5}>
               {DateTime.formatLong(startDate, locale)}
             </Typography>
             {defaultCheckin && <TimeBand time={defaultCheckin} anchor="start" />}
@@ -106,7 +106,7 @@ const MainInfoTab = ({
             <Typography variant="body2" color={colors.black600}>
               {t('yachtDropOff')}
             </Typography>
-            <Typography variant="body1" fontWeight={700} textTransform="capitalize" mt={0.5}>
+            <Typography variant="body1" fontWeight={600} textTransform="capitalize" mt={0.5}>
               {DateTime.formatLong(endDate, locale)}
             </Typography>
             {defaultCheckout && <TimeBand time={defaultCheckout} anchor="end" />}
@@ -121,7 +121,7 @@ const MainInfoTab = ({
               <Typography variant="body2" color={colors.black600}>
                 {t('totalLengthOfRental')}
               </Typography>
-              <Typography variant="body1" fontWeight={700} mt={0.5}>
+              <Typography variant="body1" fontWeight={600} mt={0.5}>
                 {numberOfDays} {t('days')}
               </Typography>
             </Grid>
@@ -133,7 +133,7 @@ const MainInfoTab = ({
                 {t('pickUpAddress')}
               </Typography>
               <Link href={generateGoogleMapsLink(locationFrom)} target="_blank" className={styles.link}>
-                <Typography variant="body1" fontWeight={700}>
+                <Typography variant="body1" fontWeight={600}>
                   {displayBaseName(locationFrom)}
                 </Typography>
                 <ExternalLink />
@@ -146,7 +146,7 @@ const MainInfoTab = ({
               <Typography variant="body2" color={colors.black600}>
                 {t('charterCompany')}
               </Typography>
-              <Typography variant="body1" fontWeight={700} color={colors.blue500} mt={0.5}>
+              <Typography variant="body1" fontWeight={600} color={colors.blue500} mt={0.5}>
                 {agencyName}
               </Typography>
             </Grid>

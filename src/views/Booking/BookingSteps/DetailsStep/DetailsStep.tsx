@@ -387,7 +387,7 @@ const DetailsStep = ({
             already surface that information. */}
         <Box className={styles.card}>
           <Stack gap={0.5}>
-            <Typography variant="h3" component="p" fontWeight={700} color={colors.blue500}>
+            <Typography variant="h3" component="p" fontWeight={600} color={colors.blue500}>
               {t('thisIsARareFind')}
             </Typography>
             <Typography variant="body1" color={colors.black500}>
@@ -524,7 +524,7 @@ const DetailsStep = ({
                     width: 'fit-content',
                   }}
                 >
-                  <Typography variant="body2" sx={{ color: '#15803d', fontWeight: 700 }}>
+                  <Typography variant="body2" sx={{ color: '#15803d', fontWeight: 600 }}>
                     ✓ {t('voucherApplied')} · {appliedVoucher.code} · −
                     {formatPriceWithCurrency({ clientPriceEur: appliedVoucher.value })}
                   </Typography>
@@ -551,7 +551,7 @@ const DetailsStep = ({
             <Stack gap={2}>
               {failure && (
                 <Alert severity="error" sx={{ '& .MuiAlert-message': { width: '100%' } }}>
-                  <Typography variant="body1" fontWeight={700} mb={0.5}>
+                  <Typography variant="body1" fontWeight={600} mb={0.5}>
                     {t('bookingFailedTitle')}
                   </Typography>
                   <Typography variant="body2" color={colors.black700}>

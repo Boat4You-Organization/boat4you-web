@@ -113,7 +113,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 .title {
   margin: rem-calc(8) 0 0;
   font-size: rem-calc(28);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.01em;
 }
@@ -153,7 +153,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 
   // The largest type on the page (site scale: 36), above the 28px title.
   font-size: rem-calc(36);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
 
   // Raleway's default figures are old-style: an amount needs lining, equal-width ones.
@@ -200,7 +200,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     max-width: 62%;
     margin: 0;
     font-size: rem-calc(16);
-    font-weight: 700;
+    font-weight: 600;
     font-variant-numeric: lining-nums;
     text-align: right;
     overflow-wrap: break-word;
@@ -244,7 +244,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     background-color: rgba($white, 0.16);
     color: $white;
     font-size: rem-calc(16);
-    font-weight: 800;
+    font-weight: 600;
     font-variant-numeric: lining-nums;
   }
 }
@@ -302,7 +302,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   min-height: rem-calc(58);
   border-radius: rem-calc(999);
   font-size: rem-calc(18);
-  font-weight: 800;
+  font-weight: 600;
   font-variant-numeric: lining-nums tabular-nums;
   text-transform: none;
 }
@@ -352,7 +352,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     background-color: $blue-50;
     color: $navy;
     font-size: rem-calc(16);
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
@@ -399,7 +399,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     padding-top: rem-calc(9);
     color: $navy;
     font-size: rem-calc(16);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
   }
 }
@@ -409,7 +409,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   padding: 0;
   color: $navy;
   font-size: rem-calc(18);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .methodLabel {
@@ -496,7 +496,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 
   dd {
     margin: 0;
-    font-weight: 800;
+    font-weight: 600;
     font-variant-numeric: lining-nums tabular-nums;
     overflow-wrap: anywhere;
   }
@@ -514,7 +514,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     0 rem-calc(10) rem-calc(22) rgba($blue-600, 0.36);
   color: $white;
   font-size: rem-calc(18);
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
 
   &:hover {

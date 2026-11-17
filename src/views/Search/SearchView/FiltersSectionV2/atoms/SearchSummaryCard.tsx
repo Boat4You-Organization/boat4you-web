@@ -52,7 +52,7 @@ const SearchSummaryCard = ({ destination, startDate, endDate, liveCount }: Searc
       }}
     >
       <Box sx={{ ...searchV2Type.sectionLabel, color: searchV2.inkSoft, mb: '6px' }}>{t('yourSearch')}</Box>
-      <Box sx={{ fontSize: 14, fontWeight: 700, color: searchV2.ink, lineHeight: 1.3 }}>
+      <Box sx={{ fontSize: 14, fontWeight: 600, color: searchV2.ink, lineHeight: 1.3 }}>
         {destination || t('allDestinations')}
       </Box>
       {dateLabel && <Box sx={{ fontSize: 12, color: searchV2.inkSoft, mt: '2px' }}>{dateLabel}</Box>}
@@ -81,7 +81,7 @@ const SearchSummaryCard = ({ destination, startDate, endDate, liveCount }: Searc
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: 12,
-            fontWeight: 800,
+            fontWeight: 600,
             fontVariantNumeric: 'tabular-nums',
             padding: '0 7px',
             whiteSpace: 'nowrap',

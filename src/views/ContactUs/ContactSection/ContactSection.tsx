@@ -21,12 +21,12 @@ const ContactSection = () => {
                 {t(titleKey)}
               </Typography>
               {typeof link === 'string' ? (
-                <Typography variant="h3" fontWeight={700} component="p" color={colors.blue500}>
+                <Typography variant="h3" fontWeight={600} component="p" color={colors.blue500}>
                   {t(link as 'contact.mondayToSunday')}
                 </Typography>
               ) : (
                 <Link href={link.href}>
-                  <Typography variant="h3" fontWeight={700} component="p" color={colors.blue500}>
+                  <Typography variant="h3" fontWeight={600} component="p" color={colors.blue500}>
                     {link.text}
                   </Typography>
                 </Link>

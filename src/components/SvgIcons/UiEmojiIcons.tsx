@@ -135,6 +135,22 @@ export const IconCompass = (p: UiIconProps) => (
   </UiIcon>
 );
 
+export const IconAnchor = (p: UiIconProps) => (
+  <UiIcon {...p}>
+    <circle cx="12" cy="5" r="2" />
+    <path d="M12 7v14M8 11h8" />
+    <path d="M5 13a7 7 0 0 0 14 0" />
+  </UiIcon>
+);
+
+export const IconSailboat = (p: UiIconProps) => (
+  <UiIcon {...p}>
+    <path d="M11 3 5 15h6V3Z" />
+    <path d="M13 6l5 9h-5V6Z" />
+    <path d="M3 18h18l-2 3H5l-2-3Z" />
+  </UiIcon>
+);
+
 export const IconShareOut = (p: UiIconProps) => (
   <UiIcon {...p}>
     <path d="M12 15V3M7.5 7.5 12 3l4.5 4.5" />

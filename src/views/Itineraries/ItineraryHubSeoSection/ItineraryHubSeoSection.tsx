@@ -19,7 +19,7 @@ const inlineLink = (href: string) => (chunks: ReactNode) => (
 const SectionH2 = ({ children }: { children: ReactNode }) => (
   <Typography
     component="h2"
-    sx={{ fontSize: { xs: 22, md: 28 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.15, pt: 5, pb: 1.5 }}
+    sx={{ fontSize: { xs: 22, md: 28 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.15, pt: 5, pb: 1.5 }}
   >
     {children}
   </Typography>
@@ -28,7 +28,7 @@ const SectionH2 = ({ children }: { children: ReactNode }) => (
 const SectionH3 = ({ children }: { children: ReactNode }) => (
   <Typography
     component="h3"
-    sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 700, color: colors.blue950, lineHeight: 1.2, pt: 3, pb: 0.5 }}
+    sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.2, pt: 3, pb: 0.5 }}
   >
     {children}
   </Typography>
@@ -63,7 +63,7 @@ const ItineraryHubSeoSection = ({ countrySearchHrefs }: { countrySearchHrefs?: C
     alignItems: 'center',
     gap: 1,
     color: colors.blue700,
-    fontWeight: 700,
+    fontWeight: 600,
     fontSize: { xs: 14, md: 14 },
     background: 'none',
     border: 'none',

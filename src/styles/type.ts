@@ -7,7 +7,7 @@ const siteType = {
   /** A section heading rendered as `<Typography variant="h1" component="h2">`. */
   sectionTitle: { fontSize: { xs: '28px', md: '36px' } },
   /** The blue italic half inside it: takes the heading's size instead of the variant's own 36 px. */
-  emphasis: { fontSize: 'inherit', fontStyle: 'italic', fontWeight: 800 },
+  emphasis: { fontSize: 'inherit', fontStyle: 'italic', fontWeight: 600 },
 } as const;
 
 export default siteType;

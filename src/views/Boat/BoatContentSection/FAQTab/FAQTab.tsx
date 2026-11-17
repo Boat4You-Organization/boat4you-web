@@ -83,7 +83,7 @@ const FAQTab = ({ yacht, yachtFaq }: FAQTabProps) => {
         <Typography
           component="h2"
           variant="h3"
-          fontWeight={700}
+          fontWeight={600}
           display="flex"
           flexDirection="row"
           alignItems="center"

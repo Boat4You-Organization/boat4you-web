@@ -29,7 +29,7 @@ const CancellationTab = ({ dateFrom, bookedAt = null }: CancellationTabProps) =>
     <Stack component="section" gap={3}>
       <Stack direction="row" alignItems="center" gap={1}>
         <Cancellation size={32} variant="secondary" />
-        <Typography variant="h3" component="h2" fontWeight={700}>
+        <Typography variant="h3" component="h2" fontWeight={600}>
           {t('cancellationPolicy')}
         </Typography>
       </Stack>

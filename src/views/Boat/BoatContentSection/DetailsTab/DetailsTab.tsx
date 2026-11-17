@@ -238,7 +238,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
         <Typography
           component="h2"
           variant="h3"
-          fontWeight={700}
+          fontWeight={600}
           flexDirection="row"
           alignItems="center"
           gap={1}

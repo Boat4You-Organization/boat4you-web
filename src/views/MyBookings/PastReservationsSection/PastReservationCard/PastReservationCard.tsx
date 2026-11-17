@@ -116,7 +116,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
                 <Typography variant="body2" color={colors.black500} sx={{ textDecoration: 'line-through' }}>
                   {formattedListPrice}
                 </Typography>
-                <Typography variant="body2" color={colors.black950} fontWeight={800}>
+                <Typography variant="body2" color={colors.black950} fontWeight={600}>
                   − {discountPercent}%
                 </Typography>
               </Stack>
@@ -130,7 +130,7 @@ const PastReservationCard = ({ reservation }: PastReservationCardProps) => {
                 color={colors.green500}
                 sx={{
                   typography: { xs: 'body1', md: 'h2' },
-                  fontWeight: '700 !important',
+                  fontWeight: '600 !important',
                 }}
               >
                 {formattedPrice}

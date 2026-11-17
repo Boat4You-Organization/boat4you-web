@@ -19,7 +19,7 @@
   margin: 0;
   color: $blue-950;
   font-size: rem-calc(26);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.25;
 }
 
@@ -27,7 +27,7 @@
   margin: 0 0 rem-calc(8);
   color: $blue-950;
   font-size: rem-calc(22);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .text {
@@ -95,7 +95,7 @@
 .cardTitle {
   color: $blue-950;
   font-size: rem-calc(16);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .visuallyHidden {
@@ -134,7 +134,7 @@
   padding: 0;
   color: $blue-950;
   font-size: rem-calc(16);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .required {
@@ -210,7 +210,7 @@
   display: inline-block;
   margin-top: rem-calc(16);
   color: $blue-700;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 
   &:hover {

@@ -141,17 +141,13 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
           <Grid size={{ xs: 12, md: 6 }}>
             <Stack gap={2.5}>
               {vesselType && (
-                <Typography
-                  variant="body2"
-                  color={colors.black600}
-                  sx={{ letterSpacing: 1.5, textTransform: 'uppercase', fontWeight: 700 }}
-                >
+                <Typography variant="body2" color={colors.black600} sx={{ fontWeight: 600 }}>
                   {tRoot(VESSEL_TYPE_LABEL_MAP[vesselType])}
                 </Typography>
               )}
 
               <Stack direction="row" alignItems="center" gap={1.5} flexWrap="wrap">
-                <Typography component="h1" variant="h2" fontWeight={700} color={colors.black950}>
+                <Typography component="h1" variant="h2" fontWeight={600} color={colors.black950}>
                   {yachtLabel(model, toTitleCase(name))}
                 </Typography>
                 {isNewYacht && (
@@ -162,7 +158,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                       borderRadius: 1,
                       backgroundColor: colors.blue50,
                       color: colors.blue500,
-                      fontWeight: 700,
+                      fontWeight: 600,
                       fontSize: 13,
                     }}
                   >
@@ -199,7 +195,7 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
                 <Stack direction="row" gap={{ xs: 3, md: 5 }} flexWrap="wrap" sx={{ pt: 1 }}>
                   {stats.map(({ key, value, label }) => (
                     <Stack key={key} gap={0.25}>
-                      <Typography variant="h3" fontWeight={700} color={colors.black950}>
+                      <Typography variant="h3" fontWeight={600} color={colors.black950}>
                         {value}
                       </Typography>
                       <Typography variant="body2" color={colors.black600}>

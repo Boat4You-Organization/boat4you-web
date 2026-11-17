@@ -128,7 +128,7 @@ const DealsPage = async ({ params }: DealsPageParams) => {
       <Container maxWidth="xl" sx={{ px: { xs: 2, md: 3 }, mt: { xs: '96px', md: '104px' } }}>
         <PromoBanner campaign={campaign} initialPct={bannerPct} clickable={false} />
 
-        <Typography component="h1" variant="h2" fontWeight={800} mt={{ xs: 3, md: 5 }}>
+        <Typography component="h1" variant="h2" fontWeight={600} mt={{ xs: 3, md: 5 }}>
           {t(`campaigns.${campaign.i18nKey}.metaTitle`)}
         </Typography>
         <Typography variant="body1" color="text.secondary" mt={1.5} maxWidth="80ch">
@@ -140,7 +140,7 @@ const DealsPage = async ({ params }: DealsPageParams) => {
           id={DEALS_LIST_ID}
           component="h2"
           variant="h4"
-          fontWeight={700}
+          fontWeight={600}
           mt={{ xs: 3, md: 4 }}
           mb={2}
           sx={{ scrollMarginTop: { xs: '96px', md: '104px' } }}
@@ -177,7 +177,7 @@ const DealsPage = async ({ params }: DealsPageParams) => {
         </Box>
 
         <Box maxWidth="80ch" mb={{ xs: 5, md: 8 }}>
-          <Typography component="h2" variant="h4" fontWeight={700} mb={1.5}>
+          <Typography component="h2" variant="h4" fontWeight={600} mb={1.5}>
             {t(`campaigns.${campaign.i18nKey}.seoTitle`)}
           </Typography>
           <Typography variant="body1" color="text.secondary">

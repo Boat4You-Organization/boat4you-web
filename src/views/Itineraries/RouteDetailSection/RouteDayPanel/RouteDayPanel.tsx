@@ -84,9 +84,7 @@ const RouteDayPanel = ({ route, activeDay }: Props) => {
           component="span"
           sx={{
             fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: '0.16em',
-            textTransform: 'uppercase',
+            fontWeight: 600,
             color: colors.blue800,
           }}
         >
@@ -96,7 +94,7 @@ const RouteDayPanel = ({ route, activeDay }: Props) => {
           component="h3"
           sx={{
             fontSize: { xs: 18, md: 22 },
-            fontWeight: 700,
+            fontWeight: 600,
             color: colors.black900,
             lineHeight: 1.3,
             mt: 0.5,
@@ -136,15 +134,13 @@ const RouteDayPanel = ({ route, activeDay }: Props) => {
                 <Typography
                   sx={{
                     fontSize: 12,
-                    fontWeight: 700,
+                    fontWeight: 600,
                     color: colors.black600,
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
                   }}
                 >
                   {t('panel.distanceLabel')}
                 </Typography>
-                <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
+                <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
                   {t('panel.distanceValue', { nm: stats.nauticalMiles })}
                 </Typography>
               </Box>
@@ -155,15 +151,13 @@ const RouteDayPanel = ({ route, activeDay }: Props) => {
                 <Typography
                   sx={{
                     fontSize: 12,
-                    fontWeight: 700,
+                    fontWeight: 600,
                     color: colors.black600,
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase',
                   }}
                 >
                   {t('panel.sailingLabel')}
                 </Typography>
-                <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
+                <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
                   {t('panel.sailingValue', { hours: stats.sailingHours })}
                 </Typography>
               </Box>

@@ -34,7 +34,7 @@ const ArrowBtn = ({ dir, onClick, disabled = false, size = 'desktop' }: ArrowBtn
       justifyContent: 'center',
       color: T.navy,
       fontSize: '22px',
-      fontWeight: 700,
+      fontWeight: 600,
       flexShrink: 0,
       fontFamily: 'inherit',
       padding: 0,

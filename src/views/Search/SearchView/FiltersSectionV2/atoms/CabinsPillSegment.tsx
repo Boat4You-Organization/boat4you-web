@@ -54,7 +54,7 @@ const CabinsPillSegment = ({ value, onChange }: CabinsPillSegmentProps) => {
               border: `1px solid ${on ? searchV2.brand : searchV2.line}`,
               borderRadius: '6px',
               fontSize: 12,
-              fontWeight: 700,
+              fontWeight: 600,
               fontFamily: searchV2Type.fontFamily,
               transition: 'background .12s ease, color .12s ease, border-color .12s ease',
               '&:hover': { borderColor: on ? searchV2.brand : searchV2.lineStrong },

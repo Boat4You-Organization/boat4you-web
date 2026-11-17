@@ -13,7 +13,7 @@ const EmptySection = () => {
   return (
     <Box className={styles.container}>
       <Stack className={styles.content}>
-        <Typography variant="h2" component="h1" fontWeight={700}>
+        <Typography variant="h2" component="h1" fontWeight={600}>
           {t('chooseYourDestination')}
         </Typography>
         <Typography variant="body2" color={colors.black600}>

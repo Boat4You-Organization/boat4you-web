@@ -17,7 +17,7 @@ const ContactUsSection = () => {
           <Typography
             variant="hero"
             component="h2"
-            fontWeight={800}
+            fontWeight={600}
             fontStyle="italic"
             color={colors.blue500}
             className={styles.title}

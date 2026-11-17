@@ -103,8 +103,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
               component="span"
               sx={{
                 fontSize: 12,
-                letterSpacing: '0.28em',
-                textTransform: 'uppercase',
                 color: colors.blue700,
                 fontWeight: 600,
               }}
@@ -115,7 +113,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
             </Typography>
             <Typography
               component="h2"
-              sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 800, color: colors.blue950, lineHeight: 1.1, mt: 1 }}
+              sx={{ fontSize: { xs: 28, md: 36 }, fontWeight: 600, color: colors.blue950, lineHeight: 1.1, mt: 1 }}
             >
               {t('area.pickTitle')}{' '}
               <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
@@ -132,8 +130,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
             sx={{
               color: colors.blue700,
               fontSize: 12,
-              letterSpacing: '0.16em',
-              textTransform: 'uppercase',
               fontWeight: 600,
               textDecoration: 'none',
               whiteSpace: 'nowrap',
@@ -149,8 +145,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
             <Typography
               sx={{
                 fontSize: 12,
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
                 color: colors.black600,
                 mb: 1.5,
                 fontWeight: 600,
@@ -235,7 +229,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                     borderColor: colors.blue500,
                     boxShadow: '0 12px 32px -12px rgb(0 0 0 / 18%)',
                   },
-                  '&:hover .route-card-img': { transform: 'scale(1.04)' },
                 }}
               >
                 <Box sx={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden' }}>
@@ -266,8 +259,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                       py: 0.75,
                       borderRadius: 99,
                       fontSize: 12,
-                      letterSpacing: '0.18em',
-                      textTransform: 'uppercase',
                       color: colors.blue950,
                       fontWeight: 600,
                     }}
@@ -281,8 +272,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                     sx={{
                       display: 'block',
                       fontSize: 12,
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase',
                       color: colors.blue700,
                       fontWeight: 600,
                       mb: 1,
@@ -297,7 +286,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                     component="h3"
                     sx={{
                       fontSize: { xs: 18, sm: 22 },
-                      fontWeight: 700,
+                      fontWeight: 600,
                       color: colors.blue950,
                       lineHeight: 1.35,
                       m: 0,
@@ -328,8 +317,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
                       mt: 2.5,
                       color: colors.blue600,
                       fontSize: 12,
-                      letterSpacing: '0.14em',
-                      textTransform: 'uppercase',
                       fontWeight: 600,
                     }}
                   >
@@ -349,8 +336,6 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
               component="span"
               sx={{
                 fontSize: 12,
-                letterSpacing: '0.28em',
-                textTransform: 'uppercase',
                 color: colors.blue700,
                 fontWeight: 600,
               }}
@@ -361,7 +346,7 @@ const ItineraryArea: FC<ItineraryAreaProps> = ({ slug, areaLabel, countryLabel }
               component="h2"
               sx={{
                 fontSize: { xs: 22, md: 28 },
-                fontWeight: 800,
+                fontWeight: 600,
                 color: colors.blue950,
                 lineHeight: 1.15,
                 mt: 1,

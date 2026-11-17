@@ -32,7 +32,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
 
   return (
     <Box className={styles.card}>
-      <Typography variant="h4" fontWeight={700} pb={2.5}>
+      <Typography variant="h4" fontWeight={600} pb={2.5}>
         {t('yourBookingDetails')}
       </Typography>
 
@@ -42,7 +42,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
           <Typography variant="body2" color={colors.black600}>
             {t('yachtPickUp')}
           </Typography>
-          <Typography variant="body1" fontWeight={700}>
+          <Typography variant="body1" fontWeight={600}>
             {DateTime.formatLong(startDate, locale)}
           </Typography>
           {checkin && <TimeBand time={checkin} anchor="start" />}
@@ -53,7 +53,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
           <Typography variant="body2" color={colors.black600}>
             {t('yachtDropOff')}
           </Typography>
-          <Typography variant="body1" fontWeight={700}>
+          <Typography variant="body1" fontWeight={600}>
             {DateTime.formatLong(endDate, locale)}
           </Typography>
           {checkout && <TimeBand time={checkout} anchor="end" />}
@@ -68,7 +68,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
             <Typography variant="body2" color={colors.black600}>
               {t('totalLengthOfRental')}
             </Typography>
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {numberOfDays} {t('days')}
             </Typography>
           </Stack>
@@ -79,7 +79,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
             <Typography variant="body2" color={colors.black600}>
               {t('pickUpAddress')}
             </Typography>
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {displayBaseName(locationFrom.name)}
             </Typography>
           </Stack>
@@ -90,7 +90,7 @@ const BookingSummaryCard = ({ reservationData }: BookingSummaryCardProps) => {
             <Typography variant="body2" color={colors.black600}>
               {t('charterCompany')}
             </Typography>
-            <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+            <Typography variant="body1" fontWeight={600} color={colors.blue500}>
               {agencyName}
             </Typography>
           </Stack>
@@ -130,7 +130,7 @@ const TimeBand = ({ time, anchor }: { time: string; anchor: 'start' | 'end' }) =
         <Typography variant="body2" color={colors.black500} fontSize={11}>
           0:00
         </Typography>
-        <Typography variant="body2" fontWeight={700} color={colors.black950} fontSize={12}>
+        <Typography variant="body2" fontWeight={600} color={colors.black950} fontSize={12}>
           {anchor === 'start' ? `${t('from')} ${time}` : `${t('by')} ${time}`}
         </Typography>
         <Typography variant="body2" color={colors.black500} fontSize={11}>

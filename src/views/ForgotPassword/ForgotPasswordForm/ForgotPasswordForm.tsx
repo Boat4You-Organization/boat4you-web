@@ -23,7 +23,7 @@ const ForgotPasswordForm = () => {
 
   return (
     <Stack direction="column" spacing={3}>
-      <Typography variant="hero" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+      <Typography variant="hero" fontWeight={600} fontStyle="italic" color={colors.blue500}>
         {t('resetYourPassword')}
       </Typography>
       <Typography variant="body1" pt={3} color={colors.black950}>

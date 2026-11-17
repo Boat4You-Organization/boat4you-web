@@ -50,12 +50,12 @@ const PaymentPoliciesCard = ({
           We keep only the Extras breakdown (Paid now / Paid in advance /
           Paid at marina). Sections collapse when empty. */}
       <Stack gap={3}>
-        <Typography variant="h3" component="p" fontWeight={700}>
+        <Typography variant="h3" component="p" fontWeight={600}>
           {t('extras')}
         </Typography>
         {hasPaidNow && (
           <Stack gap={1}>
-            <Typography variant="body1" fontWeight={700}>
+            <Typography variant="body1" fontWeight={600}>
               {t('paidNow')}
             </Typography>
             {selectedExtrasInPrice.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
@@ -123,7 +123,7 @@ const PaymentPoliciesCard = ({
             <>
               {inAdvance.length > 0 && (
                 <Stack gap={1}>
-                  <Typography variant="body1" fontWeight={700}>
+                  <Typography variant="body1" fontWeight={600}>
                     {t('paidInAdvance')}
                   </Typography>
                   {inAdvance.map(renderRow)}
@@ -131,7 +131,7 @@ const PaymentPoliciesCard = ({
               )}
               {(onSite.length > 0 || showSecurityDeposit) && (
                 <Stack gap={1}>
-                  <Typography variant="body1" fontWeight={700}>
+                  <Typography variant="body1" fontWeight={600}>
                     {t('paidAtMarina')}
                   </Typography>
                   {onSite.map(renderRow)}

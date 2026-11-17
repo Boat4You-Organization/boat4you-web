@@ -5,7 +5,15 @@ import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } fro
 
 import QRCode from 'qrcode';
 
-import { IconCalendar, IconCamera, IconCompass, IconCrown, IconShareOut } from '@/components/SvgIcons/UiEmojiIcons';
+import {
+  IconAnchor,
+  IconCalendar,
+  IconCamera,
+  IconCompass,
+  IconCrown,
+  IconSailboat,
+  IconShareOut,
+} from '@/components/SvgIcons/UiEmojiIcons';
 
 import type { TripDto } from './TripHub';
 
@@ -57,19 +65,19 @@ interface TripSocialProps {
 const ROLE_BADGES: Record<string, ReactNode> = {
   OWNER: <IconCrown label="Trip leader" />,
   SKIPPER: <IconCompass label="Skipper" />,
-  CONCIERGE: '⚓',
-  GUEST: '⛵',
+  CONCIERGE: <IconAnchor label="Concierge" />,
+  GUEST: <IconSailboat label="Guest" />,
 };
 
 const CARD = { background: '#fff', border: '1px solid #e3e9f2', borderRadius: 14, padding: '13px 15px' } as const;
 const SUB = { color: '#5b6b82', fontSize: 13 } as const;
-const H2 = { fontSize: 15, fontWeight: 800, margin: '18px 2px 8px' } as const;
+const H2 = { fontSize: 15, fontWeight: 600, margin: '18px 2px 8px' } as const;
 const BTN_BLUE = {
   display: 'block',
   textAlign: 'center' as const,
   background: '#2856ff',
   color: '#fff',
-  fontWeight: 800,
+  fontWeight: 600,
   fontSize: 15,
   borderRadius: 12,
   padding: '13px 10px',
@@ -481,7 +489,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
           <div style={{ ...CARD, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {trip.inviteUnlocked && !finished ? (
               <>
-                <div style={{ fontWeight: 800, fontSize: 14 }}>Join the crew of {trip.yacht.name}</div>
+                <div style={{ fontWeight: 600, fontSize: 14 }}>Join the crew of {trip.yacht.name}</div>
                 <div style={{ ...SUB, fontSize: 12.5 }}>
                   Just your name — no account needed. You&apos;ll get the group chat, the crew list and the photo album.
                 </div>
@@ -505,7 +513,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                   disabled={joinBusy}
                   style={{ ...BTN_BLUE, opacity: joinBusy ? 0.6 : 1 }}
                 >
-                  ⛵ Join the crew
+                  <IconSailboat size="1em" /> Join the crew
                 </button>
                 {joinError && <div style={{ color: '#b32424', fontSize: 12.5 }}>{joinError}</div>}
               </>
@@ -569,10 +577,10 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                   borderRadius: 99,
                   padding: '6px 11px',
                   fontSize: 13,
-                  fontWeight: 700,
+                  fontWeight: 600,
                 }}
               >
-                {ROLE_BADGES[participant.role] ?? '⛵'} {participant.name}
+                {ROLE_BADGES[participant.role] ?? <IconSailboat label="Guest" />} {participant.name}
                 {isOwner && participant.role !== 'OWNER' && (
                   <button
                     type="button"
@@ -582,7 +590,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                       border: 'none',
                       background: 'transparent',
                       color: '#b32424',
-                      fontWeight: 800,
+                      fontWeight: 600,
                       cursor: 'pointer',
                       padding: 0,
                       fontSize: 13,
@@ -637,7 +645,8 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                         textAlign: mine ? 'right' : 'left',
                       }}
                     >
-                      {concierge ? '⚓ ' : ''}
+                      {concierge ? <IconAnchor size="1em" label="Concierge" /> : null}
+                      {concierge ? ' ' : ''}
                       {message.senderName} · {fmtTime(message.createdAt)}
                     </div>
                     <div
@@ -745,7 +754,7 @@ const TripSocial = ({ trip, token, apiUrl, ownerCredentials }: TripSocialProps) 
                             background: 'rgba(12,36,97,.75)',
                             color: '#fff',
                             fontSize: 12,
-                            fontWeight: 800,
+                            fontWeight: 600,
                             cursor: 'pointer',
                             lineHeight: 1,
                           }}

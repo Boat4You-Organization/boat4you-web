@@ -32,7 +32,7 @@ const FaqTab = () => {
 
   return (
     <Stack component="section" direction="column" spacing={3} pt={4}>
-      <Typography variant="h3" fontWeight={700} display="flex" flexDirection="row" alignItems="center" gap={1}>
+      <Typography variant="h3" fontWeight={600} display="flex" flexDirection="row" alignItems="center" gap={1}>
         <FAQ variant="secondary" size={32} />
         {t('FAQTitle')}
       </Typography>

@@ -81,7 +81,7 @@ const SecuritySection = () => {
 
   return (
     <Paper variant="outlined" sx={{ p: 3, mb: 3 }}>
-      <Typography variant="h3" component="h2" fontWeight={700} sx={{ mb: 2 }}>
+      <Typography variant="h3" component="h2" fontWeight={600} sx={{ mb: 2 }}>
         {tt('signInAndSecurity')}
       </Typography>
 

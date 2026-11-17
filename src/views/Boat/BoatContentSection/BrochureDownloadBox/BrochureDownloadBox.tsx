@@ -38,7 +38,7 @@ const BrochureDownloadBox = ({ yachtName, onDownload }: BrochureDownloadBoxProps
       </Grid>
       <Grid size={{ xs: 12, lg: 8 }}>
         <Stack direction="column" spacing={3} className={styles.content}>
-          <Typography component="h2" variant="h1" fontWeight={800} color={colors.blue500}>
+          <Typography component="h2" variant="h1" fontWeight={600} color={colors.blue500}>
             {t('title', { name: yachtName })}
           </Typography>
           <Typography variant="body2" color={colors.black350}>

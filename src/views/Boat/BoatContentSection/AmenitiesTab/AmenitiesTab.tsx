@@ -55,7 +55,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
       <Typography
         component="h2"
         variant="h3"
-        fontWeight={700}
+        fontWeight={600}
         sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center', py: 0.5 }}
       >
         {heading}

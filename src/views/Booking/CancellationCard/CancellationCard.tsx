@@ -40,7 +40,7 @@ const CancellationCard = ({
 
   return (
     <Box className={cx(styles.container, { [styles.compact]: compact, [styles.lastStep]: isLastStep })}>
-      <Typography variant="h3" component="h2" fontWeight={700} mb={3}>
+      <Typography variant="h3" component="h2" fontWeight={600} mb={3}>
         {t('howMuchWillItCostToCancel')}
       </Typography>
       <VerticalTimeline items={cancellationTimeline} />

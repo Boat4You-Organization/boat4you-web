@@ -28,7 +28,7 @@ const PriceDetailsTab = ({ yacht }: PriceDetailsTabProps) => {
       <Typography
         component="h2"
         variant="h3"
-        fontWeight={700}
+        fontWeight={600}
         display="flex"
         flexDirection="row"
         alignItems="center"

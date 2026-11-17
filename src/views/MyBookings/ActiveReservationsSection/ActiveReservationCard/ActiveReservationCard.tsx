@@ -199,7 +199,7 @@ const ActiveReservationCard = ({ reservation }: ActiveReservationCardProps) => {
                 <Typography variant="body2" color={colors.black500} sx={{ textDecoration: 'line-through' }}>
                   {formattedListPrice}
                 </Typography>
-                <Typography variant="body2" color={colors.black950} fontWeight={800}>
+                <Typography variant="body2" color={colors.black950} fontWeight={600}>
                   − {discountPercent}%
                 </Typography>
               </Stack>

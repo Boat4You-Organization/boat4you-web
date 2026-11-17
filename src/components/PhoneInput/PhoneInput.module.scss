@@ -40,7 +40,10 @@
   :global(.MuiOutlinedInput-root) {
     border-radius: rem-calc(10);
     background-color: $white;
-    transition: all $animation-duration-fast $timing-function;
+    transition:
+      background-color $animation-duration-fast $timing-function,
+      border-color $animation-duration-fast $timing-function,
+      box-shadow $animation-duration-fast $timing-function;
 
     &.Mui-focused {
       outline: rem-calc(2) solid $blue-500;
@@ -89,7 +92,10 @@
   :global(.MuiOutlinedInput-root) {
     border-radius: rem-calc(10);
     background-color: $white;
-    transition: all $animation-duration-fast $timing-function;
+    transition:
+      background-color $animation-duration-fast $timing-function,
+      border-color $animation-duration-fast $timing-function,
+      box-shadow $animation-duration-fast $timing-function;
 
     &.Mui-focused {
       outline: rem-calc(2) solid $blue-500;

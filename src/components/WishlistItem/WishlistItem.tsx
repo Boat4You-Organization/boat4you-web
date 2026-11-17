@@ -49,7 +49,7 @@ const WishlistItem = ({ yacht }: WishlistItemProps) => {
             />
           </CardMedia>
           <CardContent className={styles.content}>
-            <Typography variant="h3" fontWeight={700} whiteSpace="wrap" className={styles.title}>
+            <Typography variant="h3" fontWeight={600} whiteSpace="wrap" className={styles.title}>
               {yachtLabel(yacht.model, toTitleCase(yacht.name))}
             </Typography>
             <Stack direction="row" alignItems="center" gap={1}>

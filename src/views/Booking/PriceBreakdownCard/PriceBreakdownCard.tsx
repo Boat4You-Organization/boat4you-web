@@ -92,7 +92,7 @@ const PriceBreakdownCard = ({
       {selectedPaymentMethod === PaymentMethod.BANK_TRANSFER && (
         <>
           <Box>
-            <Typography variant="h3" component="h2" fontWeight={700} mb={3}>
+            <Typography variant="h3" component="h2" fontWeight={600} mb={3}>
               {t('common.paymentInformation')}
             </Typography>
             <Grid container spacing={2}>
@@ -115,12 +115,12 @@ const PriceBreakdownCard = ({
               p={2}
               sx={{ backgroundColor: colors.mandalay50, borderRadius: 1.5 }}
             >
-              <Typography variant="h4" component="p" fontWeight={700} color={colors.mandalay900}>
+              <Typography variant="h4" component="p" fontWeight={600} color={colors.mandalay900}>
                 {t('common.important')}:
               </Typography>
               <Typography variant="body2" color={colors.mandalay800}>
                 {t('common.pleaseUseYourBooking')}{' '}
-                <Typography component="span" variant="body1" fontWeight={800} color={colors.mandalay900}>
+                <Typography component="span" variant="body1" fontWeight={600} color={colors.mandalay900}>
                   {reservationId?.toString() || ''}
                 </Typography>{' '}
                 {t('common.asPaymentReference')}
@@ -137,7 +137,7 @@ const PriceBreakdownCard = ({
         </>
       )}
       <Stack gap={2}>
-        <Typography variant="h3" component="h2" fontWeight={700} whiteSpace="wrap" className={styles.title}>
+        <Typography variant="h3" component="h2" fontWeight={600} whiteSpace="wrap" className={styles.title}>
           {t('common.priceBreakdown')}
         </Typography>
         <Stack direction="row" justifyContent="space-between" alignItems="center">
@@ -158,10 +158,10 @@ const PriceBreakdownCard = ({
       <Stack gap={2}>
         {appliedVoucher && (
           <Stack direction="row" justifyContent="space-between" alignItems="center">
-            <Typography variant="body1" sx={{ color: '#15803d', fontWeight: 700 }}>
+            <Typography variant="body1" sx={{ color: '#15803d', fontWeight: 600 }}>
               {t('common.voucherRow')} · {appliedVoucher.code}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#15803d', fontWeight: 700 }}>
+            <Typography variant="body1" sx={{ color: '#15803d', fontWeight: 600 }}>
               −{formattedVoucherValue}
             </Typography>
           </Stack>
@@ -188,7 +188,7 @@ const PriceBreakdownCard = ({
       {dateFrom && totalPriceEur > 0 && (
         <>
           <Divider sx={{ '&.MuiDivider-root': { marginBlock: 3 } }} />
-          <Typography variant="h3" component="h3" fontWeight={700} mb={3}>
+          <Typography variant="h3" component="h3" fontWeight={600} mb={3}>
             {t('common.paymentSchedule')}
           </Typography>
           {isLoadingPhases && paymentPhases.length === 0 ? (
@@ -249,7 +249,7 @@ const PriceBreakdownCard = ({
                       )}
                     </Stack>
                     <Stack sx={{ pb: isLast ? 0 : 2 }}>
-                      <Typography variant="body1" fontWeight={700} color={colors.black950}>
+                      <Typography variant="body1" fontWeight={600} color={colors.black950}>
                         {amount}
                       </Typography>
                       <Typography variant="body2" color="success.main" fontWeight={600}>

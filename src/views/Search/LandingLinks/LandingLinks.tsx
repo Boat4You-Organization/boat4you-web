@@ -25,7 +25,7 @@ interface LandingLinksProps {
 
 const Row = ({ title, links, after }: { title: string; links: LandingLink[]; after?: ReactNode }) => (
   <Box component="section" sx={{ mt: 3 }}>
-    <Typography component="h2" variant="h4" fontWeight={700} color={colors.blue950} sx={{ fontSize: 16 }}>
+    <Typography component="h2" variant="h4" fontWeight={600} color={colors.blue950} sx={{ fontSize: 16 }}>
       {title}
     </Typography>
     <Stack

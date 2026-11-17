@@ -11,7 +11,7 @@ interface BookingModalProps {
 }
 
 const HighlightedText = (chunks: React.ReactNode) => (
-  <Typography component="span" variant="h1" fontStyle="italic" fontWeight={800} color={colors.blue500}>
+  <Typography component="span" variant="h1" fontStyle="italic" fontWeight={600} color={colors.blue500}>
     {chunks}
   </Typography>
 );

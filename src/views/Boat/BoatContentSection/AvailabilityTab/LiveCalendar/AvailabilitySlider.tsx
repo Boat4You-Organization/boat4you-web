@@ -550,9 +550,7 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
             flex: 1,
             textAlign: 'center',
             ...boatType.bodyStrong,
-            letterSpacing: '0.06em',
             color: T.navy,
-            textTransform: 'uppercase',
             fontFeatureSettings: '"tnum"',
           }}
         >
@@ -788,8 +786,6 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
               flex: 1,
               textAlign: 'center',
               ...boatType.bodyStrong,
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
               color: T.navy,
               fontFeatureSettings: '"tnum"',
               lineHeight: 1.2,

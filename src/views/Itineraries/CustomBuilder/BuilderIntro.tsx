@@ -31,7 +31,7 @@ const BuilderIntro = async () => {
 
       <Typography
         component="h2"
-        sx={{ fontSize: { xs: 18, md: 22 }, fontWeight: 800, color: colors.blue950, mt: 4, mb: 2 }}
+        sx={{ fontSize: { xs: 18, md: 22 }, fontWeight: 600, color: colors.blue950, mt: 4, mb: 2 }}
       >
         {t('builder.howTitle')}
       </Typography>
@@ -46,7 +46,7 @@ const BuilderIntro = async () => {
                 bgcolor: colors.blue600,
                 color: '#fff',
                 fontSize: 14,
-                fontWeight: 700,
+                fontWeight: 600,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -55,7 +55,7 @@ const BuilderIntro = async () => {
             >
               {i + 1}
             </Box>
-            <Typography sx={{ fontSize: 16, fontWeight: 700, color: colors.blue950, mb: 0.6 }}>{step.title}</Typography>
+            <Typography sx={{ fontSize: 16, fontWeight: 600, color: colors.blue950, mb: 0.6 }}>{step.title}</Typography>
             <Typography sx={{ fontSize: 14, lineHeight: 1.6, color: '#3c4257' }}>{step.text}</Typography>
           </Box>
         ))}
@@ -70,7 +70,7 @@ const BuilderIntro = async () => {
             gap={0.8}
             sx={{ px: 1.6, py: 0.9, bgcolor: '#eef1fb', borderRadius: 999 }}
           >
-            <Typography component="span" sx={{ color: colors.blue600, fontWeight: 800, fontSize: 14 }}>
+            <Typography component="span" sx={{ color: colors.blue600, fontWeight: 600, fontSize: 14 }}>
               ✓
             </Typography>
             <Typography component="span" sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>

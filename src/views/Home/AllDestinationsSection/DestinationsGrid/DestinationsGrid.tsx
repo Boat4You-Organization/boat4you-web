@@ -33,7 +33,7 @@ const DestinationsGrid = ({ destinations }: DestinationsGridProps) => {
           <Grid key={destination.id} size={{ xs: 6, md: 3, xl: 2 }} height="100%" className={styles.itemWrapper}>
             <Link href={buildDestinationHref(destination.name, destination.id)} className={styles.item}>
               <Stack>
-                <Typography component="h3" variant="h4" fontWeight={700} color={colors.blue950}>
+                <Typography component="h3" variant="h4" fontWeight={600} color={colors.blue950}>
                   {localizedName}
                 </Typography>
                 <Typography variant="body2" color={colors.black350}>

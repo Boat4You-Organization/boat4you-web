@@ -240,7 +240,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
             )}
             {!isCheckingAvailability &&
               (hasValidDateSelection && isCalculatedPrice && !isSelectedOfferBlocked ? (
-                <Typography component="p" variant="h3" fontWeight={700} color={colors.blue500}>
+                <Typography component="p" variant="h3" fontWeight={600} color={colors.blue500}>
                   {t('readyToSail')}
                 </Typography>
               ) : (
@@ -317,7 +317,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
               arrow
               title={
                 <Box sx={{ p: 0.5 }}>
-                  <Typography variant="body1" fontWeight={700} color={colors.white}>
+                  <Typography variant="body1" fontWeight={600} color={colors.white}>
                     {yachtLabel(yacht.model, toTitleCase(yacht.name))}
                   </Typography>
                   {yacht.location && (
@@ -333,7 +333,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                       <Typography variant="body2" color={colors.black300}>
                         {tCommon('totalLengthOfRental')}
                       </Typography>
-                      <Typography variant="body2" fontWeight={700} color={colors.white}>
+                      <Typography variant="body2" fontWeight={600} color={colors.white}>
                         {computedNumberOfDays} {daysText}
                       </Typography>
                     </Stack>
@@ -341,7 +341,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                       <Typography variant="body2" color={colors.black300}>
                         {tCommon('yachtPickup')}
                       </Typography>
-                      <Typography variant="body2" fontWeight={700} color={colors.white}>
+                      <Typography variant="body2" fontWeight={600} color={colors.white}>
                         {startDate ? DateTime.formatLongWithoutDay(dayjs(startDate), locale) : '-'}
                       </Typography>
                     </Stack>
@@ -349,12 +349,12 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                       <Typography variant="body2" color={colors.black300}>
                         {tCommon('yachtDropOff')}
                       </Typography>
-                      <Typography variant="body2" fontWeight={700} color={colors.white}>
+                      <Typography variant="body2" fontWeight={600} color={colors.white}>
                         {endDate ? DateTime.formatLongWithoutDay(dayjs(endDate), locale) : '-'}
                       </Typography>
                     </Stack>
                   </Stack>
-                  <Typography variant="body2" fontWeight={700} color={colors.blue400} mt={1.5}>
+                  <Typography variant="body2" fontWeight={600} color={colors.blue400} mt={1.5}>
                     {t('bookingTakesMinutes')}
                   </Typography>
                 </Box>
@@ -392,12 +392,12 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
             {isCalculatedPrice && (
               <>
                 <Stack direction="row" justifyContent="space-between" pt={4} gap={1} alignItems="flex-start">
-                  <Typography variant="body1" fontWeight={700}>
+                  <Typography variant="body1" fontWeight={600}>
                     {t('totalDueNow')}
                   </Typography>
                   <Typography
                     variant="body1"
-                    fontWeight={700}
+                    fontWeight={600}
                     color={colors.blue500}
                     display="flex"
                     alignItems="center"
@@ -430,7 +430,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
               )}
               {(selectedExtrasInPrice?.length ?? 0) > 0 && (
                 <>
-                  <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                  <Typography variant="body1" fontWeight={600} color={colors.blue500}>
                     {tCommon('paidNow')}
                   </Typography>
                   {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
@@ -523,7 +523,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                   <>
                     {inAdvance.length > 0 && (
                       <>
-                        <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                        <Typography variant="body1" fontWeight={600} color={colors.blue500}>
                           {tCommon('paidInAdvance')}
                         </Typography>
                         {inAdvance.map(renderRow)}
@@ -531,7 +531,7 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                     )}
                     {(onSite.length > 0 || showSecurityDeposit) && (
                       <>
-                        <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                        <Typography variant="body1" fontWeight={600} color={colors.blue500}>
                           {tCommon('paidAtMarina')}
                         </Typography>
                         {onSite.map(renderRow)}

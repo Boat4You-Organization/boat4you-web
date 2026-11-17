@@ -8,6 +8,7 @@ import QRCode from 'qrcode';
 
 import Download from '@/components/SvgIcons/Download';
 import ExternalLink from '@/components/SvgIcons/ExternalLink';
+import { IconAnchor } from '@/components/SvgIcons/UiEmojiIcons';
 import { ReservationDetails, ReservationDocument } from '@/models/reservation.model';
 import colors from '@/styles/themes/colors';
 
@@ -63,7 +64,7 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
   // "previše plavo s ovim botunom pay now").
   const buttonSx = {
     textTransform: 'none' as const,
-    fontWeight: 700,
+    fontWeight: 600,
     fontSize: 15,
     px: 3,
     py: 1.25,
@@ -98,7 +99,7 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
 
   return (
     <Container component="section" maxWidth="xl" disableGutters>
-      <Typography variant="h3" component="h2" fontWeight={700} sx={{ mt: 4 }}>
+      <Typography variant="h3" component="h2" fontWeight={600} sx={{ mt: 4 }}>
         {t('travelDocumentsTitle')}
       </Typography>
       <Stack direction={{ xs: 'column', sm: 'row' }} flexWrap="wrap" gap={1.5} sx={{ mt: 2 }}>
@@ -115,7 +116,7 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
             rel="noopener noreferrer"
             sx={{
               textTransform: 'none',
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: 15,
               px: 3,
               py: 1.25,
@@ -124,7 +125,8 @@ const TravelDocumentsBar = ({ reservationDetails }: TravelDocumentsBarProps) => 
               '&:hover': { backgroundColor: '#122f7a' },
             }}
           >
-            ⚓ {t('openTripApp')}
+            <IconAnchor size="1em" style={{ marginRight: 8 }} />
+            {t('openTripApp')}
           </Button>
         )}
         {tripQr && (

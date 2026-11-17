@@ -27,7 +27,7 @@ const WhyChooseUsSection = () => {
             component="h2"
             variant="h4"
             textAlign="center"
-            fontWeight={800}
+            fontWeight={600}
             fontStyle="italic"
             color={colors.blue500}
           >

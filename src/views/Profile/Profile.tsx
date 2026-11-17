@@ -278,14 +278,14 @@ const Profile = ({ user }: ProfileProps) => {
 
   return (
     <Container component="section" maxWidth="md" className={styles.container}>
-      <Typography variant="h1" fontWeight={700} sx={{ mb: 3 }}>
+      <Typography variant="h1" fontWeight={600} sx={{ mb: 3 }}>
         {t('accountSettings')}
       </Typography>
 
       <Box className={styles.hero}>
         <Avatar className={styles.avatar}>{initials}</Avatar>
         <Stack className={styles.heroInfo}>
-          <Typography variant="h3" fontWeight={700}>
+          <Typography variant="h3" fontWeight={600}>
             {user.name} {user.surname}
           </Typography>
           <Typography variant="body1" className={styles.heroEmail}>
@@ -565,7 +565,7 @@ const DangerZone = () => {
       <Tooltip
         title={
           <Box sx={{ p: 0.5, maxWidth: 320 }}>
-            <Typography variant="body2" fontWeight={700} sx={{ mb: 0.5 }}>
+            <Typography variant="body2" fontWeight={600} sx={{ mb: 0.5 }}>
               Download my data
             </Typography>
             <Typography variant="caption" sx={{ display: 'block', lineHeight: 1.5 }}>
@@ -597,7 +597,7 @@ const DangerZone = () => {
       <Tooltip
         title={
           <Box sx={{ p: 0.5, maxWidth: 320 }}>
-            <Typography variant="body2" fontWeight={700} sx={{ mb: 0.5 }}>
+            <Typography variant="body2" fontWeight={600} sx={{ mb: 0.5 }}>
               Delete my account
             </Typography>
             <Typography variant="caption" sx={{ display: 'block', lineHeight: 1.5 }}>
@@ -622,7 +622,7 @@ const DangerZone = () => {
       </Tooltip>
 
       <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
-        <DialogTitle sx={{ color: '#c62828', fontWeight: 700 }}>Delete account permanently?</DialogTitle>
+        <DialogTitle sx={{ color: '#c62828', fontWeight: 600 }}>Delete account permanently?</DialogTitle>
         <DialogContent>
           <Stack gap={2} sx={{ mt: 1 }}>
             <Typography variant="body2">

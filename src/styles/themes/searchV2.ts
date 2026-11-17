@@ -46,12 +46,12 @@ export const searchV2 = {
 export const searchV2Type = {
   fontFamily: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
   body: 14,
-  sectionLabel: { fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase' as const, fontWeight: 700 },
-  groupTitle: { fontSize: 14, fontWeight: 700 },
-  countBadge: { fontSize: 12, fontWeight: 700 },
+  sectionLabel: { fontSize: 12, fontWeight: 600 },
+  groupTitle: { fontSize: 14, fontWeight: 600 },
+  countBadge: { fontSize: 12, fontWeight: 600 },
   smallLabel: { fontSize: 12, fontWeight: 600 },
   numericValue: { fontSize: 14, fontWeight: 600, fontVariantNumeric: 'tabular-nums' as const },
-  numericBig: { fontSize: 18, fontWeight: 700, fontVariantNumeric: 'tabular-nums' as const },
+  numericBig: { fontSize: 18, fontWeight: 600, fontVariantNumeric: 'tabular-nums' as const },
 } as const;
 
 /** Layout tokens. */

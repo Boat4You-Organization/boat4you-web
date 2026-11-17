@@ -245,7 +245,7 @@ const RelatedBoats = async ({ yacht, user, locale, currency, startDate, endDate 
 
   return (
     <Container maxWidth="xl" component="section" sx={{ pt: { xs: 3, sm: 5 }, pb: { xs: 1, sm: 2 } }}>
-      <Typography component="h2" variant="h3" fontWeight={700} sx={{ mb: { xs: 2, sm: 3 } }}>
+      <Typography component="h2" variant="h3" fontWeight={600} sx={{ mb: { xs: 2, sm: 3 } }}>
         {t('relatedHeading')}
       </Typography>
       <BoatCardGrid>

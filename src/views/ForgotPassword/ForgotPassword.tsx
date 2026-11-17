@@ -59,7 +59,7 @@ const ForgotPassword = ({ resetCode }: ForgotPasswordProps) => {
 
   const renderErrorState = () => (
     <Stack className={styles.form} direction="column" spacing={3}>
-      <Typography variant="hero" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+      <Typography variant="hero" fontWeight={600} fontStyle="italic" color={colors.blue500}>
         {t('passwordResetCodeFailed')}
       </Typography>
       <Typography variant="body1" pt={3} color={colors.black950}>

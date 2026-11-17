@@ -62,7 +62,7 @@ const ExploreBoatsLinks = async ({ hubs, itinerary, priceGuides = [], locale, le
 
   return (
     <Box component="section" aria-labelledby="explore-boats-title" sx={{ mt: { xs: 5, md: 7 } }}>
-      <Typography id="explore-boats-title" component="h2" variant="h4" fontWeight={700} color={colors.blue950}>
+      <Typography id="explore-boats-title" component="h2" variant="h4" fontWeight={600} color={colors.blue950}>
         {t('explore.title')}
       </Typography>
       <Typography variant="body1" color={colors.black500} sx={{ mt: 1 }}>

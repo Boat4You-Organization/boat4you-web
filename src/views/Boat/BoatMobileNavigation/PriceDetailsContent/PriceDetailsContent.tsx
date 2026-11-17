@@ -70,10 +70,10 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
   return (
     <Stack>
       <Stack direction="row" justifyContent="space-between">
-        <Typography variant="body1" fontWeight={700}>
+        <Typography variant="body1" fontWeight={600}>
           {t('totalDueNow')}
         </Typography>
-        <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+        <Typography variant="body1" fontWeight={600} color={colors.blue500}>
           {formattedFullPrice}
         </Typography>
       </Stack>
@@ -98,7 +98,7 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
         )}
         {(selectedExtrasInPrice?.length ?? 0) > 0 && (
           <>
-            <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+            <Typography variant="body1" fontWeight={600} color={colors.blue500}>
               {tCommon('paidNow')}
             </Typography>
             {selectedExtrasInPrice?.map(({ id, name, priceEur, priceInfo, labelCode, paymentType }) => {
@@ -173,7 +173,7 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
             <>
               {inAdvance.length > 0 && (
                 <>
-                  <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                  <Typography variant="body1" fontWeight={600} color={colors.blue500}>
                     {tCommon('paidInAdvance')}
                   </Typography>
                   {inAdvance.map(renderRow)}
@@ -181,7 +181,7 @@ const PriceDetailsContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavaila
               )}
               {(onSite.length > 0 || showSecurityDeposit) && (
                 <>
-                  <Typography variant="body1" fontWeight={700} color={colors.blue500}>
+                  <Typography variant="body1" fontWeight={600} color={colors.blue500}>
                     {tCommon('paidAtMarina')}
                   </Typography>
                   {onSite.map(renderRow)}

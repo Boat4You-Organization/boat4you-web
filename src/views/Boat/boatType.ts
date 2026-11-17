@@ -6,7 +6,7 @@
  */
 const boatType = {
   /** A section heading: Description, Amenities, Availability… */
-  sectionTitle: { fontSize: 22, fontWeight: 700 },
+  sectionTitle: { fontSize: 22, fontWeight: 600 },
   /** A sub-heading: Pick-up time, an extra's name, a FAQ question, a card title. */
   subtitle: { fontSize: 16, fontWeight: 600, lineHeight: 1.4 },
   /** Running text, lists, values. */
@@ -15,10 +15,10 @@ const boatType = {
   bodyStrong: { fontSize: 14, fontWeight: 600 },
   /** Small plain text: "Per booking", a hint under a date. */
   small: { fontSize: 12, fontWeight: 400 },
-  /** A small uppercase label: a status pill, the legend, a month on the axis. */
-  label: { fontSize: 12, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' as const },
+  /** A small label: a status pill, the legend, a month on the axis (sentence case, unslop 17.11.2026). */
+  label: { fontSize: 12, fontWeight: 600 },
   /** The one highlighted price of a card. */
-  price: { fontSize: 20, fontWeight: 700 },
+  price: { fontSize: 20, fontWeight: 600 },
 } as const;
 
 export default boatType;

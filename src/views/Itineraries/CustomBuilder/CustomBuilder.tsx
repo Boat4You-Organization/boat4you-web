@@ -210,7 +210,7 @@ const CustomBuilder = () => {
           {/* lijevo: dnevni plan + prijedlozi */}
           <Box sx={{ flex: 1, minWidth: 0 }}>
             <Stack gap={1} sx={{ mb: 2 }}>
-              <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
+              <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
                 {t('builder.yourPlan', { start: start.label })}
               </Typography>
               {days.map((d, i) => (
@@ -230,7 +230,7 @@ const CustomBuilder = () => {
                       bgcolor: colors.blue600,
                       color: '#fff',
                       fontSize: 14,
-                      fontWeight: 700,
+                      fontWeight: 600,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -256,7 +256,7 @@ const CustomBuilder = () => {
 
             {!finished && suggestions.length > 0 && (
               <>
-                <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950, mb: 1 }}>
+                <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950, mb: 1 }}>
                   {t('builder.dayN', { day: days.length + 1 })} — {t('builder.suggestions')}
                 </Typography>
                 <Stack gap={1}>
@@ -282,7 +282,7 @@ const CustomBuilder = () => {
                       }}
                     >
                       <Stack direction="row" alignItems="center" justifyContent="space-between" gap={1}>
-                        <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
+                        <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
                           {sug.isReturn ? t('builder.returnTo', { start: sug.stop.label }) : sug.stop.label}
                         </Typography>
                         <Chip size="small" label={`~${sug.nm} NM`} sx={{ bgcolor: '#eef1fb', fontWeight: 600 }} />
@@ -314,7 +314,7 @@ const CustomBuilder = () => {
 
             {finished && (
               <Box sx={{ p: 2, bgcolor: '#eef7ee', borderRadius: 2, border: '1px solid #bfe3c0' }}>
-                <Typography sx={{ fontSize: 14, fontWeight: 700, color: '#15803d', mb: 0.5 }}>
+                <Typography sx={{ fontSize: 14, fontWeight: 600, color: '#15803d', mb: 0.5 }}>
                   {t('builder.done')}
                 </Typography>
                 <Typography sx={{ fontSize: 14, color: '#3c4257', mb: 1.5 }}>
@@ -350,7 +350,7 @@ const CustomBuilder = () => {
                     )}
                     <Box sx={{ p: 2 }}>
                       <Stack direction="row" alignItems="center" justifyContent="space-between" gap={1}>
-                        <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
+                        <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
                           {t('builder.dayN', { day: i + 1 })}: {i === 0 ? start.label : days[i - 1].stop.label} →{' '}
                           {d.stop.label}
                         </Typography>
@@ -390,7 +390,7 @@ const CustomBuilder = () => {
                 )}
                 <Box sx={{ p: 1.6 }}>
                   <Stack direction="row" alignItems="center" justifyContent="space-between" gap={1}>
-                    <Typography sx={{ fontSize: 14, fontWeight: 700, color: colors.blue950 }}>
+                    <Typography sx={{ fontSize: 14, fontWeight: 600, color: colors.blue950 }}>
                       {infoSug.stop.label}
                     </Typography>
                     <Chip size="small" label={`~${infoSug.nm} NM`} sx={{ bgcolor: '#eef1fb', fontWeight: 600 }} />

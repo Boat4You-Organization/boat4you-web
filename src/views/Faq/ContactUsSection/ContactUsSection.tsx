@@ -14,7 +14,7 @@ const ContactUsSection = () => {
     <Container component="section" maxWidth="xl" disableGutters className={styles.container}>
       <Grid container direction={{ xs: 'column-reverse', md: 'row' }} className={styles.card}>
         <Grid size={{ xs: 12, md: 7 }} className={styles.content}>
-          <Typography variant="hero" component="h2" fontWeight={800} fontStyle="italic" color={colors.blue500}>
+          <Typography variant="hero" component="h2" fontWeight={600} fontStyle="italic" color={colors.blue500}>
             {t('didntFindAnswer')}
           </Typography>
           <Typography variant="body2" color={colors.black500} mt={2} className={styles.description}>
