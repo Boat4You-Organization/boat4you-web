@@ -1,5 +1,18 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-17 — Naš Ionian tekst više ne sadrži ime charter tvrtke — ✅ LIVE (`b131bb0fd`, deployment id b131bb0fd984-mwkchmsj, tag `live/2026-11-17-ionian-copy`)
+
+**Zašto:** SEO Stage B 17.11. (T6). Ova dva teksta sadrže „Ionian Catamarans“, ime charter tvrtke s popisa operatera; vlasnikovo pravilo je da se tko upravlja brodom nikad ne prikazuje:
+
+- `public/seo-content/en/ionian-islands-catamaran-charter.html`: „Browse Ionian Catamarans“;
+- `palairos-catamaran-charter.html`: „Why Boat4You Stands Out for Ionian Catamarans“.
+
+**Što:** „Browse catamarans in the Ionian“ i „… for Catamarans in the Ionian“.
+
+**Provjereno:** stranica `search?destinations=ionian region&boatTypes=CATAMARAN` ima 0 pojava; T6 Ionian nestao.
+
+**Otvoreno (odluka vlasnika):** T6 „Sea Novels“ = ime broda 4202 „Sea novels“. Brod je agencije MG Yachts, a ne agencije Sea Novels, i ime je pravo ime broda.
+
 ## 2026-11-17 — Prijava, registracija i reset lozinke šalju IP posjetitelja — ✅ LIVE (`ab99d0f04`, deployment id ab99d0f04f3f-mwkas488, tag `live/2026-11-17-auth-client-ip`)
 
 **Zašto:** Fable sigurnosni pregled 17.11. (nalaz 1). Akcije prijave zovu API sa servera bez `X-Forwarded-For`. Backendovi limiti po IP-u (prijava 10/min, reset 3/min, registracija) zato su sve posjetitelje www.boat4you.com brojali kao jednog: desetak zahtjeva u minuti od bilo koga blokiralo bi prijavu svim kupcima.
