@@ -322,9 +322,7 @@ function buildSearchProductsLd(
     // field is a critical GSC error. Always set it, falling back to the site
     // OG image when the yacht has no photo (a valid fallback beats no image),
     // mirroring the boat-detail Product schema.
-    const imageUrl = y.mainImageId
-      ? getBoatImageUrl(y.mainImageId, 1200)
-      : `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`;
+    const imageUrl = y.mainImageId ? getBoatImageUrl(y.mainImageId, 1200) : `${meta.url}/meta/og-image.png`;
     const country = y.location?.countryCode;
     const facts = capacityFacts(fromYacht(y, { locale }));
     const product: Record<string, unknown> = {

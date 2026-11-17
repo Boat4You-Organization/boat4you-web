@@ -158,8 +158,7 @@ function buildYachtProductSchema(
   if (isBookedByInquiry(yacht)) return null;
 
   const url = localizedUrl(locale, canonicalBoatPath(yacht));
-  const mainImage =
-    yachtShareImageUrl(yacht) || `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`;
+  const mainImage = yachtShareImageUrl(yacht) || `${meta.url}/meta/og-image.png`;
 
   // The builder from data (yachtBrand.ts): the payload's manufacturer, else
   // the catalogue manufacturer the model name starts with — canonicalised,
