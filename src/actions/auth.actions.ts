@@ -14,7 +14,7 @@ import { authHeaders } from '@/utils/static/tokenUtils';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 /**
- * POST headers with the visitor's IP as X-Forwarded-For (security review 17.11.2026). These calls run on the Next
+ * POST / PUT headers (the same Accept and Content-Type) with the visitor's IP as X-Forwarded-For (security review 17.11.2026). These calls run on the Next
  * server, so without it the backend's per-IP limits on /auth/login (10/min), /auth/requestPasswordReset (3/min) and
  * registration counted every visitor of www.boat4you.com as one client: about ten requests a minute from anyone
  * blocked sign-in for all customers. The backend believes the header only from our own web servers (ClientIp).
@@ -648,6 +648,7 @@ export async function register(state: any, formData: FormData): Promise<PayloadR
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register`, {
       ...PUT_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ name, surname, password, email, phoneNumber }),
     });
 
