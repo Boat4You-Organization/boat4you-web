@@ -1,5 +1,17 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-17 — Stranica plaćanja `/pay/<ključ>`: plava ploča kao tekuće staklo (Liquid Glass), stranica bijela — ✅ LIVE (`0c1e6cbe5`, deployment id 0c1e6cbe5532-mwklqlm8, tag `live/2026-11-17-pay-redesign`)
+
+**Zašto:** Mario 17.11.: Appleov Liquid Glass „mi se puno sviđa“; „lijeva neka ostane plava ali liquid glass“, „ne pozadinu cijelog, ostavi je bijelu okolo“. Dopustio Higgsfield.
+
+**Što:**
+
+- `public/images/pay/blue-liquid-glass-texture.webp` (34 KB, generirana u Higgsfieldu za ovu stranicu, 0,5 kredita) ispod plave ploče, preko nje tamnoplavi ton za kontrast bijelog teksta, svijetli rub i odsjaj. Ista tekstura na mobitelu.
+- Uplatnica je mutno staklo (`backdrop-filter`) preko teksture. Stranica i desna kartica ostaju bijele.
+- Broj rezervacije i iznos jedno do drugoga tek od 1200 px (na užem se natpis lomio pa polja nisu bila u liniji).
+
+**Provjera:** lokalno 1440×800 bez scrolla, 375 px bez vodoravnog pomicanja; uživo `dpl=0c1e6cbe5532`, tekstura vraća 200 (33 700 B), živi CSS je referencira. SEO regresija: 0 novih FAIL.
+
 ## 2026-11-17 — Stranica plaćanja `/pay/<ključ>`: bijela pozadina, sjajna tamnoplava ploča, kartice za način plaćanja, cijela stranica u jednom ekranu — ✅ LIVE (`e917e3011`, deployment id e917e3011c18-mwkkoi2m, tag `live/2026-11-17-pay-redesign`)
 
 **Zašto:** Mario 17.11., redom: „napravi da bude glosi“, izbor načina plaćanja „grozno“, Apple Liquid Glass „to mi je super“, zatim „stavi bijelu pozadinu, previše plavo“ i „da nema scroll na stranici desktop“.
