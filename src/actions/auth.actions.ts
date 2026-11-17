@@ -7,10 +7,23 @@ import { AuthKeys, POST_REQUEST_PARAMETERS, PUT_REQUEST_PARAMETERS } from '@/con
 import { ErrorModel } from '@/models/error.model';
 import { UserModel } from '@/models/user.model';
 import { PayloadResponse } from '@/types/response.type';
+import { clientIp } from '@/utils/server/clientIp';
 import { authFetch } from '@/utils/static/authFetch';
 import { authHeaders } from '@/utils/static/tokenUtils';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+/**
+ * POST headers with the visitor's IP as X-Forwarded-For (security review 17.11.2026). These calls run on the Next
+ * server, so without it the backend's per-IP limits on /auth/login (10/min), /auth/requestPasswordReset (3/min) and
+ * registration counted every visitor of www.boat4you.com as one client: about ten requests a minute from anyone
+ * blocked sign-in for all customers. The backend believes the header only from our own web servers (ClientIp).
+ */
+const postHeadersWithClientIp = async (): Promise<Record<string, string>> => {
+  const ip = await clientIp();
+
+  return { ...POST_REQUEST_PARAMETERS.headers, ...(ip ? { 'X-Forwarded-For': ip } : {}) };
+};
 
 export type LoginResponse = {
   token: string;
@@ -81,6 +94,7 @@ export async function login(state: any, formData: FormData): Promise<LoginResult
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/login`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ email, password }),
     });
 
@@ -160,6 +174,7 @@ export async function googleLogin(idToken: string): Promise<LoginResult> {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/oauth/google`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ idToken }),
     });
 
@@ -235,6 +250,7 @@ export async function facebookLogin(accessToken: string): Promise<LoginResult> {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/oauth/facebook`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ accessToken }),
     });
 
@@ -532,6 +548,7 @@ export async function updatePassword(payload: UpdatePasswordParams): Promise<Pay
   try {
     const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/updatePassword`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify(payload),
     });
 
@@ -553,6 +570,7 @@ export async function requestPasswordReset(state: any, formData: FormData) {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/requestPasswordReset`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ email }),
     });
 
@@ -599,6 +617,7 @@ export async function resetPassword(state: any, payload: ResetPasswordPayload) {
       `${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/resetPassword?passwordResetCode=${encodeURIComponent(passwordResetCode)}`,
       {
         ...POST_REQUEST_PARAMETERS,
+        headers: await postHeadersWithClientIp(),
         body: JSON.stringify({ password }),
       }
     );
@@ -657,6 +676,7 @@ export async function verifyEmail(state: any, formData: FormData): Promise<Login
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register/verifyEmail`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ email, verificationCode }),
     });
 
@@ -717,6 +737,7 @@ export async function resendVerificationCode(state: any, formData: FormData): Pr
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/auth/register/resendVerificationCode`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ email }),
     });
 
@@ -740,6 +761,7 @@ export async function requestEmailChange(newEmail: string): Promise<{ success: b
   try {
     const response = await authFetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/users/me/request-email-change`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ newEmail }),
     });
 
@@ -765,6 +787,7 @@ export async function confirmEmailChange(token: string): Promise<{ success: bool
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BOAT_WS_API_URL}/public/users/confirm-email-change`, {
       ...POST_REQUEST_PARAMETERS,
+      headers: await postHeadersWithClientIp(),
       body: JSON.stringify({ token }),
     });
 
