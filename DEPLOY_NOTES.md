@@ -10,6 +10,7 @@
 - Gumb nosi iznos („Pay EUR 1,109.00“).
 - Tri koraka, napomena da se kartica unosi samo kod Molliea, načini plaćanja i podaci o primatelju.
 - Desktop: uplatnica lijevo (sticky), forma desno. Mobitel: uplatnica, forma, koraci.
+- Lijeva i desna strana su na desktopu iste visine (Mario 17.11.; `09526b588`, deployment id 09526b588a05-mwkharw3: obje 921 px na 1280 px).
 - Stranice uspjeha, potvrđivanja, neuspjeha i nedostupnosti su u istom stilu.
 - Logika forme, validacija, Klarna i zahtjev nisu mijenjani.
 - 11 novih tekstova ×9 jezika (`pay.slip.*`, `pay.steps.*`, `pay.form.payAmount`). Sve veličine slova su na ljestvici sajta.
