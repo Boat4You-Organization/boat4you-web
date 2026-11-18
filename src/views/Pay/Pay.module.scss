@@ -274,7 +274,7 @@ $hairline: rgba($navy, 0.1);
   gap: 0 rem-calc(14);
 }
 
-// Ways to pay: the marks in a row, Pay by Bank as a word at the end. Not buttons, so no hover or pill.
+// Ways to pay: the marks in a row. Not buttons, so no hover or pill.
 .ways {
   display: flex;
   flex-wrap: wrap;
@@ -294,12 +294,6 @@ $hairline: rgba($navy, 0.1);
     width: rem-calc(40);
     height: rem-calc(30);
   }
-}
-
-.wayText {
-  margin-left: rem-calc(4);
-  color: $black-600;
-  font-size: rem-calc(14);
 }
 
 // Payment method (default Mollie page or Klarna) above the Pay button: two cards to pick from, the picked one lit.

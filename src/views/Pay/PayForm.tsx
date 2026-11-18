@@ -47,8 +47,8 @@ interface PayFormProps {
 
 type PayMethod = 'default' | 'klarna';
 
-// The marks under Pay: the same files as the footer (Mollie's own icons, official card marks), Pay by Bank as text.
-const PAY_MARKS = footerPaymentMethods.filter(mark => mark.name !== 'American Express');
+// The marks under Pay: the footer's files (Mollie's own icons, official card marks) plus Mollie's Pay by Bank icon.
+const PAY_BY_BANK_MARK = '/images/payments/pay-by-bank-payment-method.svg';
 
 const isCheckoutUrl = (url: string): boolean => {
   try {
@@ -402,13 +402,18 @@ const PayForm = ({
             </span>
           </p>
           <ul className={styles.ways} aria-label={t('method.title')}>
-            {PAY_MARKS.filter(mark => klarna || mark.name !== 'Klarna').map(mark => (
-              <li key={mark.name}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={mark.src} alt={mark.name} width={40} height={30} />
-              </li>
-            ))}
-            <li className={styles.wayText}>{t('slip.bank')}</li>
+            {footerPaymentMethods
+              .filter(mark => klarna || mark.name !== 'Klarna')
+              .map(mark => (
+                <li key={mark.name}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={mark.src} alt={mark.name} width={40} height={30} />
+                </li>
+              ))}
+            <li>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={PAY_BY_BANK_MARK} alt={t('slip.bank')} width={40} height={30} />
+            </li>
           </ul>
         </div>
       </div>
