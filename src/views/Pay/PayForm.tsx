@@ -10,6 +10,7 @@ import { CreateCustomPaymentResult, PayFormField, createCustomPayment } from '@/
 import Form from '@/components/Forms/Form';
 import FormInput from '@/components/Forms/FormInput';
 import KlarnaBillingForm from '@/components/Payment/KlarnaBillingForm';
+import { footerPaymentMethods } from '@/config/footerMenu';
 import { Link } from '@/i18n/navigation';
 import {
   EMPTY_KLARNA_BILLING,
@@ -45,6 +46,9 @@ interface PayFormProps {
 }
 
 type PayMethod = 'default' | 'klarna';
+
+// The marks under Pay: the same files as the footer (Mollie's own icons, official card marks), Pay by Bank as text.
+const PAY_MARKS = footerPaymentMethods.filter(mark => mark.name !== 'American Express');
 
 const isCheckoutUrl = (url: string): boolean => {
   try {
@@ -398,12 +402,13 @@ const PayForm = ({
             </span>
           </p>
           <ul className={styles.ways} aria-label={t('method.title')}>
-            <li>Visa</li>
-            <li>Mastercard</li>
-            <li>Apple Pay</li>
-            <li>Google Pay</li>
-            <li>{t('slip.bank')}</li>
-            {klarna && <li>Klarna</li>}
+            {PAY_MARKS.filter(mark => klarna || mark.name !== 'Klarna').map(mark => (
+              <li key={mark.name}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={mark.src} alt={mark.name} width={40} height={30} />
+              </li>
+            ))}
+            <li className={styles.wayText}>{t('slip.bank')}</li>
           </ul>
         </div>
       </div>
