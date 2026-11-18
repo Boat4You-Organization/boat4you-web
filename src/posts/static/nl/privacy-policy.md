@@ -205,9 +205,9 @@ Als je een aanvraag verstuurt, ga je ermee akkoord dat we daarover contact met j
 
 Gesprekken worden opgenomen en getranscribeerd zodat ons team je offerte kan voorbereiden en de kwaliteit van de service kan controleren. Als je Nika zegt dat je niet wilt dat het gesprek wordt opgenomen, wordt het gesprek beëindigd, wordt de opname verwijderd en belt een medewerker van ons team je in plaats daarvan. Als je vraagt om niet meer gebeld te worden, markeren we je nummer en belt Nika het niet meer.
 
-Voor deze gesprekken gebruiken we twee verwerkers: ElevenLabs (spraak-AI: spraakherkenning, de stem van de assistente en het gesprek) en Twilio (de telefoonverbinding). Zij ontvangen je telefoonnummer, je naam, de gegevens van je aanvraag en de inhoud van het gesprek. Beide zijn gevestigd in de Verenigde Staten; de overdracht is gebaseerd op de Standaard Contractuele Bepalingen van de Europese Commissie.
+Voor deze gesprekken gebruiken we twee verwerkers: ElevenLabs (spraak-AI: spraakherkenning, de stem van de assistente en het gesprek) en Twilio (de telefoonverbinding). Zij ontvangen je telefoonnummer, je naam, de gegevens van je aanvraag en de inhoud van het gesprek. Beide zijn gevestigd in de Verenigde Staten; de overdracht is gebaseerd op de Standaard Contractuele Bepalingen van de Europese Commissie. Voor de antwoorden van de assistente gebruikt ElevenLabs als subverwerker een taalmodel van Anthropic (Claude).
 
-We bewaren de opname 30 dagen, en de transcriptie en gespreksnotities even lang als de aanvraag zelf (24 maanden), op onze eigen servers in de EU. ElevenLabs verwijdert zijn kopie uiterlijk na 30 dagen.
+We verwijderen de opname, de transcriptie en de gespreksnotities 20 dagen na het gesprek; tot dan worden ze bewaard op onze eigen servers in de EU. ElevenLabs verwijdert zijn kopie uiterlijk na 20 dagen.
 
 De rechtsgrond is je toestemming (art. 6, lid 1, onder a, AVG). Je kunt die op elk moment intrekken: zeg het tegen Nika tijdens het gesprek of schrijf ons op het adres in de sectie Contact.
 

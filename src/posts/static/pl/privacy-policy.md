@@ -200,9 +200,9 @@ Wysyłając zapytanie, zgadzasz się, abyśmy kontaktowali się z Tobą w jego s
 
 Rozmowy są nagrywane i transkrybowane, aby nasz zespół mógł przygotować Twoją ofertę i sprawdzać jakość obsługi. Jeśli powiesz Nice, że nie chcesz, aby rozmowa była nagrywana, rozmowa się kończy, nagranie zostaje usunięte, a zamiast niej zadzwoni do Ciebie członek naszego zespołu. Jeśli poprosisz, abyśmy więcej nie dzwonili, oznaczamy Twój numer i Nika już na niego nie dzwoni.
 
-Przy tych rozmowach korzystamy z dwóch podmiotów przetwarzających: ElevenLabs (głosowa AI: rozpoznawanie mowy, głos asystentki i prowadzenie rozmowy) oraz Twilio (połączenie telefoniczne). Otrzymują one Twój numer telefonu, imię i nazwisko, szczegóły zapytania oraz treść rozmowy. Oba podmioty mają siedzibę w Stanach Zjednoczonych; przekazywanie danych odbywa się na podstawie Standardowych Klauzul Umownych Komisji Europejskiej.
+Przy tych rozmowach korzystamy z dwóch podmiotów przetwarzających: ElevenLabs (głosowa AI: rozpoznawanie mowy, głos asystentki i prowadzenie rozmowy) oraz Twilio (połączenie telefoniczne). Otrzymują one Twój numer telefonu, imię i nazwisko, szczegóły zapytania oraz treść rozmowy. Oba podmioty mają siedzibę w Stanach Zjednoczonych; przekazywanie danych odbywa się na podstawie Standardowych Klauzul Umownych Komisji Europejskiej. Do formułowania odpowiedzi asystentki ElevenLabs korzysta, jako z podmiotu podprzetwarzającego, z modelu językowego firmy Anthropic (Claude).
 
-Nagranie przechowujemy przez 30 dni, a transkrypcję i notatki z rozmowy tak długo jak samo zapytanie (24 miesiące), na własnych serwerach w UE. ElevenLabs usuwa swoją kopię najpóźniej po 30 dniach.
+Nagranie, transkrypcję i notatki z rozmowy usuwamy 20 dni po rozmowie; do tego czasu są przechowywane na własnych serwerach w UE. ElevenLabs usuwa swoją kopię najpóźniej po 20 dniach.
 
 Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO). Możesz ją w każdej chwili wycofać: powiedz o tym Nice w trakcie rozmowy lub napisz do nas na adres podany w sekcji Kontakt.
 

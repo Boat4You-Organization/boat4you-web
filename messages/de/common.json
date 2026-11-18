@@ -284,7 +284,7 @@
   "paidAtMarina": "In der Marina bezahlt",
   "sendInquiry": "Anfrage senden",
   "callConsent": {
-    "short": "Ich bin einverstanden, zu dieser Anfrage kontaktiert zu werden; meine Daten werden nur dafür verwendet.",
+    "short": "Ich bin einverstanden, zu dieser Anfrage per E-Mail, Nachricht oder Telefon kontaktiert zu werden, auch durch einen aufgezeichneten Anruf von Nika, unserer KI-Assistentin; meine Daten werden nur dafür verwendet.",
     "more": "Mehr Details",
     "less": "Weniger Details",
     "details": "Wir antworten per E-Mail, Nachricht oder Telefon. Der Anruf kann auch von Nika kommen, der KI-Assistentin von Boat4You; Anrufe werden aufgezeichnet und transkribiert. Wir verwenden Ihre Daten nur, um diese Anfrage zu beantworten, und nehmen Sie nie in Marketinglisten auf. <privacy>Datenschutzerklärung</privacy>",

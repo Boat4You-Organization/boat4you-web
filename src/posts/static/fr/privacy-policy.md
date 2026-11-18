@@ -229,9 +229,9 @@ Lorsque vous envoyez une demande, vous acceptez que nous vous contactions à son
 
 Les appels sont enregistrés et transcrits afin que notre équipe puisse préparer votre offre et contrôler la qualité du service. Si vous dites à Nika que vous ne souhaitez pas que l'appel soit enregistré, l'appel prend fin, l'enregistrement est supprimé et un membre de notre équipe vous appellera à la place. Si vous demandez que l'on ne vous appelle plus, nous marquons votre numéro et Nika ne l'appelle plus.
 
-Pour ces appels, nous recourons à deux sous-traitants : ElevenLabs (IA vocale : reconnaissance de la parole, voix de l'assistante et conversation) et Twilio (connexion téléphonique). Ils reçoivent votre numéro de téléphone, votre nom, les détails de votre demande et le contenu de l'appel. Tous deux sont situés aux États-Unis ; le transfert repose sur les Clauses Contractuelles Types de la Commission européenne.
+Pour ces appels, nous recourons à deux sous-traitants : ElevenLabs (IA vocale : reconnaissance de la parole, voix de l'assistante et conversation) et Twilio (connexion téléphonique). Ils reçoivent votre numéro de téléphone, votre nom, les détails de votre demande et le contenu de l'appel. Tous deux sont situés aux États-Unis ; le transfert repose sur les Clauses Contractuelles Types de la Commission européenne. Pour formuler les réponses de l'assistante, ElevenLabs fait appel, en tant que sous-traitant ultérieur, à un modèle de langage d'Anthropic (Claude).
 
-Nous conservons l'enregistrement 30 jours, et la transcription ainsi que les notes d'appel aussi longtemps que la demande elle-même (24 mois), sur nos propres serveurs dans l'UE. ElevenLabs supprime sa copie au plus tard après 30 jours.
+Nous supprimons l'enregistrement, la transcription et les notes d'appel 20 jours après l'appel ; d'ici là, ils sont conservés sur nos propres serveurs dans l'UE. ElevenLabs supprime sa copie au plus tard après 20 jours.
 
 La base légale est votre consentement (art. 6, par. 1, point a) du RGPD). Vous pouvez le retirer à tout moment : dites-le à Nika pendant l'appel ou écrivez-nous à l'adresse indiquée dans la section « Nous Contacter ».
 

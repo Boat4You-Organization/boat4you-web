@@ -189,9 +189,9 @@ When you send an inquiry, you agree that we contact you about it by e-mail, mess
 
 Calls are recorded and transcribed so that our team can prepare your offer and check the quality of the service. If you tell Nika that you do not want to be recorded, the call ends, the recording is deleted and a member of our team will call you instead. If you ask not to be called again, we mark your number and Nika does not call it again.
 
-For these calls we use two processors: ElevenLabs (voice AI: speech recognition, the assistant's voice and the conversation) and Twilio (the telephone connection). They receive your phone number, your name, the details of your inquiry and the content of the call. Both are in the United States; the transfer is based on the European Commission's Standard Contractual Clauses.
+For these calls we use two processors: ElevenLabs (voice AI: speech recognition, the assistant's voice and the conversation) and Twilio (the telephone connection). They receive your phone number, your name, the details of your inquiry and the content of the call. Both are in the United States; the transfer is based on the European Commission's Standard Contractual Clauses. To form the assistant's answers, ElevenLabs uses a language model from Anthropic (Claude) as its sub-processor.
 
-We keep the recording for 30 days, and the transcript and call notes for as long as the inquiry itself (24 months), on our own servers in the EU. ElevenLabs deletes its copy after 30 days at the latest.
+We delete the recording, the transcript and the call notes 20 days after the call; until then they are kept on our own servers in the EU. ElevenLabs deletes its copy after 20 days at the latest.
 
 The legal basis is your consent (Art. 6(1)(a) GDPR). You can withdraw it at any time: tell Nika during the call or write to us at the address in the Contact Us section.
 

@@ -69,9 +69,9 @@ Ao enviar uma consulta, aceita que entremos em contacto consigo sobre ela por e-
 
 As chamadas são gravadas e transcritas para que a nossa equipa possa preparar a sua oferta e verificar a qualidade do serviço. Se disser à Nika que não quer que a chamada seja gravada, a chamada termina, a gravação é eliminada e, em vez dela, telefona-lhe um membro da nossa equipa. Se pedir que não lhe voltemos a telefonar, assinalamos o seu número e a Nika não volta a ligar para ele.
 
-Para estas chamadas recorremos a dois subcontratantes: ElevenLabs (IA de voz: reconhecimento de fala, a voz da assistente e a conversa) e Twilio (a ligação telefónica). Recebem o seu número de telefone, o seu nome, os dados da sua consulta e o conteúdo da chamada. Ambos estão nos Estados Unidos; a transferência baseia-se nas Cláusulas Contratuais Padrão da Comissão Europeia.
+Para estas chamadas recorremos a dois subcontratantes: ElevenLabs (IA de voz: reconhecimento de fala, a voz da assistente e a conversa) e Twilio (a ligação telefónica). Recebem o seu número de telefone, o seu nome, os dados da sua consulta e o conteúdo da chamada. Ambos estão nos Estados Unidos; a transferência baseia-se nas Cláusulas Contratuais Padrão da Comissão Europeia. Para formular as respostas da assistente, a ElevenLabs recorre, como subcontratante ulterior, a um modelo de linguagem da Anthropic (Claude).
 
-Conservamos a gravação durante 30 dias, e a transcrição e as notas da chamada durante o mesmo tempo que a própria consulta (24 meses), nos nossos próprios servidores na UE. A ElevenLabs elimina a sua cópia no máximo após 30 dias.
+Eliminamos a gravação, a transcrição e as notas da chamada 20 dias após a chamada; até lá ficam guardadas nos nossos próprios servidores na UE. A ElevenLabs elimina a sua cópia no máximo após 20 dias.
 
 A base legal é o seu consentimento (art. 6.º, n.º 1, alínea a), do RGPD). Pode retirá-lo a qualquer momento: diga-o à Nika durante a chamada ou escreva-nos para o endereço indicado na secção Contacte-nos.
 

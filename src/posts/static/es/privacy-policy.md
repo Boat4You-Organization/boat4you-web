@@ -69,9 +69,9 @@ Al enviar una consulta, acepta que le contactemos sobre ella por correo electró
 
 Las llamadas se graban y se transcriben para que nuestro equipo pueda preparar su oferta y comprobar la calidad del servicio. Si le dice a Nika que no quiere que se grabe la llamada, la llamada termina, la grabación se elimina y en su lugar le llamará un miembro de nuestro equipo. Si pide que no le volvamos a llamar, marcamos su número y Nika no vuelve a llamarlo.
 
-Para estas llamadas utilizamos dos encargados del tratamiento: ElevenLabs (IA de voz: reconocimiento del habla, la voz de la asistente y la conversación) y Twilio (la conexión telefónica). Reciben su número de teléfono, su nombre, los datos de su consulta y el contenido de la llamada. Ambos están en Estados Unidos; la transferencia se basa en las Cláusulas Contractuales Tipo de la Comisión Europea.
+Para estas llamadas utilizamos dos encargados del tratamiento: ElevenLabs (IA de voz: reconocimiento del habla, la voz de la asistente y la conversación) y Twilio (la conexión telefónica). Reciben su número de teléfono, su nombre, los datos de su consulta y el contenido de la llamada. Ambos están en Estados Unidos; la transferencia se basa en las Cláusulas Contractuales Tipo de la Comisión Europea. Para formular las respuestas de la asistente, ElevenLabs utiliza como subencargado un modelo de lenguaje de Anthropic (Claude).
 
-Conservamos la grabación durante 30 días, y la transcripción y las notas de la llamada durante el mismo tiempo que la propia consulta (24 meses), en nuestros propios servidores de la UE. ElevenLabs elimina su copia como máximo a los 30 días.
+Eliminamos la grabación, la transcripción y las notas de la llamada 20 días después de la llamada; hasta entonces se conservan en nuestros propios servidores de la UE. ElevenLabs elimina su copia como máximo a los 20 días.
 
 La base jurídica es su consentimiento (art. 6.1.a RGPD). Puede retirarlo en cualquier momento: dígaselo a Nika durante la llamada o escríbanos a la dirección indicada en la sección Contáctenos.
 

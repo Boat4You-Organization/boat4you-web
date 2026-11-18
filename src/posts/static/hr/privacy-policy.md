@@ -69,9 +69,9 @@ Kad pošaljete upit, pristajete da vas u vezi tog upita kontaktiramo e-poštom, 
 
 Pozivi se snimaju i zapisuju kako bi naš tim pripremio ponudu i provjerio kvalitetu usluge. Ako Niki kažete da ne želite snimanje, poziv završava, snimka se briše, a nazvat će vas član našeg tima. Ako kažete da vas više ne zovemo, vaš broj označavamo i Nika ga više ne zove.
 
-Za ove pozive koristimo dva izvršitelja obrade: ElevenLabs (glasovna AI: prepoznavanje govora, glas asistentice i razgovor) i Twilio (telefonska veza). Oni primaju vaš broj telefona, ime, podatke iz upita i sadržaj poziva. Oba su u SAD-u; prijenos se temelji na standardnim ugovornim klauzulama Europske komisije.
+Za ove pozive koristimo dva izvršitelja obrade: ElevenLabs (glasovna AI: prepoznavanje govora, glas asistentice i razgovor) i Twilio (telefonska veza). Oni primaju vaš broj telefona, ime, podatke iz upita i sadržaj poziva. Oba su u SAD-u; prijenos se temelji na standardnim ugovornim klauzulama Europske komisije. Za odgovore asistentice ElevenLabs kao podizvršitelja koristi jezični model tvrtke Anthropic (Claude).
 
-Snimku čuvamo 30 dana, a zapis razgovora i bilješke o pozivu koliko i sam upit (24 mjeseca), na vlastitim poslužiteljima u EU. ElevenLabs svoju kopiju briše najkasnije nakon 30 dana.
+Snimku, zapis razgovora i bilješke o pozivu brišemo 20 dana nakon poziva; do tada se čuvaju na vlastitim poslužiteljima u EU. ElevenLabs svoju kopiju briše najkasnije nakon 20 dana.
 
 Pravna osnova je vaša privola (čl. 6. st. 1. t. (a) GDPR-a). Možete je povući u bilo kojem trenutku: recite to Niki tijekom poziva ili nam pišite na adresu iz odjeljka „Kontaktirajte nas“.
 

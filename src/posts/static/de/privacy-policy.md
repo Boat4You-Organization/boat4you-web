@@ -69,9 +69,9 @@ Wenn Sie eine Anfrage senden, sind Sie damit einverstanden, dass wir Sie dazu pe
 
 Anrufe werden aufgezeichnet und transkribiert, damit unser Team Ihr Angebot vorbereiten und die Qualität des Service prüfen kann. Wenn Sie Nika sagen, dass Sie nicht aufgezeichnet werden möchten, wird der Anruf beendet, die Aufzeichnung gelöscht und stattdessen ruft Sie jemand aus unserem Team an. Wenn Sie darum bitten, nicht mehr angerufen zu werden, markieren wir Ihre Nummer und Nika ruft sie nicht mehr an.
 
-Für diese Anrufe setzen wir zwei Auftragsverarbeiter ein: ElevenLabs (Sprach-KI: Spracherkennung, die Stimme der Assistentin und das Gespräch) und Twilio (die Telefonverbindung). Sie erhalten Ihre Telefonnummer, Ihren Namen, die Angaben aus Ihrer Anfrage und den Inhalt des Anrufs. Beide haben ihren Sitz in den Vereinigten Staaten; die Übermittlung beruht auf den Standardvertragsklauseln der Europäischen Kommission.
+Für diese Anrufe setzen wir zwei Auftragsverarbeiter ein: ElevenLabs (Sprach-KI: Spracherkennung, die Stimme der Assistentin und das Gespräch) und Twilio (die Telefonverbindung). Sie erhalten Ihre Telefonnummer, Ihren Namen, die Angaben aus Ihrer Anfrage und den Inhalt des Anrufs. Beide haben ihren Sitz in den Vereinigten Staaten; die Übermittlung beruht auf den Standardvertragsklauseln der Europäischen Kommission. Für die Antworten der Assistentin nutzt ElevenLabs als Unterauftragsverarbeiter ein Sprachmodell von Anthropic (Claude).
 
-Wir speichern die Aufzeichnung 30 Tage und das Transkript sowie die Gesprächsnotizen so lange wie die Anfrage selbst (24 Monate), auf unseren eigenen Servern in der EU. ElevenLabs löscht seine Kopie spätestens nach 30 Tagen.
+Wir löschen die Aufzeichnung, das Transkript und die Gesprächsnotizen 20 Tage nach dem Anruf; bis dahin liegen sie auf unseren eigenen Servern in der EU. ElevenLabs löscht seine Kopie spätestens nach 20 Tagen.
 
 Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können sie jederzeit widerrufen: Sagen Sie es Nika während des Anrufs oder schreiben Sie uns an die Adresse im Abschnitt „Kontakt“.
 

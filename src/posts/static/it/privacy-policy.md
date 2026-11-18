@@ -206,9 +206,9 @@ Quando invii una richiesta, accetti che ti contattiamo al riguardo via e-mail, m
 
 Le chiamate vengono registrate e trascritte affinché il nostro team possa preparare la tua offerta e verificare la qualità del servizio. Se dici a Nika che non desideri che la chiamata venga registrata, la chiamata termina, la registrazione viene cancellata e ti chiamerà invece un membro del nostro team. Se chiedi di non ricevere altre chiamate, contrassegniamo il tuo numero e Nika non lo chiama più.
 
-Per queste chiamate ci avvaliamo di due responsabili del trattamento: ElevenLabs (IA vocale: riconoscimento del parlato, la voce dell'assistente e la conversazione) e Twilio (il collegamento telefonico). Ricevono il tuo numero di telefono, il tuo nome, i dettagli della tua richiesta e il contenuto della chiamata. Entrambi hanno sede negli Stati Uniti; il trasferimento si basa sulle Clausole Contrattuali Standard della Commissione Europea.
+Per queste chiamate ci avvaliamo di due responsabili del trattamento: ElevenLabs (IA vocale: riconoscimento del parlato, la voce dell'assistente e la conversazione) e Twilio (il collegamento telefonico). Ricevono il tuo numero di telefono, il tuo nome, i dettagli della tua richiesta e il contenuto della chiamata. Entrambi hanno sede negli Stati Uniti; il trasferimento si basa sulle Clausole Contrattuali Standard della Commissione Europea. Per formulare le risposte dell'assistente, ElevenLabs si avvale, come sub-responsabile, di un modello linguistico di Anthropic (Claude).
 
-Conserviamo la registrazione per 30 giorni, e la trascrizione e le note della chiamata per lo stesso periodo della richiesta (24 mesi), sui nostri server nell'UE. ElevenLabs cancella la propria copia al più tardi dopo 30 giorni.
+Cancelliamo la registrazione, la trascrizione e le note della chiamata 20 giorni dopo la chiamata; fino ad allora sono conservate sui nostri server nell'UE. ElevenLabs cancella la propria copia al più tardi dopo 20 giorni.
 
 La base giuridica è il tuo consenso (art. 6, par. 1, lett. a) GDPR). Puoi revocarlo in qualsiasi momento: dillo a Nika durante la chiamata oppure scrivici all'indirizzo indicato nella sezione Contattaci.
 
