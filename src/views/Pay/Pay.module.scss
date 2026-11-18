@@ -107,13 +107,13 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   margin: 0;
   color: rgba($white, 0.78);
   font-size: rem-calc(16);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .title {
   margin: rem-calc(8) 0 0;
   font-size: rem-calc(28);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.01em;
 }
@@ -169,7 +169,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   margin: rem-calc(2) 0 0;
   color: rgba($white, 0.55);
   font-size: rem-calc(16);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -200,7 +200,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     max-width: 62%;
     margin: 0;
     font-size: rem-calc(16);
-    font-weight: 600;
+    font-weight: 500;
     font-variant-numeric: lining-nums;
     text-align: right;
     overflow-wrap: break-word;
@@ -244,7 +244,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     background-color: rgba($white, 0.16);
     color: $white;
     font-size: rem-calc(16);
-    font-weight: 600;
+    font-weight: 500;
     font-variant-numeric: lining-nums;
   }
 }
@@ -270,7 +270,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   margin: 0 0 rem-calc(18);
   color: $black-900;
   font-size: rem-calc(18);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -352,7 +352,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     background-color: $blue-50;
     color: $navy;
     font-size: rem-calc(16);
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -399,7 +399,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     padding-top: rem-calc(9);
     color: $navy;
     font-size: rem-calc(16);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5;
   }
 }
@@ -409,7 +409,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   padding: 0;
   color: $navy;
   font-size: rem-calc(18);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .methodLabel {
@@ -496,7 +496,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 
   dd {
     margin: 0;
-    font-weight: 600;
+    font-weight: 500;
     font-variant-numeric: lining-nums tabular-nums;
     overflow-wrap: anywhere;
   }
