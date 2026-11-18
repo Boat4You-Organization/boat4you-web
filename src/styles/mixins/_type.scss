@@ -1,7 +1,7 @@
 // The site's type scale (Mario 6.11.2026: "ne treba nam 10 veličina fontova po pageu", first on the home page,
 // then the whole site; the boat page has had the same scale since 3.11.2026, src/views/Boat/boatType.ts).
 // Sizes: desktop 62 / 36 / 28 / 22 / 18 / 16 / 14 / 12, phone 36 / 28 / 22 / 18 / 16 / 14 / 12 (62 is only the hero;
-// 20 only the boat page's price). Weights: 500 text, 700 titles / buttons / labels, 800 italic for the blue half of
+// 20 only the boat page's price). Weights: 500 text, 600 titles / buttons / labels, 600 italic for the blue half of
 // a heading and photo captions. A component takes one of these mixins (or a size from this list), never its own
 // font-size. MUI components: src/styles/type.ts. Checked by `yarn check:type-scale`.
 @use '@/styles/utils/rem-calc' as *;

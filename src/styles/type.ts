@@ -1,6 +1,6 @@
 /**
  * The site's type scale for MUI components (SCSS modules use `src/styles/mixins/_type.scss`, which explains the
- * scale). Same values: a section heading is 36 px on desktop and 28 px on a phone, weight 500, with an 800 italic
+ * scale). Same values: a section heading is 36 px on desktop and 28 px on a phone, weight 500, with a 600 italic
  * blue half.
  */
 const siteType = {

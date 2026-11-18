@@ -41,7 +41,7 @@ const BlogCard = ({ variant = 'blog', slug, title, date, featuredImage }: BlogCa
             variant="h4"
             sx={{
               typography: { xs: 'h4', md: 'h3' },
-              fontWeight: { xs: 700, md: 700 },
+              fontWeight: 600,
             }}
             className={styles.title}
           >

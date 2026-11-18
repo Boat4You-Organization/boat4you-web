@@ -18,6 +18,9 @@
 // same directive even though only ~5–7 are pulled today — a single rule across
 // the file is easier to reason about than per-weight conditionals (the browser
 // only downloads weights actually rendered).
+// ---
+// One file per weight: 600 SemiBold, 700 Bold, 800 ExtraBold, 900 Black. From 17.11. to 18.11.2026 the last four
+// faces all said 600, so the last one (Black) won and every 600 / 700 / 800 on the site was drawn in Black.
 
 @font-face {
   font-family: Raleway;
@@ -142,7 +145,7 @@
 @font-face {
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
   src:
     url('/fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
@@ -152,7 +155,7 @@
 @font-face {
   font-family: Raleway;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
   src:
     url('/fonts/Raleway/Raleway-BoldItalic.woff2') format('woff2'),
@@ -162,7 +165,7 @@
 @font-face {
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   font-display: swap;
   src:
     url('/fonts/Raleway/Raleway-ExtraBold.woff2') format('woff2'),
@@ -172,7 +175,7 @@
 @font-face {
   font-family: Raleway;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 800;
   font-display: swap;
   src:
     url('/fonts/Raleway/Raleway-ExtraBoldItalic.woff2') format('woff2'),
@@ -182,7 +185,7 @@
 @font-face {
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 900;
   font-display: swap;
   src:
     url('/fonts/Raleway/Raleway-Black.woff2') format('woff2'),
@@ -192,7 +195,7 @@
 @font-face {
   font-family: Raleway;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 900;
   font-display: swap;
   src:
     url('/fonts/Raleway/Raleway-BlackItalic.woff2') format('woff2'),

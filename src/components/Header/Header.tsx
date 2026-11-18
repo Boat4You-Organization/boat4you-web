@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense } from 'react';
+import { MouseEvent, Suspense } from 'react';
 
 import { AppBar, Button, Container, Divider, Drawer, IconButton, Stack } from '@mui/material';
 import { useTranslations } from 'next-intl';
@@ -10,7 +10,7 @@ import Favorites from '@/components/Header/Favorites';
 import NavigationMobile from '@/components/NavigationMobile';
 import ProfileDropdown from '@/components/ProfileDropdown';
 import Logo from '@/components/SvgIcons/Logo';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import colors from '@/styles/themes/colors';
 import { useAuthModal } from '@/utils/context/AuthModalContext';
 import useToggleState from '@/utils/hooks/useToggleState';
@@ -19,6 +19,15 @@ import { useUserStore } from '@/valtio/user/user.store';
 import styles from './Header.module.scss';
 import LanguageCurrency from './LanguageCurrency';
 import Navigation from './Navigation';
+
+// A quiet text button: the header keeps its colour for the page below (the search button, the offers).
+const signInSx = {
+  backgroundColor: 'transparent',
+  color: colors.black950,
+  fontWeight: 500,
+  '&:hover': { backgroundColor: colors.black100 },
+  '&:active': { backgroundColor: colors.black200 },
+};
 
 const Header = () => {
   const [navigationOpen, toggleNavigation] = useToggleState();
@@ -29,12 +38,24 @@ const Header = () => {
   const { user } = useUserStore();
   const { language, currency, id } = user || {};
   const t = useTranslations('common');
+  const pathname = usePathname();
+
+  // On the home page the logo links to the page it is on, so Next does nothing: take the visitor back to the top.
+  const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== '/' || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    event.preventDefault();
+
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  };
 
   return (
     <>
       <AppBar elevation={0} classes={{ root: styles.root }} className={styles.container}>
         <Container disableGutters maxWidth="xl" className={styles.header}>
-          <Link href="/" aria-label={t('home')}>
+          <Link href="/" aria-label={t('home')} onClick={handleLogoClick}>
             <Logo />
           </Link>
           <Stack direction="row" alignItems="center" gap={2} className={styles.desktopContent}>
@@ -52,7 +73,7 @@ const Header = () => {
             {user ? (
               <ProfileDropdown user={user} />
             ) : (
-              <Button color="secondary" onClick={toggleLoginModal}>
+              <Button color="secondary" sx={signInSx} onClick={toggleLoginModal}>
                 {t('signIn')}
               </Button>
             )}
@@ -61,7 +82,7 @@ const Header = () => {
             {user ? (
               <ProfileDropdown user={user} />
             ) : (
-              <Button color="secondary" size="large" onClick={toggleLoginModal}>
+              <Button color="secondary" size="large" sx={signInSx} onClick={toggleLoginModal}>
                 {t('signIn')}
               </Button>
             )}

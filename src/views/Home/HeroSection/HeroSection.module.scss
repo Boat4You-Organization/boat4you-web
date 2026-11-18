@@ -77,7 +77,7 @@ $hero-bg-mobile: url("data:image/svg+xml,%3Csvg width='393' height='424' viewBox
   justify-content: center;
   gap: rem-calc(12);
   font-size: rem-calc(12);
-  font-weight: 600;
+  font-weight: 500;
   opacity: 0.95;
 
   @include media('md') {

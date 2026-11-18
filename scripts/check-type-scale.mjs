@@ -12,7 +12,7 @@ const SCALE = new Set([12, 14, 16, 18, 22, 28, 36, 62]);
 const ICON = /icon|chevron|flag/i;
 const allows20 = (rel, line, selector) => rel.startsWith('src/views/Boat/') || ICON.test(line) || ICON.test(selector);
 const SKIP =
-  /PDF|\/SvgIcons\/|\/views\/Booking\/|\/views\/MyBookings\/|\/views\/Trip\/|\/app\/trip\/|\/views\/Review\/|\/views\/Profile\/|\/components\/Auth\/|\/views\/Payment|\/views\/Home\/HeroSection\//;
+  /PDF|\/SvgIcons\/|\/views\/Booking\/|\/views\/MyBookings\/|\/views\/Trip\/|\/app\/trip\/|\/views\/Review\/|\/views\/Profile\/|\/components\/Auth\/|\/views\/Pay\/|\/views\/Home\/HeroSection\//;
 const PATTERNS = [
   /font-size:\s*rem-calc\((\d+(?:\.\d+)?)\)/g,
   /font-size:\s*(\d+(?:\.\d+)?)px/g,
