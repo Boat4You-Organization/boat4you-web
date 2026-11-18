@@ -537,14 +537,7 @@ $hairline: rgba($navy, 0.1);
   }
 }
 
-// Once the payment method choice is on the page, the word marks under the button only repeat it.
-@media (width >= 960px) {
-  .form:has(.methods) .ways {
-    display: none;
-  }
-}
-
-// A low laptop screen: the word marks and the three steps (which the form itself shows) give way.
+// A low laptop screen: the payment marks and the three steps (which the form itself shows) give way.
 @media (width >= 960px) and (height < 740px) {
   .ways,
   .steps {
