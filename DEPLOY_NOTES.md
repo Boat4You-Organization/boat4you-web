@@ -1,5 +1,14 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-18 — Prozor pristanka: čist, jedan font, manji + slika „Welcome to BOAT4YOU“ za dijeljenje i Google sličicu — ✅ LIVE 18.11.2026 ~09:14 UTC (`c81663a87`, deployment id c81663a87134-mwlwcfgy, tag `live/2026-11-18-consent-plain`)
+
+**Zašto:** Mario 17.11. (slika s mobitela): prozor pristanka „izgleda kao za djecu – čisto, sve u jednom fontu, jednostavno, smanji sve“ → „puno bolje, tako mora biti na svim stranicama“; slika: „pusti slobodno na live, samo da se ne vidi na stranici, nego pri dijeljenju i kao Google sličica“. 18.11. „Da, prvo to“ (prije Cloudflarea).
+
+- `src/components/CookieConsent/CookieConset.module.scss`: naslov 18/500 uspravno crno (bio 28 plavi kurziv 600, a 600 se zbog mapiranja u `_fonts.scss` crta kao Raleway Black); tekst i svrhe 14/400; mali naslov i gumbi 14/500; bez plavih naglasaka; padding 24 (mobitel 16), širina 520. Tekst nije mijenjan.
+- `public/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg` (og:image, twitter:image) i `-1200x1200.jpg` (uz vodoravnu u WebSite schemi); generirane slike, **ne crtaju se na stranici**. Brod bez vlastite fotografije u Product schemi (stranica broda i pretraga) i dalje koristi `/meta/og-image.png`, ne banner.
+- **Provjereno uživo:** dpl=c81663a87134-mwlwcfgy na naslovnici, og:image i schema slika = nove datoteke (obje 200 image/jpeg), 0 `<img>` s bannerom, pravilo naslova prozora u živom CSS-u (18 px, 500, uspravno); /contact-us, /search, /about-us 200. Skripta je sama prenijela 2 nove datoteke u `public/`.
+- **SEO Stage B:** 1 novi FAIL C2 — zbroj kartica tipova na naslovnici 10767 > ukupno u heroju 10763 (4 broda razlike). Ponovljeno quick: isto. Izmjena ne dira brojeve (samo CSS, `layout.tsx`/`buildMetadata.ts` slika); razlika je u podacima (dva brojanja iz API-ja), ne od ovog deploya — za praćenje.
+
 ## 2026-11-17 — Unslop: mirnija tipografija i bez emoji ikona (isti paket kao 6 sestara) — ✅ LIVE 17.11.2026 ~12:38 UTC (`65c0a39c9`, deployment id 65c0a39c9fe4-mwkocf80, BUILD_ID build-TfctsWXpff2fKS, tag `live/2026-11-17-unslop`)
 
 **Zašto:** Mario 17.11. „imaš skill unslop, prođi s njime sve web stranice“, zatim „nastavi, sve moraš odradit“. Sestre su live istog dana (CC, GR, IT, CB, EY, CY).
