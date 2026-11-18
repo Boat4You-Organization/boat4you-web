@@ -1,47 +1,9 @@
 @use '@/styles/settings/variables' as *;
 @use '@/styles/utils/rem-calc' as *;
 
-// The contract payment page (17.11.2026, Mario: "super moderan, atraktivan", Apple's Liquid Glass "mi se puno svidja",
-// page "bijela okolo", "lijeva neka ostane plava ali liquid glass"). A white page with two panes: a pane of blue liquid
-// glass with the live payment slip (pools of light and deep blue under a translucent, blurring sheet with a lit rim)
-// and a white one with the form. Controls are capsules.
+// The contract payment page. 17.11.2026 it was a blue Liquid Glass pane; 18.11.2026 simplified (see the form page
+// section below).
 $navy: $blue-950;
-
-// Blue liquid glass: a rendered texture of flowing blue glass (public/images/pay, made for this page 17.11.2026)
-// under a deep blue tint, so white text keeps its contrast, with a lit rim and a sheen from the top-left.
-$liquid: url('/images/pay/blue-liquid-glass-texture.webp');
-
-@mixin glass-dark {
-  border: 1px solid rgba($white, 0.5);
-  background-color: $blue-800;
-  background-image:
-    linear-gradient(150deg, rgba($white, 0.26) 0%, rgba($white, 0.04) 30%, rgba($white, 0) 58%),
-    linear-gradient(165deg, rgba($blue-800, 0.46) 0%, rgba($navy, 0.66) 100%), $liquid;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:
-    100% 100%,
-    100% 100%,
-    cover;
-  box-shadow:
-    inset 0 1px 1px rgba($white, 0.85),
-    inset 1px 0 1px rgba($white, 0.3),
-    inset 0 -1px 1px rgba($white, 0.3),
-    inset 0 rem-calc(18) rem-calc(30) rgba($white, 0.1),
-    0 rem-calc(22) rem-calc(48) rgba($blue-800, 0.34);
-}
-
-// Clear glass: the page shows through softly; dark text stays readable because the page itself is light.
-@mixin glass-light {
-  border: 1px solid rgba($white, 0.9);
-  background-color: rgba($white, 0.5);
-  background-image: linear-gradient(150deg, rgba($white, 0.75) 0%, rgba($white, 0.1) 46%, rgba($white, 0.3) 100%);
-  box-shadow:
-    inset 0 1px 1px $white,
-    inset 0 0 rem-calc(24) rgba($white, 0.5),
-    0 rem-calc(24) rem-calc(56) rgba($blue-700, 0.16);
-  backdrop-filter: blur(28px) saturate(190%);
-}
 
 // A solid glossy navy block for where there is nothing behind to blur (the facts on the white message card).
 @mixin gloss {
@@ -55,104 +17,82 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 // The simple header is fixed (~73px): the page clears it with top padding.
 .page {
   min-height: 100dvh;
-  padding: rem-calc(88) rem-calc(16) rem-calc(56);
+  padding: rem-calc(96) rem-calc(20) rem-calc(56);
   background-color: $white;
 
   // Raleway's default figures are old-style ("Boat4You", amounts, the OIB): lining ones on this page.
   font-variant-numeric: lining-nums;
 }
 
-// ------------------------------------------------------------------ form page: slip + card
+// ------------------------------------------------------------------ form page: what you pay + the form
+// Simple layout (18.11.2026). Mario: "previse dizajnirano", Stripe's payment page as the bar; Apple HIG review: one
+// job per screen, the most important information first (writing.md), no glass or texture under content
+// (liquid-glass.md). White page, dark text, one accent (the Pay button and the links), bold only on the amount and
+// Pay. Who we are, the steps and the receiver are small grey text at the end. Same words, only the look changed.
+$hairline: rgba($navy, 0.1);
 
 .checkout {
   display: flex;
   flex-direction: column;
-  gap: rem-calc(16);
+  gap: rem-calc(28);
   max-width: rem-calc(1040);
   margin: 0 auto;
 }
 
-// Phone: the panel's two halves are laid out as separate panes around the card.
+// Phone: what you pay, then the form, then the small print.
 .panel {
   display: contents;
 }
 
 .head {
   order: 1;
-  padding: rem-calc(28) rem-calc(22) rem-calc(24);
-  border-radius: rem-calc(28);
-  color: $white;
-
-  @include glass-dark;
+  color: $navy;
 }
 
 .card {
   order: 2;
-  padding: rem-calc(24) rem-calc(20) rem-calc(22);
-  border-radius: rem-calc(28);
-
-  @include glass-light;
+  padding-top: rem-calc(24);
+  border-top: 1px solid $hairline;
 }
 
 .foot {
   order: 3;
-  padding: rem-calc(24) rem-calc(22);
-  border-radius: rem-calc(28);
-  color: rgba($white, 0.92);
-
-  @include glass-dark;
+  padding-top: rem-calc(20);
+  border-top: 1px solid $hairline;
 }
 
 .brand {
   margin: 0;
-  color: rgba($white, 0.78);
+  color: $black-600;
   font-size: rem-calc(16);
   font-weight: 400;
 }
 
 .title {
-  margin: rem-calc(8) 0 0;
+  margin: rem-calc(4) 0 0;
+  color: $navy;
   font-size: rem-calc(28);
   font-weight: 500;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
-.about {
-  max-width: 34em;
-  margin: rem-calc(12) 0 0;
-  color: rgba($white, 0.82);
-  font-size: rem-calc(16);
-  line-height: 1.6;
-}
-
-// The live slip.
 .slip {
-  margin: rem-calc(22) 0 0;
-  padding: rem-calc(18) rem-calc(18) rem-calc(16);
-  border: 1px solid rgba($white, 0.32);
-  border-radius: rem-calc(22);
-
-  // A lighter pane lying on the dark one: brighter rim on top, a soft shadow under it.
-  background-image: linear-gradient(160deg, rgba($white, 0.24) 0%, rgba($white, 0.07) 100%);
-  box-shadow:
-    inset 0 1px 0 rgba($white, 0.55),
-    0 rem-calc(12) rem-calc(28) rgba($navy, 0.3);
-  backdrop-filter: blur(14px) saturate(170%);
+  margin: rem-calc(24) 0 0;
 }
 
 .slipLabel {
   margin: 0;
-  color: rgba($white, 0.78);
+  color: $black-600;
   font-size: rem-calc(16);
 }
 
 .slipAmount {
   min-height: 1.15em;
   margin: rem-calc(2) 0 0;
+  color: $navy;
 
-  // The largest type on the page (site scale: 36), above the 28px title.
-  font-size: rem-calc(36);
+  // The largest type on the page.
+  font-size: rem-calc(40);
   font-weight: 600;
   line-height: 1.15;
 
@@ -162,12 +102,12 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 }
 
 .slipWaiting {
-  // As tall as one line of the amount, so the slip does not jump when the amount appears.
+  // As tall as one line of the amount, so nothing jumps when the amount appears.
   display: flex;
   align-items: center;
-  min-height: rem-calc(41);
+  min-height: rem-calc(46);
   margin: rem-calc(2) 0 0;
-  color: rgba($white, 0.55);
+  color: $black-600;
   font-size: rem-calc(16);
   font-weight: 400;
   line-height: 1.4;
@@ -177,9 +117,9 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   display: flex;
   flex-direction: column;
   gap: rem-calc(8);
-  margin: rem-calc(14) 0 0;
-  padding-top: rem-calc(14);
-  border-top: 1px solid rgba($white, 0.24);
+  margin: rem-calc(16) 0 0;
+  padding-top: rem-calc(16);
+  border-top: 1px solid $hairline;
 
   div {
     display: flex;
@@ -190,7 +130,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   dt {
     flex: 1 1 0;
     min-width: 0;
-    color: rgba($white, 0.72);
+    color: $black-600;
     font-size: rem-calc(16);
   }
 
@@ -199,6 +139,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     flex: 0 1 auto;
     max-width: 62%;
     margin: 0;
+    color: $navy;
     font-size: rem-calc(16);
     font-weight: 500;
     font-variant-numeric: lining-nums;
@@ -209,16 +150,25 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 
 .safe {
   margin: rem-calc(16) 0 0;
-  color: rgba($white, 0.82);
+  color: $black-600;
   font-size: rem-calc(16);
+  line-height: 1.5;
+}
+
+// The small print: who we are, how it works, who receives the money.
+.about {
+  max-width: 40em;
+  margin: 0 0 rem-calc(12);
+  color: $black-600;
+  font-size: rem-calc(14);
   line-height: 1.55;
 }
 
-// How it works: a real sequence, so it is numbered.
+// How it works: a real sequence, so it is numbered, quietly.
 .steps {
   display: flex;
   flex-direction: column;
-  gap: rem-calc(12);
+  gap: rem-calc(4);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -226,25 +176,16 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 
   li {
     display: flex;
-    gap: rem-calc(12);
-    align-items: flex-start;
-    font-size: rem-calc(16);
-    line-height: 1.5;
+    gap: rem-calc(8);
+    color: $black-600;
+    font-size: rem-calc(14);
+    line-height: 1.55;
     counter-increment: step;
   }
 
   li::before {
-    content: counter(step);
-    display: grid;
-    flex: 0 0 rem-calc(28);
-    place-items: center;
-    height: rem-calc(28);
-    border-radius: 50%;
-    border: 1px solid rgba($white, 0.3);
-    background-color: rgba($white, 0.16);
-    color: $white;
-    font-size: rem-calc(16);
-    font-weight: 500;
+    content: counter(step) '.';
+    flex: 0 0 auto;
     font-variant-numeric: lining-nums;
   }
 }
@@ -252,15 +193,13 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 .legal {
   display: flex;
   flex-direction: column;
-  gap: rem-calc(4);
-  margin-top: rem-calc(20);
-  padding-top: rem-calc(16);
-  border-top: 1px solid rgba($white, 0.22);
+  gap: rem-calc(2);
+  margin-top: rem-calc(12);
 
   p {
     margin: 0;
-    color: rgba($white, 0.76);
-    font-size: rem-calc(16);
+    color: $black-600;
+    font-size: rem-calc(14);
     line-height: 1.55;
     font-variant-numeric: lining-nums;
   }
@@ -269,7 +208,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 .lead {
   margin: 0 0 rem-calc(18);
   color: $black-900;
-  font-size: rem-calc(18);
+  font-size: rem-calc(16);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -277,7 +216,7 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 .form {
   display: flex;
   flex-direction: column;
-  gap: rem-calc(18);
+  gap: rem-calc(16);
 
   // Inputs stay at 16px on every device (no zoom on focus on phones).
   input {
@@ -286,8 +225,8 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   }
 
   :global(.MuiOutlinedInput-root) {
-    border-radius: rem-calc(16);
-    background-color: rgba($white, 0.78);
+    border-radius: rem-calc(12);
+    background-color: $white;
   }
 
   // Field hints/errors (MUI caption, 12px) and the error alert (body2, 14px) at the page's 16px minimum.
@@ -297,24 +236,24 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   }
 }
 
-// The pay button: a capsule of blue glass.
+// The Pay button: the one accent on the page, solid.
 .pay:global(.MuiButton-root) {
-  min-height: rem-calc(58);
-  border-radius: rem-calc(999);
+  min-height: rem-calc(52);
+  border-radius: rem-calc(12);
   font-size: rem-calc(18);
   font-weight: 600;
   font-variant-numeric: lining-nums tabular-nums;
   text-transform: none;
+  box-shadow: none;
 }
 
 .pay:global(.MuiButton-root):not(:global(.Mui-disabled)) {
-  background-image:
-    linear-gradient(180deg, rgba($white, 0.3) 0%, rgba($white, 0.08) 49%, rgba($white, 0) 50%),
-    linear-gradient(180deg, $blue-500 0%, $blue-700 100%);
-  box-shadow:
-    inset 0 1px 0 rgba($white, 0.6),
-    inset 0 -1px 0 rgba($navy, 0.3),
-    0 rem-calc(12) rem-calc(26) rgba($blue-600, 0.42);
+  background-color: $blue-700;
+
+  &:hover {
+    background-color: $blue-800;
+    box-shadow: none;
+  }
 }
 
 .terms {
@@ -335,24 +274,25 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   gap: 0 rem-calc(14);
 }
 
-// Ways to pay: plain word marks, no logos to load.
+// Ways to pay: one quiet line of words. Not pills, they cannot be pressed.
 .ways {
   display: flex;
   flex-wrap: wrap;
-  gap: rem-calc(8);
+  gap: rem-calc(4) 0;
   margin: 0;
   padding: rem-calc(16) 0 0;
   border-top: 1px solid rgba($navy, 0.1);
   list-style: none;
 
   li {
-    padding: rem-calc(5) rem-calc(14);
-    border: 1px solid $blue-100;
-    border-radius: rem-calc(999);
-    background-color: $blue-50;
-    color: $navy;
+    color: $black-600;
     font-size: rem-calc(16);
-    font-weight: 500;
+    font-weight: 400;
+  }
+
+  li:not(:last-child)::after {
+    content: '\00B7';
+    padding: 0 rem-calc(8);
   }
 }
 
@@ -450,8 +390,8 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   margin: rem-calc(8) auto 0;
   padding: rem-calc(30) rem-calc(22) rem-calc(28);
   border-radius: rem-calc(28);
-
-  @include glass-light;
+  border: 1px solid rgba($navy, 0.1);
+  background-color: $white;
 
   .title {
     margin: 0;
@@ -532,14 +472,6 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     padding: rem-calc(112) rem-calc(24) rem-calc(72);
   }
 
-  .head {
-    padding: rem-calc(36) rem-calc(34) rem-calc(30);
-  }
-
-  .card {
-    padding: rem-calc(32) rem-calc(32) rem-calc(28);
-  }
-
   .message {
     padding: rem-calc(40) rem-calc(40) rem-calc(36);
 
@@ -549,125 +481,36 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
   }
 }
 
-// Desktop: one dark pane on the left (title, slip, how it works), the light form pane on the right.
-@media (width >= 960px) {
-  .checkout {
-    position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-    gap: rem-calc(24);
-
-    // Both sides the same height (Mario 17.11.2026): the shorter one stretches to the taller.
-    align-items: stretch;
-  }
-
-  .panel,
-  .card {
-    position: relative;
-  }
-
-  .panel {
-    display: flex;
-    flex-direction: column;
-
-    // The steps and the receiver sit at the bottom edge when the form side is the taller one.
-    justify-content: space-between;
-    gap: rem-calc(26);
-    padding: rem-calc(40) rem-calc(38) rem-calc(34);
-    border-radius: rem-calc(34);
-    color: $white;
-
-    @include glass-dark;
-  }
-
-  // Inside the one pane the two halves are plain blocks.
-  .head,
-  .foot {
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    padding: rem-calc(40) rem-calc(40) rem-calc(34);
-    border-radius: rem-calc(34);
-  }
-
-  // When the slip side is the taller one, the form fills the card and the ways to pay sit at its bottom edge.
-  .form {
-    flex: 1 1 auto;
-  }
-
-  .ways {
-    margin-top: auto;
-  }
-}
-
-// A computer screen shows the whole page at once, nothing to scroll (Mario 17.11.2026): tighter panes, the two
-// contract fields (booking number, amount) side by side, the two payment methods side by side.
+// Desktop: what you pay on the left, the form on the right, a hairline between them.
 @media (width >= 960px) {
   .page {
-    padding: rem-calc(89) rem-calc(24) rem-calc(16);
+    padding: rem-calc(128) rem-calc(32) rem-calc(48);
   }
 
   .checkout {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: rem-calc(20);
-    max-width: rem-calc(1280);
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 0;
   }
 
   .panel {
-    gap: rem-calc(16);
-    padding: rem-calc(26) rem-calc(32) rem-calc(22);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem-calc(32);
+    padding-right: rem-calc(56);
   }
 
   .card {
-    padding: rem-calc(26) rem-calc(34) rem-calc(22);
-  }
-
-  .about {
-    margin-top: rem-calc(8);
-    line-height: 1.5;
-  }
-
-  .slip {
-    margin-top: rem-calc(16);
-    padding: rem-calc(14) rem-calc(18) rem-calc(12);
-  }
-
-  .slipRows {
-    gap: rem-calc(4);
-    margin-top: rem-calc(10);
-    padding-top: rem-calc(10);
-  }
-
-  .safe {
-    margin-top: rem-calc(12);
-  }
-
-  .steps {
-    gap: rem-calc(8);
-  }
-
-  .legal {
-    margin-top: rem-calc(14);
-    padding-top: rem-calc(12);
-  }
-
-  .lead {
-    margin-bottom: rem-calc(14);
-    font-size: rem-calc(16);
+    padding: 0 0 0 rem-calc(56);
+    border-top: 0;
+    border-left: 1px solid $hairline;
   }
 
   .form {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: rem-calc(12) rem-calc(16);
+    gap: rem-calc(14) rem-calc(16);
     align-content: start;
 
     > * {
@@ -683,14 +526,6 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
 
   .methodsLegend {
     margin-bottom: rem-calc(6);
-  }
-
-  .pay:global(.MuiButton-root) {
-    min-height: rem-calc(52);
-  }
-
-  .ways {
-    padding-top: rem-calc(12);
   }
 }
 
@@ -716,21 +551,9 @@ $liquid: url('/images/pay/blue-liquid-glass-texture.webp');
     display: none;
   }
 
-  .legal {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
-  }
-
   .page {
     padding-top: rem-calc(83);
     padding-bottom: rem-calc(10);
-  }
-
-  .panel,
-  .card {
-    padding-top: rem-calc(18);
-    padding-bottom: rem-calc(16);
   }
 
   .form {

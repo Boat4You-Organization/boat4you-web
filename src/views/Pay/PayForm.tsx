@@ -311,11 +311,12 @@ const PayForm = ({
         <div className={styles.head}>
           <p className={styles.brand}>{t('slip.brand')}</p>
           <h1 className={styles.title}>{t('slip.title')}</h1>
-          <p className={styles.about}>{t('form.about')}</p>
           <PaySlip />
           <p className={styles.safe}>{t('slip.safe')}</p>
         </div>
         <div className={styles.foot}>
+          {/* Who we are comes after the amount and the form on phones: the slip and the fields lead (HIG writing.md). */}
+          <p className={styles.about}>{t('form.about')}</p>
           <ol className={styles.steps}>
             <li>{t('steps.one')}</li>
             <li>{t('steps.two')}</li>
