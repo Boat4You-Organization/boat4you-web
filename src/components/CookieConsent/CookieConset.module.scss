@@ -6,10 +6,10 @@
 // notice in its middle, so that the visitor answers it instead of scrolling past a corner card.
 .notice {
   width: 100%;
-  max-width: rem-calc(600);
+  max-width: rem-calc(520);
   max-height: calc(100dvh - #{rem-calc(32)});
   overflow-y: auto;
-  padding: rem-calc(32) rem-calc(28) rem-calc(28);
+  padding: rem-calc(24);
   background-color: $white;
   border: 1px solid $blue-500;
   border-radius: rem-calc(8);
@@ -26,7 +26,7 @@
   }
 
   @include media(0, 'md') {
-    padding: rem-calc(20) rem-calc(16) rem-calc(16);
+    padding: rem-calc(16);
   }
 }
 
@@ -74,19 +74,23 @@
 }
 
 // Nested under .notice (two classes): above MUI Typography's own font size and colour.
+// One plain voice (Mario 17.11.2026: "looks like it is for children - clean, one font, simple, smaller"): upright
+// Raleway everywhere, regular text at 14, only the title and the small heading a step heavier, no colour accents.
 .notice .title {
-  margin-bottom: rem-calc(12);
-  font-size: rem-calc(28);
-  font-style: italic;
-  font-weight: 600;
-  line-height: 1.2;
-  color: $blue-500;
+  margin-bottom: rem-calc(8);
+  font-size: rem-calc(18);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $black-950;
 }
 
 .notice .text {
-  margin-bottom: rem-calc(12);
+  margin-bottom: rem-calc(8);
+  font-size: rem-calc(14);
+  font-weight: 400;
   color: $black-700;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .notice .link {
@@ -97,25 +101,26 @@
 .notice .purposesTitle {
   margin-top: rem-calc(4);
   font-size: rem-calc(14);
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.5;
   color: $black-950;
 }
 
 .notice .purposes {
   font-size: rem-calc(14);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
-  color: $blue-900;
+  color: $black-700;
 }
 
 // The two buttons as on index.hr and dnevnik.hr (Mario 10.11.2026): side by side, the same size, square corners,
-// bold text; "Learn more" light grey, "Accept and close" filled in the site's colour.
+// plain text; "Learn more" light grey, "Accept and close" filled in the site's colour.
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: rem-calc(10);
   justify-content: center;
-  margin-top: rem-calc(28);
+  margin-top: rem-calc(16);
 }
 
 // Doubled classes: above the MUI theme's own button styles.
@@ -126,8 +131,8 @@
   padding: rem-calc(8) rem-calc(16);
   border-radius: 0;
   box-shadow: none;
-  font-size: rem-calc(16);
-  font-weight: 600;
+  font-size: rem-calc(14);
+  font-weight: 500;
   line-height: 1.2;
   text-transform: none;
 
