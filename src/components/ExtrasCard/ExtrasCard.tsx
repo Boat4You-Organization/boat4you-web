@@ -148,7 +148,9 @@ const ExtrasCard = ({
       sx={{
         display: 'flex',
         alignItems: 'flex-start',
-        gap: { xs: 1.25, sm: 1.5 },
+        flexWrap: 'wrap',
+        columnGap: { xs: 1.25, sm: 1.5 },
+        rowGap: 0.5,
         px: 2,
         py: 1.5,
         borderRadius: 1.5,
@@ -167,7 +169,7 @@ const ExtrasCard = ({
           />
         )}
       </Box>
-      <Box sx={{ flex: 1, minWidth: 0 }}>
+      <Box sx={{ flex: '1 1 100px', minWidth: 0 }}>
         <Typography
           id={labelId}
           component="h3"
@@ -196,8 +198,18 @@ const ExtrasCard = ({
           1,400 €". Was a two-line stack (price over unit) which made each row
           tall + the right column wide with empty space; Mario asked for one
           tidy line (less vertical scroll). */}
-      <Stack direction="row" alignItems="baseline" gap={0.75} sx={{ flexShrink: 0, whiteSpace: 'nowrap' }}>
-        <Typography variant="body2" color={colors.black500} sx={boatType.small}>
+      {/* The row wraps: when the title's 100 px and this column do not fit side by side, as with a long label in
+          place of a price ("On request, paid in the marina") on a phone, the column drops to its own line, right
+          aligned. Unshrinkable on one line, it left the title a column one letter wide (19.11.2026). */}
+      <Stack
+        direction="row"
+        alignItems="baseline"
+        justifyContent="flex-end"
+        flexWrap="wrap"
+        columnGap={0.75}
+        sx={{ maxWidth: '100%', ml: 'auto', textAlign: 'right' }}
+      >
+        <Typography variant="body2" color={colors.black500} sx={{ ...boatType.small, whiteSpace: 'nowrap' }}>
           {t(UNIT_LABEL_MAP[unit])}
         </Typography>
         <Box component="span" sx={{ color: colors.black300, fontSize: 12 }}>
