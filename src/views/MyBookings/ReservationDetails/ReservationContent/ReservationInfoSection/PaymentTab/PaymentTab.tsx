@@ -255,12 +255,13 @@ const PaymentTab = ({
                   direction="row"
                   justifyContent="space-between"
                   alignItems="flex-start"
-                  gap={2}
+                  flexWrap="wrap"
+                  columnGap={2}
                 >
-                  <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                  <Typography variant="body1" sx={{ flex: '1 1 100px', minWidth: 0 }}>
                     {safePartnerName(item.name)}
                   </Typography>
-                  <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                  <Typography variant="body1" sx={{ ml: 'auto', maxWidth: '100%', textAlign: 'right' }}>
                     {extraPriceLabel(item)}
                   </Typography>
                 </Stack>
@@ -279,12 +280,13 @@ const PaymentTab = ({
                   direction="row"
                   justifyContent="space-between"
                   alignItems="flex-start"
-                  gap={2}
+                  flexWrap="wrap"
+                  columnGap={2}
                 >
-                  <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                  <Typography variant="body1" sx={{ flex: '1 1 100px', minWidth: 0 }}>
                     {safePartnerName(item.name)}
                   </Typography>
-                  <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                  <Typography variant="body1" sx={{ ml: 'auto', maxWidth: '100%', textAlign: 'right' }}>
                     {extraPriceLabel(item)}
                   </Typography>
                 </Stack>
@@ -303,12 +305,13 @@ const PaymentTab = ({
                   direction="row"
                   justifyContent="space-between"
                   alignItems="flex-start"
-                  gap={2}
+                  flexWrap="wrap"
+                  columnGap={2}
                 >
-                  <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                  <Typography variant="body1" sx={{ flex: '1 1 100px', minWidth: 0 }}>
                     {safePartnerName(item.name)}
                   </Typography>
-                  <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                  <Typography variant="body1" sx={{ ml: 'auto', maxWidth: '100%', textAlign: 'right' }}>
                     {extraPriceLabel(item, { inTotal: true })}
                   </Typography>
                 </Stack>

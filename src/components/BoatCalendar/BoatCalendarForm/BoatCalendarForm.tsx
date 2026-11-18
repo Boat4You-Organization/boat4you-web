@@ -457,12 +457,13 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                         direction="row"
                         justifyContent="space-between"
                         alignItems="flex-start"
-                        gap={2}
+                        flexWrap="wrap"
+                        columnGap={2}
                       >
-                        <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                        <Typography variant="body1" sx={{ flex: '1 1 100px', minWidth: 0 }}>
                           {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                         </Typography>
-                        <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                        <Typography variant="body1" sx={{ ml: 'auto', maxWidth: '100%', textAlign: 'right' }}>
                           {formattedPrice}
                         </Typography>
                       </Stack>
@@ -507,12 +508,13 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                       direction="row"
                       justifyContent="space-between"
                       alignItems="flex-start"
-                      gap={2}
+                      flexWrap="wrap"
+                      columnGap={2}
                     >
-                      <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                      <Typography variant="body1" sx={{ flex: '1 1 100px', minWidth: 0 }}>
                         {labelCode ? tServices(labelCode as YachtServiceExtrasKey) : name}
                       </Typography>
-                      <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                      <Typography variant="body1" sx={{ ml: 'auto', maxWidth: '100%', textAlign: 'right' }}>
                         {formattedPrice}
                       </Typography>
                     </Stack>
@@ -536,11 +538,17 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
                         </Typography>
                         {onSite.map(renderRow)}
                         {showSecurityDeposit && (
-                          <Stack direction="row" justifyContent="space-between" alignItems="flex-start" gap={2}>
-                            <Typography variant="body1" sx={{ flex: 1, minWidth: 0 }}>
+                          <Stack
+                            direction="row"
+                            justifyContent="space-between"
+                            alignItems="flex-start"
+                            flexWrap="wrap"
+                            columnGap={2}
+                          >
+                            <Typography variant="body1" sx={{ flex: '1 1 100px', minWidth: 0 }}>
                               {tServices('refundable-security-deposit')}
                             </Typography>
-                            <Typography variant="body1" whiteSpace="nowrap" sx={{ flexShrink: 0 }}>
+                            <Typography variant="body1" sx={{ ml: 'auto', maxWidth: '100%', textAlign: 'right' }}>
                               {formatPriceWithCurrency({ clientPriceEur: yacht.securityDeposit, locale })}
                             </Typography>
                           </Stack>
