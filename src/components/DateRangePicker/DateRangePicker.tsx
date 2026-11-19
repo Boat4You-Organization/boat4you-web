@@ -258,6 +258,26 @@ const DateRangePicker = ({
     return () => cancelAnimationFrame(frame);
   }, [isModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // The list of months is in the page only while the sheet is open (and for its closing slide). The sheet itself
+  // stays mounted when closed, and 15 calendars under it re-rendered with every change of the page: after the
+  // second tap the price took 9 - 13 s to appear on the live site, against 3.4 s for a week chosen in the widget
+  // (19.11.2026).
+  const [listMounted, setListMounted] = useState(false);
+
+  useEffect(() => {
+    if (!scrollMonths) return undefined;
+
+    if (isModalOpen) {
+      setListMounted(true);
+
+      return undefined;
+    }
+
+    const timer = window.setTimeout(() => setListMounted(false), 400);
+
+    return () => window.clearTimeout(timer);
+  }, [isModalOpen, scrollMonths]);
+
   if (scrollMonths) {
     return (
       <ModalRoot
@@ -287,20 +307,21 @@ const DateRangePicker = ({
             '& .MuiPickersDay-root, & .MuiPickersDay-hiddenDaySpacingFiller': { minWidth: '32px', minHeight: '32px' },
           }}
         >
-          {listMonths.map((month, index) => (
-            <LazyMonth key={month.format('YYYY-MM')} eager={index < 2 || !!startDate?.isSame(month, 'month')}>
-              <MonthShown month={month} onShown={onMonthShown} />
-              <CustomDateCalendar
-                currentMonth={month}
-                startDate={activeStartDate}
-                endDate={activeEndDate}
-                onDayClick={handleDayClick}
-                hoverDate={hoverDate}
-                onDayHover={handleDayHover}
-                getDateDisableReason={getDateDisableReason}
-              />
-            </LazyMonth>
-          ))}
+          {(isModalOpen || listMounted) &&
+            listMonths.map((month, index) => (
+              <LazyMonth key={month.format('YYYY-MM')} eager={index < 2 || !!startDate?.isSame(month, 'month')}>
+                <MonthShown month={month} onShown={onMonthShown} />
+                <CustomDateCalendar
+                  currentMonth={month}
+                  startDate={activeStartDate}
+                  endDate={activeEndDate}
+                  onDayClick={handleDayClick}
+                  hoverDate={hoverDate}
+                  onDayHover={handleDayHover}
+                  getDateDisableReason={getDateDisableReason}
+                />
+              </LazyMonth>
+            ))}
         </Stack>
       </ModalRoot>
     );
