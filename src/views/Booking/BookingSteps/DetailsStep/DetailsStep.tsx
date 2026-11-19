@@ -111,8 +111,9 @@ const DetailsStep = ({
   const [state, createReservationAction, createReservationPending] = useActionState(createReservation, undefined);
   const t = useTranslations('common');
   const locale = useLocale();
-  // Phone and tablet: the total where the form starts and beside its button (UX review 19.11.2026: the price was
-  // 1,200 px under the button, in the summary the desktop shows beside the form).
+  // Phone and tablet: the total above the form's button, once (UX review 19.11.2026: the price was 1,200 px under
+  // the button, in the summary the desktop shows beside the form). Not at the top of the form as well: with the
+  // price section below, the same amount stood on the page three times (Mario 19.11.2026).
   const totalRow = (
     <Stack
       direction="row"
@@ -428,7 +429,6 @@ const DetailsStep = ({
         <Box sx={{ mt: 4 }} />
         <Form defaultValues={initialValues} onSubmit={handleSubmit} resetDefaultValues>
           <Stack gap={3}>
-            {totalRow}
             <Stack direction="row" alignItems="center" justifyContent="space-between" flexWrap="wrap" gap={1}>
               <Typography variant="h2">{t('yourDetails')}</Typography>
               {!effectiveUser && (
