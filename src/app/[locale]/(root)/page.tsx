@@ -10,6 +10,8 @@ import { PAGE_SIZE } from '@/config/constants.config';
 import whyChooseUs from '@/config/whyChooseUs';
 import { routing } from '@/i18n/routing';
 import { getBlogs } from '@/lib/api';
+import { homeWebPageJsonLd } from '@/utils/static/homeWebPageJsonLd';
+import { serializeJsonLd } from '@/utils/static/serializeJsonLd';
 import DestinationsSection from '@/views/Home/DestinationsSection';
 // Server components (plain HTML, no client JS) — static-imported so they
 // render to HTML and never hydrate on the client. Pulling these out of
@@ -90,6 +92,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(homeWebPageJsonLd) }}
+      />
       {faqSchema && (
         <script
           type="application/ld+json"

@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       description,
       images: [
         {
-          url: `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`,
+          url: `${meta.url}/meta/welcome-to-boat4you-three-charter-boats-title-centred-1200x630.jpg`,
           width: 1200,
           height: 630,
           alt: meta.name,
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
       card: 'summary_large_image',
       title: { default: t(meta.title), template: t(meta.titleTemplate) },
       description,
-      images: [`${meta.url}/meta/welcome-to-boat4you-three-charter-boats-1200x630.jpg`],
+      images: [`${meta.url}/meta/welcome-to-boat4you-three-charter-boats-title-centred-1200x630.jpg`],
     },
     icons: {
       icon: '/favicons/favicon.ico',
