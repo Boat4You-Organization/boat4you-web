@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
+import useWarmLightbox from '@/components/Gallery/useWarmLightbox';
 import FloorPlan from '@/components/SvgIcons/FloorPlan';
 import { YachtImage } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -41,6 +42,8 @@ const LayoutSection = ({ images, photoName }: LayoutSectionProps) => {
   const [selected, setSelected] = useState(0);
   // The lightbox in the block's order (it would put a main layout first).
   const lightboxImages = useMemo(() => withoutMainImage(images), [images]);
+
+  useWarmLightbox();
 
   if (images.length === 0) return null;
 

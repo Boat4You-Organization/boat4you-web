@@ -101,7 +101,15 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
     return (
       <React.Fragment key={category}>
         {showDivider && <Divider sx={{ borderColor: colors.black100 }} />}
-        <Grid container component="section" spacing={{ xs: 1.5, md: 3 }} py={2.5} alignItems="flex-start">
+        {/* Phone: the groups as close as the rows of the boat's data above (year, cabins, berths: 10 px above and
+            below each rule), Mario 19.11.2026: too much air between "Comfort" and "Deck". */}
+        <Grid
+          container
+          component="section"
+          spacing={{ xs: 0.5, md: 3 }}
+          py={{ xs: 1.25, md: 2.5 }}
+          alignItems="flex-start"
+        >
           <Grid size={{ xs: 12, md: 3 }}>
             <Typography variant="body1" color={colors.black950} sx={boatType.subtitle}>
               {t(YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP[category])}
@@ -120,7 +128,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
                     <ListItem
                       sx={{
                         px: amenity.highlight ? 1 : 0,
-                        py: 0.5,
+                        py: { xs: 0.25, md: 0.5 },
                         gap: 1,
                         alignItems: 'flex-start',
                         backgroundColor: amenity.highlight ? colors.yellow50 : 'transparent',

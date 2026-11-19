@@ -20,6 +20,7 @@ import { yachtPhotoName } from '@/utils/static/yachtPhotoName';
 import styles from './Gallery.module.scss';
 import PhotoCredit from './PhotoCredit';
 import { galleryPhotoAlt } from './photoAlt';
+import useWarmLightbox from './useWarmLightbox';
 
 // The lightbox (Swiper + its CSS) is fetched on the first open, not with
 // the boat page: the page shipped 1.5 MB of JS on slow phones (audit B41).
@@ -47,6 +48,8 @@ const Gallery = ({ yacht, images, showShareAndFavorite = false, maxDisplayedImag
   // Mounted from the first open on (and kept, so it can animate closed).
   const [lightboxMounted, setLightboxMounted] = useState(false);
   const t = useTranslations('common');
+
+  useWarmLightbox();
 
   // Every picture names the boat, "Fountaine Pajot Elba 45 Karina — photo 3"
   // (yachtPhotoName.ts): its own photos, its model's, the marina's and a
