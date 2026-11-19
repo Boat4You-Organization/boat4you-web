@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Preços Competitivos",
-        "description": "As melhores tarifas, sem taxas de reserva. Os extras obrigatórios são indicados antes de pagar."
+        "description": "Os melhores preços e sem custo para reservar. Todos os extras obrigatórios são indicados claramente antes de pagar."
       },
       "wideSelection": {
         "title": "Ampla Seleção",
-        "description": "Frota diversificada desde iates de luxo até veleiros para todas as ocasiões."
+        "description": "Frota diversificada de iates de luxo e veleiros."
       },
       "securePayment": {
         "title": "Pagamento Seguro",
-        "description": "Segurança de nível bancário com gateways de pagamento confiáveis. Seus dados estão seguros."
+        "description": "Segurança de nível bancário para seus dados pessoais, com gateways de pagamento online confiáveis."
       },
       "trustedCustomerService": {
         "title": "Atendimento ao Cliente Confiável",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Ideias para suas próximas ",
     "nextHoliday": "férias de navegação",
-    "discoverSecretSpots": "Descubra lugares secretos como os locais; confira nossos conselhos para o seu próximo charter de iate."
+    "discoverSecretSpots": "Viva o verdadeiro espírito do aluguel de barcos e do charter de iates e descubra os lugares secretos locais pelo mundo. Leia nossas dicas de viagem para suas próximas férias de charter de iate."
   },
   "allDestinationsSection": {
     "allOf": "Explore nossos ",
     "ourDestinations": "lugares favoritos para navegar",
-    "specialDeals": "Obtenha ofertas especiais e economize dinheiro em cada reserva.",
+    "specialDeals": "Economize ainda mais dinheiro em cada reserva.",
     "continentsLabel": "Destinos por continente",
     "continents": {
       "europe": "Europa",

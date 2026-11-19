@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Prix compétitifs",
-        "description": "Les meilleurs tarifs, sans frais de réservation. Les extras obligatoires sont indiqués avant le paiement."
+        "description": "Les meilleurs prix et aucuns frais pour réserver. Tous les extras obligatoires sont clairement indiqués avant le paiement."
       },
       "wideSelection": {
         "title": "Large sélection",
-        "description": "Flotte diversifiée, des yachts de luxe aux voiliers pour toutes les occasions."
+        "description": "Flotte diversifiée de yachts de luxe et de voiliers."
       },
       "securePayment": {
         "title": "Paiement sécurisé",
-        "description": "Sécurité de niveau bancaire avec des passerelles de paiement fiables. Vos données sont protégées."
+        "description": "Une sécurité de niveau bancaire pour vos données personnelles, avec des passerelles de paiement en ligne fiables."
       },
       "trustedCustomerService": {
         "title": "Service client de confiance",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Idées pour vos prochaines ",
     "nextHoliday": "vacances en voilier",
-    "discoverSecretSpots": "Découvrez des lieux secrets comme le font les locaux ; consultez nos conseils pour votre prochaine location de yacht."
+    "discoverSecretSpots": "Vivez le véritable esprit de la location de bateaux et de yachts et découvrez les lieux secrets des locaux partout dans le monde. Lisez nos conseils de voyage pour vos prochaines vacances en location de yacht."
   },
   "allDestinationsSection": {
     "allOf": "Explorez nos ",
     "ourDestinations": "lieux de navigation préférés",
-    "specialDeals": "Obtenez des offres spéciales et économisez de l'argent sur chaque réservation.",
+    "specialDeals": "Économisez encore plus d'argent sur chaque réservation.",
     "continentsLabel": "Destinations par continent",
     "continents": {
       "europe": "Europe",

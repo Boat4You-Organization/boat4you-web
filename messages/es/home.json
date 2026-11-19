@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Precios Competitivos",
-        "description": "Las mejores tarifas, sin gastos de reserva. Los extras obligatorios se indican antes de pagar."
+        "description": "Los mejores precios y sin coste por reservar. Todos los extras obligatorios aparecen claramente antes de pagar."
       },
       "wideSelection": {
         "title": "Amplia Selección",
-        "description": "Flota diversa desde yachts de lujo hasta barcos de vela para cada ocasión."
+        "description": "Flota diversa de yates de lujo y barcos de vela."
       },
       "securePayment": {
         "title": "Pago Seguro",
-        "description": "Seguridad a nivel bancario con pasarelas de pago confiables. Tus datos están seguros."
+        "description": "Seguridad a nivel bancario para tus datos personales, con pasarelas de pago online fiables."
       },
       "trustedCustomerService": {
         "title": "Servicio al Cliente Confiable",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Ideas para tus próximas ",
     "nextHoliday": "vacaciones de navegación",
-    "discoverSecretSpots": "Descubre lugares secretos como lo hacen los locales; consulta nuestros consejos para tu próximo chárter de yate."
+    "discoverSecretSpots": "Vive el verdadero espíritu del alquiler de barcos y el chárter de yates y descubre los rincones secretos locales del mundo. Lee nuestros consejos de viaje para tus próximas vacaciones en chárter de yate."
   },
   "allDestinationsSection": {
     "allOf": "Explora nuestros ",
     "ourDestinations": "lugares favoritos para navegar",
-    "specialDeals": "Obtén ofertas especiales y ahorra dinero en cada reserva.",
+    "specialDeals": "Ahorra aún más dinero en cada una de tus reservas.",
     "continentsLabel": "Destinos por continente",
     "continents": {
       "europe": "Europa",

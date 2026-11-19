@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Prezzi Competitivi",
-        "description": "Le migliori tariffe, senza commissioni di prenotazione. Gli extra obbligatori sono indicati prima del pagamento."
+        "description": "I migliori prezzi e nessun costo per prenotare. Tutti gli extra obbligatori sono indicati chiaramente prima del pagamento."
       },
       "wideSelection": {
         "title": "Ampia Selezione",
-        "description": "Flotta diversificata da yacht di lusso a barche a vela per ogni occasione."
+        "description": "Flotta diversificata di yacht di lusso e barche a vela."
       },
       "securePayment": {
         "title": "Pagamento Sicuro",
-        "description": "Sicurezza a livello bancario con gateway di pagamento affidabili. I tuoi dati sono al sicuro."
+        "description": "Sicurezza a livello bancario per i tuoi dati personali, con gateway di pagamento online affidabili."
       },
       "trustedCustomerService": {
         "title": "Servizio Clienti Affidabile",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Idee per la tua prossima ",
     "nextHoliday": "vacanza in barca a vela",
-    "discoverSecretSpots": "Scopri luoghi segreti come fanno i locali; consulta i nostri consigli per il tuo prossimo noleggio yacht."
+    "discoverSecretSpots": "Vivi il vero spirito del noleggio barche e del charter di yacht e scopri gli angoli segreti locali di tutto il mondo. Leggi i nostri consigli di viaggio per la tua prossima vacanza con noleggio yacht."
   },
   "allDestinationsSection": {
     "allOf": "Esplora i nostri ",
     "ourDestinations": "luoghi di navigazione preferiti",
-    "specialDeals": "Ottieni offerte speciali e risparmia denaro su ogni prenotazione.",
+    "specialDeals": "Risparmia ancora di più su ogni singola prenotazione.",
     "continentsLabel": "Destinazioni per continente",
     "continents": {
       "europe": "Europa",

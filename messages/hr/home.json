@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Konkurentne cijene",
-        "description": "Najbolje cijene bez naknade za rezervaciju. Obvezne dodatke vidite prije plaćanja."
+        "description": "Najbolje cijene i bez naknade za rezervaciju. Svi obvezni dodaci jasno su navedeni prije plaćanja."
       },
       "wideSelection": {
         "title": "Širok izbor",
-        "description": "Raznolika flota, od luksuznih jahti do jedrilica, za svaku priliku."
+        "description": "Raznolika flota luksuznih jahti i jedrilica."
       },
       "securePayment": {
         "title": "Sigurno plaćanje",
-        "description": "Sigurnost na razini banke uz pouzdane platne sustave. Vaši su podaci zaštićeni."
+        "description": "Sigurnost na razini banke za vaše osobne podatke, uz pouzdane online platne sustave."
       },
       "trustedCustomerService": {
         "title": "Pouzdana korisnička podrška",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Ideje za vaše sljedeće ",
     "nextHoliday": "jedriličarsko putovanje",
-    "discoverSecretSpots": "Otkrijte tajna mjesta kao lokalci; provjerite naše savjete za vaš sljedeći charter jahte."
+    "discoverSecretSpots": "Doživite pravi duh najma brodova i chartera jahti i otkrijte tajna mjesta lokalaca diljem svijeta. Pročitajte naše putne savjete za vaš sljedeći odmor na charteru jahte."
   },
   "allDestinationsSection": {
     "allOf": "Istražite naše ",
     "ourDestinations": "omiljene destinacije za jedrenje",
-    "specialDeals": "Ostvarite posebne ponude i uštedite novac na svakoj rezervaciji.",
+    "specialDeals": "Uštedite još više novca na svakoj rezervaciji.",
     "continentsLabel": "Destinacije po kontinentima",
     "continents": {
       "europe": "Europa",

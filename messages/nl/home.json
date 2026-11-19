@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Concurrerende prijzen",
-        "description": "Scherpe tarieven zonder boekingskosten. Verplichte extra's zie je vóór je betaalt."
+        "description": "De beste prijzen en geen kosten om te boeken. Alle verplichte extra's staan duidelijk vermeld voordat je betaalt."
       },
       "wideSelection": {
         "title": "Ruime keuze",
-        "description": "Diverse vloot van luxe jachten tot zeilboten voor elke gelegenheid."
+        "description": "Diverse vloot van luxe jachten en zeilboten."
       },
       "securePayment": {
         "title": "Veilig betalen",
-        "description": "Beveiliging op bankniveau met vertrouwde betaalproviders. Je gegevens zijn veilig."
+        "description": "Beveiliging op bankniveau voor je persoonlijke gegevens, met betrouwbare online betaalproviders."
       },
       "trustedCustomerService": {
         "title": "Betrouwbare klantenservice",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Ideeën voor je volgende ",
     "nextHoliday": "zeilvakantie",
-    "discoverSecretSpots": "Ontdek geheime plekjes zoals de locals; bekijk ons advies voor je volgende jachtcharter."
+    "discoverSecretSpots": "Beleef de echte sfeer van bootverhuur en jachtcharter en ontdek de geheime plekjes van de locals over de hele wereld. Lees ons reisadvies voor je volgende jachtchartervakantie."
   },
   "allDestinationsSection": {
     "allOf": "Ontdek onze ",
     "ourDestinations": "favoriete plekken om te zeilen",
-    "specialDeals": "Krijg speciale aanbiedingen en bespaar geld op elke boekingsreservering.",
+    "specialDeals": "Bespaar nog meer geld op elke boeking.",
     "continentsLabel": "Bestemmingen per continent",
     "continents": {
       "europe": "Europa",

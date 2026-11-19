@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Competitive Pricing",
-        "description": "Best rates and no booking fees. Obligatory extras are listed before you pay."
+        "description": "Best prices and no fee to book. All the obligatory extras are clearly listed before you pay."
       },
       "wideSelection": {
         "title": "Wide Selection",
-        "description": "Diverse fleet from luxury yachts to sailing boats for every occasion."
+        "description": "Diverse fleet of luxury yachts and sailing boats."
       },
       "securePayment": {
         "title": "Secure Payment",
-        "description": "Bank-level security with trusted payment gateways. Your data is safe."
+        "description": "Bank-level security for your personal data, with reliable online payment gateways."
       },
       "trustedCustomerService": {
         "title": "Trusted Customer Service",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Ideas for your next ",
     "nextHoliday": "sailing vacation",
-    "discoverSecretSpots": "Discover secret spots like the locals do; check our advice for your next yacht charter."
+    "discoverSecretSpots": "Experience the true spirit of boat rental and yacht charter and discover the local secret spots of the world. Read our travel advice for your next yacht charter holiday."
   },
   "allDestinationsSection": {
     "allOf": "Explore our ",
     "ourDestinations": "favorite places to sail",
-    "specialDeals": "Get special deals and save money on every booking reservation.",
+    "specialDeals": "Save even more money on every single booking reservation.",
     "continentsLabel": "Destinations by continent",
     "continents": {
       "europe": "Europe",

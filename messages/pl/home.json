@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Konkurencyjne ceny",
-        "description": "Najlepsze stawki bez opłat rezerwacyjnych. Obowiązkowe dodatki widzisz przed płatnością."
+        "description": "Najlepsze ceny i brak opłaty za rezerwację. Wszystkie obowiązkowe dodatki są jasno podane przed płatnością."
       },
       "wideSelection": {
         "title": "Szeroki wybór",
-        "description": "Zróżnicowana flota — od luksusowych jachtów po żaglowe łodzie na każdą okazję."
+        "description": "Zróżnicowana flota luksusowych jachtów i łodzi żaglowych."
       },
       "securePayment": {
         "title": "Bezpieczne płatności",
-        "description": "Bezpieczeństwo na poziomie bankowym z zaufanymi bramkami płatniczymi. Twoje dane są chronione."
+        "description": "Bezpieczeństwo na poziomie bankowym dla Twoich danych osobowych, z niezawodnymi bramkami płatności online."
       },
       "trustedCustomerService": {
         "title": "Zaufana obsługa klienta",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Pomysły na kolejne ",
     "nextHoliday": "wakacje żeglarskie",
-    "discoverSecretSpots": "Odkryj tajemnicze miejsca jak miejscowi; sprawdź nasze porady dotyczące następnego czarteru jachtu."
+    "discoverSecretSpots": "Poczuj prawdziwego ducha wynajmu łodzi i czarteru jachtów i odkryj sekretne miejsca lokalsów na całym świecie. Przeczytaj nasze porady podróżnicze przed kolejnymi wakacjami na czarterze jachtu."
   },
   "allDestinationsSection": {
     "allOf": "Odkryj nasze ",
     "ourDestinations": "ulubione miejsca do żeglowania",
-    "specialDeals": "Korzystaj ze specjalnych ofert i oszczędzaj na każdej rezerwacji.",
+    "specialDeals": "Oszczędzaj jeszcze więcej na każdej rezerwacji.",
     "continentsLabel": "Kierunki według kontynentów",
     "continents": {
       "europe": "Europa",

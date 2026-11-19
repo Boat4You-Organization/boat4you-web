@@ -68,15 +68,15 @@
     "items": {
       "competitivePricing": {
         "title": "Wettbewerbsfähige Preise",
-        "description": "Beste Tarife ohne Buchungsgebühren. Pflichtextras sehen Sie vor der Zahlung."
+        "description": "Beste Preise und keine Gebühr für die Buchung. Alle Pflichtextras sind vor der Zahlung klar aufgeführt."
       },
       "wideSelection": {
         "title": "Große Auswahl",
-        "description": "Vielfältige Flotte von Luxusyachten bis Segelbooten für jeden Anlass."
+        "description": "Vielfältige Flotte aus Luxusyachten und Segelbooten."
       },
       "securePayment": {
         "title": "Sichere Zahlung",
-        "description": "Bank-Level-Sicherheit mit vertrauenswürdigen Zahlungsanbietern. Ihre Daten sind sicher."
+        "description": "Sicherheit auf Bankniveau für Ihre persönlichen Daten, mit zuverlässigen Online-Zahlungsanbietern."
       },
       "trustedCustomerService": {
         "title": "Vertrauensvoller Kundenservice",
@@ -114,12 +114,12 @@
   "blogSection": {
     "readAboutYour": "Ideen für Ihren nächsten ",
     "nextHoliday": "Segelurlaub",
-    "discoverSecretSpots": "Entdecken Sie Geheimtipps wie die Einheimischen; sehen Sie sich unsere Ratschläge für Ihren nächsten Yachtcharter an."
+    "discoverSecretSpots": "Erleben Sie den wahren Geist von Bootsverleih und Yachtcharter und entdecken Sie die Geheimtipps der Einheimischen weltweit. Lesen Sie unsere Reisetipps für Ihren nächsten Yachtcharter-Urlaub."
   },
   "allDestinationsSection": {
     "allOf": "Entdecken Sie unsere ",
     "ourDestinations": "Lieblings-Segelziele",
-    "specialDeals": "Erhalten Sie Sonderangebote und sparen Sie Geld bei jeder Buchungsreservierung.",
+    "specialDeals": "Sparen Sie bei jeder einzelnen Buchung noch mehr Geld.",
     "continentsLabel": "Reiseziele nach Kontinent",
     "continents": {
       "europe": "Europa",
