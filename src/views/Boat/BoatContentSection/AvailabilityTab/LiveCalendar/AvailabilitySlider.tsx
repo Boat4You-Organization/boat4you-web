@@ -425,6 +425,59 @@ const chunkOf = (weeks: WeekData[], id: string | undefined): number => {
   return idx < 0 ? 0 : Math.floor(idx / WEEKS_PER_CHUNK);
 };
 
+/**
+ * The strip of weeks is dragged left or right to turn its 6-month page, with a mouse and with a finger (Mario
+ * 19.11.2026: "da se ne trebaju pretiskat strelice povise za uci u drugo razdoblje"). A drag is 48 px or more and
+ * mostly sideways; anything less is a click on a week, as before. The click the browser sends after a drag is
+ * swallowed, so a drag never selects the week under the pointer.
+ */
+const useDragToTurn = (turn: (dir: 1 | -1) => void) => {
+  const dragged = useRef(false);
+  const turnRef = useRef(turn);
+
+  turnRef.current = turn;
+
+  return {
+    onPointerDown: (event: React.PointerEvent) => {
+      const { clientX, clientY } = event;
+
+      dragged.current = false;
+
+      const onUp = (up: PointerEvent) => {
+        window.removeEventListener('pointerup', onUp);
+        window.removeEventListener('pointercancel', onUp);
+
+        const dx = up.clientX - clientX;
+        const dy = up.clientY - clientY;
+
+        if (up.type !== 'pointerup' || Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+
+        dragged.current = true;
+        turnRef.current(dx < 0 ? 1 : -1);
+      };
+
+      window.addEventListener('pointerup', onUp);
+      window.addEventListener('pointercancel', onUp);
+    },
+    onClickCapture: (event: React.MouseEvent) => {
+      if (!dragged.current) return;
+
+      dragged.current = false;
+      event.stopPropagation();
+      event.preventDefault();
+    },
+    onDragStart: (event: React.DragEvent) => event.preventDefault(),
+  };
+};
+
+/** The strip's box under `useDragToTurn`: sideways moves are ours, the page still scrolls up and down. */
+const DRAG_SX = {
+  touchAction: 'pan-y',
+  cursor: 'grab',
+  userSelect: 'none',
+  '&:active': { cursor: 'grabbing' },
+} as const;
+
 export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: BranchProps) => {
   const t = useTranslations('yacht.calendar');
   const locale = useLocale();
@@ -508,6 +561,8 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
   const lastWindowStart = Math.max(0, chunkWeeks.length - VISIBLE_COUNT);
   const canScrollBack = windowStart > 0 || chunkIdx > 0;
   const canScrollOn = windowStart < lastWindowStart || chunkIdx < totalChunks - 1;
+
+  const dragToTurn = useDragToTurn(dir => setChunkIdx(c => Math.max(0, Math.min(totalChunks - 1, c + dir))));
 
   const scroll = (dir: 1 | -1) => {
     if (dir === 1 && windowStart >= lastWindowStart) {
@@ -609,7 +664,9 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
       </Stack>
 
       <Box
+        {...dragToTurn}
         sx={{
+          ...DRAG_SX,
           background: T.card,
           borderRadius: '16px',
           padding: '22px 24px 18px',
@@ -699,8 +756,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
   // the scroll listener.
   const programmaticScrollRef = useRef(false);
 
-  // A swipe left or right turns the 6-month page, as the two arrows do (Mario 19.11.2026): anywhere on the strip,
-  // and on the week cards once they are at their first or last card (before that the swipe scrolls the cards).
+  // A swipe on the week cards turns the 6-month page once they are at their first or last card (before that the
+  // swipe scrolls the cards). The strip above has its own drag (useDragToTurn).
   const swipeStart = useRef<{ x: number; y: number; atFirst: boolean; atLast: boolean } | null>(null);
   const arriveAtLast = useRef(false);
 
@@ -720,6 +777,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
     }
   };
 
+  const dragToTurn = useDragToTurn(dir => setChunkIdx(c => Math.max(0, Math.min(totalChunks - 1, c + dir))));
+
   const handleSwipeStart = (event: React.TouchEvent) => {
     const touch = event.touches[0];
     const el = scrollerEl;
@@ -733,7 +792,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
     };
   };
 
-  const handleSwipeEnd = (edgesOnly: boolean) => (event: React.TouchEvent) => {
+  const handleSwipeEnd = (event: React.TouchEvent) => {
     const start = swipeStart.current;
     const touch = event.changedTouches[0];
 
@@ -747,10 +806,10 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
     // A sideways move of a thumb, not a tap and not the page scrolling.
     if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
 
-    if (dx < 0 && (!edgesOnly || start.atLast)) setChunkIdx(c => Math.min(totalChunks - 1, c + 1));
+    if (dx < 0 && start.atLast) setChunkIdx(c => Math.min(totalChunks - 1, c + 1));
 
-    if (dx > 0 && (!edgesOnly || start.atFirst) && chunkIdx > 0) {
-      arriveAtLast.current = edgesOnly;
+    if (dx > 0 && start.atFirst && chunkIdx > 0) {
+      arriveAtLast.current = true;
       setChunkIdx(chunkIdx - 1);
     }
   };
@@ -935,10 +994,9 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
           </Stack>
         </Stack>
         <Box
-          onTouchStart={handleSwipeStart}
-          onTouchEnd={handleSwipeEnd(false)}
+          {...dragToTurn}
           sx={{
-            touchAction: 'pan-y',
+            ...DRAG_SX,
             background: T.card,
             borderRadius: '14px',
             padding: '12px 12px 10px',
@@ -975,7 +1033,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
       <Box
         ref={setScrollerEl}
         onTouchStart={handleSwipeStart}
-        onTouchEnd={handleSwipeEnd(true)}
+        onTouchEnd={handleSwipeEnd}
         sx={{
           display: 'flex',
           overflowX: 'auto',
