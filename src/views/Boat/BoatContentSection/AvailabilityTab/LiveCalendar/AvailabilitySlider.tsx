@@ -319,6 +319,18 @@ const AvailabilitySlider = ({ yacht, allBooked = false, initial = null }: Availa
     setSelId(firstSelectedId(weeks, search.get('startDate'), search.get('endDate')));
   }, [weeks, selId, allBooked]);
 
+  // Dates chosen elsewhere on the page (the phone's date sheet, the desktop price box) select their week here too,
+  // and the page with it (Mario 19.11.2026: he picked 7 - 14 August in the sheet and this still showed another
+  // week). Only a period that is one of the weeks; any other range leaves the selection as it is.
+  useEffect(() => {
+    if (allBooked || !params.startDate || !params.endDate) return;
+
+    const match = weeks.find(w => w.dateFromIso === params.startDate && w.dateToIso === params.endDate);
+
+    if (match) setSelId(prev => (prev === match.id ? prev : match.id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params.startDate, params.endDate, weeks.length]);
+
   // The breakpoint is known only in the browser: until mounted (the server
   // HTML and the hydration render) both layouts are drawn and the stylesheet
   // shows the one for the screen, so a phone never flashes the desktop grid.
@@ -468,6 +480,14 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
 
     const idxInChunk = chunkWeeks.findIndex(w => w.id === selId);
 
+    // Arrived from the next page with the cards' left arrow: its last cards, wherever the selected week is.
+    if (arriveAtEnd.current) {
+      arriveAtEnd.current = false;
+      setWindowStart(Math.max(0, chunkWeeks.length - VISIBLE_COUNT));
+
+      return;
+    }
+
     if (idxInChunk < 0) {
       setWindowStart(0);
 
@@ -482,8 +502,30 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chunkIdx, selId]);
 
+  // The cards' arrows walk on into the next / previous 6-month page (Mario 19.11.2026: at the last card the right
+  // arrow went grey and only the page arrows above the strip went further).
+  const arriveAtEnd = useRef(false);
+  const lastWindowStart = Math.max(0, chunkWeeks.length - VISIBLE_COUNT);
+  const canScrollBack = windowStart > 0 || chunkIdx > 0;
+  const canScrollOn = windowStart < lastWindowStart || chunkIdx < totalChunks - 1;
+
   const scroll = (dir: 1 | -1) => {
-    setWindowStart(s => Math.max(0, Math.min(chunkWeeks.length - VISIBLE_COUNT, s + dir)));
+    if (dir === 1 && windowStart >= lastWindowStart) {
+      if (chunkIdx < totalChunks - 1) setChunkIdx(chunkIdx + 1);
+
+      return;
+    }
+
+    if (dir === -1 && windowStart <= 0) {
+      if (chunkIdx > 0) {
+        arriveAtEnd.current = true;
+        setChunkIdx(chunkIdx - 1);
+      }
+
+      return;
+    }
+
+    setWindowStart(s => Math.max(0, Math.min(lastWindowStart, s + dir)));
   };
 
   const onCellClick = (w: WeekData, idxInChunk: number) => {
@@ -589,7 +631,7 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
         </Box>
       )}
       <Box sx={{ mt: allBooked ? '16px' : '24px', display: 'flex', alignItems: 'stretch', gap: '12px' }}>
-        <ArrowBtn dir="<" onClick={() => scroll(-1)} disabled={windowStart === 0} />
+        <ArrowBtn dir="<" onClick={() => scroll(-1)} disabled={!canScrollBack} />
         <Box
           sx={{
             flex: 1,
@@ -603,7 +645,7 @@ export const AvailabilityDesktop = ({ weeks, selId, onSelect, allBooked }: Branc
             <AvailabilityCard key={w.id} w={w} selected={w.id === selId} onClick={onSelect} size="desktop" />
           ))}
         </Box>
-        <ArrowBtn dir=">" onClick={() => scroll(1)} disabled={windowStart >= chunkWeeks.length - VISIBLE_COUNT} />
+        <ArrowBtn dir=">" onClick={() => scroll(1)} disabled={!canScrollOn} />
       </Box>
     </Box>
   );
@@ -660,6 +702,23 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
   // A swipe left or right turns the 6-month page, as the two arrows do (Mario 19.11.2026): anywhere on the strip,
   // and on the week cards once they are at their first or last card (before that the swipe scrolls the cards).
   const swipeStart = useRef<{ x: number; y: number; atFirst: boolean; atLast: boolean } | null>(null);
+  const arriveAtLast = useRef(false);
+
+  // The week arrows under the cards walk on into the next / previous page (they used to go grey at its edge).
+  const stepWeek = (dir: 1 | -1) => {
+    const next = active + dir;
+
+    if (next >= chunkWeeks.length) {
+      if (chunkIdx < totalChunks - 1) setChunkIdx(chunkIdx + 1);
+    } else if (next < 0) {
+      if (chunkIdx > 0) {
+        arriveAtLast.current = true;
+        setChunkIdx(chunkIdx - 1);
+      }
+    } else {
+      goToIdx(next);
+    }
+  };
 
   const handleSwipeStart = (event: React.TouchEvent) => {
     const touch = event.touches[0];
@@ -690,7 +749,10 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
 
     if (dx < 0 && (!edgesOnly || start.atLast)) setChunkIdx(c => Math.min(totalChunks - 1, c + 1));
 
-    if (dx > 0 && (!edgesOnly || start.atFirst)) setChunkIdx(c => Math.max(0, c - 1));
+    if (dx > 0 && (!edgesOnly || start.atFirst) && chunkIdx > 0) {
+      arriveAtLast.current = edgesOnly;
+      setChunkIdx(chunkIdx - 1);
+    }
   };
 
   const cardSlotWidth = () => {
@@ -721,7 +783,11 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
   // from the first render, before the strip element is known.
   useEffect(() => {
     const idxInChunk = selId ? chunkWeeks.findIndex(w => w.id === selId) : -1;
-    const target = idxInChunk >= 0 ? idxInChunk : 0;
+    // Arrived from the next page going back (the week arrows, a swipe on the cards): its last card, not its first.
+    const fromSelection = idxInChunk >= 0 ? idxInChunk : 0;
+    const target = arriveAtLast.current ? chunkWeeks.length - 1 : fromSelection;
+
+    arriveAtLast.current = false;
 
     setActive(target);
 
@@ -943,7 +1009,7 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
         </Box>
       </Box>
       <Stack direction="row" justifyContent="center" sx={{ gap: '16px', padding: '0 16px 16px' }}>
-        <ArrowBtn dir="<" onClick={() => goToIdx(active - 1)} disabled={active === 0} size="mobile" />
+        <ArrowBtn dir="<" onClick={() => stepWeek(-1)} disabled={active === 0 && chunkIdx === 0} size="mobile" />
         <Box
           sx={{
             flex: 1,
@@ -978,8 +1044,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
         </Box>
         <ArrowBtn
           dir=">"
-          onClick={() => goToIdx(active + 1)}
-          disabled={active === chunkWeeks.length - 1}
+          onClick={() => stepWeek(1)}
+          disabled={active === chunkWeeks.length - 1 && chunkIdx === totalChunks - 1}
           size="mobile"
         />
       </Stack>
