@@ -2,7 +2,7 @@
   "hero": {
     "title": "Czarter jachtów w",
     "ctaTitle": "jednym kliknięciu.",
-    "description": "Wynajmij idealny jacht w kilku kliknięciach. Łatwo, szybko i bez stresu — Twoja wymarzona przygoda żeglarska zaczyna się tutaj.",
+    "description": "Wynajmij idealny jacht online w kilku kliknięciach. Rezerwacja rejsu jeszcze nigdy nie była tak prosta!",
     "support": "Doskonała obsługa klienta",
     "yachtsCount": "{count, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}}",
     "marinasCount": "{count, plural, one {# marina} few {# mariny} many {# marin} other {# mariny}}"
@@ -158,27 +158,27 @@
     "questions": [
       {
         "q": "Jak zarezerwować czarter jachtu na Boat4You?",
-        "a": "Wybierz cel podróży i terminy, przejrzyj dostępne jachty i kliknij Rezerwuj przy interesującej Cię jednostce. Potwierdzamy dostępność u partnera, wysyłamy propozycję rezerwacji, a po wpłacie zaliczki Twój czarter jest potwierdzony. Cały proces zajmuje zaledwie kilka minut."
+        "a": "Przejrzyj jachty dostępne do czarteru w wybranym kierunku w Twoim terminie i po prostu kliknij przycisk Rezerwuj przy jachcie, który Ci się podoba. Następnie potwierdzimy dostępność u partnera czarterowego, wyślemy Ci propozycję rezerwacji, a gdy wpłacisz zaliczkę, Twój czarter zostanie potwierdzony i możesz zacząć cieszyć się na swój rejs!"
       },
       {
         "q": "Czy do wyczarterowania jachtu potrzebny jest patent żeglarski?",
-        "a": "Do czarteru bez sternika (bareboat) konieczny jest patent żeglarski uznawany w kraju czarteru – polski patent jachtowego sternika morskiego, RYA Day Skipper, ICC lub równoważny. Jeśli nie masz patentu, nadal możesz zarezerwować dowolny jacht i dodać sternika podczas finalizacji rezerwacji."
+        "a": "Rezerwując jacht bareboat (bez skippera), musisz mieć ważny patent żeglarski uznawany w kraju, w którym chcesz wyczarterować łódź (chorwacki patent lub podobny, RYA Day Skipper, ICC lub inny). Jeśli nie masz ważnego patentu żeglarskiego, zawsze możesz zarezerwować dowolną łódź, a potem za dodatkową opłatą dobrać skippera przy finalizacji rezerwacji."
       },
       {
         "q": "Co jest wliczone w cenę czarteru bareboat?",
-        "a": "Cena bazowa obejmuje sam jacht, standardowe wyposażenie, wsparcie agencji czarterowej oraz ubezpieczenie od poważniejszych szkód. Sprzątanie końcowe, paliwo, opłaty portowe poza mariną macierzystą, transit log i opłata turystyczna są zwykle płatne osobno – na karcie każdego jachtu znajdziesz przejrzystą listę dodatków obowiązkowych i opcjonalnych."
+        "a": "Cena bazowa Twojego jachtu czarterowego obejmuje sam jacht, jego standardowe wyposażenie do użytku na pokładzie, obsługę Twojej agencji czarterowej oraz ubezpieczenie od poważnych szkód. Sprzątanie końcowe, paliwo, postoje poza portem macierzystym, transit log i opłata turystyczna (jeśli obowiązuje) są jednak zwykle naliczane osobno. Te pozycje są zawsze wyraźnie oznaczone jako obowiązkowe lub opcjonalne na stronie szczegółów każdego jachtu."
       },
       {
         "q": "Czy mogę wyczarterować jacht bez sternika?",
-        "a": "Tak. Czarter bareboat jest dostępny dla większości jachtów w naszym katalogu, pod warunkiem że co najmniej jedna osoba na pokładzie posiada ważny patent żeglarski oraz świadectwo operatora radiowego VHF. Jeśli nikt w załodze nie ma patentu, ten sam jacht można wynająć z profesjonalnym sternikiem za dodatkową opłatą dzienną."
+        "a": "Tak. Czarter bareboat jest dostępny dla większości jachtów na tej stronie, pod warunkiem że co najmniej jedna osoba na pokładzie posiada ważny i uznawany patent żeglarski oraz świadectwo VHF. Jeśli nikt w Twojej grupie nie ma patentu żeglarskiego, ten sam jacht nadal możesz wyczarterować z wykwalifikowanym skipperem za dodatkową opłatą dzienną."
       },
       {
         "q": "Kiedy najlepiej wyczarterować jacht na Morzu Śródziemnym?",
-        "a": "Maj, czerwiec i wrzesień to idealny moment – ciepłe morze, lekkie wiatry, mniej tłumów i wyraźnie niższe ceny niż w szczycie sezonu w lipcu i sierpniu. Kwiecień i październik również się sprawdzają dla doświadczonych żeglarzy, którym nie przeszkadza chłodniejsza woda – oferują najniższe stawki tygodniowe w roku."
+        "a": "Najlepszy czas na żeglowanie to maj, czerwiec i wrzesień. Morze jest ciepłe, wiatr słaby, na wyspach i wybrzeżu nie ma zbyt wielu ludzi, a ceny są wyraźnie niższe niż w lipcu i sierpniu. W kwietniu i październiku na rejs mogą wybrać się też pewni swoich umiejętności żeglarze, choć morze jest nieco chłodniejsze. W tych miesiącach znajdziesz nawet najniższe tygodniowe ceny w roku."
       },
       {
         "q": "Czy mogę anulować rezerwację?",
-        "a": "Warunki anulacji różnią się w zależności od jachtu – dokładne zasady wyświetlamy na stronie każdej oferty przed dokonaniem płatności. Jeśli rezerwujesz ponad 14 dni przed rozpoczęciem czarteru, w ciągu 72 godzin od rezerwacji możesz bezpłatnie anulować z pełnym zwrotem wpłat; później obowiązują warunki armatora, dlatego polecamy ubezpieczenie podróżne obejmujące rezygnację. Zwrotna kaucja jest oddawana w całości, o ile jacht nie został uszkodzony."
+        "a": "Warunki anulacji różnią się w zależności od jachtu i są opisane na stronie oferty przed płatnością. Jeśli rezerwujesz z wyprzedzeniem większym niż 14 dni, możesz bezpłatnie anulować rezerwację z pełnym zwrotem wpłat w ciągu 72 godzin od jej dokonania. Później obowiązują warunki firmy czarterowej. Dlatego polecamy wykupienie ubezpieczenia podróżnego, które obejmuje także rezygnację z wyjazdu. Zwrotna kaucja jest zawsze oddawana klientowi, o ile jacht nie został uszkodzony."
       }
     ],
     "preTitle": "Często zadawane ",
@@ -187,22 +187,22 @@
   "seoSection": {
     "preTitle": "Czarter jachtów,",
     "emphasizedTitle": "prostszy niż myślisz",
-    "intro": "Czarter jachtu zamienia zwykły urlop w prawdziwy rejs: własna łódź, własna trasa i nowa zatoka do zakotwiczenia, kiedy tylko przyjdzie Ci ochota. boat4you zbiera tysiące jachtów czarterowych z całego świata w jednej wyszukiwarce — z dostępnością i cenami w czasie rzeczywistym, a obowiązkowe dodatki i kaucję widzisz przed płatnością. Porównuj jachty żaglowe, katamarany, jachty motorowe i gulety obok siebie, oglądaj prawdziwe zdjęcia i listy wyposażenia, a wybrany tydzień rezerwuj bez niekończącej się wymiany e-maili.",
+    "intro": "Czarter jachtu może zamienić urlop w prawdziwą podróż. boat4you zbiera tysiące jachtów czarterowych z całego świata w jednej wyszukiwarce, z aktualną dostępnością do rezerwacji online i cenami czarteru, a obowiązkowe dopłaty i kaucja są podane przed płatnością. Dla każdego jachtu oferowanego online są szczegółowe listy wyposażenia i prawdziwe zdjęcia jachtu. Jachty żaglowe, katamarany, jachty motorowe, a nawet gulety można łatwo porównać obok siebie i zarezerwować online w kilka minut.",
     "blocks": [
       {
         "heading": "Bareboat, ze skipperem czy z pełną załogą",
-        "body": "To Ty decydujesz, ile żeglujesz samodzielnie. Wyczarteruj jacht w formule bareboat i poprowadź go sam, jeśli masz uznawany patent, taki jak ICC czy RYA Day Skipper. Wolisz odpoczywać? Do każdego jachtu możesz przy rezerwacji dodać zawodowego skippera — zna lokalne wiatry, mariny i tawerny, których nie znajdziesz w żadnym przewodniku. A jeśli marzy Ci się urlop w pływającej willi, wybierz jacht z załogą, na którym skipper i hostessa zajmą się wszystkim — od gotowania po planowanie trasy."
+        "body": "W zależności od Twoich preferencji i potrzeb możesz zarezerwować jacht bareboat albo dodać skippera do swojego jachtu. Jeśli masz uznawany patent żeglarski (np. chorwacki patent, RYA Day Skipper, ICC itp.), możesz zarezerwować bareboat i ruszyć na żeglarski urlop. Jeśli nie, zawsze możesz dodać skippera przy finalizacji rezerwacji online. Na całkowicie relaksujący urlop możesz też zarezerwować jacht z załogą, ze skipperem i hostessą, którzy zajmą się wszystkim, od gotowania po planowanie tras."
       },
       {
         "heading": "Jacht żaglowy, katamaran czy jacht motorowy",
-        "body": "Jednokadłubowe jachty żaglowe dają najprawdziwszy kontakt z wiatrem i najlepszą cenę w przeliczeniu na koję. Katamarany stały się ulubieńcami rodzin: brak przechyłów, dwa kadłuby prywatnych kabin i mesa, w której mieści się cała załoga. Jachty motorowe wymieniają żagle na prędkość i pokonują dwa razy więcej mil dziennie, a tradycyjne gulety łączą profesjonalną załogę z romantyzmem drewnianych pokładów. Każda oferta na boat4you pokazuje kabiny, koje, rok budowy i obowiązkowe dopłaty, zanim podejmiesz decyzję."
+        "body": "Jachty żaglowe są świetne dla żeglarzy, którzy szukają najczystszej formy żeglowania w najlepszej cenie za koję. Katamarany są bardzo popularne na rodzinnych rejsach, bo się nie przechylają i oferują prywatne kabiny w obu kadłubach oraz mesę, w której mieści się cała załoga. Jachty motorowe są idealne dla tych, którzy chcą w ciągu dnia pokonać wiele mil, mniej więcej dwa razy więcej niż jachtem żaglowym. Tradycyjne gulety są oferowane z profesjonalną załogą i dają bardzo romantyczne przeżycie żeglowania na drewnianych pokładach. Każda oferta na boat4you pokazuje kabiny, koje, rok budowy i obowiązkowe dopłaty, zanim dokonasz rezerwacji."
       },
       {
         "heading": "Gdzie i kiedy wypłynąć",
-        "body": "Sezon śródziemnomorski trwa od kwietnia do października: lipiec i sierpień to gwarancja słońca i najbardziej tętniące życiem porty, a maj, czerwiec i wrzesień kuszą ciepłym morzem, stabilniejszymi wiatrami i wyraźnie niższymi cenami. Od listopada do kwietnia flota przenosi się na zimowe wody — Karaiby, Bahamy i Seszele mają wtedy swój najlepszy czas, podczas gdy Europa czeka na wiosnę. Większość czarterów trwa od soboty do soboty i zaczyna się w dobrze skomunikowanych marinach macierzystych, więc loty i transfery łatwo zaplanować."
+        "body": "Na Morzu Śródziemnym sezon czarterowy trwa od kwietnia do końca października. Lipiec i sierpień to dużo słońca i najbardziej tętniące życiem porty, ale wtedy ceny czarteru jachtów są najwyższe. W maju, czerwcu i wrześniu woda w morzu jest jeszcze ciepła, wiatry są stabilniejsze, a ceny są wyraźnie niższe niż w szczycie sezonu. Od listopada do końca kwietnia flota czarterowa przenosi się na Karaiby, Bahamy i Seszele, a Europa czeka na kolejny sezon żeglarski. Większość czarterów trwa od soboty do soboty i zaczyna się w dobrze skomunikowanych marinach macierzystych, więc loty i transfery łatwo zaplanować."
       }
     ],
-    "closing": "Chcesz zacząć? Wybierz kierunek powyżej, porównaj realne ceny w swoim terminie i zarezerwuj jacht online w kilka minut — z bezpieczną płatnością i zespołem obsługi, który naprawdę odpowiada.",
+    "closing": "Chcesz zarezerwować żeglarski urlop? Wybierz kierunek powyżej, porównaj ceny wybranych jachtów w swoim terminie i zarezerwuj online w kilka minut w bezpiecznym środowisku. Jeśli masz pytania przed rezerwacją online, w jej trakcie lub po niej, chętnie Ci pomożemy.",
     "linksLabel": "Popularne wyszukiwania czarteru jachtów",
     "links": {
       "sailing": "Czarter jachtów żaglowych",

@@ -2,7 +2,7 @@
   "hero": {
     "title": "Noleggio yacht in",
     "ctaTitle": "un clic.",
-    "description": "Noleggia il tuo yacht perfetto con pochi click. Facile, veloce e senza stress — la tua avventura di navigazione da sogno inizia qui.",
+    "description": "Noleggia online il tuo yacht ideale con pochi click. Prenotare una vacanza in barca a vela non è mai stato così facile!",
     "support": "Eccellente assistenza clienti",
     "yachtsCount": "{count, plural, one {# yacht} other {# yacht}}",
     "marinasCount": "{count, plural, one {# porto} other {# porti}}"
@@ -158,27 +158,27 @@
     "questions": [
       {
         "q": "Come prenoto un noleggio yacht su Boat4You?",
-        "a": "Scegli la destinazione e le date, sfoglia gli yacht disponibili e clicca su Prenota sulla barca che preferisci. Confermiamo la disponibilità con il partner, ti inviamo una proposta di prenotazione e, non appena versi l'acconto, il tuo charter è confermato. L'intero processo richiede solo pochi minuti."
+        "a": "Sfoglia gli yacht disponibili per il noleggio nella destinazione che hai scelto per le tue date e clicca semplicemente sul pulsante Prenota dello yacht che preferisci. Noi confermeremo la disponibilità con il partner di noleggio, ti invieremo una proposta di prenotazione e, una volta versato l'acconto, il tuo noleggio sarà confermato e potrai iniziare a pregustare la tua vacanza in barca!"
       },
       {
         "q": "Serve la patente nautica per noleggiare uno yacht?",
-        "a": "Per il noleggio senza skipper (bareboat) è necessaria una patente nautica riconosciuta nel Paese di noleggio – patente nautica italiana entro o senza limiti, RYA Day Skipper, ICC o equivalente. Se non hai la patente puoi comunque prenotare qualsiasi yacht e aggiungere uno skipper al checkout."
+        "a": "Per prenotare uno yacht bareboat (senza skipper) devi avere una patente nautica valida e riconosciuta nel paese in cui vuoi noleggiare la barca (patente nautica croata o simile, RYA Day Skipper, ICC o altra). Se non hai una patente nautica valida puoi sempre prenotare qualsiasi barca e poi aggiungere uno skipper con un supplemento al momento del checkout."
       },
       {
         "q": "Cosa è incluso nella tariffa di noleggio bareboat?",
-        "a": "La tariffa base copre lo yacht, la dotazione standard, l'assistenza dell'agenzia di noleggio e l'assicurazione contro i danni rilevanti. Pulizie finali, carburante, ormeggi fuori dalla marina di partenza, transit log e tassa di soggiorno sono di norma a parte – nella scheda di ogni yacht trovi gli extra obbligatori e opzionali elencati in modo trasparente."
+        "a": "La tariffa base del tuo yacht a noleggio comprende lo yacht stesso, la sua dotazione standard per l'uso a bordo, l'assistenza della tua agenzia di noleggio e l'assicurazione contro i danni maggiori. Pulizia finale, carburante, ormeggi fuori dal porto base, transit log e tassa di soggiorno (se prevista) di solito vengono però addebitati a parte. Queste voci sono sempre indicate chiaramente come obbligatorie o facoltative nella pagina di dettaglio di ogni yacht."
       },
       {
         "q": "Posso noleggiare uno yacht senza skipper?",
-        "a": "Sì. Il noleggio bareboat è disponibile sulla maggior parte degli yacht del nostro catalogo, a condizione che almeno una persona a bordo sia in possesso di una patente nautica valida e del certificato limitato di radiotelefonista (VHF). Se nessuno del gruppo ha la patente, puoi noleggiare lo stesso yacht con uno skipper professionista pagando un supplemento giornaliero."
+        "a": "Sì. Il noleggio bareboat è disponibile sulla maggior parte degli yacht presenti su questo sito, a condizione che almeno una persona a bordo abbia una patente nautica valida e riconosciuta insieme al certificato VHF. Se nessuno del tuo gruppo ha la patente nautica, puoi comunque noleggiare lo stesso yacht con i servizi di uno skipper qualificato pagando un supplemento giornaliero."
       },
       {
         "q": "Qual è il periodo migliore per noleggiare uno yacht nel Mediterraneo?",
-        "a": "Maggio, giugno e settembre sono il periodo ideale – mare caldo, venti leggeri, meno affollamento e prezzi sensibilmente più bassi rispetto al picco di luglio e agosto. Aprile e ottobre sono adatti ai velisti esperti che non temono un mare più fresco, e offrono le tariffe settimanali più basse dell'anno."
+        "a": "Il periodo migliore per navigare è maggio, giugno e settembre. Il mare è caldo, il vento è leggero, sulle isole e sulla costa non c'è troppa gente e i prezzi sono sensibilmente più bassi che a luglio e agosto. Ad aprile e ottobre si può andare in barca anche come velisti esperti, anche se il mare è un po' più fresco. In questi mesi troverai addirittura i prezzi settimanali più bassi dell'anno."
       },
       {
         "q": "Posso cancellare la prenotazione?",
-        "a": "Le condizioni di cancellazione variano a seconda dello yacht – i termini esatti sono indicati nella scheda di ogni offerta prima del pagamento. Se prenoti più di 14 giorni prima della partenza, entro 72 ore dalla prenotazione puoi cancellare gratuitamente con rimborso completo; dopo si applicano le condizioni dell'operatore, per questo consigliamo un'assicurazione di viaggio che copra l'annullamento. Il deposito cauzionale rimborsabile viene sempre restituito, salvo che lo yacht presenti danni."
+        "a": "Le condizioni di cancellazione variano da yacht a yacht e sono descritte nella pagina dell'offerta prima del pagamento. Se prenoti con più di 14 giorni di anticipo, puoi cancellare la prenotazione gratuitamente e con rimborso completo entro 72 ore dalla prenotazione. Trascorso questo periodo si applicano i termini e le condizioni della società di noleggio. Per questo ti consigliamo di stipulare un'assicurazione di viaggio che copra anche l'annullamento del viaggio. La cauzione rimborsabile viene sempre restituita al cliente, purché lo yacht non abbia subito danni."
       }
     ],
     "preTitle": "Domande ",
@@ -187,22 +187,22 @@
   "seoSection": {
     "preTitle": "Noleggio yacht,",
     "emphasizedTitle": "senza complicazioni",
-    "intro": "Un noleggio yacht trasforma la vacanza in un viaggio: la tua barca, la tua rotta e un ancoraggio nuovo ogni volta che ne hai voglia. boat4you riunisce migliaia di yacht in charter da tutto il mondo in un'unica ricerca — con disponibilità e prezzi in tempo reale, e gli extra obbligatori e la cauzione indicati prima di pagare. Confronta fianco a fianco barche a vela, catamarani, yacht a motore e caicchi, guarda foto reali e liste dell'equipaggiamento e prenota la settimana che vuoi senza infiniti scambi di email.",
+    "intro": "Un noleggio yacht può trasformare una vacanza in un viaggio. boat4you riunisce migliaia di yacht a noleggio da tutto il mondo in un'unica ricerca, con disponibilità per la prenotazione online e prezzi di noleggio in tempo reale, e gli extra obbligatori e la cauzione sono indicati prima del pagamento. Per ogni yacht offerto online ci sono liste dettagliate delle dotazioni e foto reali dello yacht. Barche a vela, catamarani, yacht a motore e persino caicchi si possono confrontare facilmente fianco a fianco e prenotare online in pochi minuti.",
     "blocks": [
       {
         "heading": "Bareboat, con skipper o con equipaggio completo",
-        "body": "Quanto navigare in prima persona lo decidi tu. Noleggia una barca bareboat e conducila da solo se possiedi una patente riconosciuta come l'ICC o la RYA Day Skipper. Preferisci rilassarti? Aggiungi uno skipper professionista a qualsiasi yacht al momento della prenotazione: conosce i venti locali, gli ormeggi e le trattorie che nessuna guida menziona. E per una vacanza da vera villa galleggiante, scegli uno yacht con equipaggio, dove skipper e hostess si occupano di tutto, dalla cucina alla pianificazione della rotta."
+        "body": "In base alle tue preferenze e alle tue esigenze puoi prenotare una barca senza skipper oppure aggiungere uno skipper al tuo yacht. Se hai una patente nautica riconosciuta (ad es. patente nautica croata, RYA Day Skipper, ICC ecc.) puoi prenotare un bareboat e partire per la tua vacanza in barca a vela. Altrimenti puoi sempre aggiungere uno skipper al checkout online. Per una vacanza in totale relax puoi anche prenotare uno yacht con equipaggio, skipper e hostess, che si occuperanno di tutto, dalla cucina alla pianificazione delle rotte."
       },
       {
         "heading": "Barca a vela, catamarano o yacht a motore",
-        "body": "I monoscafi a vela regalano la sensazione più autentica del vento e il miglior rapporto qualità-prezzo per posto letto. I catamarani sono ormai i preferiti delle famiglie: niente sbandamento, due scafi di cabine private e un quadrato dove tutto l'equipaggio trova posto. Gli yacht a motore scambiano le vele con la velocità e coprono il doppio delle miglia in un giorno, mentre i tradizionali caicchi uniscono un equipaggio professionale al fascino dei ponti in legno. Ogni annuncio su boat4you mostra cabine, posti letto, anno di costruzione ed extra obbligatori prima della conferma."
+        "body": "Le barche a vela sono ideali per chi cerca la forma più pura di navigazione al miglior prezzo per posto letto. I catamarani sono molto apprezzati per le vacanze in famiglia perché non sbandano e offrono cabine private in entrambi gli scafi e un quadrato dove tutto l'equipaggio trova posto. Gli yacht a motore sono perfetti per chi vuole percorrere molte miglia in un giorno, circa il doppio di una barca a vela. I caicchi tradizionali vengono offerti con equipaggio professionale e regalano un'esperienza molto romantica di navigazione sui ponti in legno. Ogni annuncio su boat4you mostra cabine, posti letto, anno di costruzione ed extra obbligatori prima della prenotazione."
       },
       {
         "heading": "Dove e quando salpare",
-        "body": "La stagione del Mediterraneo va da aprile a ottobre: luglio e agosto garantiscono sole e i porti più animati, mentre maggio, giugno e settembre offrono mare caldo, venti più regolari e prezzi sensibilmente più bassi. Da novembre ad aprile la flotta si sposta verso le acque invernali: Caraibi, Bahamas e Seychelles danno il meglio di sé mentre l'Europa aspetta la primavera. La maggior parte dei charter va da sabato a sabato con partenza da marine ben collegate, così voli e transfer si organizzano senza fatica."
+        "body": "Nel Mediterraneo la stagione di noleggio va da aprile a fine ottobre. Luglio e agosto portano tanto sole e i porti più vivaci, ma in quei mesi i prezzi del noleggio yacht sono i più alti. A maggio, giugno e settembre l'acqua del mare è ancora calda e i venti sono più stabili, mentre i prezzi sono sensibilmente più bassi rispetto all'alta stagione. Da novembre a fine aprile la flotta a noleggio si sposta nei Caraibi, alle Bahamas e alle Seychelles mentre l'Europa aspetta la prossima stagione velica. La maggior parte dei noleggi va da sabato a sabato da marine base ben collegate, così voli e trasferimenti sono facili da organizzare."
       }
     ],
-    "closing": "Pronti a partire? Scegli una destinazione qui sopra, confronta prezzi reali per le tue date e assicurati il tuo yacht online in pochi minuti — con pagamento sicuro e un team di assistenza che risponde davvero.",
+    "closing": "Vuoi prenotare una vacanza in barca a vela? Scegli la tua destinazione qui sopra, confronta i prezzi degli yacht che preferisci per le tue date e prenota online in pochi minuti in un ambiente sicuro. Se hai domande prima, durante o dopo la prenotazione online, siamo qui per aiutarti.",
     "linksLabel": "Le ricerche di noleggio yacht più popolari",
     "links": {
       "sailing": "Noleggio barche a vela",

@@ -2,7 +2,7 @@
   "hero": {
     "title": "Location de yacht en",
     "ctaTitle": "un seul clic.",
-    "description": "Louez votre yacht parfait en quelques clics seulement. Simple, rapide et sans stress — votre aventure de navigation de rêve commence ici.",
+    "description": "Louez votre yacht idéal en ligne en quelques clics seulement. Réserver des vacances en voilier n'a jamais été aussi simple !",
     "support": "Service client excellent",
     "yachtsCount": "{count, plural, one {# yacht} other {# yachts}}",
     "marinasCount": "{count, plural, one {# marina} other {# marinas}}"
@@ -158,27 +158,27 @@
     "questions": [
       {
         "q": "Comment réserver une location de yacht sur Boat4You ?",
-        "a": "Choisissez votre destination et vos dates, parcourez les yachts disponibles et cliquez sur Réserver pour le bateau qui vous plaît. Nous confirmons la disponibilité auprès du partenaire, vous envoyons une proposition de réservation et, dès le versement de l'acompte, votre location est confirmée. L'ensemble du processus ne prend que quelques minutes."
+        "a": "Parcourez les yachts disponibles à la location dans la destination choisie pour vos dates de location, puis cliquez simplement sur le bouton Réserver du yacht de votre choix. Nous confirmons ensuite la disponibilité auprès du partenaire de location, vous envoyons une proposition de réservation et, une fois l'acompte versé, votre location est confirmée et vous pouvez commencer à vous réjouir de votre croisière !"
       },
       {
         "q": "Faut-il un permis pour louer un yacht ?",
-        "a": "Pour une location sans skipper, vous devez disposer d'un permis bateau reconnu dans le pays de location – permis hauturier français, RYA Day Skipper, ICC ou équivalent. Si vous n'avez pas de permis, vous pouvez tout de même réserver n'importe quel yacht et ajouter un skipper au moment du paiement."
+        "a": "Pour réserver un yacht sans skipper, vous devez être titulaire d'un permis bateau valide et reconnu dans le pays où vous souhaitez louer (permis bateau croate ou équivalent, RYA Day Skipper, ICC ou autre). Si vous n'avez pas de permis bateau valide, vous pouvez toujours réserver n'importe quel bateau puis ajouter un skipper moyennant un supplément lors du paiement."
       },
       {
         "q": "Que comprend le tarif de location sans skipper ?",
-        "a": "Le tarif de base couvre le yacht, l'équipement standard, l'assistance de l'agence de location et l'assurance contre les dommages importants. Le nettoyage final, le carburant, les frais de port hors marina d'origine, le transit log et la taxe de séjour sont généralement à régler séparément – chaque fiche yacht détaille de manière transparente les extras obligatoires et optionnels."
+        "a": "Le tarif de base de votre yacht de location comprend le yacht lui-même, son équipement standard pour l'utilisation à bord, l'assistance de votre agence de location et une assurance contre les dommages importants. Le ménage de fin de séjour, le carburant, les frais d'amarrage hors du port d'attache, le transit log et la taxe de séjour (le cas échéant) sont toutefois généralement facturés à part. Ces éléments sont toujours clairement indiqués comme obligatoires ou optionnels sur la page détaillée de chaque yacht."
       },
       {
         "q": "Puis-je louer un yacht sans skipper ?",
-        "a": "Oui. La location sans skipper est proposée sur la majorité des yachts de notre catalogue, à condition qu'au moins une personne à bord détienne un permis bateau valide et un certificat restreint de radiotéléphoniste (VHF). Si personne dans le groupe n'a de permis, vous pouvez louer le même yacht avec un skipper professionnel moyennant un supplément journalier."
+        "a": "Oui. La location sans skipper est proposée sur la majorité des yachts présentés sur ce site, à condition qu'au moins une personne à bord détienne un permis bateau valide et reconnu ainsi qu'un certificat VHF. Si personne dans votre groupe n'a de permis bateau, vous pouvez quand même louer le même yacht avec les services d'un skipper qualifié moyennant un supplément journalier."
       },
       {
         "q": "Quelle est la meilleure période pour louer un yacht en Méditerranée ?",
-        "a": "Mai, juin et septembre sont la période idéale – mer chaude, vents légers, moins de monde et tarifs nettement plus avantageux qu'en pleine saison de juillet et août. Avril et octobre conviennent aussi aux marins expérimentés que la fraîcheur de la mer ne dérange pas, et offrent les tarifs hebdomadaires les plus bas de l'année."
+        "a": "La meilleure période pour naviguer, ce sont les mois de mai, juin et septembre. La mer est chaude, le vent est léger, il n'y a pas trop de monde sur les îles et sur la côte, et les prix sont nettement plus bas qu'en juillet et en août. En avril et en octobre, une croisière reste possible pour les navigateurs confirmés, même si la mer est un peu plus fraîche. Ces mois-là, vous bénéficiez même des tarifs hebdomadaires les plus bas de l'année."
       },
       {
         "q": "Puis-je annuler ma réservation ?",
-        "a": "Les conditions d'annulation varient d'un yacht à l'autre – chaque fiche d'offre indique les modalités précises avant le paiement. Si vous réservez plus de 14 jours avant le départ, vous pouvez, dans les 72 heures suivant la réservation, annuler gratuitement avec un remboursement intégral ; ensuite, les conditions de l'opérateur s'appliquent, c'est pourquoi nous recommandons une assurance voyage couvrant l'annulation. La caution remboursable est toujours restituée, sauf si le yacht présente des dommages."
+        "a": "Les conditions d'annulation varient d'un yacht à l'autre et sont décrites sur la page de l'offre avant le paiement. Si vous réservez plus de 14 jours à l'avance, vous pouvez annuler votre réservation sans frais et avec un remboursement intégral dans les 72 heures suivant la réservation. Passé ce délai, ce sont les conditions générales de la société de location qui s'appliquent. Nous vous recommandons donc de souscrire une assurance voyage qui couvre aussi l'annulation de votre séjour. La caution remboursable est toujours restituée au client, tant que le yacht n'a subi aucun dommage."
       }
     ],
     "preTitle": "Questions ",
@@ -187,22 +187,22 @@
   "seoSection": {
     "preTitle": "La location de yacht,",
     "emphasizedTitle": "en toute simplicité",
-    "intro": "Une location de yacht transforme des vacances en véritable voyage : votre propre bateau, votre propre itinéraire et un nouveau mouillage dès que l'envie vous prend. boat4you réunit des milliers de yachts à louer dans le monde entier en une seule recherche — avec disponibilités et prix en temps réel, et les extras obligatoires ainsi que la caution indiqués avant le paiement. Comparez voiliers, catamarans, yachts à moteur et goélettes côte à côte, consultez de vraies photos et les listes d'équipement, et réservez la semaine de votre choix sans interminables échanges d'e-mails.",
+    "intro": "Une location de yacht peut transformer des vacances en un vrai voyage. boat4you réunit des milliers de yachts de location du monde entier dans une seule recherche, avec les disponibilités de réservation en ligne et les prix de location en temps réel, et les extras obligatoires ainsi que la caution sont indiqués avant le paiement. Pour chaque yacht proposé en ligne, vous trouvez des listes d'équipement détaillées et de vraies photos du yacht. Voiliers, catamarans, yachts à moteur et même goélettes se comparent facilement côte à côte et se réservent en ligne en quelques minutes.",
     "blocks": [
       {
         "heading": "Sans skipper, avec skipper ou avec équipage complet",
-        "body": "C'est vous qui décidez de la part de navigation que vous souhaitez assurer. Louez un bateau coque nue (bareboat) et barrez-le vous-même si vous détenez un permis reconnu comme l'ICC ou le RYA Day Skipper. Envie de vous détendre ? Ajoutez un skipper professionnel à n'importe quel yacht lors de la réservation — il connaît les vents locaux, les mouillages et les tavernes qu'aucun guide ne mentionne. Et pour des vacances façon villa flottante, choisissez un yacht avec équipage, où skipper et hôtesse s'occupent de tout, de la cuisine à la planification de l'itinéraire."
+        "body": "Selon vos envies et vos besoins, vous pouvez réserver un bateau sans skipper ou ajouter un skipper à votre yacht. Si vous avez un permis bateau reconnu (par ex. permis bateau croate, RYA Day Skipper, ICC, etc.), vous pouvez réserver sans skipper et partir pour vos vacances en voilier. Sinon, vous pouvez toujours ajouter un skipper lors du paiement en ligne. Pour des vacances entièrement reposantes, vous pouvez aussi réserver un yacht avec équipage, skipper et hôtesse, qui s'occupent de tout, de la cuisine à la planification de vos itinéraires."
       },
       {
         "heading": "Voilier, catamaran ou yacht à moteur",
-        "body": "Les voiliers monocoques offrent la sensation la plus pure du vent et le meilleur rapport qualité-prix par couchette. Le catamaran est devenu le favori des familles : pas de gîte, deux coques de cabines privées et un carré où tout l'équipage trouve sa place. Les yachts à moteur troquent les voiles contre la vitesse et parcourent deux fois plus de milles en une journée, tandis que les goélettes traditionnelles allient équipage professionnel et charme des ponts en bois. Chaque annonce sur boat4you affiche les cabines, les couchettes, l'année de construction et les extras obligatoires avant que vous ne vous engagiez."
+        "body": "Les voiliers sont parfaits pour qui recherche la navigation à voile la plus pure au meilleur prix par couchette. Les catamarans sont très appréciés pour naviguer en famille, car ils ne gîtent pas et offrent des cabines privées dans les deux coques et un carré où tout l'équipage trouve sa place. Les yachts à moteur sont idéaux pour ceux qui veulent parcourir beaucoup de milles dans la journée, environ deux fois plus qu'un voilier. Les goélettes traditionnelles sont proposées avec un équipage professionnel et offrent une expérience très romantique de la navigation sur des ponts en bois. Chaque annonce sur boat4you affiche les cabines, les couchettes, l'année de construction et les extras obligatoires avant que vous ne réserviez."
       },
       {
         "heading": "Où et quand larguer les amarres",
-        "body": "En Méditerranée, la saison s'étend d'avril à octobre : juillet et août garantissent le soleil et les ports les plus animés, tandis que mai, juin et septembre offrent une mer chaude, des vents plus réguliers et des prix nettement plus doux. De novembre à avril, la flotte migre vers les eaux d'hiver — les Caraïbes, les Bahamas et les Seychelles se naviguent alors sous leur meilleur jour pendant que l'Europe attend le printemps. La plupart des locations vont du samedi au samedi, au départ de marinas bien desservies : vols et transferts se planifient donc facilement."
+        "body": "En Méditerranée, la saison de location s'étend d'avril à fin octobre. Juillet et août apportent beaucoup de soleil et les ports les plus animés, mais c'est alors que les prix de la location de yacht sont les plus élevés. En mai, juin et septembre, l'eau de mer est encore chaude et les vents sont plus stables, tandis que les prix sont nettement plus bas qu'en haute saison. De novembre à fin avril, la flotte de location rejoint les Caraïbes, les Bahamas et les Seychelles pendant que l'Europe attend la prochaine saison de voile. La plupart des locations se font du samedi au samedi au départ de ports d'attache bien desservis, ce qui facilite l'organisation des vols et des transferts."
       }
     ],
-    "closing": "Prêt à embarquer ? Choisissez une destination ci-dessus, comparez les prix réels pour vos dates et réservez votre yacht en ligne en quelques minutes — avec paiement sécurisé et une équipe d'assistance qui répond vraiment.",
+    "closing": "Vous avez envie de réserver des vacances en voilier ? Choisissez simplement votre destination ci-dessus, comparez les prix des yachts de votre choix pour vos dates et réservez en ligne en quelques minutes dans un environnement sécurisé. Si vous avez des questions avant, pendant ou après votre réservation en ligne, nous sommes là pour vous aider.",
     "linksLabel": "Recherches populaires de location de yacht",
     "links": {
       "sailing": "Location de voilier",

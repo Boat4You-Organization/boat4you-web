@@ -2,7 +2,7 @@
   "hero": {
     "title": "Jachtcharter in",
     "ctaTitle": "één klik.",
-    "description": "Charter je perfecte jacht in een paar klikken. Eenvoudig, snel en zonder stress — je droomzeilavontuur begint hier.",
+    "description": "Charter je ideale jacht online in een paar klikken. Een zeilvakantie boeken was nog nooit zo makkelijk!",
     "support": "Uitstekende klantenservice",
     "yachtsCount": "{count, plural, one {# jacht} other {# jachten}}",
     "marinasCount": "{count, plural, one {# jachthaven} other {# jachthavens}}"
@@ -158,27 +158,27 @@
     "questions": [
       {
         "q": "Hoe boek ik een jachtcharter op Boat4You?",
-        "a": "Kies je bestemming en data, bekijk de beschikbare jachten en klik op Reserveren bij de boot van je keuze. Wij bevestigen de beschikbaarheid bij de partner, sturen je een boekingsvoorstel en zodra je de aanbetaling voldoet, staat je charter vast. Het hele proces duurt slechts enkele minuten."
+        "a": "Bekijk de jachten die op jouw gekozen bestemming beschikbaar zijn voor je charterdata en klik gewoon op de knop Reserveren bij het jacht van je voorkeur. Wij bevestigen dan de beschikbaarheid bij de charterpartner, sturen je een boekingsvoorstel en zodra je de aanbetaling hebt gedaan, is je charter bevestigd en kun je je gaan verheugen op je vaarvakantie!"
       },
       {
         "q": "Heb ik een vaarbewijs nodig om een jacht te charteren?",
-        "a": "Voor een charter zonder schipper (bareboat) heb je een vaarbewijs nodig dat in het charterland erkend wordt – Klein Vaarbewijs II, RYA Day Skipper, ICC of een gelijkwaardig brevet. Heb je geen vaarbewijs, dan kun je elk jacht alsnog boeken en bij het afrekenen een schipper toevoegen."
+        "a": "Als je een bareboat-jacht (zonder schipper) boekt, heb je een geldig vaarbewijs nodig dat erkend wordt in het land waar je een boot wilt charteren (Kroatisch vaarbewijs of vergelijkbaar, RYA Day Skipper, ICC of een ander). Heb je geen geldig vaarbewijs, dan kun je altijd elke boot boeken en bij het afrekenen tegen meerprijs een schipper bijboeken."
       },
       {
         "q": "Wat is inbegrepen in de bareboat-charterprijs?",
-        "a": "Het basistarief omvat het jacht zelf, de standaarduitrusting, de ondersteuning van het charterkantoor en een verzekering tegen grote schade. Eindschoonmaak, brandstof, ligplaatsen buiten de thuishaven, transit log en toeristenbelasting worden meestal apart betaald – op elke jachtpagina zie je de verplichte en optionele extra's transparant op een rij."
+        "a": "De basisprijs van je charterjacht omvat het jacht zelf, de standaarduitrusting voor gebruik aan boord, de ondersteuning van je charterbureau en een verzekering tegen grote schade. Eindschoonmaak, brandstof, ligplaatsen buiten de thuishaven, transitlog en toeristenbelasting (indien van toepassing) worden meestal wel apart in rekening gebracht. Deze posten staan op de detailpagina van elk jacht altijd duidelijk aangegeven als verplicht of optioneel."
       },
       {
         "q": "Kan ik een jacht zonder schipper huren?",
-        "a": "Ja. Bareboat-charter is beschikbaar voor de meeste jachten in ons aanbod, mits ten minste één persoon aan boord een geldig vaarbewijs en een marifoonbedienerscertificaat (VHF) heeft. Heeft niemand uit de groep een vaarbewijs, dan kun je hetzelfde jacht huren met een professionele schipper tegen een dagtoeslag."
+        "a": "Ja. Bareboat-charter is mogelijk voor de meeste jachten op deze website, mits ten minste één persoon aan boord een geldig en erkend vaarbewijs en een marifooncertificaat (VHF) heeft. Heeft niemand in je groep een vaarbewijs, dan kun je hetzelfde jacht toch charteren met een gekwalificeerde schipper tegen een dagtoeslag."
       },
       {
         "q": "Wat is de beste tijd om een jacht te charteren in de Middellandse Zee?",
-        "a": "Mei, juni en september zijn ideaal – warme zee, lichte winden, minder drukte en duidelijk lagere prijzen dan in het hoogseizoen juli en augustus. April en oktober zijn nog steeds geschikt voor ervaren zeilers die geen moeite hebben met een koelere zee, en bieden de laagste weektarieven van het jaar."
+        "a": "De beste tijd om te zeilen is mei, juni en september. De zee is warm, de wind is licht, het is niet te druk op de eilanden en aan de kust en de prijzen liggen merkbaar lager dan in juli en augustus. In april en oktober kun je als ervaren zeiler ook prima een zeiltocht maken, al is de zee dan wat koeler. In deze maanden krijg je zelfs de laagste weekprijzen van het jaar."
       },
       {
         "q": "Kan ik mijn boeking annuleren?",
-        "a": "De annuleringsvoorwaarden verschillen per jacht – de exacte voorwaarden staan op elke aanbiedingspagina voordat je betaalt. Boek je meer dan 14 dagen voor de charter, dan kun je binnen 72 uur na het boeken kosteloos annuleren met volledige terugbetaling; daarna gelden de voorwaarden van de verhuurder, dus we raden een reisverzekering aan die annulering dekt. De terugbetaalbare borg wordt altijd geretourneerd, tenzij het jacht beschadigd is."
+        "a": "De annuleringsvoorwaarden verschillen per jacht en staan op de aanbiedingspagina voordat je betaalt. Boek je meer dan 14 dagen van tevoren, dan kun je je boeking binnen 72 uur na het boeken kosteloos en met volledige terugbetaling annuleren. Daarna gelden de algemene voorwaarden van het charterbedrijf. We raden je daarom een reisverzekering aan die ook annulering van je reis dekt. De terugbetaalbare borg krijgt de klant altijd terug, zolang het jacht geen schade heeft opgelopen."
       }
     ],
     "preTitle": "Veelgestelde ",
@@ -187,22 +187,22 @@
   "seoSection": {
     "preTitle": "Jacht huren,",
     "emphasizedTitle": "eenvoudig geregeld",
-    "intro": "Een jacht huren maakt van een vakantie een echte zeereis: je eigen boot, je eigen route en een nieuwe ankerplaats wanneer jij daar zin in hebt. boat4you brengt duizenden charterjachten van over de hele wereld samen in één zoekopdracht — met actuele beschikbaarheid en prijzen, en de verplichte extra's en borg zie je vóór je betaalt. Vergelijk zeiljachten, catamarans, motorjachten en gulets naast elkaar, bekijk echte foto's en uitrustingslijsten en boek de week die jou uitkomt, zonder eindeloos heen-en-weer gemail.",
+    "intro": "Een jachtcharter kan van een vakantie een echte reis maken. boat4you brengt duizenden charterjachten van over de hele wereld samen in één zoekopdracht, met actuele online beschikbaarheid en charterprijzen, en de verplichte extra's en de borg zie je voordat je betaalt. Voor elk jacht dat online wordt aangeboden zijn er gedetailleerde uitrustingslijsten en echte foto's van het jacht. Zeiljachten, catamarans, motorjachten en zelfs gulets kun je makkelijk naast elkaar vergelijken en binnen enkele minuten online boeken.",
     "blocks": [
       {
         "heading": "Bareboat, met schipper of met volledige bemanning",
-        "body": "Hoeveel je zelf vaart, bepaal jij. Huur een bareboat en sta zelf aan het roer als je een erkend vaarbewijs hebt, zoals het ICC of RYA Day Skipper. Liever ontspannen? Voeg bij het boeken aan elk jacht een professionele schipper toe — die kent de lokale winden, de aanlegplaatsen en de taveernes die in geen enkele reisgids staan. En wil je een vakantie als in een drijvende villa, kies dan een jacht met volledige bemanning, waar schipper en hostess alles verzorgen, van koken tot routeplanning."
+        "body": "Afhankelijk van je wensen en behoeften kun je een bareboat boeken of een schipper aan je jacht toevoegen. Heb je een erkend vaarbewijs (bijv. Kroatisch vaarbewijs, RYA Day Skipper, ICC enz.), dan kun je een bareboat boeken en op zeilvakantie vertrekken. Zo niet, dan kun je bij het online afrekenen altijd een schipper toevoegen. Voor een volledig ontspannen vakantie kun je ook een jacht met bemanning boeken, met schipper en hostess, die alles voor je regelen, van het koken tot het plannen van je routes."
       },
       {
         "heading": "Zeiljacht, catamaran of motorjacht",
-        "body": "Monohull-zeiljachten bieden het puurste zeilgevoel en de beste prijs per slaapplaats. De catamaran is uitgegroeid tot dé familiefavoriet: hij helt niet over, heeft twee rompen vol privéhutten en een salon waar de hele bemanning in past. Motorjachten ruilen zeilen in voor snelheid en leggen op een dag twee keer zoveel mijlen af, terwijl traditionele gulets een professionele bemanning koppelen aan de romantiek van houten dekken. Elke aanbieding op boat4you toont hutten, slaapplaatsen, bouwjaar en de verplichte extra's voordat je boekt."
+        "body": "Zeiljachten zijn ideaal voor de zeiler die het puurste zeilen zoekt tegen de beste prijs per slaapplaats. Catamarans zijn erg populair om met het gezin te zeilen, omdat ze niet overhellen en privéhutten in beide rompen bieden en een salon waar de hele bemanning in past. Motorjachten zijn ideaal voor wie overdag veel mijlen wil afleggen, ongeveer twee keer zoveel als met een zeiljacht. Traditionele gulets worden met een professionele bemanning aangeboden en geven een heel romantische zeilervaring op houten dekken. Elke aanbieding op boat4you toont hutten, slaapplaatsen, bouwjaar en de verplichte extra's voordat je boekt."
       },
       {
         "heading": "Waar en wanneer je het ruime sop kiest",
-        "body": "Het seizoen op de Middellandse Zee loopt van april tot en met oktober: juli en augustus brengen gegarandeerde zon en de levendigste havens, terwijl mei, juni en september warme zeeën, stabielere wind en duidelijk lagere prijzen bieden. Van november tot april verhuist de vloot naar haar winterbestemmingen — dan varen de Caraïben, de Bahama's en de Seychellen op hun best, terwijl Europa op de lente wacht. De meeste charters lopen van zaterdag tot zaterdag vanuit goed bereikbare thuishavens, zodat vluchten en transfers eenvoudig te plannen zijn."
+        "body": "In de Middellandse Zee loopt het charterseizoen van april tot eind oktober. Juli en augustus brengen veel zon en de levendigste havens, maar dan zijn de prijzen voor een jachtcharter ook het hoogst. In mei, juni en september is het zeewater nog warm en zijn de winden stabieler, terwijl de prijzen merkbaar lager liggen dan in het hoogseizoen. Van november tot eind april verhuist de chartervloot naar de Caraïben, de Bahama's en de Seychellen, terwijl Europa op het volgende zeilseizoen wacht. De meeste charters lopen van zaterdag tot zaterdag vanuit goed bereikbare thuishavens, zodat vluchten en transfers makkelijk te plannen zijn."
       }
     ],
-    "closing": "Klaar voor vertrek? Kies hierboven een bestemming, vergelijk echte prijzen voor jouw data en leg je jacht binnen een paar minuten online vast — met veilig betalen en een supportteam dat écht antwoord geeft.",
+    "closing": "Wil je een zeilvakantie boeken? Kies hierboven je bestemming, vergelijk de prijzen van de jachten van je keuze voor jouw data en boek binnen enkele minuten online in een veilige omgeving. Heb je vragen voor, tijdens of na je online boeking, dan helpen we je graag.",
     "linksLabel": "Populaire zoekopdrachten voor jachtcharter",
     "links": {
       "sailing": "Zeiljacht huren",

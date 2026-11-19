@@ -2,7 +2,7 @@
   "hero": {
     "title": "Alquiler de yates en",
     "ctaTitle": "un solo clic.",
-    "description": "Alquila tu yacht perfecto en solo unos clicks. Fácil, rápido y sin estrés — tu aventura de navegación soñada comienza aquí.",
+    "description": "Alquila online tu yate ideal en solo unos clics. ¡Reservar unas vacaciones en velero nunca ha sido tan fácil!",
     "support": "Excelente atención al cliente",
     "yachtsCount": "{count, plural, one {# yate} other {# yates}}",
     "marinasCount": "{count, plural, one {# puerto} other {# puertos}}"
@@ -158,27 +158,27 @@
     "questions": [
       {
         "q": "¿Cómo reservo un alquiler de yate en Boat4You?",
-        "a": "Elige tu destino y fechas, explora los yates disponibles y haz clic en Reservar en el barco que te guste. Confirmamos la disponibilidad con el partner, te enviamos una propuesta de reserva y, en cuanto pagas la señal, tu charter queda confirmado. Todo el proceso lleva solo unos minutos."
+        "a": "Explora los yates disponibles para alquilar en el destino que elijas y para tus fechas de chárter y simplemente haz clic en el botón Reservar del yate que prefieras. Después confirmaremos la disponibilidad con el socio de chárter, te enviaremos una propuesta de reserva y, una vez que hayas pagado el depósito, tu chárter quedará confirmado y ya podrás empezar a disfrutar de la espera."
       },
       {
         "q": "¿Necesito titulación náutica para alquilar un yate?",
-        "a": "Para un charter sin patrón (bareboat) necesitas una titulación náutica reconocida en el país de alquiler, como el PER español, el RYA Day Skipper, el ICC o equivalente. Si no tienes titulación, puedes reservar igualmente cualquier yate y añadir un patrón en el checkout."
+        "a": "Para reservar un yate bareboat (sin patrón) necesitas una titulación náutica válida y reconocida en el país donde quieres alquilar el barco (licencia náutica croata o similar, RYA Day Skipper, ICC u otra). Si no tienes una titulación náutica válida, siempre puedes reservar cualquier barco y añadir un patrón por un coste adicional al finalizar la reserva."
       },
       {
         "q": "¿Qué incluye el precio del alquiler bareboat?",
-        "a": "La tarifa base cubre el yate, el equipamiento estándar, la asistencia de la agencia de alquiler y el seguro contra daños mayores. La limpieza final, el combustible, las tasas de amarre fuera de la marina base, el transit log y la tasa turística suelen pagarse aparte: en cada ficha de yate verás los extras obligatorios y opcionales detallados con total transparencia."
+        "a": "La tarifa base de tu yate de alquiler incluye el propio yate, su equipamiento estándar para el uso a bordo, la asistencia de tu agencia de chárter y el seguro contra daños mayores. La limpieza final, el combustible, los amarres fuera del puerto base, el transit log y la tasa turística (si procede) suelen cobrarse aparte. Estos conceptos siempre aparecen claramente indicados como obligatorios u opcionales en la página de detalle de cada yate."
       },
       {
         "q": "¿Puedo alquilar un yate sin patrón?",
-        "a": "Sí. El charter bareboat está disponible en la mayoría de los yates de nuestro catálogo, siempre que al menos una persona a bordo cuente con una titulación náutica vigente y el certificado de operador de radio VHF. Si nadie del grupo dispone de titulación, puedes alquilar el mismo yate con un patrón profesional pagando un suplemento diario."
+        "a": "Sí. El charter bareboat está disponible en la mayoría de los yates de esta web, siempre que al menos una persona a bordo tenga una titulación náutica vigente y reconocida junto con el certificado de radio VHF. Si nadie de tu grupo tiene titulación náutica, puedes alquilar igualmente el mismo yate con los servicios de un patrón cualificado pagando un suplemento diario."
       },
       {
         "q": "¿Cuál es la mejor época para alquilar un yate en el Mediterráneo?",
-        "a": "Mayo, junio y septiembre son los meses ideales: mar cálido, vientos suaves, menos masificación y precios sensiblemente más bajos que en plena temporada de julio y agosto. Abril y octubre también funcionan para navegantes con experiencia a quienes no les importa un mar más fresco, y ofrecen las tarifas semanales más bajas del año."
+        "a": "La mejor época para navegar es mayo, junio y septiembre. El mar está templado, el viento es suave, no hay demasiada gente en las islas ni en la costa y los precios son notablemente más bajos que en julio y agosto. En abril y octubre también se puede salir a navegar si eres un navegante con experiencia, aunque el mar está algo más fresco. En estos meses incluso encontrarás los precios semanales más bajos del año."
       },
       {
         "q": "¿Puedo cancelar mi reserva?",
-        "a": "Las condiciones de cancelación varían según el yate y se muestran en cada ficha de oferta antes del pago. Si reservas con más de 14 días de antelación, durante las 72 horas siguientes a la reserva puedes cancelar gratis con reembolso íntegro; después se aplican las condiciones del operador, por lo que te recomendamos un seguro de viaje que cubra la cancelación. La fianza reembolsable se devuelve siempre que el yate no presente daños."
+        "a": "Las condiciones de cancelación varían de un yate a otro y se describen en la página de la oferta antes de pagar. Si reservas con más de 14 días de antelación, puedes cancelar tu reserva sin coste y con reembolso total en las 72 horas siguientes a la reserva. Pasado ese plazo, se aplican los términos y condiciones de la empresa de chárter. Por eso te recomendamos contratar un seguro de viaje que cubra también la cancelación del viaje. La fianza reembolsable siempre se devuelve al cliente, siempre que el yate no haya sufrido daños."
       }
     ],
     "preTitle": "Preguntas ",
@@ -187,22 +187,22 @@
   "seoSection": {
     "preTitle": "Alquiler de yates,",
     "emphasizedTitle": "sin complicaciones",
-    "intro": "Un alquiler de yates convierte unas vacaciones en una travesía: tu propio barco, tu propia ruta y un fondeadero nuevo siempre que te apetezca. boat4you reúne miles de yates de alquiler de todo el mundo en un solo buscador, con disponibilidad y precios en tiempo real, y los extras obligatorios y la fianza indicados antes de pagar. Compara veleros, catamaranes, yates a motor y goletas, consulta fotos reales y listas de equipamiento, y reserva la semana que quieras sin interminables correos de ida y vuelta.",
+    "intro": "Un alquiler de yates puede convertir unas vacaciones en una travesía. boat4you reúne miles de yates de chárter de todo el mundo en una sola búsqueda, con disponibilidad para reservar online y precios de chárter en tiempo real, y los extras obligatorios y la fianza se indican antes de pagar. Cada yate ofrecido online tiene listas de equipamiento detalladas y fotos reales del yate. Veleros, catamaranes, yates a motor e incluso goletas se pueden comparar fácilmente uno al lado del otro y reservar online en pocos minutos.",
     "blocks": [
       {
         "heading": "Sin patrón, con patrón o con tripulación completa",
-        "body": "Tú decides cuánto quieres navegar. Alquila un barco sin patrón (bareboat) y gobiérnalo tú mismo si cuentas con una titulación reconocida como el ICC o el RYA Day Skipper. ¿Prefieres relajarte? Añade un patrón profesional a cualquier yate al reservar: conoce los vientos locales, los amarres y las tabernas que no aparecen en ninguna guía. Y para unas vacaciones de pura villa flotante, elige un yate con tripulación, donde el patrón y la azafata se ocupan de todo, desde la cocina hasta la planificación de la ruta."
+        "body": "Según tus preferencias y necesidades, puedes reservar un barco sin patrón o añadir un patrón a tu yate. Si tienes una titulación náutica reconocida (por ejemplo, licencia náutica croata, RYA Day Skipper, ICC, etc.), puedes reservar un bareboat y empezar tus vacaciones en velero. Si no, siempre puedes añadir un patrón al finalizar la reserva online. Para unas vacaciones totalmente relajadas, también puedes reservar un yate con tripulación, con patrón y azafata, que se encargarán de todo, desde la cocina hasta la planificación de las rutas."
       },
       {
         "heading": "Velero, catamarán o yate a motor",
-        "body": "Los veleros monocasco ofrecen la sensación más pura del viento y la mejor relación calidad-precio por plaza. El catamarán se ha convertido en el favorito de las familias: sin escora, dos cascos con camarotes privados y un salón donde cabe toda la tripulación. Los yates a motor cambian velas por velocidad y recorren el doble de millas en un día, mientras que las goletas tradicionales combinan tripulación profesional con el romanticismo de las cubiertas de madera. Cada anuncio de boat4you muestra camarotes, plazas, año de construcción y los extras obligatorios antes de confirmar la reserva."
+        "body": "Los veleros son ideales para quien busca la forma más pura de navegar al mejor precio por plaza. Los catamaranes son muy populares para navegar en familia, porque no escoran y ofrecen camarotes privados en ambos cascos y un salón donde cabe toda la tripulación. Los yates a motor son ideales para quienes quieren recorrer muchas millas en un día, aproximadamente el doble que un velero. Las goletas tradicionales se ofrecen con tripulación profesional y brindan una experiencia muy romántica de navegar sobre cubiertas de madera. Cada anuncio de boat4you muestra camarotes, plazas, año de construcción y los extras obligatorios antes de reservar."
       },
       {
         "heading": "Dónde y cuándo zarpar",
-        "body": "La temporada del Mediterráneo va de abril a octubre: julio y agosto garantizan sol y los puertos más animados, mientras que mayo, junio y septiembre ofrecen aguas cálidas, vientos más estables y precios notablemente más bajos. De noviembre a abril la flota se traslada a aguas de invierno: el Caribe, las Bahamas y las Seychelles viven su mejor momento mientras Europa espera la primavera. La mayoría de los chárteres van de sábado a sábado desde puertos base bien conectados, así que los vuelos y traslados se planifican sin esfuerzo."
+        "body": "En el Mediterráneo, la temporada de chárter va de abril a finales de octubre. Julio y agosto traen mucho sol y los puertos más animados, pero es cuando los precios del alquiler de yates son más altos. En mayo, junio y septiembre el agua del mar sigue templada y los vientos son más estables, mientras que los precios son notablemente más bajos que en temporada alta. De noviembre a finales de abril, la flota de chárter se traslada al Caribe, las Bahamas y las Seychelles mientras Europa espera la siguiente temporada de navegación. La mayoría de los chárteres van de sábado a sábado desde marinas base bien comunicadas, así que es fácil planificar vuelos y traslados."
       }
     ],
-    "closing": "¿Listo para empezar? Elige un destino arriba, compara precios reales para tus fechas y asegura tu yate online en cuestión de minutos, con pago seguro y un equipo de atención que responde de verdad.",
+    "closing": "¿Quieres reservar unas vacaciones en velero? Elige tu destino arriba, compara los precios de los yates que prefieras para tus fechas y reserva online en pocos minutos en un entorno seguro. Si tienes alguna pregunta antes, durante o después de tu reserva online, estamos aquí para ayudarte.",
     "linksLabel": "Búsquedas populares de alquiler de yates",
     "links": {
       "sailing": "Alquiler de veleros",

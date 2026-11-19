@@ -2,7 +2,7 @@
   "hero": {
     "title": "Yachtcharter in",
     "ctaTitle": "einem Klick.",
-    "description": "Chartern Sie Ihre perfekte Yacht mit nur wenigen Klicks. Einfach, schnell und stressfrei — Ihr Traumsegelabenteuer beginnt hier.",
+    "description": "Chartern Sie Ihre ideale Yacht online mit nur wenigen Klicks. Einen Segelurlaub zu buchen war noch nie so einfach!",
     "support": "Erstklassiger Kundenservice",
     "yachtsCount": "{count, plural, one {# Yacht} other {# Yachten}}",
     "marinasCount": "{count, plural, one {# Marina} other {# Marinas}}"
@@ -158,27 +158,27 @@
     "questions": [
       {
         "q": "Wie buche ich einen Yachtcharter auf Boat4You?",
-        "a": "Wählen Sie Ihr Reiseziel und Ihre Reisedaten aus, durchstöbern Sie die verfügbaren Yachten und klicken Sie bei Ihrem Wunschboot auf Reservieren. Wir bestätigen die Verfügbarkeit beim Partner, senden Ihnen ein Buchungsangebot zu und sobald Sie die Anzahlung leisten, ist Ihr Charter fest gebucht. Der gesamte Vorgang dauert nur wenige Minuten."
+        "a": "Durchsuchen Sie die verfügbaren Charteryachten in Ihrem gewünschten Reiseziel für Ihre Chartertermine und klicken Sie einfach bei Ihrer Wunschyacht auf „Reservieren“. Wir bestätigen dann die Verfügbarkeit beim Charterpartner, senden Ihnen ein Buchungsangebot und sobald Sie die Anzahlung geleistet haben, ist Ihr Charter bestätigt und Sie können sich auf Ihren Törn freuen!"
       },
       {
         "q": "Brauche ich einen Sportbootführerschein, um eine Yacht zu chartern?",
-        "a": "Für einen Bareboat-Charter (ohne Skipper) benötigen Sie einen im Chartergebiet anerkannten Bootsführerschein – etwa den kroatischen Küstenpatent, den RYA Day Skipper, das ICC oder einen gleichwertigen Nachweis. Falls Sie keinen Schein besitzen, können Sie jede Yacht trotzdem buchen und beim Checkout einen Skipper hinzubuchen."
+        "a": "Wenn Sie eine Bareboat-Yacht (ohne Skipper) buchen, benötigen Sie einen gültigen Bootsführerschein, der im Charterland anerkannt ist (kroatischer Bootsführerschein oder vergleichbar, RYA Day Skipper, ICC oder andere). Wenn Sie keinen gültigen Bootsführerschein haben, können Sie trotzdem jedes Boot buchen und beim Checkout gegen Aufpreis einen Skipper dazubuchen."
       },
       {
         "q": "Was ist im Bareboat-Charterpreis enthalten?",
-        "a": "Der Grundpreis umfasst die Yacht selbst, die Standardausrüstung, den Service der Charteragentur sowie eine Versicherung gegen größere Schäden. Endreinigung, Treibstoff, Liegegebühren außerhalb des Heimathafens, Transitlog und Kurtaxe werden in der Regel separat bezahlt – auf jeder Yachtseite finden Sie die obligatorischen und optionalen Extras transparent aufgelistet."
+        "a": "Der Grundpreis Ihrer Charteryacht umfasst die Yacht selbst, ihre Standardausrüstung für den Einsatz an Bord, die Betreuung durch Ihre Charteragentur und eine Versicherung gegen größere Schäden. Endreinigung, Treibstoff, Liegegebühren außerhalb des Heimathafens, Transitlog und Kurtaxe (falls zutreffend) werden in der Regel jedoch separat berechnet. Diese Posten sind auf der Detailseite jeder Yacht immer klar als obligatorisch oder optional gekennzeichnet."
       },
       {
         "q": "Kann ich eine Yacht ohne Skipper chartern?",
-        "a": "Ja. Bareboat-Charter ist bei den meisten Yachten in unserem Katalog möglich, sofern mindestens eine Person an Bord über einen gültigen Bootsführerschein und einen UKW-Funkschein verfügt. Hat niemand in der Crew einen Schein, können Sie dieselbe Yacht gegen einen Tagesaufpreis mit einem professionellen Skipper buchen."
+        "a": "Ja. Bareboat-Charter ist bei den meisten Yachten auf dieser Website möglich, sofern mindestens eine Person an Bord einen gültigen und anerkannten Bootsführerschein sowie einen UKW-Funkschein besitzt. Hat niemand in Ihrer Crew einen Bootsführerschein, können Sie dieselbe Yacht trotzdem mit einem qualifizierten Skipper gegen einen Tagesaufpreis chartern."
       },
       {
         "q": "Wann ist die beste Zeit für einen Yachtcharter im Mediterranean?",
-        "a": "Mai, Juni und September sind ideal – warmes Meer, leichte Winde, weniger Trubel und deutlich günstigere Preise als in der Hochsaison Juli und August. April und Oktober eignen sich für erfahrene Segler, die ein kühleres Meer nicht stört, und bieten die niedrigsten Wochenpreise des Jahres."
+        "a": "Die beste Zeit zum Segeln sind Mai, Juni und September. Das Meer ist warm, der Wind ist leicht, auf den Inseln und an der Küste ist nicht allzu viel los, und die Preise liegen spürbar unter denen im Juli und August. Im April und Oktober ist ein Segeltörn für sichere Segler ebenfalls möglich, auch wenn das Meer etwas kühler ist. In diesen Monaten bekommen Sie sogar die niedrigsten Wochenpreise des Jahres."
       },
       {
         "q": "Kann ich meine Buchung stornieren?",
-        "a": "Die Stornierungsbedingungen unterscheiden sich je nach Yacht – die genauen Konditionen sehen Sie auf jeder Angebotsseite vor der Zahlung. Buchen Sie mehr als 14 Tage vor Charterbeginn, können Sie innerhalb von 72 Stunden nach der Buchung kostenlos mit voller Erstattung stornieren; danach gelten die Bedingungen des Anbieters, daher empfehlen wir eine Reiseversicherung mit Reiserücktrittsschutz. Die rückzahlbare Kaution wird stets erstattet, sofern die Yacht keine Schäden aufweist."
+        "a": "Die Stornierungsbedingungen unterscheiden sich von Yacht zu Yacht und werden auf der Angebotsseite beschrieben, bevor Sie bezahlen. Wenn Sie mehr als 14 Tage im Voraus buchen, können Sie Ihre Buchung innerhalb von 72 Stunden nach der Buchung kostenlos und mit voller Erstattung stornieren. Danach gelten die Geschäftsbedingungen des Charterunternehmens. Wir empfehlen Ihnen daher eine Reiseversicherung, die auch den Rücktritt von Ihrer Reise abdeckt. Die rückzahlbare Kaution wird dem Kunden immer zurückerstattet, sofern die Yacht keinen Schaden genommen hat."
       }
     ],
     "preTitle": "Häufig ",
@@ -187,22 +187,22 @@
   "seoSection": {
     "preTitle": "Yachtcharter",
     "emphasizedTitle": "leicht gemacht",
-    "intro": "Ein Yachtcharter macht aus dem Urlaub eine echte Reise: das eigene Boot, die eigene Route und eine neue Ankerbucht, wann immer Ihnen danach ist. boat4you bündelt Tausende Charteryachten aus aller Welt in einer einzigen Suche – mit Live-Verfügbarkeit und aktuellen Preisen; Pflichtextras und Kaution sehen Sie vor der Zahlung. Vergleichen Sie Segelyachten, Katamarane, Motoryachten und Gulets direkt nebeneinander, prüfen Sie echte Fotos und Ausstattungslisten und buchen Sie Ihre Wunschwoche ganz ohne E-Mail-Pingpong.",
+    "intro": "Ein Yachtcharter kann aus einem Urlaub eine Reise machen. boat4you bringt Tausende Charteryachten aus aller Welt in einer Suche zusammen, mit Live-Verfügbarkeit für die Online-Buchung und Charterpreisen, und die obligatorischen Extras und die Kaution werden vor der Zahlung angezeigt. Zu jeder online angebotenen Yacht gibt es detaillierte Ausstattungslisten und echte Fotos der Yacht. Segelyachten, Katamarane, Motoryachten und sogar Gulets lassen sich ganz einfach nebeneinander vergleichen und in wenigen Minuten online buchen.",
     "blocks": [
       {
         "heading": "Bareboat, mit Skipper oder mit Crew",
-        "body": "Wie viel Sie selbst segeln, entscheiden Sie. Chartern Sie eine Yacht als Bareboat und führen Sie sie selbst, wenn Sie einen anerkannten Führerschein wie das ICC oder den RYA Day Skipper besitzen. Lieber entspannen? Buchen Sie beim Checkout zu jeder Yacht einen professionellen Skipper hinzu – er kennt die lokalen Winde, die besten Liegeplätze und die Tavernen, die in keinem Reiseführer stehen. Und für einen Urlaub wie in einer schwimmenden Villa wählen Sie eine Yacht mit Crew, auf der Skipper und Hostess alles übernehmen – vom Kochen bis zur Routenplanung."
+        "body": "Je nach Ihren persönlichen Wünschen und Anforderungen können Sie eine Bareboat-Yacht buchen oder Ihre Yacht mit Skipper chartern. Wenn Sie einen anerkannten Bootsführerschein besitzen (z. B. kroatischen Bootsführerschein, RYA Day Skipper, ICC usw.), können Sie eine Bareboat-Yacht buchen und zu Ihrem Segelurlaub aufbrechen. Wenn nicht, können Sie beim Online-Checkout jederzeit einen Skipper hinzufügen. Für einen rundum entspannten Urlaub können Sie auch eine Yacht mit Crew buchen, mit Skipper und Hostess, die sich um alles kümmern, vom Kochen bis zur Routenplanung."
       },
       {
         "heading": "Segelyacht, Katamaran oder Motoryacht",
-        "body": "Einrumpfige Segelyachten (Monohulls) vermitteln das unverfälschteste Segelgefühl und bieten den besten Preis pro Koje. Katamarane sind längst der Favorit für Familien: keine Krängung, private Kabinen in zwei Rümpfen und ein Salon, in den die ganze Crew passt. Motoryachten tauschen Segel gegen Geschwindigkeit und schaffen doppelt so viele Meilen am Tag, während traditionelle Gulets eine professionelle Crew mit der Romantik hölzerner Decks verbinden. Jedes Inserat auf boat4you zeigt Kabinen, Kojen, Baujahr und die obligatorischen Extras, bevor Sie sich festlegen."
+        "body": "Segelyachten sind ideal für Segler, die das ursprünglichste Segeln zum besten Preis pro Koje suchen. Katamarane sind beim Familiensegeln sehr beliebt, da sie nicht krängen und private Kabinen in beiden Rümpfen sowie einen Salon bieten, in den die ganze Crew passt. Motoryachten sind ideal für alle, die am Tag viele Meilen zurücklegen möchten, etwa doppelt so viele wie mit einer Segelyacht. Traditionelle Gulets werden mit professioneller Crew angeboten und bieten ein sehr romantisches Segelerlebnis auf hölzernen Decks. Jedes Inserat auf boat4you zeigt Kabinen, Kojen, Baujahr und die obligatorischen Extras, bevor Sie buchen."
       },
       {
         "heading": "Wohin und wann in See stechen",
-        "body": "Die Mittelmeersaison läuft von April bis Oktober: Juli und August bringen garantierte Sonne und die lebhaftesten Häfen, während Mai, Juni und September warmes Wasser, beständigere Winde und spürbar niedrigere Preise bieten. Von November bis April zieht die Flotte in wärmere Reviere – die Karibik, die Bahamas und die Seychellen zeigen sich dann von ihrer besten Seite, während Europa auf den Frühling wartet. Die meisten Charter laufen von Samstag bis Samstag ab gut angebundenen Heimathäfen, sodass sich Flüge und Transfers leicht planen lassen."
+        "body": "Im Mittelmeer dauert die Chartersaison von April bis Ende Oktober. Juli und August bringen viel Sonne und die lebhaftesten Häfen, doch dann sind die Preise für einen Yachtcharter am höchsten. Im Mai, Juni und September ist das Meerwasser noch warm und die Winde sind beständiger, während die Preise spürbar unter denen der Hochsaison liegen. Von November bis Ende April zieht die Charterflotte in die Karibik, auf die Bahamas und die Seychellen, während Europa auf die nächste Segelsaison wartet. Die meisten Charter laufen von Samstag bis Samstag ab gut angebundenen Heimathäfen, sodass sich Flüge und Transfers leicht planen lassen."
       }
     ],
-    "closing": "Bereit für den Start? Wählen Sie oben ein Reiseziel, vergleichen Sie echte Preise für Ihre Wunschtermine und sichern Sie sich Ihre Yacht online in wenigen Minuten – mit sicherer Zahlung und einem Support-Team, das tatsächlich antwortet.",
+    "closing": "Sie möchten also einen Segelurlaub buchen? Wählen Sie einfach oben Ihr Reiseziel, vergleichen Sie die Preise der Yachten Ihrer Wahl für Ihre Termine und buchen Sie in wenigen Minuten online in einer sicheren Umgebung. Wenn Sie vor, während oder nach Ihrer Online-Buchung Fragen haben, helfen wir Ihnen gerne weiter.",
     "linksLabel": "Beliebte Yachtcharter-Suchen",
     "links": {
       "sailing": "Segelyacht chartern",
