@@ -360,6 +360,10 @@ export const PhoneInput = ({
               disabled={disabled}
               error={!!error}
               className={styles.phoneInput}
+              // The phone's number pad, not the full keyboard (Mario 19.11.2026), and the browser's saved number.
+              type="tel"
+              autoComplete="tel-national"
+              slotProps={{ htmlInput: { inputMode: 'tel' } }}
               {...textFieldProps}
             />
           </Box>

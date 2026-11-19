@@ -3,7 +3,16 @@
 import { MouseEvent, ReactNode, startTransition, useActionState, useEffect, useRef, useState } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
-import { Button, Divider, FormHelperText, InputAdornment, Stack, Typography } from '@mui/material';
+import {
+  Button,
+  Divider,
+  FormHelperText,
+  InputAdornment,
+  Stack,
+  Theme,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -298,6 +307,11 @@ const BoatInquiryModal = ({
     </Stack>
   );
 
+  // Phone and tablet (the bottom sheet): "Send inquiry" closes the form, under the message and the consent box,
+  // instead of a bar stuck to the sheet's bottom (Mario 19.11.2026). With the keyboard up the bar sat right above the
+  // field being typed in, and the consent it depends on was out of sight. The desktop dialog keeps its buttons.
+  const isSheet = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
+
   return (
     <ModalRoot
       open={isOpen}
@@ -316,6 +330,8 @@ const BoatInquiryModal = ({
       CancelBtnProps={{
         disabled: pending,
       }}
+      hideConfirmButton={isSheet}
+      hideCancelButton={isSheet}
     >
       <YachtCard
         mainImageId={heroImage(yacht.yachtImages)?.id ?? 0}
@@ -340,24 +356,28 @@ const BoatInquiryModal = ({
       />
       <Form defaultValues={initialValues} onSubmit={handleSubmit} id={BOAT_INQUIRY_FORM} mode="onBlur">
         {pickDates && <InquiryDateFields />}
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 3, md: 2 }}>
+        {/* Phone: 16 px between the fields (24 before; Mario: the form was too big). */}
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={2}>
           <FormInput
             name="name"
+            autoComplete="given-name"
             placeholder={t('inputYourFirstName')}
             formLabel={t('firstName')}
             validate={validator.isNotEmpty}
           />
           <FormInput
             name="surname"
+            autoComplete="family-name"
             placeholder={t('inputYourLastName')}
             formLabel={t('lastName')}
             validate={validator.isNotEmpty}
           />
         </Stack>
-        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 3, md: 2 }} mt={3}>
+        <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} mt={{ xs: 2, md: 3 }}>
           <FormInput
             name="email"
             type="email"
+            autoComplete="email"
             placeholder={t('inputYourEmailAddress')}
             formLabel={t('email')}
             validate={FormValidator.all(validator.isNotEmpty, validator.isValidEmail)}
@@ -368,7 +388,7 @@ const BoatInquiryModal = ({
             validate={FormValidator.all(validator.isNotEmpty, FormValidator.isValidPhoneNumber)}
           />
         </Stack>
-        <Stack mt={3}>
+        <Stack mt={{ xs: 2, md: 3 }}>
           <FormInput
             name="message"
             placeholder={t('inputMessage')}
@@ -377,9 +397,19 @@ const BoatInquiryModal = ({
             validate={validator.isNotEmpty}
           />
         </Stack>
-        <Stack mt={3}>
+        <Stack mt={{ xs: 2, md: 3 }}>
           <CallConsentField />
         </Stack>
+        {isSheet && (
+          <Stack spacing={1.5} mt={3}>
+            <Button type="submit" size="large" fullWidth disabled={pending || isLocked}>
+              {t('sendInquiry')}
+            </Button>
+            <Button size="large" color="secondary" fullWidth onClick={onClose} disabled={pending}>
+              {t('cancel')}
+            </Button>
+          </Stack>
+        )}
       </Form>
     </ModalRoot>
   );
