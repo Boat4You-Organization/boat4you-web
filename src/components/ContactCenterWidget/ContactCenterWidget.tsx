@@ -29,6 +29,10 @@ const ContactCenterWidget = ({ locale }: ContactCenterWidgetProps) => {
       data-site="boat4you"
       data-locale={locale}
       data-api={process.env.NEXT_PUBLIC_BOAT_WS_API_URL}
+      // `next dev` on localhost only: the widget shows on a page of another host than the site's only with this
+      // (cc-widget config.ts), so the chat button can be seen and placed in a local review. A production build
+      // never sets it.
+      data-dev={process.env.NODE_ENV === 'development' ? '1' : undefined}
     />
   );
 };
