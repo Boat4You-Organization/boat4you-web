@@ -14,6 +14,7 @@ import { PaymentPhase } from '@/models/reservation.model';
 import { UserModel } from '@/models/user.model';
 import { ReservationData } from '@/types/reservation.type';
 import { AppliedVoucher } from '@/types/voucher.type';
+import useBreakpoint from '@/utils/hooks/useBreakpoint';
 import { boatPageForCheckout, savedReservationMatchesLink } from '@/utils/static/checkoutLink';
 import { clearDataFromLocalStorage, getDataFromLocalStorage } from '@/utils/static/localStorageUtils';
 import { clearDataFromSessionStorage, getDataFromSessionStorage } from '@/utils/static/sessionStorageUtils';
@@ -64,6 +65,10 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
   const isInitialMount = useRef(true);
 
   const isLastStep = isAdmin ? false : activeStep === 2;
+  // Phone and tablet (the one-column layout, below lg): the form first, the boat's data after the extras and before
+  // the cancellation fees (Mario 19.11.2026: the visitor comes from the boat's page and already knows it). The page
+  // renders in the browser only (the cart is in localStorage), so the media query is known on the first paint.
+  const { isBelowLg } = useBreakpoint();
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -240,7 +245,7 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
 
   return (
     <Container maxWidth="xl" disableGutters classes={{ root: styles.root }} className={styles.container}>
-      {!isLastStep && <BookingHero reservationData={reservationData} />}
+      {!isLastStep && !isBelowLg && <BookingHero reservationData={reservationData} />}
       <Stack className={cx(styles.form, { [styles.lastStep]: isLastStep })}>
         <Stack className={styles.leftPanel}>
           {isLastStep ? (
@@ -263,6 +268,12 @@ const Booking = ({ isAdmin, user, initialStep = 0, trustStats = null }: BookingP
                 securityDeposit={reservationData.securityDeposit}
               />
               <Box className={styles.divider} />
+              {isBelowLg && (
+                <>
+                  <BookingHero reservationData={reservationData} />
+                  <Box className={styles.divider} />
+                </>
+              )}
               {/* Free-cancellation window end = partner option expiry (set by
                   DetailsStep once the option is created; null on step 0 →
                   legacy 5-day fallback). Same source as the payment-step trust
