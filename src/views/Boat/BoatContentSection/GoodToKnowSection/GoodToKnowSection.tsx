@@ -27,7 +27,7 @@ const GoodToKnowSection = ({ yacht }: GoodToKnowSectionProps) => {
   const [isMapOpen, toggleMap] = useToggleState();
 
   return (
-    <Stack direction="column" spacing={4}>
+    <Stack direction="column" spacing={{ xs: 2, md: 4 }}>
       <Typography
         component="h2"
         variant="h3"
@@ -43,7 +43,8 @@ const GoodToKnowSection = ({ yacht }: GoodToKnowSectionProps) => {
 
       {/* The same light panel as the description (owner 13.10.2026). */}
       <ReadMorePanel collapsible={false}>
-        <Grid container spacing={4}>
+        {/* Phone: the items closer together (Mario 19.11.2026). */}
+        <Grid container spacing={{ xs: 2, md: 4 }}>
           <GoodToKnowItem title={tCommon('pickUpTime')} value={yacht.defaultCheckin || selectedOffer?.checkin || '-'} />
           <GoodToKnowItem
             title={tCommon('dropOffTime')}

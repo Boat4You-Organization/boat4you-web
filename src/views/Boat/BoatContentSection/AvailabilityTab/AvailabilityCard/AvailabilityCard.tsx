@@ -129,17 +129,20 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
         </Stack>
       </Stack>
       <Stack padding={{ xs: 2, md: 3 }}>
-        <Grid container spacing={3}>
+        {/* Phone: tighter lists and blocks (Mario 19.11.2026: too much air under "Price includes"). */}
+        <Grid container spacing={{ xs: 2, md: 3 }}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="h4" sx={boatType.subtitle}>
+            <Typography variant="h4" sx={boatType.subheading}>
               {t('paymentPolicies')}
             </Typography>
-            <List sx={{ padding: 0, marginTop: 2 }}>
+            <List sx={{ padding: 0, marginTop: { xs: 0.5, md: 2 } }}>
               {paymentPolicies.map((policy: PolicyItem, index: number) => (
                 <ListItem
                   key={`${index + 1}`}
                   sx={{
                     ...boatType.body,
+                    py: { xs: 0.25, md: 1 },
+                    px: { xs: 0, md: 2 },
                     color: policy.textColor === 'success' ? colors.green500 : 'inherit',
                     fontWeight:
                       policy.textColor === 'success' ? boatType.bodyStrong.fontWeight : boatType.body.fontWeight,
@@ -172,14 +175,17 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
             </List>
           </Grid>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="h4" sx={boatType.subtitle}>
+            <Typography variant="h4" sx={boatType.subheading}>
               {t('priceIncludes')}
             </Typography>
-            <List sx={{ padding: 0, marginTop: 2 }}>
+            <List sx={{ padding: 0, marginTop: { xs: 0.5, md: 2 } }}>
               {presentAmenities(amenities)
                 .slice(0, 3)
                 .map(amenity => (
-                  <ListItem key={amenity.id} sx={boatType.body}>
+                  <ListItem
+                    key={amenity.id}
+                    sx={{ ...boatType.body, py: { xs: 0.25, md: 1 }, px: { xs: 0, md: 2 }, gap: 1 }}
+                  >
                     <Check size={24} fill={colors.black300} />
                     {amenityLabel(amenity)}
                   </ListItem>
@@ -191,12 +197,12 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
           direction={{ xs: 'column', sm: 'row' }}
           alignItems={{ sm: 'center' }}
           justifyContent="space-between"
-          spacing={2}
-          mt={3}
-          pt={3}
+          spacing={{ xs: 1, sm: 2 }}
+          mt={{ xs: 2, md: 3 }}
+          pt={{ xs: 2, md: 3 }}
           borderTop={`1px solid ${colors.blue200}`}
         >
-          <Typography variant="h4" sx={boatType.subtitle}>
+          <Typography variant="h4" sx={boatType.subheading}>
             {t('anyQuestions')}
           </Typography>
           <Button size="medium" color="secondary" onClick={toggleBoatInquiryModalOpen}>

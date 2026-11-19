@@ -24,7 +24,8 @@
       background-color: $white;
 
       @include media(0, 'lg') {
-        margin: rem-calc(32) 0;
+        // 12 px on each side of the rule between the two dates (Mario 19.11.2026: 32 px was too much air).
+        margin: rem-calc(12) 0;
         border-color: $white;
         width: 100%;
         height: fit-content;
