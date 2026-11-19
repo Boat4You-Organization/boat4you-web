@@ -114,6 +114,39 @@ const DetailsStep = ({
   // Phone and tablet: the total above the form's button, once (UX review 19.11.2026: the price was 1,200 px under
   // the button, in the summary the desktop shows beside the form). Not at the top of the form as well: with the
   // price section below, the same amount stood on the page three times (Mario 19.11.2026).
+  // The total before the partner's discount, and the discount as a share of it: the saving on the charter price
+  // (list - client) added back to the total with its extras, in the currency shown. Null when nothing is saved.
+  const saving = (() => {
+    const { listPriceEur, charterPriceEur, listPriceInfo, charterPriceInfo, totalPriceEur, totalPriceInfo } =
+      reservationData;
+
+    if (!listPriceEur || !charterPriceEur || listPriceEur <= charterPriceEur || !(totalPriceEur > 0)) return null;
+
+    const beforeEur = totalPriceEur + (listPriceEur - charterPriceEur);
+    const sameCurrency =
+      !!totalPriceInfo &&
+      !!listPriceInfo &&
+      !!charterPriceInfo &&
+      totalPriceInfo.currency === listPriceInfo.currency &&
+      totalPriceInfo.currency === charterPriceInfo.currency;
+    const beforeInfo =
+      sameCurrency && totalPriceInfo && listPriceInfo && charterPriceInfo
+        ? { ...totalPriceInfo, amount: totalPriceInfo.amount + (listPriceInfo.amount - charterPriceInfo.amount) }
+        : undefined;
+    const percent = Math.round(((beforeEur - totalPriceEur) / beforeEur) * 100);
+
+    if (percent < 1) return null;
+
+    return {
+      percent,
+      // Without the three amounts in one currency the before-price is shown in euros only when the total is too.
+      before:
+        beforeInfo || !totalPriceInfo
+          ? formatPriceWithCurrency({ clientPriceEur: beforeEur, clientPriceInfo: beforeInfo, locale })
+          : null,
+    };
+  })();
+
   const totalRow = (
     <Stack
       direction="row"
@@ -129,13 +162,27 @@ const DetailsStep = ({
           {DateTime.formatShortWithoutDay(dayjs(reservationData.dateTo), locale)}
         </Typography>
       </Stack>
-      <Typography variant="h3" component="p" color={colors.green500} sx={{ whiteSpace: 'nowrap' }}>
-        {formatPriceWithCurrency({
-          clientPriceEur: reservationData.totalPriceEur,
-          clientPriceInfo: reservationData.totalPriceInfo ?? undefined,
-          locale,
-        })}
-      </Typography>
+      <Stack alignItems="flex-end">
+        {saving && (
+          <Stack direction="row" alignItems="baseline" gap={1}>
+            {saving.before && (
+              <Typography variant="body2" color={colors.black400} sx={{ textDecoration: 'line-through' }}>
+                {saving.before}
+              </Typography>
+            )}
+            <Typography variant="body2" fontWeight={600} color="#D97706" sx={{ whiteSpace: 'nowrap' }}>
+              −{saving.percent}%
+            </Typography>
+          </Stack>
+        )}
+        <Typography variant="h3" component="p" color={colors.green500} sx={{ whiteSpace: 'nowrap' }}>
+          {formatPriceWithCurrency({
+            clientPriceEur: reservationData.totalPriceEur,
+            clientPriceInfo: reservationData.totalPriceInfo ?? undefined,
+            locale,
+          })}
+        </Typography>
+      </Stack>
     </Stack>
   );
   const router = useRouter();

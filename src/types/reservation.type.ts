@@ -48,4 +48,13 @@ export type ReservationData = {
    *  on damage-free handover). Always shown under "Paid at marina" in the
    *  booking recap — independent of any partner-sent extras. */
   securityDeposit?: number | null;
+  /**
+   * The chosen period's charter price before and after the partner's discount (the offer's list and client price),
+   * so the checkout can say the price is a discounted one. Absent in a cart saved before 19.11.2026 or when the
+   * offer has no list price.
+   */
+  listPriceEur?: number | null;
+  listPriceInfo?: PriceInfo | null;
+  charterPriceEur?: number | null;
+  charterPriceInfo?: PriceInfo | null;
 };

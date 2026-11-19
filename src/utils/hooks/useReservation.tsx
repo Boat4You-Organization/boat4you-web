@@ -63,6 +63,14 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
 
       const offerId = customOfferId || calculatedPrice?.offerId;
 
+      // The offer whose price was calculated (not one for other dates still in the store).
+      const pricedOffer =
+        selectedOffer &&
+        selectedOffer.dateFrom === calculatedPrice?.dateFrom &&
+        selectedOffer.dateTo === calculatedPrice?.dateTo
+          ? selectedOffer
+          : null;
+
       const reservationData: ReservationData = {
         name: yachtName,
         agencyName: agency?.name,
@@ -98,6 +106,10 @@ export const useReservation = ({ yacht }: UseReservationProps) => {
         capacity,
         yachtImages,
         securityDeposit,
+        listPriceEur: pricedOffer?.listPriceEur ?? null,
+        listPriceInfo: pricedOffer?.listPriceInfo ?? null,
+        charterPriceEur: pricedOffer?.clientPriceEur ?? null,
+        charterPriceInfo: pricedOffer?.clientPriceInfo ?? null,
       };
 
       try {
