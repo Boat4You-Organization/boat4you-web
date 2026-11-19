@@ -46,3 +46,11 @@ a {
     font-size: max(16px, 1em) !important;
   }
 }
+
+// The chat button steps aside while a sheet, dialog or menu of the site is open (Mario 19.11.2026). It floats above
+// everything (z-index 1300, 56 px), and over the phone's date sheet it covered the Sunday column of the calendar.
+// The same test the widget uses not to open over a dialog (cc-widget main.ts, siteDialogOpen); closed keepMounted
+// sheets carry `MuiModal-hidden` and do not count.
+body:has(.MuiModal-root:not(.MuiModal-hidden)) #b4y-cc-root {
+  display: none;
+}
