@@ -84,15 +84,21 @@ const BookingHero = ({ reservationData }: BookingHeroProps) => {
     { capacity: capacityDto, cabins, berths, wc, maxPersons, crewNumber, charterType },
     { locale }
   );
+  const allChips = capacityChips(capacity, capacityT);
+  // The WC count as a stat beside "Max. people", like the others (Mario 19.11.2026: it sat alone on a small line
+  // under them). Only a plain "4 WC"; any other wording stays in the line below.
+  const headsText = allChips.find(chip => chip.key === 'heads')?.text.match(/^(\d+)\s+(\S.*)$/);
   const stats = [
     buildYear ? { key: 'year', value: String(buildYear), label: tFilters('year') } : null,
     ...cardChips(capacity, capacityT).map(chip => ({ key: chip.key, value: chip.value, label: chip.label })),
+    headsText ? { key: 'heads', value: headsText[1], label: headsText[2] } : null,
   ].filter((s): s is { key: string; value: string; label: string } => s !== null);
-  // The rest of the compact form (WC, crew cabins, crew WC) as one line. The
+  // The rest of the compact form (crew cabins, crew WC) as one line. The
   // crew count only when the boat has no bareboat option: on a boat offered
   // both ways, "1 crew member" would read as part of a bareboat booking.
-  const moreCapacity = capacityChips(capacity, capacityT)
+  const moreCapacity = allChips
     .filter(chip => !CARD_CHIP_KEYS.includes(chip.key))
+    .filter(chip => chip.key !== 'heads' || !headsText)
     .filter(chip => chip.key !== 'crew' || !capacity.crew?.alsoBareboat)
     .map(chip => chip.text)
     .join(' · ');
