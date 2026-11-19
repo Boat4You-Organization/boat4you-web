@@ -56,7 +56,7 @@ const AccordionMenuItem = ({
           component="span"
           fontWeight={600}
           color={colors.black950}
-          sx={dense ? boatType.subtitle : undefined}
+          sx={dense ? boatType.subheading : undefined}
         >
           {title}
         </Typography>

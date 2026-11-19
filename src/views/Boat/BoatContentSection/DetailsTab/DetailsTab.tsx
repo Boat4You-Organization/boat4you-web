@@ -23,6 +23,10 @@ import { Capacity, capacityFacts, capacityRows, fromYacht } from '@/utils/static
 import { yachtVariant } from '@/utils/static/yachtFaq';
 import boatType from '@/views/Boat/boatType';
 
+// The description in the page's running-text size, the same 14 px as the boat's data under it (Mario 19.11.2026:
+// at the theme's 16 px it read larger than the rows below).
+const descriptionText = { ...boatType.body, lineHeight: 1.6 } as const;
+
 interface DetailsTabProps {
   yacht: YachtModel;
   /** The boat's capacity resolved on the server for the page locale (note
@@ -261,7 +265,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
           <ReadMorePanel>
             <Stack direction="column" spacing={2}>
               {cabins && yacht.buildYear && locationLabel && yacht.model ? (
-                <Typography variant="body1" color={colors.black500}>
+                <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                   {t.rich(
                     `yacht.descIntroV${descVariant(1)}` as never,
                     {
@@ -280,7 +284,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                 // Short intro that survives missing model / year / base — each
                 // part is an ICU select on the sentinel 'none', so a missing
                 // value drops its clause instead of printing "built in ." .
-                <Typography variant="body1" color={colors.black500}>
+                <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                   {t.rich(
                     'yacht.descIntroShort' as never,
                     {
@@ -295,7 +299,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                 </Typography>
               )}
               {accommodation.length > 0 && (
-                <Typography variant="body1" color={colors.black500}>
+                <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                   {accommodation.map((part, index) => (
                     <React.Fragment key={part.key}>
                       {index > 0 && ' '}
@@ -305,12 +309,12 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                 </Typography>
               )}
               {description && (
-                <Typography variant="body1" color={colors.black500}>
+                <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                   {description}
                 </Typography>
               )}
               {lengthValue && beamValue && (yacht.fuelTank || yacht.waterTank) && (
-                <Typography variant="body1" color={colors.black500}>
+                <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                   {t.rich(
                     (engineRow
                       ? `yacht.descSpecsV${descVariant(3)}`
@@ -333,7 +337,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                 </Typography>
               )}
               {yacht.location?.name && (
-                <Typography variant="body1" color={colors.black500}>
+                <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                   {t.rich(
                     (countryName ? `yacht.descRegionV${descVariant(4)}` : 'yacht.descSailingRegionNoCountry') as never,
                     {
@@ -346,7 +350,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                   )}
                 </Typography>
               )}
-              <Typography variant="body1" color={colors.black500}>
+              <Typography variant="body1" color={colors.black500} sx={descriptionText}>
                 {t.rich(
                   // Booking copy ("book online", "real-time prices") would be
                   // wrong for a boat booked by inquiry (no bookable offer, or an
@@ -365,7 +369,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
         )}
         {yacht.custom && yacht.description && (
           <ReadMorePanel>
-            <Typography variant="body1" color={colors.black500}>
+            <Typography variant="body1" color={colors.black500} sx={descriptionText}>
               {yacht.description}
             </Typography>
           </ReadMorePanel>
@@ -383,7 +387,7 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
             // 4+4 grid is grouped semantically (accommodation vs boat-self)
             // so the header tells users what they're looking at.
             <Stack direction="column" spacing={2} pt={1}>
-              <Typography component="h3" variant="h4" sx={boatType.subtitle}>
+              <Typography component="h3" variant="h4" sx={boatType.subheading}>
                 {t('yacht.specifications')}
               </Typography>
               <Grid container columnSpacing={{ xs: 0, md: 8 }} rowSpacing={0}>

@@ -55,7 +55,7 @@ const GoodToKnowItem = ({ title, value, link, onClick }: GoodToKnowItemProps) =>
   return (
     <Grid container size={{ xs: 12 }} spacing={1}>
       <Grid size={{ xs: 12, md: 6 }}>
-        <Typography variant="h4" component="h3" sx={boatType.subtitle}>
+        <Typography variant="h4" component="h3" sx={boatType.subheading}>
           {title}
         </Typography>
       </Grid>

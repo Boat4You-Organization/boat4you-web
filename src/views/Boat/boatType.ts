@@ -9,6 +9,12 @@ const boatType = {
   sectionTitle: { fontSize: 22, fontWeight: 600 },
   /** A sub-heading: Pick-up time, an extra's name, a FAQ question, a card title. */
   subtitle: { fontSize: 16, fontWeight: 600, lineHeight: 1.4 },
+  /**
+   * A sub-heading inside a section, in the text's own size: an amenity group, "Selected services", a FAQ question,
+   * "Pick-up time" (Mario 19.11.2026: at 16 px these read larger than the boat's data beside them; weight alone
+   * sets them apart now).
+   */
+  subheading: { fontSize: 14, fontWeight: 600, lineHeight: 1.4 },
   /** Running text, lists, values. */
   body: { fontSize: 14, fontWeight: 400 },
   /** A value next to its label, a price that is not the card's main one. */

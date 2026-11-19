@@ -119,7 +119,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
           alignItems="flex-start"
         >
           <Grid size={{ xs: 12, md: 3 }}>
-            <Typography variant="body1" color={colors.black950} sx={boatType.subtitle}>
+            <Typography variant="body1" color={colors.black950} sx={boatType.subheading}>
               {t(YACHT_EQUIPMENT_CATEGORY_TYPE_LABEL_MAP[category])}
             </Typography>
           </Grid>
@@ -178,7 +178,7 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
 
     return (
       <Grid component="section" size={{ xs: 12, md: 6 }}>
-        <Typography variant="body1" color={colors.black950} pb={1.5} sx={boatType.subtitle}>
+        <Typography variant="body1" color={colors.black950} pb={1.5} sx={boatType.subheading}>
           {label}
         </Typography>
         <List dense disablePadding>

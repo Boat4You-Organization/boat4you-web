@@ -96,7 +96,7 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
       </Typography>
       <Stack spacing={0} pt={3}>
         {(obligatoryServices.length > 0 || securityDepositPrice) && (
-          <Typography component="h3" variant="body2" color={colors.black950} sx={{ ...boatType.subtitle, mb: 1 }}>
+          <Typography component="h3" variant="body2" color={colors.black950} sx={{ ...boatType.subheading, mb: 1 }}>
             {t('selectedServicesObligatory')}
           </Typography>
         )}
@@ -189,7 +189,7 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
                 component: 'h3',
                 variant: 'body2',
                 color: colors.black950,
-                sx: boatType.subtitle,
+                sx: boatType.subheading,
               }}
             >
               {optionalServices.map((extra, index) => {
