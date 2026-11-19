@@ -1,5 +1,15 @@
 # Boat4You (main) — Production Deploy Notes
 
+## 2026-11-19 — Google sličica: kvadrat kao primaryImageOfPage + 1200x630 s natpisom u sredini — ✅ LIVE 19.11.2026 ~11:04 UTC (`7c3ac3e92`, deployment id 7c3ac3e92d67-mwnfq79q; SEO Stage B 0 novih FAIL)
+
+**Zašto:** Mario 19.11. (snimke Googlea): sličica u rezultatima je kvadratni izrez široke og:image, pa je natpis „Welcome to …“ bio odrezan (Greece „ELCOME / REECE“). Kvadrat je bio samo u `WebSite.image`, što Google za sličicu ne čita.
+
+- `src/utils/static/homeWebPageJsonLd.ts` + naslovnica: WebPage JSON-LD s `primaryImageOfPage` i `thumbnailUrl` = `public/meta/welcome-to-boat4you-three-charter-boats-1200x1200.jpg`; `image` = 1:1, 4:3, 16:9.
+- `public/meta/welcome-to-boat4you-three-charter-boats-title-centred-1200x630.jpg` (nova og:image / twitter:image): kvadrat proširen u Higgsfieldu (outpaint 16:9), natpis u sredini, preživi svaki izrez; stara `welcome-to-boat4you-three-charter-boats-1200x630.jpg` uklonjena.
+- `public/meta/welcome-to-boat4you-three-charter-boats-1200x900.jpg` (4:3, izrez gornjeg dijela kvadrata) dodana i u `WebSite.image`.
+- Slike se i dalje **ne crtaju na stranici**. Google sličicu mijenja tek nakon ponovnog obilaska (dani–tjedni). Izvornici: `~/Claude/boat4you-delivery/_og-square-2026-11-19/`.
+- **Provjereno uživo:** og:image = nova datoteka, WebPage s kvadratom u JSON-LD-u, sve tri slike 200 image/jpeg, 0 `<img>` s bannerom.
+
 ## 2026-11-18 — Prozor pristanka: čist, jedan font, manji + slika „Welcome to BOAT4YOU“ za dijeljenje i Google sličicu — ✅ LIVE 18.11.2026 ~09:14 UTC (`c81663a87`, deployment id c81663a87134-mwlwcfgy, tag `live/2026-11-18-consent-plain`)
 
 **Zašto:** Mario 17.11. (slika s mobitela): prozor pristanka „izgleda kao za djecu – čisto, sve u jednom fontu, jednostavno, smanji sve“ → „puno bolje, tako mora biti na svim stranicama“; slika: „pusti slobodno na live, samo da se ne vidi na stranici, nego pri dijeljenju i kao Google sličica“. 18.11. „Da, prvo to“ (prije Cloudflarea).
