@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 import { Box, Button, Divider, InputAdornment, Stack, Tooltip, Typography } from '@mui/material';
@@ -13,7 +13,6 @@ import FlagIcon from '@/components/FlagIcon';
 import FormDateInput from '@/components/Forms/FormDateInput';
 import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
-import { ReservationStatus } from '@/models/reservation.model';
 import { PriceCalcDto, YachtOfferModel } from '@/models/yacht-offer.model';
 import { YachtServiceExtrasKey } from '@/models/yacht-service.model';
 import { YachtModel } from '@/models/yacht.model';
@@ -21,8 +20,8 @@ import colors from '@/styles/themes/colors';
 import { useDaysText } from '@/utils/hooks/usePluralization';
 import useQueryParams from '@/utils/hooks/useQueryParams';
 import { useReservation } from '@/utils/hooks/useReservation';
+import useReservedDaysByMonth from '@/utils/hooks/useReservedDaysByMonth';
 import useToggleState from '@/utils/hooks/useToggleState';
-import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { formatPriceWithCurrency, isPositivePrice, unpricedExtraLabelKey } from '@/utils/static/formatPriceCurrency';
@@ -98,32 +97,9 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
   const startDate = watch('startDate');
   const endDate = watch('endDate');
 
-  const { yachtAvailability, loading: isLoadingAvailability } = useYachtAvailability(
-    slug,
-    activeDate.year(),
-    activeDate.month() + 1
-  );
-
-  const unavailableDates = useMemo(() => {
-    if (!Array.isArray(yachtAvailability)) return [];
-
-    const dates: string[] = [];
-
-    yachtAvailability.forEach(item => {
-      if (item.status === ReservationStatus.RESERVATION || item.status === ReservationStatus.SERVICE) {
-        const start = dayjs(item.from);
-        const end = dayjs(item.to);
-        let current = start;
-
-        while (current.isBefore(end)) {
-          dates.push(DateTime.formatFull(current));
-          current = current.add(1, 'day');
-        }
-      }
-    });
-
-    return dates;
-  }, [yachtAvailability]);
+  // Reserved days month by month as the scrolling list of months reaches them (useReservedDaysByMonth): one
+  // source for the sheet and for the range check below.
+  const { reservedDays: unavailableDates, loadMonth } = useReservedDaysByMonth(slug);
 
   const validateDateRange = useCallback(
     (start: Dayjs, end: Dayjs): boolean => {
@@ -571,11 +547,14 @@ const BoatCalendarForm = ({ yacht, variant, initialOffer = null, initialPrice = 
         handleDateChange={handleDateChange}
         onConfirm={handleConfirm}
         monthsShown={1}
+        // The months in a list that scrolls down, no arrows (Mario 19.11.2026, the desktop price box's "Change
+        // dates" too); the second day closes it.
+        scrollMonths
+        onMonthShown={loadMonth}
         unavailableDates={unavailableDates}
         externalCurrentMonth={activeDate}
         externalHandlePrevMonth={handlePrevMonth}
         externalHandleNextMonth={handleNextMonth}
-        isLoadingAvailability={isLoadingAvailability}
       />
     </>
   );

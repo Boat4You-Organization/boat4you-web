@@ -1,20 +1,18 @@
 'use client';
 
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import { Box, Button, Divider, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
-import dayjs, { Dayjs } from 'dayjs';
+import { Box, Button, Divider, Stack, Typography } from '@mui/material';
+import { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
 import DateRangePicker from '@/components/DateRangePicker';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
-import { ReservationStatus } from '@/models/reservation-status.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useReservedDaysByMonth from '@/utils/hooks/useReservedDaysByMonth';
 import useToggleState from '@/utils/hooks/useToggleState';
-import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
 import { handleNextMonth, handlePrevMonth } from '@/valtio/yacht/yacht.actions';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
@@ -34,38 +32,15 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
   const [isModalOpen, toggleModal] = useToggleState();
   const { setValue, watch } = useFormContext<BoatCalendarFormValues>();
 
-  // Phone and tablet: "Change dates" opens the same sheet as the bar at the bottom, the months in a list that
-  // scrolls down and no Confirm (Mario 19.11.2026). The desktop keeps its dialog with one month and arrows.
-  const isPhone = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
-  const { reservedDays, loadMonth } = useReservedDaysByMonth(yacht.slug);
+  // "Change dates" opens the months in a list that scrolls down, no arrows and no Confirm, on every screen (Mario
+  // 19.11.2026: first the phone, then the desktop dialog too).
 
   const formStartDate = watch('startDate');
   const formEndDate = watch('endDate');
 
-  const { yachtAvailability } = useYachtAvailability(yacht.slug, activeDate.year(), activeDate.month() + 1);
-
-  const unavailableDates = useMemo(() => {
-    if (!Array.isArray(yachtAvailability)) return [];
-
-    const dates: string[] = [];
-
-    yachtAvailability.forEach(item => {
-      // Hard-blocked dates only — RESERVATION (partner reservation) AND SERVICE
-      // (maintenance / owner block). OPTION stays selectable (routes to inquiry).
-      if (item.status === ReservationStatus.RESERVATION || item.status === ReservationStatus.SERVICE) {
-        const start = dayjs(item.from);
-        const end = dayjs(item.to);
-        let current = start;
-
-        while (current.isBefore(end)) {
-          dates.push(DateTime.formatFull(current));
-          current = current.add(1, 'day');
-        }
-      }
-    });
-
-    return dates;
-  }, [yachtAvailability]);
+  // Reserved days month by month as the scrolling list of months reaches them (useReservedDaysByMonth): one
+  // source for the sheet and for the range check below.
+  const { reservedDays: unavailableDates, loadMonth } = useReservedDaysByMonth(yacht.slug);
 
   const validateDateRange = useCallback(
     (start: Dayjs, end: Dayjs): boolean => {
@@ -177,9 +152,9 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
         handleDateChange={handleDateChange}
         onConfirm={handleConfirm}
         monthsShown={1}
-        scrollMonths={isPhone}
+        scrollMonths
         onMonthShown={loadMonth}
-        unavailableDates={isPhone ? reservedDays : unavailableDates}
+        unavailableDates={unavailableDates}
         externalCurrentMonth={activeDate}
         externalHandlePrevMonth={handlePrevMonth}
         externalHandleNextMonth={handleNextMonth}

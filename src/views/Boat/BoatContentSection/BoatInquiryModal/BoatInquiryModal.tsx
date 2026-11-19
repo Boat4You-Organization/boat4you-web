@@ -116,6 +116,8 @@ const InquiryDateFields = () => {
         handleDateChange={setDates}
         onConfirm={setDates}
         monthsShown={1}
+        // The months in a list that scrolls down, as every date sheet of the boat page (Mario 19.11.2026).
+        scrollMonths
       />
     </>
   );
