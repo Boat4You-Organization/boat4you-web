@@ -1,17 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { AppBar, Box, Container, Icon, IconButton, Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import FiltersModal from '@/components/HeaderSearchMobile/FiltersModal';
+import ChevronLeft from '@/components/SvgIcons/ChevronLeft';
 import Filters from '@/components/SvgIcons/Filters';
-import LogoWithoutText from '@/components/SvgIcons/LogoWithoutText';
 import { getTranslationKeyByDestinationName } from '@/config/destinations.config';
-import { Link } from '@/i18n/navigation';
 import { CatalogueData, CatalogueFilters } from '@/models/catalogue.model';
 import { VESSEL_TYPE_LABEL_MAP_PLURAL, isVesselType } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -30,6 +29,7 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
   const { params } = useQueryParams();
   const [filtersModalOpen, setFiltersModalOpen] = useState<boolean>(false);
   const [generalSearchModalOpen, setGeneralSearchModalOpen] = useState<boolean>(false);
+  const router = useRouter();
   const pathname = usePathname();
 
   const isBoatDetailPage = /^\/[a-z]{2}\/boat\/.+$|^\/boat\/.+$/.test(pathname);
@@ -75,6 +75,16 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
     setGeneralSearchModalOpen(false);
   };
 
+  const handleGoBack = useCallback(() => {
+    const hasNextJsState = window.history.state && window.history.state.__N;
+
+    if (hasNextJsState) {
+      router.back();
+    } else {
+      router.push('/');
+    }
+  }, [router]);
+
   return (
     <>
       <FiltersModal
@@ -87,11 +97,11 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
       <GeneralSearchBarModal isOpen={generalSearchModalOpen} onClose={handleCloseGeneralSearchModal} />
       <AppBar elevation={0} classes={{ root: styles.root }} className={styles.container}>
         <Container disableGutters maxWidth="xl" className={styles.header}>
-          {/* The brand, where a back arrow used to be (Mario 19.11.2026): a visitor from Google lands on a boat page
-              with no logo anywhere on the phone. It leads home; going back is the browser's own button and swipe. */}
-          <Link href="/" aria-label={t('common.home')} className={styles.brand}>
-            <LogoWithoutText size={28} />
-          </Link>
+          <IconButton size="large" onClick={handleGoBack} aria-label={t('common.goBack')}>
+            <Icon>
+              <ChevronLeft size={24} />
+            </Icon>
+          </IconButton>
           <Box
             className={styles.searchBar}
             onClick={handleOpenGeneralSearchModal}

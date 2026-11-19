@@ -26,13 +26,3 @@
     }
   }
 }
-
-// The logo mark, a 44 px target.
-.brand {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  width: rem-calc(44);
-  height: rem-calc(44);
-}
