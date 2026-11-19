@@ -79,7 +79,7 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
       sx={{
         background: T.card,
         borderRadius: compact ? '16px' : '12px',
-        padding: compact ? '22px' : '14px 12px',
+        padding: compact ? '16px' : '14px 12px',
         border: selected ? `2px solid ${T.navy}` : `1px solid ${T.hair}`,
         boxShadow: selected ? '0 14px 30px -16px rgba(15,30,62,0.30)' : 'none',
         cursor: isBooked ? 'not-allowed' : 'pointer',
@@ -107,56 +107,77 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         </Box>
       </Stack>
 
-      <Box
-        sx={{
-          mt: compact ? '18px' : '12px',
-          mb: compact ? 0 : '14px',
-          textAlign: 'center',
-          fontFeatureSettings: '"tnum"',
-        }}
-      >
-        <Typography
+      {compact ? (
+        // Phone and tablet: the two dates side by side and the nights with the year under them (Mario 19.11.2026:
+        // one under the other, with the status above, the card was too tall for a phone).
+        <Box sx={{ mt: '12px', textAlign: 'center', fontFeatureSettings: '"tnum"' }}>
+          <Stack direction="row" justifyContent="center" alignItems="baseline" gap="10px">
+            <Typography
+              sx={{ ...boatType.subtitle, fontWeight: 600, color: T.ink, lineHeight: 1.2, whiteSpace: 'nowrap' }}
+            >
+              {w.from}
+            </Typography>
+            <Box component="span" aria-hidden="true" sx={{ ...boatType.body, color: T.faint }}>
+              →
+            </Box>
+            <Typography
+              sx={{ ...boatType.subtitle, fontWeight: 600, color: T.ink, lineHeight: 1.2, whiteSpace: 'nowrap' }}
+            >
+              {w.to}
+            </Typography>
+          </Stack>
+          <Typography sx={{ ...boatType.small, color: T.muted, mt: '4px' }}>
+            {t('calendar.nights', { count: nights })}
+            {endIso ? ` · ${dayjs(endIso).format('YYYY')}` : ''}
+          </Typography>
+        </Box>
+      ) : (
+        <Box
           sx={{
-            ...boatType.subtitle,
-            fontWeight: 600,
-            color: T.ink,
-            lineHeight: 1.2,
-            whiteSpace: 'nowrap',
+            mt: '12px',
+            mb: '14px',
+            textAlign: 'center',
+            fontFeatureSettings: '"tnum"',
           }}
         >
-          {w.from}
-        </Typography>
-        <Typography
-          sx={{
-            ...boatType.label,
-            color: T.faint,
-            margin: compact ? '4px 0' : '2px 0',
-          }}
-        >
-          ↓ {t('calendar.nights', { count: nights }).toUpperCase()}
-        </Typography>
-        <Typography
-          sx={{
-            ...boatType.subtitle,
-            fontWeight: 600,
-            color: T.ink,
-            lineHeight: 1.2,
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {w.to}
-        </Typography>
-        {/* The year of the end date it sits under ("Jan 02 / 2027" for a week from Dec 26). The nights are said once,
-            between the two dates; here they were said again (Mario 19.11.2026). */}
-        {compact && endIso && (
-          <Typography sx={{ ...boatType.small, color: T.muted, mt: '6px' }}>{dayjs(endIso).format('YYYY')}</Typography>
-        )}
-      </Box>
+          <Typography
+            sx={{
+              ...boatType.subtitle,
+              fontWeight: 600,
+              color: T.ink,
+              lineHeight: 1.2,
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {w.from}
+          </Typography>
+          <Typography
+            sx={{
+              ...boatType.label,
+              color: T.faint,
+              margin: '2px 0',
+            }}
+          >
+            ↓ {t('calendar.nights', { count: nights }).toUpperCase()}
+          </Typography>
+          <Typography
+            sx={{
+              ...boatType.subtitle,
+              fontWeight: 600,
+              color: T.ink,
+              lineHeight: 1.2,
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {w.to}
+          </Typography>
+        </Box>
+      )}
 
       <Box
         sx={{
-          mt: compact ? '22px' : 'auto',
-          pt: compact ? '18px' : '10px',
+          mt: compact ? '14px' : 'auto',
+          pt: compact ? '12px' : '10px',
           borderTop: `1px solid ${T.hair}`,
           textAlign: 'center',
         }}
