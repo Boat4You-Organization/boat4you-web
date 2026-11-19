@@ -100,7 +100,15 @@ const AmenitiesTab = ({ yacht }: AmenitiesTabProps) => {
 
     return (
       <React.Fragment key={category}>
-        {showDivider && <Divider sx={{ borderColor: colors.black100 }} />}
+        {/* Phone: no margin of the rule's own (it added 16 px on each side of the groups' 10 px). */}
+        {showDivider && (
+          <Divider
+            sx={{
+              // `&.MuiDivider-root`: the theme sets the 16 px with this selector, a plain `my` loses to it.
+              '&.MuiDivider-root': { borderColor: colors.black100, marginBlock: { xs: 0, md: '16px' } },
+            }}
+          />
+        )}
         {/* Phone: the groups as close as the rows of the boat's data above (year, cabins, berths: 10 px above and
             below each rule), Mario 19.11.2026: too much air between "Comfort" and "Deck". */}
         <Grid
