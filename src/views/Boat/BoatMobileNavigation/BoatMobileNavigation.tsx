@@ -269,11 +269,18 @@ const BoatMobileNavigation = ({
         // Not before the answer is in: the first render (server HTML) used to
         // say "Not available on these dates" for every dated boat
         // (re-audit 2.10.2026). A known price being recalculated stays shown.
+        // Dates just picked in the sheet: the form has them at once, the page's URL (and with it the offer and its
+        // price) a few seconds later. Until then the bar is checking, whatever the previous dates' offer says - on
+        // the live site it read "Not available on these dates" in red for 5 - 9 s before the price came (19.11.2026;
+        // the old sheet stayed open over the bar meanwhile).
+        const isAwaitingDates =
+          hasDates &&
+          (DateTime.formatFull(startDate) !== params.startDate || DateTime.formatFull(endDate) !== params.endDate);
         const isCheckingAvailability =
           hasDates &&
           !isInquireFlow &&
-          !(isCalculatedPrice && !isSelectedOfferBlocked) &&
-          (!isPriceSettled || isCalculatingPrice);
+          (isAwaitingDates ||
+            (!(isCalculatedPrice && !isSelectedOfferBlocked) && (!isPriceSettled || isCalculatingPrice)));
         const isUnavailableSelection =
           hasDates && !isInquireFlow && !isCheckingAvailability && (isSelectedOfferBlocked || !isCalculatedPrice);
 
@@ -380,7 +387,10 @@ const BoatMobileNavigation = ({
                     id={BOAT_CALENDAR_FORM}
                     fullWidth
                     onClick={handleReservationClick}
-                    disabled={!hasDates || isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)}
+                    // Not while the new dates load: the price in the store is still the previous dates' offer.
+                    disabled={
+                      !hasDates || isAwaitingDates || isSelectedOfferBlocked || (!isInquireFlow && !isCalculatedPrice)
+                    }
                   >
                     {isInquireFlow ? tYacht('inquireNow') : tYacht('reserve')}
                   </Button>
