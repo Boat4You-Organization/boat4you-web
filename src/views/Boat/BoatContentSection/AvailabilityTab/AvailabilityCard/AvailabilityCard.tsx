@@ -137,14 +137,14 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
             <Typography variant="h4" sx={boatType.subheading}>
               {t('paymentPolicies')}
             </Typography>
-            <List sx={{ padding: 0, marginTop: { xs: 0.5, md: 2 } }}>
+            <List sx={{ padding: 0, marginTop: 0.5 }}>
               {paymentPolicies.map((policy: PolicyItem, index: number) => (
                 <ListItem
                   key={`${index + 1}`}
                   sx={{
                     ...boatType.body,
-                    py: { xs: 0.25, md: 1 },
-                    px: { xs: 0, md: 2 },
+                    py: 0.25,
+                    px: 0,
                     color: policy.textColor === 'success' ? colors.green500 : 'inherit',
                     fontWeight:
                       policy.textColor === 'success' ? boatType.bodyStrong.fontWeight : boatType.body.fontWeight,
@@ -180,15 +180,12 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
             <Typography variant="h4" sx={boatType.subheading}>
               {t('priceIncludes')}
             </Typography>
-            <List sx={{ padding: 0, marginTop: { xs: 0.5, md: 2 } }}>
+            <List sx={{ padding: 0, marginTop: 0.5 }}>
               {presentAmenities(amenities)
                 .slice(0, 3)
                 .map(amenity => (
-                  <ListItem
-                    key={amenity.id}
-                    sx={{ ...boatType.body, py: { xs: 0.25, md: 1 }, px: { xs: 0, md: 2 }, gap: 1 }}
-                  >
-                    <Check size={24} fill={colors.black300} />
+                  <ListItem key={amenity.id} sx={{ ...boatType.body, py: 0.25, px: 0, gap: 0.75 }}>
+                    <Check size={18} fill={colors.black300} />
                     {amenityLabel(amenity)}
                   </ListItem>
                 ))}
