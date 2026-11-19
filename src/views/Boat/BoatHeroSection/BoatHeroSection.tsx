@@ -23,30 +23,64 @@ import Gallery from '@/components/Gallery';
 import Crew from '@/components/SvgIcons/Crew';
 import Download from '@/components/SvgIcons/Download';
 import Share from '@/components/SvgIcons/Share';
+import { singleBoatTabsFor } from '@/config/tabs.config';
 import { YachtImage, YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useToggleState from '@/utils/hooks/useToggleState';
 import useYachtPdfDownload from '@/utils/hooks/useYachtPdfDownload';
 import { countryDisplayName } from '@/utils/static/countryDisplayName';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
+import { formatPriceWithCurrency, isPositivePrice } from '@/utils/static/formatPriceCurrency';
 import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { heroImage } from '@/utils/static/yachtLayout';
 import { crewProfileHref } from '@/utils/static/yachtMedia';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
+import type { BoatFromPrice } from '@/views/Boat/BoatMobileNavigation/BoatMobileNavigation';
 
 import styles from './BoatHeroSection.module.scss';
 import BoatShareModal from './BoatShareModal';
 
 interface BoatHeroSectionProps {
   yacht: YachtModel;
+  /** The cheapest bookable week (or period), as the phone bar quotes it; null → no price line. */
+  fromPrice?: BoatFromPrice | null;
   /** The layout drawings, kept out of `yacht.yachtImages` (yachtLayout.ts) — for the PDF's layout page. */
   layoutImages?: YachtImage[];
 }
 
-const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
+const BoatHeroSection = ({ yacht, layoutImages, fromPrice = null }: BoatHeroSectionProps) => {
   const [isOpen, toggeIsOpen] = useToggleState();
   const t = useTranslations('common');
   const locale = useLocale();
+  const tYacht = useTranslations('yacht');
+  // The bar's own wording and amount (BoatMobileNavigation): "From … / week", or "Price for N days …" when no week
+  // is bookable.
+  const fromAmount =
+    fromPrice && isPositivePrice(fromPrice.clientPriceInfo?.amount ?? fromPrice.clientPriceEur)
+      ? formatPriceWithCurrency({
+          clientPriceEur: fromPrice.clientPriceEur,
+          clientPriceInfo: fromPrice.clientPriceInfo,
+          locale,
+        })
+      : null;
+  const weeklyLabel = fromAmount ? tYacht('fromPerWeek', { price: fromAmount }) : null;
+  const fromPriceLabel =
+    fromAmount && fromPrice && fromPrice.nights !== 7
+      ? `${t('priceForXDays', { days: String(fromPrice.nights) })} ${fromAmount}`
+      : weeklyLabel;
+  const scrollToAvailability = () => {
+    const index = (singleBoatTabsFor(yacht) as readonly string[]).indexOf('availability');
+    const section = index < 0 ? null : document.getElementById(`section-${index}`);
+
+    if (!section) return;
+
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({
+      top: section.getBoundingClientRect().top + window.scrollY - 96,
+      behavior: smooth ? 'smooth' : 'auto',
+    });
+  };
   const { selectedOffer } = useYachtStore();
   const { downloadYachtPDF, isDownloading } = useYachtPdfDownload({
     yacht,
@@ -163,6 +197,32 @@ const BoatHeroSection = ({ yacht, layoutImages }: BoatHeroSectionProps) => {
                   </>
                 )}
               </Stack>
+            )}
+            {/* Phone: the price on the first screen (UX review 19.11.2026: it was 3.4 screens down, and the bar
+                with it only slides in on scroll). The desktop has the price box beside the photos. A tap goes to
+                the weeks. */}
+            {fromPriceLabel && (
+              <MuiLink
+                component="button"
+                type="button"
+                underline="none"
+                onClick={scrollToAvailability}
+                sx={{
+                  display: { xs: 'block', md: 'none' },
+                  width: 'fit-content',
+                  pt: 0.5,
+                  color: colors.green500,
+                  fontSize: 18,
+                  fontWeight: 600,
+                  textAlign: 'left',
+                  background: 'none',
+                  border: 0,
+                  p: 0,
+                  cursor: 'pointer',
+                }}
+              >
+                {fromPriceLabel}
+              </MuiLink>
             )}
           </Stack>
           {/* Wraps instead of squeezing the title on a tablet when the crew-profile action makes four;

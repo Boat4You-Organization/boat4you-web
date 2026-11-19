@@ -2,7 +2,8 @@ import { startTransition, useActionState, useEffect, useMemo, useState } from 'r
 import { useFormContext } from 'react-hook-form';
 
 import { Alert, Box, Button, ButtonProps, Stack, TextField, Typography } from '@mui/material';
-import { useTranslations } from 'next-intl';
+import dayjs from 'dayjs';
+import { useLocale, useTranslations } from 'next-intl';
 import { useParams, useRouter } from 'next/navigation';
 
 import { createReservation } from '@/actions/reservation.actions';
@@ -19,6 +20,7 @@ import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import { ReservationData } from '@/types/reservation.type';
 import { AppliedVoucher } from '@/types/voucher.type';
+import DateTime from '@/utils/static/DateTime';
 import { FormValidator } from '@/utils/static/FormValidator';
 import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
 import {
@@ -108,6 +110,33 @@ const DetailsStep = ({
   const { name, model, locationFrom } = reservationData;
   const [state, createReservationAction, createReservationPending] = useActionState(createReservation, undefined);
   const t = useTranslations('common');
+  const locale = useLocale();
+  // Phone and tablet: the total where the form starts and beside its button (UX review 19.11.2026: the price was
+  // 1,200 px under the button, in the summary the desktop shows beside the form).
+  const totalRow = (
+    <Stack
+      direction="row"
+      justifyContent="space-between"
+      alignItems="baseline"
+      gap={2}
+      sx={{ display: { xs: 'flex', md: 'none' } }}
+    >
+      <Stack>
+        <Typography variant="body1">{t('totalPrice')}</Typography>
+        <Typography variant="body2" color={colors.black500}>
+          {DateTime.formatShortWithoutDay(dayjs(reservationData.dateFrom), locale)} -{' '}
+          {DateTime.formatShortWithoutDay(dayjs(reservationData.dateTo), locale)}
+        </Typography>
+      </Stack>
+      <Typography variant="h3" component="p" color={colors.green500} sx={{ whiteSpace: 'nowrap' }}>
+        {formatPriceWithCurrency({
+          clientPriceEur: reservationData.totalPriceEur,
+          clientPriceInfo: reservationData.totalPriceInfo ?? undefined,
+          locale,
+        })}
+      </Typography>
+    </Stack>
+  );
   const router = useRouter();
   const params = useParams<{ slug: string }>();
   const validator = FormValidator.withTranslation(t);
@@ -399,6 +428,7 @@ const DetailsStep = ({
         <Box sx={{ mt: 4 }} />
         <Form defaultValues={initialValues} onSubmit={handleSubmit} resetDefaultValues>
           <Stack gap={3}>
+            {totalRow}
             <Stack direction="row" alignItems="center" justifyContent="space-between" flexWrap="wrap" gap={1}>
               <Typography variant="h2">{t('yourDetails')}</Typography>
               {!effectiveUser && (
@@ -572,6 +602,7 @@ const DetailsStep = ({
                   </RequestQuoteButton>
                 </Alert>
               )}
+              {totalRow}
               <Stack direction={{ xs: 'column-reverse', sm: 'row' }} justifyContent="flex-end" gap={2}>
                 <RequestQuoteButton
                   size="large"

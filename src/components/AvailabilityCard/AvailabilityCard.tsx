@@ -146,11 +146,10 @@ const AvailabilityCard = ({ w, selected, onClick, size = 'desktop' }: Availabili
         >
           {w.to}
         </Typography>
-        {/* The year of the end date it sits under: "Jan 02 / 2027 · 7 nights" for a week from Dec 26. */}
-        {compact && (
-          <Typography sx={{ ...boatType.small, color: T.muted, mt: '6px' }}>
-            {endIso ? dayjs(endIso).format('YYYY') : ''} · {t('calendar.nights', { count: nights })}
-          </Typography>
+        {/* The year of the end date it sits under ("Jan 02 / 2027" for a week from Dec 26). The nights are said once,
+            between the two dates; here they were said again (Mario 19.11.2026). */}
+        {compact && endIso && (
+          <Typography sx={{ ...boatType.small, color: T.muted, mt: '6px' }}>{dayjs(endIso).format('YYYY')}</Typography>
         )}
       </Box>
 

@@ -689,7 +689,7 @@ const BoatPage = async ({
         />
       )}
       <BoatTransitionProvider>
-        <BoatHeroSection yacht={clientYacht} layoutImages={layoutImages} />
+        <BoatHeroSection yacht={clientYacht} layoutImages={layoutImages} fromPrice={fromPrice} />
         <BoatContentSection
           yacht={clientYacht}
           yachtFaq={yachtFaq}

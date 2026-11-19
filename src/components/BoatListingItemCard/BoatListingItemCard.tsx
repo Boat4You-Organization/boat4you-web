@@ -34,7 +34,7 @@ import BoatLocationModal from '@/components/BoatLocationModal';
 import Checkbox from '@/components/Checkbox';
 import FavoriteButton from '@/components/FavoriteButton';
 import FlagIcon from '@/components/FlagIcon';
-import { Link } from '@/i18n/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { UserModel, UserRoleName } from '@/models/user.model';
 import { Location, MatchKind, OfferStatus, YachtModelShortInfo } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
@@ -305,6 +305,18 @@ const BoatListingItemCardView = ({
     toggleYachtSelection(id);
   };
 
+  // A phone or tablet opens the boat in the same tab (Mario 19.11.2026): in the new tab the link asks for, "Back"
+  // had no list to go back to. A desktop keeps the new tab, and so does a click with a modifier key.
+  const router = useRouter();
+  const handleCardClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+
+    if (!window.matchMedia('(max-width: 899.95px)').matches) return;
+
+    e.preventDefault();
+    router.push(boatDetailHref);
+  };
+
   return (
     <>
       {mapMarina && (
@@ -320,6 +332,7 @@ const BoatListingItemCardView = ({
         href={boatDetailHref}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleCardClick}
         className={cx({ [styles.alignedItem]: alignRows })}
       >
         <Card
