@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 
-import Checkbox from '@/components/Checkbox';
 import CollapsibleBlock from '@/components/CollapsibleBlock';
 import ExtrasCard from '@/components/ExtrasCard';
 import Extras from '@/components/SvgIcons/Extras';
@@ -98,7 +97,7 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
       <Stack spacing={0} pt={3}>
         {(obligatoryServices.length > 0 || securityDepositPrice) && (
           <Typography component="h3" variant="body2" color={colors.black950} sx={{ ...boatType.subtitle, mb: 1 }}>
-            {t('selectedServices')}
+            {t('selectedServicesObligatory')}
           </Typography>
         )}
         {obligatoryServices.map((extra, index) => {
@@ -142,19 +141,14 @@ const ExtrasTab = ({ yacht, open, onToggle }: ExtrasTabProps) => {
               borderRadius: 1.5,
               backgroundColor: '#fff',
               borderBottom: `1px solid ${colors.black200}`,
-              opacity: 0.7,
-              cursor: 'not-allowed',
             }}
           >
-            <Box sx={{ flexShrink: 0, mt: '-2px' }}>
-              <Checkbox checked value disabled />
-            </Box>
             <Box sx={{ flex: 1, minWidth: 0 }}>
               <Typography
                 component="h3"
                 variant="body1"
                 color={colors.black950}
-                sx={{ ...boatType.subtitle, wordBreak: 'break-word' }}
+                sx={{ ...boatType.bodyStrong, lineHeight: 1.4, wordBreak: 'break-word' }}
               >
                 {tServices('refundable-security-deposit')}
               </Typography>

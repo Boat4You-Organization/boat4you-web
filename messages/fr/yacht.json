@@ -8,6 +8,7 @@
   "FAQTitle": "Questions fréquemment posées",
   "extrasTitle": "Suppléments",
   "selectedServices": "Services sélectionnés",
+  "selectedServicesObligatory": "Services sélectionnés (obligatoires)",
   "optionalServices": "Services optionnels",
   "features": {
     "maxPersons": "personnes",

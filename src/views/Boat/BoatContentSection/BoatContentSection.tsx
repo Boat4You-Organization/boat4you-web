@@ -282,8 +282,11 @@ const BoatContentSection = ({
                       Availability. Only where the calendar is: a custom boat has its own Good to know tab. */}
                   {tabName === 'extras' && currentTabs.includes('availability' as never) && (
                     <>
+                      {/* One rule on each side, never two: Extras drew one above when another tab follows before
+                          the FAQ (a boat with a video), and the FAQ draws its own. */}
+                      {index >= currentTabs.length - 2 && <Divider className={styles.divier} />}
                       <GoodToKnowSection yacht={yacht} />
-                      <Divider className={styles.divier} />
+                      {index < currentTabs.length - 2 && <Divider className={styles.divier} />}
                     </>
                   )}
                 </React.Fragment>

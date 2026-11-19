@@ -154,28 +154,35 @@ const ExtrasCard = ({
         px: 2,
         py: 1.5,
         borderRadius: 1.5,
-        ...(infoOnly ? { cursor: 'default' } : {}),
+        ...(infoOnly || isObligatoryExtras ? { cursor: 'default' } : {}),
       }}
     >
-      {/* One-way fee: information, nothing to tick; the empty box keeps the title in line with the others. */}
-      <Box ref={checkboxContainerRef} sx={{ flexShrink: 0, mt: '-2px' /* visual centering vs title */, minWidth: 24 }}>
-        {!infoOnly && (
-          <Checkbox
-            checked={isChecked}
-            value={isChecked}
-            onChange={handleCheckboxChange}
-            disabled={isDisabled}
-            slotProps={{ input: { 'aria-labelledby': labelId } }}
-          />
-        )}
-      </Box>
+      {/* An obligatory service has no box at all (Mario 19.11.2026): the ticked, locked box read as something to
+          press (heatmap: taps with no reaction), and the group's heading says "obligatory". A one-way fee shown for
+          information keeps an empty box, so its title lines up with the optional services around it. */}
+      {!isObligatoryExtras && (
+        <Box
+          ref={checkboxContainerRef}
+          sx={{ flexShrink: 0, mt: '-2px' /* visual centering vs title */, minWidth: 24 }}
+        >
+          {!infoOnly && (
+            <Checkbox
+              checked={isChecked}
+              value={isChecked}
+              onChange={handleCheckboxChange}
+              disabled={isDisabled}
+              slotProps={{ input: { 'aria-labelledby': labelId } }}
+            />
+          )}
+        </Box>
+      )}
       <Box sx={{ flex: '1 1 100px', minWidth: 0 }}>
         <Typography
           id={labelId}
           component="h3"
           variant="body1"
           color={colors.black950}
-          sx={{ ...boatType.subtitle, wordBreak: 'break-word' }}
+          sx={{ ...boatType.bodyStrong, lineHeight: 1.4, wordBreak: 'break-word' }}
         >
           {extras ? servicesT(extras.labelCode as YachtServiceExtrasKey) : name}
         </Typography>
@@ -194,35 +201,34 @@ const ExtrasCard = ({
           </Typography>
         )}
       </Box>
-      {/* Single row: unit label first, then the price — e.g. "Per week ·
-          1,400 €". Was a two-line stack (price over unit) which made each row
-          tall + the right column wide with empty space; Mario asked for one
-          tidy line (less vertical scroll). */}
-      {/* The row wraps: when the title's 100 px and this column do not fit side by side, as with a long label in
-          place of a price ("On request, paid in the marina") on a phone, the column drops to its own line, right
-          aligned. Unshrinkable on one line, it left the title a column one letter wide (19.11.2026). */}
+      {/* The price and its unit. Phone: the price with the unit under it, right aligned (Mario 19.11.2026: "per
+          booking" beside the price crowded the row). Wider screens: one line, "Per week · 1,400 €". The row wraps:
+          a long label in place of a price ("On request, paid in the marina") drops under the title instead of
+          squeezing it to a column one letter wide. */}
       <Stack
-        direction="row"
-        alignItems="baseline"
+        direction={{ xs: 'column-reverse', sm: 'row' }}
+        alignItems={{ xs: 'flex-end', sm: 'baseline' }}
         justifyContent="flex-end"
-        flexWrap="wrap"
+        flexWrap={{ xs: 'nowrap', sm: 'wrap' }}
         columnGap={0.75}
         sx={{ maxWidth: '100%', ml: 'auto', textAlign: 'right' }}
       >
         <Typography variant="body2" color={colors.black500} sx={{ ...boatType.small, whiteSpace: 'nowrap' }}>
           {t(UNIT_LABEL_MAP[unit])}
         </Typography>
-        <Box component="span" sx={{ color: colors.black300, fontSize: 12 }}>
+        <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' }, color: colors.black300, fontSize: 12 }}>
           ·
         </Box>
-        {isStartingPrice && hasPrice && (
-          <Typography variant="body2" color={colors.black500} sx={boatType.small}>
-            {t('from')}
+        <Stack direction="row" alignItems="baseline" justifyContent="flex-end" columnGap={0.75}>
+          {isStartingPrice && hasPrice && (
+            <Typography variant="body2" color={colors.black500} sx={boatType.small}>
+              {t('from')}
+            </Typography>
+          )}
+          <Typography color={colors.black950} component="p" variant="body1" sx={boatType.bodyStrong}>
+            {displayPrice}
           </Typography>
-        )}
-        <Typography color={colors.black950} component="p" variant="body1" sx={boatType.bodyStrong}>
-          {displayPrice}
-        </Typography>
+        </Stack>
       </Stack>
     </Box>
   );
