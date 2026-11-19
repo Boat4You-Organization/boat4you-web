@@ -137,7 +137,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
             <Typography variant="h4" sx={boatType.subheading}>
               {t('paymentPolicies')}
             </Typography>
-            <List sx={{ padding: 0, marginTop: 0.5 }}>
+            <List sx={{ padding: 0, marginTop: 0.5, gap: 0.25 }}>
               {paymentPolicies.map((policy: PolicyItem, index: number) => (
                 <ListItem
                   key={`${index + 1}`}
@@ -180,7 +180,7 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
             <Typography variant="h4" sx={boatType.subheading}>
               {t('priceIncludes')}
             </Typography>
-            <List sx={{ padding: 0, marginTop: 0.5 }}>
+            <List sx={{ padding: 0, marginTop: 0.5, gap: 0.25 }}>
               {presentAmenities(amenities)
                 .slice(0, 3)
                 .map(amenity => (
