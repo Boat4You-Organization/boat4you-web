@@ -101,20 +101,22 @@ const AvailabilityCard = ({ yacht, offer }: AvailabilityCardProps) => {
               {tCommon('priceForXDays', { days: String(days) })}
             </Typography>
           )}
-          {showListPrice && (
-            <Typography variant="body2" color={colors.black950} sx={{ ...boatType.bodyStrong, mt: 0.25 }}>
-              − {discountPercent}%
-            </Typography>
-          )}
-          <Stack direction="row" alignItems="baseline" gap={1} sx={{ mt: 0.25 }}>
+          {/* One line: the list price, the discount, the price (Mario 19.11.2026: the discount sat on a line of its
+              own above them), as on the week card. */}
+          <Stack direction="row" alignItems="baseline" flexWrap="wrap" columnGap={1} sx={{ mt: 0.25 }}>
             {showListPrice && (
-              <Typography
-                variant="body2"
-                color={colors.black500}
-                sx={{ ...boatType.body, textDecoration: 'line-through' }}
-              >
-                {formattedListPrice}
-              </Typography>
+              <>
+                <Typography
+                  variant="body2"
+                  color={colors.black500}
+                  sx={{ ...boatType.body, textDecoration: 'line-through' }}
+                >
+                  {formattedListPrice}
+                </Typography>
+                <Typography variant="body2" color="#D97706" sx={{ ...boatType.bodyStrong, whiteSpace: 'nowrap' }}>
+                  −{discountPercent}%
+                </Typography>
+              </>
             )}
             {hasPrice ? (
               <Typography variant="h3" component="p" color="success" sx={boatType.price}>
