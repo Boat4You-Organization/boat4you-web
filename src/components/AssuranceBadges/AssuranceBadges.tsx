@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LockOutlined, Sailing, SupportAgent, VerifiedUser } from '@mui/icons-material';
+import { LockOutlined, Sailing, SupportAgent } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';
 import { useTranslations } from 'next-intl';
 
@@ -22,8 +22,9 @@ interface AssuranceBadgesProps {
 }
 
 /**
- * Reassurance row showing the four platform commitments with icons. Same
- * four messages everywhere — single source of truth so a copy/icon change
+ * Reassurance row showing the three platform commitments with icons ("Verified charter partners" left the site
+ * on 19.11.2026, Mario). Same
+ * messages everywhere — single source of truth so a copy/icon change
  * propagates to both the booking-flow strip and the site footer.
  */
 const AssuranceBadges = ({ variant = 'card' }: AssuranceBadgesProps) => {
@@ -32,7 +33,6 @@ const AssuranceBadges = ({ variant = 'card' }: AssuranceBadgesProps) => {
   const items = [
     { Icon: LockOutlined, label: t('assuranceSSL') },
     { Icon: SupportAgent, label: t('assurance247') },
-    { Icon: VerifiedUser, label: t('assuranceVerified') },
     { Icon: Sailing, label: t('assuranceNoHidden') },
   ];
 

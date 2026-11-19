@@ -657,6 +657,42 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
   // the scroll listener.
   const programmaticScrollRef = useRef(false);
 
+  // A swipe left or right turns the 6-month page, as the two arrows do (Mario 19.11.2026): anywhere on the strip,
+  // and on the week cards once they are at their first or last card (before that the swipe scrolls the cards).
+  const swipeStart = useRef<{ x: number; y: number; atFirst: boolean; atLast: boolean } | null>(null);
+
+  const handleSwipeStart = (event: React.TouchEvent) => {
+    const touch = event.touches[0];
+    const el = scrollerEl;
+
+    swipeStart.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+      // 24 px: the last card snaps to the centre, a few pixels short of the strip's end.
+      atFirst: !el || el.scrollLeft <= 24,
+      atLast: !el || el.scrollLeft + el.clientWidth >= el.scrollWidth - 24,
+    };
+  };
+
+  const handleSwipeEnd = (edgesOnly: boolean) => (event: React.TouchEvent) => {
+    const start = swipeStart.current;
+    const touch = event.changedTouches[0];
+
+    swipeStart.current = null;
+
+    if (!start) return;
+
+    const dx = touch.clientX - start.x;
+    const dy = touch.clientY - start.y;
+
+    // A sideways move of a thumb, not a tap and not the page scrolling.
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+
+    if (dx < 0 && (!edgesOnly || start.atLast)) setChunkIdx(c => Math.min(totalChunks - 1, c + 1));
+
+    if (dx > 0 && (!edgesOnly || start.atFirst)) setChunkIdx(c => Math.max(0, c - 1));
+  };
+
   const cardSlotWidth = () => {
     const firstChild = scrollerEl?.firstChild as HTMLElement | null;
     const card = firstChild?.firstChild as HTMLElement | null;
@@ -833,7 +869,10 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
           </Stack>
         </Stack>
         <Box
+          onTouchStart={handleSwipeStart}
+          onTouchEnd={handleSwipeEnd(false)}
           sx={{
+            touchAction: 'pan-y',
             background: T.card,
             borderRadius: '14px',
             padding: '12px 12px 10px',
@@ -869,6 +908,8 @@ export const AvailabilityMobile = ({ weeks, selId, onSelect, allBooked }: Mobile
       </Box>
       <Box
         ref={setScrollerEl}
+        onTouchStart={handleSwipeStart}
+        onTouchEnd={handleSwipeEnd(true)}
         sx={{
           display: 'flex',
           overflowX: 'auto',

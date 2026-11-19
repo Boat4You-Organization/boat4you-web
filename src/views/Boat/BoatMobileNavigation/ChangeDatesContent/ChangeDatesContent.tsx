@@ -1,123 +1,78 @@
 'use client';
 
-import React, { startTransition, useActionState, useCallback, useEffect, useMemo } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import { InputAdornment, Stack, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 import { getSingleYachtAvailability } from '@/actions/yacht.actions';
-import CircularProgress from '@/components/CircularProgress';
 import DateRangePicker from '@/components/DateRangePicker';
-import FormDateInput from '@/components/Forms/FormDateInput';
-import Calendar from '@/components/SvgIcons/Calendar';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { YachtModel } from '@/models/yacht.model';
-import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
-import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
-import { formatPriceWithCurrency } from '@/utils/static/formatPriceCurrency';
-import { handleNextMonth, handlePrevMonth } from '@/valtio/yacht/yacht.actions';
-import { priceSettledKey, useYachtStore } from '@/valtio/yacht/yacht.store';
 
 interface ChangeDatesContentProps {
   yacht: YachtModel;
-  isCalculatedPrice: boolean | null;
-  isSelectedOfferUnavailable: boolean;
+  open: boolean;
+  onToggle: () => void;
 }
 
-const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailable }: ChangeDatesContentProps) => {
-  const { activeDate, selectedOffer, calculatedPrice, isCalculatingPrice, priceSettledFor } = useYachtStore();
+/**
+ * The phone's date sheet of the boat page: one sheet, the months in a list that scrolls down, and it closes with
+ * the range as soon as the second day is tapped (Mario 19.11.2026). Before: a sheet with a red "no dates selected"
+ * notice and two fields, a tap on a field opened a second sheet with one month and arrows, then Confirm twice. The
+ * price and "not available on these dates" are the bar's to say, under the sheet.
+ */
+const ChangeDatesContent = ({ yacht, open, onToggle }: ChangeDatesContentProps) => {
   const { setMultipleParams } = useQueryParams();
-  const [isModalOpen, toggleModal] = useToggleState();
   const { setValue, watch } = useFormContext<BoatCalendarFormValues>();
   const t = useTranslations('yacht');
   const tCommon = useTranslations('common');
-  const locale = useLocale();
 
   const startDate = watch('startDate');
   const endDate = watch('endDate');
 
-  // Headline shows the charter price for the WHOLE selected period, not a
-  // per-day rate — mirrors the search listing card and availability card
-  // (both use clientPriceEur + `priceForXDays`). A per-day number reads
-  // misleadingly cheap (494/day vs ~3458 for the week). Mario 5.7.2026.
-  const selectedDays = startDate && endDate ? endDate.diff(startDate, 'day') : 7;
-  const numberOfDays =
-    calculatedPrice?.numberOfDays && calculatedPrice.numberOfDays > 0 ? calculatedPrice.numberOfDays : selectedDays;
+  // Reserved days, month by month as the list scrolls to them (the endpoint answers one month at a time).
+  const [reservedByMonth, setReservedByMonth] = useState<Record<string, string[]>>({});
+  const requestedMonths = useRef(new Set<string>());
 
-  const formattedClientPriceTotal = formatPriceWithCurrency({
-    clientPriceEur: calculatedPrice?.clientPriceEur,
-    clientPriceInfo: calculatedPrice?.clientPriceInfo,
-    locale,
-  });
+  const handleMonthShown = useCallback(
+    async (month: Dayjs) => {
+      const key = month.format('YYYY-MM');
 
-  const [availabilityState, availabilityAction] = useActionState(getSingleYachtAvailability, []);
+      if (requestedMonths.current.has(key)) return;
 
-  const unavailableDates = useMemo(() => {
-    if (!Array.isArray(availabilityState)) return [];
+      requestedMonths.current.add(key);
 
-    const dates: string[] = [];
+      const periods = await getSingleYachtAvailability(null, {
+        yachtSlug: yacht.slug,
+        month: month.month() + 1,
+        year: month.year(),
+      });
+      const days: string[] = [];
 
-    availabilityState.forEach(item => {
-      if (item.status === 'RESERVATION') {
-        const start = dayjs(item.from);
-        const end = dayjs(item.to);
-        let current = start;
+      if (Array.isArray(periods)) {
+        periods.forEach(period => {
+          if (period.status !== 'RESERVATION') return;
 
-        while (current.isBefore(end)) {
-          dates.push(current.format('YYYY-MM-DD'));
-          current = current.add(1, 'day');
-        }
-      }
-    });
+          const end = dayjs(period.to);
+          let current = dayjs(period.from);
 
-    return dates;
-  }, [availabilityState]);
-
-  const validateDateRange = useCallback(
-    (start: Dayjs, end: Dayjs): boolean => {
-      const daysDiff = end.diff(start, 'day') + 1;
-
-      if (daysDiff < 3 || daysDiff > 28) return false;
-
-      let current = start.clone();
-      const unavailableDatesSet = new Set(unavailableDates);
-
-      while (current.isBefore(end)) {
-        if (unavailableDatesSet.has(current.format('YYYY-MM-DD'))) return false;
-
-        current = current.add(1, 'day');
+          while (current.isBefore(end)) {
+            days.push(current.format('YYYY-MM-DD'));
+            current = current.add(1, 'day');
+          }
+        });
       }
 
-      return true;
+      setReservedByMonth(previous => ({ ...previous, [key]: days }));
     },
-    [unavailableDates]
+    [yacht.slug]
   );
 
-  const handleDateChange = useCallback(
-    (dates: [Dayjs | null, Dayjs | null]) => {
-      const [newStartDate, newEndDate] = dates;
-
-      if (!newStartDate && !newEndDate) {
-        setValue('startDate', null);
-        setValue('endDate', null);
-
-        return;
-      }
-
-      if (newStartDate && newEndDate && validateDateRange(newStartDate, newEndDate)) {
-        setValue('startDate', newStartDate);
-        setValue('endDate', newEndDate);
-      } else if (newStartDate && !newEndDate) {
-        setValue('startDate', newStartDate);
-        setValue('endDate', null);
-      }
-    },
-    [setValue, validateDateRange]
-  );
+  const unavailableDates = useMemo(() => [...new Set(Object.values(reservedByMonth).flat())], [reservedByMonth]);
 
   const handleConfirm = useCallback(
     (dates: [Dayjs | null, Dayjs | null]) => {
@@ -138,115 +93,20 @@ const ChangeDatesContent = ({ yacht, isCalculatedPrice, isSelectedOfferUnavailab
     [setMultipleParams, setValue]
   );
 
-  useEffect(() => {
-    startTransition(() => {
-      availabilityAction({
-        yachtSlug: yacht.slug,
-        month: activeDate.month() + 1,
-        year: activeDate.year(),
-      });
-    });
-  }, [yacht.slug, activeDate, availabilityAction]);
-
-  const hasValidDateSelection = startDate && endDate && selectedOffer;
-  // Dates chosen, this boat + offer's price not in yet: "Checking
-  // availability…", as on the desktop form and the phone bar. This sheet is
-  // where the dates are changed, and between the new week's offer and its
-  // price it read the red "not available" for seconds (review 6.10.2026).
-  const isCheckingAvailability =
-    !!(startDate && endDate) &&
-    !(isCalculatedPrice && !isSelectedOfferUnavailable) &&
-    (priceSettledFor !== priceSettledKey(yacht.slug, selectedOffer?.id) || isCalculatingPrice);
-
   return (
-    <>
-      <Stack>
-        {isCheckingAvailability && (
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-            gap={1.5}
-            p={2}
-            borderRadius={2.5}
-            role="status"
-            sx={{ backgroundColor: colors.black50 }}
-          >
-            <CircularProgress size={18} />
-            <Typography variant="body1" color={colors.black600} textAlign="center">
-              {t('checkingAvailability')}
-            </Typography>
-          </Stack>
-        )}
-        {!isCheckingAvailability &&
-          (hasValidDateSelection && isCalculatedPrice && !isSelectedOfferUnavailable ? (
-            <Stack direction="row" spacing={1} alignItems="end">
-              <Typography component="p" variant="h2" color={colors.green500}>
-                {t('upTo')} {formattedClientPriceTotal}
-              </Typography>
-              <Typography variant="body1" color={colors.black600}>
-                {tCommon('priceForXDays', { days: String(numberOfDays) })}
-              </Typography>
-            </Stack>
-          ) : (
-            <Stack p={2} borderRadius={2.5} sx={{ backgroundColor: colors.red50 }}>
-              <Typography variant="body1" color={colors.red500} textAlign="center">
-                {!hasValidDateSelection ? t('noDateSelected') : t('notAvailable')}
-              </Typography>
-            </Stack>
-          ))}
-        <Stack pt={3} spacing={2}>
-          <FormDateInput
-            name="startDate"
-            formLabel={t('startDate')}
-            type="text"
-            placeholder={t('pickDate')}
-            onClick={toggleModal}
-            slotProps={{
-              input: {
-                readOnly: true,
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <Calendar size={24} fill={colors.black300} />
-                  </InputAdornment>
-                ),
-              },
-            }}
-          />
-          <FormDateInput
-            name="endDate"
-            formLabel={t('endDate')}
-            type="text"
-            placeholder={t('pickDate')}
-            onClick={toggleModal}
-            slotProps={{
-              input: {
-                readOnly: true,
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <Calendar size={24} fill={colors.black300} />
-                  </InputAdornment>
-                ),
-              },
-            }}
-          />
-        </Stack>
-      </Stack>
-      <DateRangePicker
-        isBoatCalendar
-        isModalOpen={isModalOpen}
-        toggleModal={toggleModal}
-        startDate={startDate}
-        endDate={endDate}
-        handleDateChange={handleDateChange}
-        onConfirm={handleConfirm}
-        monthsShown={1}
-        unavailableDates={unavailableDates}
-        externalCurrentMonth={activeDate}
-        externalHandlePrevMonth={handlePrevMonth}
-        externalHandleNextMonth={handleNextMonth}
-      />
-    </>
+    <DateRangePicker
+      isBoatCalendar
+      scrollMonths
+      title={startDate && endDate ? tCommon('changeDates') : t('chooseDates')}
+      isModalOpen={open}
+      toggleModal={onToggle}
+      startDate={startDate}
+      endDate={endDate}
+      handleDateChange={() => {}}
+      onConfirm={handleConfirm}
+      onMonthShown={handleMonthShown}
+      unavailableDates={unavailableDates}
+    />
   );
 };
 

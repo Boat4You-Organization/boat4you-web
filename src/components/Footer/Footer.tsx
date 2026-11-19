@@ -41,8 +41,7 @@ const Footer = () => {
           </a>
           <span>{tCommon('assuranceSSL')}</span>
           <span>{tCommon('assurance247')}</span>
-          <span>{tCommon('assuranceVerified')}</span>
-          <span>{tCommon('assuranceNoHidden')}</span>
+          <span>{tCommon('freeCancellation72h')}</span>
         </div>
       </div>
 

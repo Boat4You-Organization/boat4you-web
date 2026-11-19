@@ -82,7 +82,8 @@ const BoatMobileNavigation = ({
   const calculatedPrice = isServerPrice ? initialPrice : storePrice;
   const { params, setMultipleParams } = useQueryParams();
   const [isModalOpen, toggleModal] = useToggleState();
-  const [modalVariant, setModalVariant] = useState<'price' | 'dates' | null>(null);
+  const [modalVariant, setModalVariant] = useState<'price' | null>(null);
+  const [isDatesOpen, toggleDates] = useToggleState();
   // The bar used to cover ~20% of the first screen (Mario 20.7.2026) — slide it
   // in only once the visitor starts scrolling, Boataround-style.
   const [revealed, setRevealed] = useState(false);
@@ -147,10 +148,7 @@ const BoatMobileNavigation = ({
     setModalVariant('price');
   };
 
-  const handleChangeDatesOpen = () => {
-    toggleModal();
-    setModalVariant('dates');
-  };
+  const handleChangeDatesOpen = () => toggleDates();
 
   // The exit popup's "Reserve" (utils/static/boatBooking.ts): the chosen dates
   // reserved when they can be (as the bar's Reserve), else the date picker;
@@ -169,9 +167,7 @@ const BoatMobileNavigation = ({
         return;
       }
 
-      if (!isModalOpen) toggleModal();
-
-      setModalVariant('dates');
+      if (!isDatesOpen) toggleDates();
     };
 
     window.addEventListener(OPEN_BOAT_BOOKING_EVENT, openBooking);
@@ -203,14 +199,6 @@ const BoatMobileNavigation = ({
 
   const renderModalContent = () => {
     switch (modalVariant) {
-      case 'dates':
-        return (
-          <ChangeDatesContent
-            yacht={yacht}
-            isCalculatedPrice={isCalculatedPrice}
-            isSelectedOfferUnavailable={isSelectedOfferBlocked}
-          />
-        );
       case 'price':
         return (
           <PriceDetailsContent
@@ -400,16 +388,17 @@ const BoatMobileNavigation = ({
               </Stack>
             </Box>
             <ModalRoot
-              title={modalVariant === 'dates' ? t('changeDates') : t('priceDetails')}
+              title={t('priceDetails')}
               open={isModalOpen}
               onOpen={toggleModal}
               onClose={handleModalClose}
               onConfirm={toggleModal}
               hideCancelButton
-              hideConfirmButton={modalVariant === 'price'}
+              hideConfirmButton
             >
               {renderModalContent()}
             </ModalRoot>
+            <ChangeDatesContent yacht={yacht} open={isDatesOpen} onToggle={toggleDates} />
           </>
         );
       }}

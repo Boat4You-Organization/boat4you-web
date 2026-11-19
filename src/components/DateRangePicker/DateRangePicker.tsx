@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Box, IconButton, Stack, Theme, useMediaQuery } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 
 import CircularProgress from '@/components/CircularProgress';
 import CustomDateCalendar from '@/components/CustomDateCalendar';
+import LazyMonth from '@/components/DatePickerDropdown/LazyMonth';
 import ModalRoot from '@/components/ModalRoot';
 import ChevronLeft from '@/components/SvgIcons/ChevronLeft';
 import ChevronRight from '@/components/SvgIcons/ChevronRight';
@@ -32,7 +33,26 @@ interface DateRangePickerProps {
   externalHandlePrevMonth?: () => void;
   externalHandleNextMonth?: () => void;
   isLoadingAvailability?: boolean;
+  /** The sheet's title; default "Change dates". */
+  title?: string;
+  /**
+   * Phone sheet of the boat page (Mario 19.11.2026): every month from this one to the end of next year in one list
+   * that scrolls down, as in the search bar, instead of one month and two arrows. The sheet closes with the chosen
+   * range as soon as the second day is tapped; there is no Confirm button.
+   */
+  scrollMonths?: boolean;
+  /** `scrollMonths` only: a month of the list is about to scroll into view (the caller loads its availability). */
+  onMonthShown?: (month: Dayjs) => void;
 }
+
+/** Calls `onShown` once, when its month of the scrolling list mounts. */
+const MonthShown = ({ month, onShown }: { month: Dayjs; onShown?: (month: Dayjs) => void }) => {
+  useEffect(() => {
+    onShown?.(month);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return null;
+};
 
 const DateRangePicker = ({
   isBoatCalendar = false,
@@ -48,6 +68,9 @@ const DateRangePicker = ({
   externalHandlePrevMonth,
   externalHandleNextMonth,
   isLoadingAvailability = false,
+  title,
+  scrollMonths = false,
+  onMonthShown,
 }: DateRangePickerProps) => {
   const customBreakpoint = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
   const t = useTranslations('common');
@@ -163,9 +186,15 @@ const DateRangePicker = ({
       } else {
         updateDates([activeStartDate, date]);
         setHoverDate(null);
+
+        // The scrolling sheet has no Confirm: the second day is the answer.
+        if (scrollMonths && onConfirm) {
+          onConfirm([activeStartDate, date]);
+          toggleModal();
+        }
       }
     },
-    [activeStartDate, activeEndDate, updateDates]
+    [activeStartDate, activeEndDate, updateDates, scrollMonths, onConfirm, toggleModal]
   );
 
   const handleDayHover = useCallback((date: Dayjs | null) => {
@@ -203,9 +232,83 @@ const DateRangePicker = ({
     }
   }, [activeStartDate, activeEndDate]);
 
+  // From this month to the end of next year, as the search bar's sheet (DatePickerDropdown).
+  const listMonths = useMemo(() => {
+    const start = dayjs().startOf('month');
+    const count = dayjs().add(1, 'year').endOf('year').startOf('month').diff(start, 'month') + 1;
+
+    return Array.from({ length: count }, (_, i) => start.add(i, 'month'));
+  }, []);
+
+  // Opened with dates already chosen: the list starts at their month, not at this one. Every month before it is a
+  // LazyMonth of one fixed height (mounted or not), so the offset is known before they render.
+  const listRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!scrollMonths || !isModalOpen || !startDate) return undefined;
+
+    const index = listMonths.findIndex(month => startDate.isSame(month, 'month'));
+
+    if (index < 1) return undefined;
+
+    const frame = requestAnimationFrame(() => {
+      (listRef.current?.children[index] as HTMLElement | undefined)?.scrollIntoView({ block: 'start' });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [isModalOpen]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (scrollMonths) {
+    return (
+      <ModalRoot
+        title={title ?? t('changeDates')}
+        open={isModalOpen}
+        onOpen={toggleModal}
+        onClose={toggleModal}
+        hideConfirmButton
+        hideCancelButton={!(activeStartDate || activeEndDate)}
+        onCancel={() => {
+          handleClear();
+          toggleModal();
+        }}
+        cancelBtnText={t('clearDates')}
+      >
+        <Stack
+          ref={listRef}
+          direction="column"
+          spacing={1}
+          width="100%"
+          sx={{
+            // The compact months of the search bar's sheet (see DatePickerDropdown): the next month's name shows
+            // under the fold, so the list reads as one that scrolls.
+            '& .MuiDateCalendar-root .MuiPickersSlideTransition-root': { minHeight: '204px' },
+            '& .MuiDateCalendar-root .MuiDayCalendar-monthContainer': { gap: '2px' },
+            '& .MuiDateCalendar-root .MuiDayCalendar-header': { pb: '2px' },
+            '& .MuiPickersDay-root, & .MuiPickersDay-hiddenDaySpacingFiller': { minWidth: '32px', minHeight: '32px' },
+          }}
+        >
+          {listMonths.map((month, index) => (
+            <LazyMonth key={month.format('YYYY-MM')} eager={index < 2 || !!startDate?.isSame(month, 'month')}>
+              <MonthShown month={month} onShown={onMonthShown} />
+              <CustomDateCalendar
+                currentMonth={month}
+                startDate={activeStartDate}
+                endDate={activeEndDate}
+                onDayClick={handleDayClick}
+                hoverDate={hoverDate}
+                onDayHover={handleDayHover}
+                getDateDisableReason={getDateDisableReason}
+              />
+            </LazyMonth>
+          ))}
+        </Stack>
+      </ModalRoot>
+    );
+  }
+
   return (
     <ModalRoot
-      title={t('changeDates')}
+      title={title ?? t('changeDates')}
       open={isModalOpen}
       onOpen={toggleModal}
       onClose={toggleModal}
