@@ -6,9 +6,10 @@ export const continentsTabs = ['europe', 'americas'] as const;
 // Order matters — this is the order rendered in the tab bar, left-to-right.
 export const boatsTabs = ['recommended', 'lowestPrice', 'highestPrice', 'minLength', 'maxLength'] as const;
 
-// Availability right after the details (UX review 19.11.2026): the weeks and prices were the fifth thing on a phone,
-// under the layout and the equipment.
-export const singleBoatTabs = ['details', 'availability', 'ammenities', 'extras', 'faq'] as const;
+// Details, Amenities (the layout drawing above them), Availability, Extras (Mario 19.11.2026, after trying
+// Availability second: he wants the equipment before the weeks). "Good to know" is not a tab on these boats, the page
+// draws it under Extras (BoatContentSection).
+export const singleBoatTabs = ['details', 'ammenities', 'availability', 'extras', 'faq'] as const;
 // Custom yachts get a dedicated 'priceDetails' tab right after Amenities
 // — admins enter season-specific pricing notes in the admin form, and
 // users expect to see them under their own header rather than buried at
@@ -17,7 +18,7 @@ export const singleCustomBoatTabs = ['details', 'ammenities', 'priceDetails', 'g
 // A partner boat with a video of our own (yacht.videoUrl, owner 17.10.2026 —
 // gulet Allure) gets the Video tab too, right before FAQ as on a custom boat;
 // only when the video shows (a YouTube or Vimeo link, yachtVideoEmbedUrl).
-export const singleBoatVideoTabs = ['details', 'availability', 'ammenities', 'extras', 'video', 'faq'] as const;
+export const singleBoatVideoTabs = ['details', 'ammenities', 'availability', 'extras', 'video', 'faq'] as const;
 
 /** The boat page's tabs, in tab-bar order. */
 export const singleBoatTabsFor = (yacht: MediaYacht & { custom?: boolean }) => {

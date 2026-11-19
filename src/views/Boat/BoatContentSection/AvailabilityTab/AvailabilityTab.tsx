@@ -1,26 +1,19 @@
-import { Divider, Grid, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { useTranslations } from 'next-intl';
 
-import BoatLocationModal from '@/components/BoatLocationModal';
 import Form from '@/components/Forms/Form';
 import InquiryOnlyPanel from '@/components/InquiryOnlyPanel';
-import ReadMorePanel from '@/components/ReadMorePanel';
 import Availablity from '@/components/SvgIcons/Availablity';
-import Bulp from '@/components/SvgIcons/Bulp';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { AVAILABILITY_TAB_FORM } from '@/config/form-names.config';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
 import useQueryParams from '@/utils/hooks/useQueryParams';
-import useToggleState from '@/utils/hooks/useToggleState';
 import DateTime from '@/utils/static/DateTime';
-import { displayBaseName } from '@/utils/static/croatianPlaceNames';
-import { isGulet } from '@/utils/static/guletCrewed';
 import { isInquiryOnlyBoat, showsAllBookedCalendar } from '@/utils/static/inquiryOnlyBoat';
 import { isHardBlocked } from '@/utils/static/offerStatusGate';
 import { useYachtStore } from '@/valtio/yacht/yacht.store';
-import GoodToKnowItem from '@/views/Boat/BoatContentSection/GoodToKnowItem';
 
 import AvailabilityCard from './AvailabilityCard';
 import AvailabilityDateSelector from './AvailabilityDateSelector';
@@ -39,11 +32,9 @@ const defaultValues: BoatCalendarFormValues = {
 };
 
 const AvailabilityTab = ({ yacht, initialCalendar = null }: AvailabilityTabProps) => {
-  const { offersToDisplay, selectedOffer } = useYachtStore();
+  const { offersToDisplay } = useYachtStore();
   const { params, setMultipleParams } = useQueryParams();
   const t = useTranslations('yacht');
-  const tCommon = useTranslations('common');
-  const [isMapOpen, toggleMap] = useToggleState();
 
   // Show booking cards only for offers that aren't hard-blocked. With the
   // honest 4-state status the block is RESERVATION/SERVICE (and the legacy
@@ -118,62 +109,6 @@ const AvailabilityTab = ({ yacht, initialCalendar = null }: AvailabilityTabProps
         </Stack>
         {displayAvailabilityDateSelector &&
           availableOffers.map(offer => <AvailabilityCard key={offer.id} yacht={yacht} offer={offer} />)}
-      </Stack>
-      <Divider
-        sx={{
-          '&.MuiDivider-root': {
-            borderColor: colors.black200,
-            my: 4,
-          },
-        }}
-      />
-      <Stack direction="column" spacing={4}>
-        <Typography
-          component="h2"
-          variant="h3"
-          fontWeight={600}
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          gap={1}
-        >
-          <Bulp variant="secondary" size={32} />
-          {t('goodToKnow')}
-        </Typography>
-
-        {/* The same light panel as the description (owner 13.10.2026). */}
-        <ReadMorePanel collapsible={false}>
-          <Grid container spacing={4}>
-            <GoodToKnowItem
-              title={tCommon('pickUpTime')}
-              value={yacht.defaultCheckin || selectedOffer?.checkin || '-'}
-            />
-            <GoodToKnowItem
-              title={tCommon('dropOffTime')}
-              value={yacht.defaultCheckout || selectedOffer?.checkout || '-'}
-            />
-            <GoodToKnowItem title={tCommon('paymentMethod')} value={t('localCurrency')} />
-            {/* A gulet sails with its crew: no licence asked of the guests (guletCrewed.ts). */}
-            {!isGulet(yacht) && (
-              <GoodToKnowItem title={tCommon('sailingLicenceRequired')} value={t('standardSailingLicence')} />
-            )}
-            <GoodToKnowItem title={tCommon('cancellationPolicy')} value={t('cancellationPolicyDescription')} />
-            <GoodToKnowItem
-              title={tCommon('pickUpLocation')}
-              value={displayBaseName(yacht.location?.name)}
-              onClick={yacht.location?.name ? toggleMap : undefined}
-            />
-            {yacht.location?.name && (
-              <BoatLocationModal
-                open={isMapOpen}
-                onClose={toggleMap}
-                locationName={yacht.location.name}
-                lat={yacht.location.lat}
-                lon={yacht.location.lon}
-              />
-            )}
-          </Grid>
-        </ReadMorePanel>
       </Stack>
     </Stack>
   );

@@ -40,6 +40,7 @@ import BoatInquiryModal from './BoatInquiryModal';
 import DetailsTab from './DetailsTab';
 import ExtrasTab from './ExtrasTab';
 import FAQTab from './FAQTab';
+import GoodToKnowSection from './GoodToKnowSection';
 import GoodToKnowTab from './GoodToKnowTab';
 import LayoutSection from './LayoutSection';
 import PriceDetailsTab from './PriceDetailsTab';
@@ -259,8 +260,9 @@ const BoatContentSection = ({
             <Box pt={6} pb={8} className={styles.contentWrapper}>
               {currentTabs.map((tabName, index) => (
                 <React.Fragment key={tabName}>
-                  {/* The layout on its own, right above Amenities (not a tab). */}
-                  {tabName === 'ammenities' && layoutImages.length > 0 && (
+                  {/* The layout on its own (not a tab), right after the details: above Amenities, and so above
+                      Availability too. */}
+                  {index === 1 && layoutImages.length > 0 && (
                     <>
                       <LayoutSection images={layoutImages} photoName={yachtPhotoName(yacht) || yacht.model} />
                       <Divider className={styles.divier} />
@@ -276,6 +278,14 @@ const BoatContentSection = ({
                     {renderTabContent(tabName)}
                   </Stack>
                   {index < currentTabs.length - 2 && <Divider className={styles.divier} />}
+                  {/* Good to know on its own (not a tab), under Extras (Mario 19.11.2026); it was the lower half of
+                      Availability. Only where the calendar is: a custom boat has its own Good to know tab. */}
+                  {tabName === 'extras' && currentTabs.includes('availability' as never) && (
+                    <>
+                      <GoodToKnowSection yacht={yacht} />
+                      <Divider className={styles.divier} />
+                    </>
+                  )}
                 </React.Fragment>
               ))}
             </Box>
