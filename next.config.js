@@ -336,10 +336,17 @@ const nextConfig = {
           },
         ],
       },
-      {
-        source: '/_next/static/(.*)',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
-      },
+      // Production only: a build's static files carry a content hash. `next dev` reuses the same file names with new
+      // content, so a year of `immutable` kept the browser on the old code after a restart or a pull, and the
+      // pages fell over with "Oops! Something went wrong" until a hard reload (19.11.2026, twice in one review).
+      ...(process.env.NODE_ENV === 'production'
+        ? [
+            {
+              source: '/_next/static/(.*)',
+              headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+            },
+          ]
+        : []),
       // Files in /public (audit 29.9.2026, R64): destination photos, icons,
       // favicons, the OG image and the self-hosted fonts were served with the
       // HTML rule above (max-age=0, or Next's bare max-age=0 for /favicons),
