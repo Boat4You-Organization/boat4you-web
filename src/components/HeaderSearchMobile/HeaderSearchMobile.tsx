@@ -75,10 +75,11 @@ const HeaderSearchMobile = ({ catalogueData, catalogueFilters }: HeaderSearchMob
     setGeneralSearchModalOpen(false);
   };
 
+  // Back is back: the page the visitor came from (the list of boats, a search engine). Home only in a tab with
+  // nothing before this page. It used to ask for `history.state.__N`, a Pages Router marker the App Router never
+  // sets, so the arrow always went home (Mario 19.11.2026: from a boat it did not return to the list).
   const handleGoBack = useCallback(() => {
-    const hasNextJsState = window.history.state && window.history.state.__N;
-
-    if (hasNextJsState) {
+    if (window.history.length > 1) {
       router.back();
     } else {
       router.push('/');
