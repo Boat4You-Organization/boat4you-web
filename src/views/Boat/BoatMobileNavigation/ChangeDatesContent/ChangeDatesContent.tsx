@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import { useTranslations } from 'next-intl';
 
-import { getSingleYachtAvailability } from '@/actions/yacht.actions';
 import DateRangePicker from '@/components/DateRangePicker';
 import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { YachtModel } from '@/models/yacht.model';
 import useQueryParams from '@/utils/hooks/useQueryParams';
+import useReservedDaysByMonth from '@/utils/hooks/useReservedDaysByMonth';
 import DateTime from '@/utils/static/DateTime';
 
 interface ChangeDatesContentProps {
@@ -34,45 +34,8 @@ const ChangeDatesContent = ({ yacht, open, onToggle }: ChangeDatesContentProps) 
   const startDate = watch('startDate');
   const endDate = watch('endDate');
 
-  // Reserved days, month by month as the list scrolls to them (the endpoint answers one month at a time).
-  const [reservedByMonth, setReservedByMonth] = useState<Record<string, string[]>>({});
-  const requestedMonths = useRef(new Set<string>());
-
-  const handleMonthShown = useCallback(
-    async (month: Dayjs) => {
-      const key = month.format('YYYY-MM');
-
-      if (requestedMonths.current.has(key)) return;
-
-      requestedMonths.current.add(key);
-
-      const periods = await getSingleYachtAvailability(null, {
-        yachtSlug: yacht.slug,
-        month: month.month() + 1,
-        year: month.year(),
-      });
-      const days: string[] = [];
-
-      if (Array.isArray(periods)) {
-        periods.forEach(period => {
-          if (period.status !== 'RESERVATION') return;
-
-          const end = dayjs(period.to);
-          let current = dayjs(period.from);
-
-          while (current.isBefore(end)) {
-            days.push(current.format('YYYY-MM-DD'));
-            current = current.add(1, 'day');
-          }
-        });
-      }
-
-      setReservedByMonth(previous => ({ ...previous, [key]: days }));
-    },
-    [yacht.slug]
-  );
-
-  const unavailableDates = useMemo(() => [...new Set(Object.values(reservedByMonth).flat())], [reservedByMonth]);
+  // Reserved days, month by month as the list scrolls to them.
+  const { reservedDays: unavailableDates, loadMonth: handleMonthShown } = useReservedDaysByMonth(yacht.slug);
 
   const handleConfirm = useCallback(
     (dates: [Dayjs | null, Dayjs | null]) => {

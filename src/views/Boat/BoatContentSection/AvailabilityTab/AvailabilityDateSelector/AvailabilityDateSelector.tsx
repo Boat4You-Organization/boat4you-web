@@ -3,7 +3,7 @@
 import React, { useCallback, useMemo } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import { Box, Button, Divider, Stack, Typography } from '@mui/material';
+import { Box, Button, Divider, Stack, Theme, Typography, useMediaQuery } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -12,6 +12,7 @@ import { BoatCalendarFormValues } from '@/config/form-models.config';
 import { ReservationStatus } from '@/models/reservation-status.model';
 import { YachtModel } from '@/models/yacht.model';
 import colors from '@/styles/themes/colors';
+import useReservedDaysByMonth from '@/utils/hooks/useReservedDaysByMonth';
 import useToggleState from '@/utils/hooks/useToggleState';
 import { useYachtAvailability } from '@/utils/hooks/useYachtAvailability';
 import DateTime from '@/utils/static/DateTime';
@@ -32,6 +33,11 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
   const locale = useLocale();
   const [isModalOpen, toggleModal] = useToggleState();
   const { setValue, watch } = useFormContext<BoatCalendarFormValues>();
+
+  // Phone and tablet: "Change dates" opens the same sheet as the bar at the bottom, the months in a list that
+  // scrolls down and no Confirm (Mario 19.11.2026). The desktop keeps its dialog with one month and arrows.
+  const isPhone = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
+  const { reservedDays, loadMonth } = useReservedDaysByMonth(yacht.slug);
 
   const formStartDate = watch('startDate');
   const formEndDate = watch('endDate');
@@ -171,7 +177,9 @@ const AvailabilityDateSelector = ({ yacht, onSubmit }: AvailabilityDateSelectorP
         handleDateChange={handleDateChange}
         onConfirm={handleConfirm}
         monthsShown={1}
-        unavailableDates={unavailableDates}
+        scrollMonths={isPhone}
+        onMonthShown={loadMonth}
+        unavailableDates={isPhone ? reservedDays : unavailableDates}
         externalCurrentMonth={activeDate}
         externalHandlePrevMonth={handlePrevMonth}
         externalHandleNextMonth={handleNextMonth}
