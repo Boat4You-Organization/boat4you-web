@@ -102,7 +102,7 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
   {
     slug: 'black-friday',
     i18nKey: 'blackFriday',
-    activeFrom: '11-24',
+    activeFrom: '11-20',
     activeTo: '11-30',
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 40,
