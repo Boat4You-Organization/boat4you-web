@@ -18,7 +18,7 @@ import useCapacityFmt from '@/utils/hooks/useCapacityFmt';
 import { accommodationProse } from '@/utils/static/capacityProse';
 import { displayBaseName } from '@/utils/static/croatianPlaceNames';
 import { isBookedByInquiry } from '@/utils/static/inquiryOnlyBoat';
-import { toTitleCase } from '@/utils/static/toTitleCase';
+import { toTitleCase, yachtLabel } from '@/utils/static/toTitleCase';
 import { Capacity, capacityFacts, capacityRows, fromYacht } from '@/utils/static/yachtCapacity';
 import { yachtVariant } from '@/utils/static/yachtFaq';
 import boatType from '@/views/Boat/boatType';
@@ -357,7 +357,9 @@ const DetailsTab = ({ yacht, capacity: resolvedCapacity }: DetailsTabProps) => {
                   // inquiry-only agency) — ask for dates.
                   (isBookedByInquiry(yacht) ? 'yacht.descCtaInquiry' : `yacht.descCtaV${descVariant(5)}`) as never,
                   {
-                    name: displayName,
+                    // Model + name: a bare name reads wrong on its own ("Check Google
+                    // availability" for the Elan Impression 40 named Google, 20.11.2026).
+                    name: yachtLabel(yacht.model, displayName, ' '),
                     b: (chunks: React.ReactNode) => (
                       <strong style={{ fontWeight: boatType.bodyStrong.fontWeight }}>{chunks}</strong>
                     ),
