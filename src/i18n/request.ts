@@ -41,6 +41,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     models: (await import(`../../messages/${locale}/models.json`)).default,
     charterFacts: (await import(`../../messages/${locale}/charterFacts.json`)).default,
     priceGuide: (await import(`../../messages/${locale}/priceGuide.json`)).default,
+    guletCharter: (await import(`../../messages/${locale}/guletCharter.json`)).default,
     review: (await import(`../../messages/${locale}/review.json`)).default,
     pay: (await import(`../../messages/${locale}/pay.json`)).default,
     // Home link hub (server only). Optional: a locale without the file shows

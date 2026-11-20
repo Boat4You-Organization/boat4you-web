@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Breadcrumb",
+  "crumb": "Gulet charter",
+  "meta": {
+    "title": "Gulet charter with crew: Turkey, Greece, Croatia",
+    "description": "Gulet charter with captain and crew in {countries}, no sailing licence needed. {count, plural, one {# gulet} other {# gulets}} with weekly prices to compare.",
+    "descriptionNoCount": "Gulet charter with captain and crew in {countries}, no sailing licence needed. Compare gulets by weekly price and ask us for a quote."
+  },
+  "h1": "Gulet charter with crew: Turkey, Greece, Croatia",
+  "answer": "A gulet charter is a week at sea on a traditional wooden boat with its own crew. The captain and crew run the boat, on most gulets a cook prepares the meals, and your days are for swimming, eating well and doing very little. We list {count, plural, one {# gulet} other {# gulets}} in {countries}, always chartered with crew and never bareboat.",
+  "answerNoCount": "A gulet charter is a week at sea on a traditional wooden boat with its own crew. The captain and crew run the boat, on most gulets a cook prepares the meals, and your days are for swimming, eating well and doing very little. Our gulets sail in {countries}, always chartered with crew and never bareboat.",
+  "experience": {
+    "heading": "A week on a gulet",
+    "p1": "Mornings start with coffee on deck while the crew lifts the anchor. By lunch you are in another bay, swimming off the stern while the table is laid in the shade. Nobody on board has to read a chart or handle a line unless they want to.",
+    "p2": "A gulet suits families, groups of friends and several generations travelling together. Everyone has a cabin to retreat to, the wide deck is where the group comes together, and evenings end at anchor under the stars or in a harbour town for a walk along the waterfront."
+  },
+  "countriesHeading": "Where to charter a gulet",
+  "country": {
+    "TR": "Turkey is where the gulet comes from. Along the Turquoise Coast the season runs from April to November, and pine forest grows right down to the bays.",
+    "GR": "In Greece a gulet takes you from island to island, with a different harbour village every evening and clear water for long swims.",
+    "HR": "In Croatia gulets cruise the Dalmatian islands. Hvar, Brač, Vis and Korčula are a short hop apart, and evenings end in stone harbour towns.",
+    "IT": "Italy has a smaller gulet fleet, for a slow week along the coast with long lunches at anchor."
+  },
+  "countryFacts": "{count, plural, one {# gulet} other {# gulets}} · typical week {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# gulet} other {# gulets}}",
+  "countryBases": "home ports: {bases}",
+  "seeAll": "All gulets {where}",
+  "faqHeading": "Gulet charter questions",
+  "faq": {
+    "whatQ": "What is a gulet?",
+    "whatA": "A gulet is a traditional wooden boat from the Turkish coast around Bodrum, with two or three masts, a wide deck for lying in the sun and a shaded table aft where meals are served. Gulets cruise mostly under engine and set sail when the wind is right. Today they sail in Turkey, Greece, Croatia and Italy.",
+    "crewQ": "Is the crew included on a gulet charter?",
+    "crewA": "Yes. A gulet is always chartered with its crew, never bareboat, so nobody in your group needs a sailing licence. The captain plans each day's route with you and with the weather. What the weekly price includes, and which extras are paid on top, is listed on each gulet's page.",
+    "whereQ": "Turkey, Greece or Croatia: where is a gulet charter best?",
+    "whereA": "Turkey is the home of the gulet, with the longest season and calm, wooded bays. Greece puts more islands within a day's cruise. Croatia pairs a gulet week with Dalmatian towns such as Split, Hvar and Korčula.",
+    "whereCount": "Right now we list {list}.",
+    "whereCountItem": "{count, plural, one {# gulet} other {# gulets}} {where}",
+    "costQ": "How much does a gulet charter cost?",
+    "costA": "A typical gulet week costs {list} for the boat, depending on the month.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "The price depends on the size of the gulet, the number of cabins and the month. Each gulet's page shows its weekly price and the extras paid on top."
+  },
+  "priceGuideLink": "Yacht charter prices: what a week costs",
+  "quoteLink": "Ask for a gulet charter quote",
+  "landingLink": "Gulet charter with crew: how it works and what it costs"
+}

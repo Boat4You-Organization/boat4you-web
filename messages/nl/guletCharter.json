@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Kruimelpad",
+  "crumb": "Gulet charteren",
+  "meta": {
+    "title": "Gulet charteren met bemanning: Turkije, Griekenland, Kroatië",
+    "description": "Gulet charteren met kapitein en bemanning ({countries}), zonder vaarbewijs. {count, plural, one {# gulet} other {# guletten}} met weekprijzen om te vergelijken.",
+    "descriptionNoCount": "Gulet charteren met kapitein en bemanning ({countries}), zonder vaarbewijs. Vergelijk guletten op weekprijs en vraag een offerte aan."
+  },
+  "h1": "Gulet charteren met bemanning: Turkije, Griekenland, Kroatië",
+  "answer": "Een gulet charteren is een week op zee aan boord van een traditionele houten boot met een eigen bemanning. Kapitein en bemanning varen de boot, op de meeste guletten kookt een kok aan boord, en jouw dagen zijn voor zwemmen, lekker eten en heel weinig doen. We bieden {count, plural, one {# gulet} other {# guletten}} aan ({countries}), altijd met bemanning en nooit bareboat.",
+  "answerNoCount": "Een gulet charteren is een week op zee aan boord van een traditionele houten boot met een eigen bemanning. Kapitein en bemanning varen de boot, op de meeste guletten kookt een kok aan boord, en jouw dagen zijn voor zwemmen, lekker eten en heel weinig doen. Onze guletten varen in deze landen: {countries}, altijd met bemanning en nooit bareboat.",
+  "experience": {
+    "heading": "Een week op een gulet",
+    "p1": "De ochtend begint met koffie aan dek terwijl de bemanning het anker licht. Tegen de lunch lig je al in een andere baai, spring je vanaf de achtersteven het water in en wordt de tafel in de schaduw gedekt. Niemand aan boord hoeft een zeekaart te lezen of een lijn te bedienen, tenzij hij dat wil.",
+    "p2": "Een gulet past bij gezinnen, vriendengroepen en meerdere generaties die samen reizen. Iedereen heeft een eigen hut om zich terug te trekken, op het brede dek komt de groep samen, en de avonden eindigen voor anker onder de sterren of in een havenstadje met een wandeling langs de kade."
+  },
+  "countriesHeading": "Waar je een gulet chartert",
+  "country": {
+    "TR": "De gulet komt uit Turkije. Aan de Turquoise Kust loopt het seizoen van april tot november, en het pijnbos groeit tot aan de baaien.",
+    "GR": "In Griekenland brengt een gulet je van eiland naar eiland, met elke avond een ander havendorp en helder water om lang te zwemmen.",
+    "HR": "In Kroatië varen guletten tussen de Dalmatische eilanden. Hvar, Brač, Vis en Korčula liggen dicht bij elkaar, en de avonden eindigen in stenen havenstadjes.",
+    "IT": "Italië heeft een kleinere vloot guletten, voor een rustige week langs de kust met lange lunches voor anker."
+  },
+  "countryFacts": "{count, plural, one {# gulet} other {# guletten}} · gemiddelde week {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# gulet} other {# guletten}}",
+  "countryBases": "thuishavens: {bases}",
+  "seeAll": "Alle guletten {where}",
+  "faqHeading": "Vragen over gulet charteren",
+  "faq": {
+    "whatQ": "Wat is een gulet?",
+    "whatA": "Een gulet is een traditionele houten boot van de Turkse kust rond Bodrum, met twee of drie masten, een breed dek om in de zon te liggen en een schaduwrijke tafel op het achterdek waar de maaltijden worden geserveerd. Guletten varen meestal op de motor en zetten de zeilen bij als de wind meezit. Vandaag varen ze in Turkije, Griekenland, Kroatië en Italië.",
+    "crewQ": "Is de bemanning inbegrepen bij een gulet charter?",
+    "crewA": "Ja. Een gulet wordt altijd met bemanning gecharterd, nooit bareboat, dus niemand in je groep heeft een vaarbewijs nodig. De kapitein bepaalt elke dag samen met jou de route, afhankelijk van het weer. Wat de weekprijs omvat en welke extra’s je apart betaalt, staat op de pagina van elke gulet.",
+    "whereQ": "Turkije, Griekenland of Kroatië: waar charter je het best een gulet?",
+    "whereA": "Turkije is de thuisbasis van de gulet, met het langste seizoen en rustige, beboste baaien. Griekenland brengt meer eilanden binnen een dag varen. Kroatië combineert een week op een gulet met Dalmatische steden als Split, Hvar en Korčula.",
+    "whereCount": "Op dit moment bieden we {list}.",
+    "whereCountItem": "{count, plural, one {# gulet} other {# guletten}} {where}",
+    "costQ": "Wat kost een gulet charter?",
+    "costA": "Een gemiddelde week op een gulet kost {list} voor de boot, afhankelijk van de maand.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "De prijs hangt af van de grootte van de gulet, het aantal hutten en de maand. Op de pagina van elke gulet staan de weekprijs en de extra’s die erbij komen."
+  },
+  "priceGuideLink": "Prijzen voor jachtcharter: wat een week kost",
+  "quoteLink": "Vraag een offerte aan voor een gulet",
+  "landingLink": "Gulet charteren met bemanning: zo werkt het en dit kost het"
+}

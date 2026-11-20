@@ -20,9 +20,15 @@ const OurFleetCard = ({ vesselType, yachtCount }: YachtFleet) => {
   const t = useTranslations('home.ourFleetSection');
 
   const config = VESSEL_TYPE_CONFIG[vesselType as keyof typeof VESSEL_TYPE_CONFIG];
+  // A type with its own indexable page (gulets: /gulet-charter) links there, followed.
+  const landingPath = 'landingPath' in config ? config.landingPath : null;
 
   return (
-    <Link href={`/search?boatTypes=${config.slug}`} rel="nofollow" className={styles.card}>
+    <Link
+      href={landingPath ?? `/search?boatTypes=${config.slug}`}
+      rel={landingPath ? undefined : 'nofollow'}
+      className={styles.card}
+    >
       <Image
         src={config.image.src}
         alt={t(config.image.alt)}

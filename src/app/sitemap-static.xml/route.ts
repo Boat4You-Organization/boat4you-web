@@ -1,4 +1,5 @@
 import { PROMO_CAMPAIGNS } from '@/config/campaigns.config';
+import { GULET_CHARTER_PATH } from '@/config/guletCharter.config';
 import { PRICE_GUIDES, PRICE_GUIDE_HUB_PATH, priceGuidePath } from '@/config/priceGuides.config';
 import { routing } from '@/i18n/routing';
 
@@ -26,6 +27,8 @@ export async function GET() {
     // Price guides: the hub and one data page per country, recomputed nightly.
     { path: PRICE_GUIDE_HUB_PATH, priority: '0.6', changefreq: 'daily' },
     ...PRICE_GUIDES.map(({ slug }) => ({ path: priceGuidePath(slug), priority: '0.7', changefreq: 'daily' })),
+    // The general gulet page above the country gulet landings.
+    { path: GULET_CHARTER_PATH, priority: '0.7', changefreq: 'daily' },
     ...PROMO_CAMPAIGNS.map(({ slug }) => ({ path: `/deals/${slug}`, priority: '0.7', changefreq: 'daily' })),
   ];
 

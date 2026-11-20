@@ -36,6 +36,7 @@ declare module 'next-intl' {
       models: typeof import('../../messages/en/models.json').default;
       charterFacts: typeof import('../../messages/en/charterFacts.json').default;
       priceGuide: typeof import('../../messages/en/priceGuide.json').default;
+      guletCharter: typeof import('../../messages/en/guletCharter.json').default;
       review: typeof import('../../messages/en/review.json').default;
       pay: typeof import('../../messages/en/pay.json').default;
       homeHub: typeof import('../../messages/en/homeHub.json').default;

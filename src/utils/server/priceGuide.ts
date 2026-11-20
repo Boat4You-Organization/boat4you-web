@@ -60,7 +60,7 @@ export interface PriceGuideData {
   types: GuideTable[];
 }
 
-const tableOf = (
+export const tableOf = (
   facts: CharterFacts,
   vesselType: VesselType | null,
   countryCode: string,

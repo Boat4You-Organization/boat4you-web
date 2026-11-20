@@ -1,3 +1,4 @@
+import { GULET_CHARTER_PATH } from '@/config/guletCharter.config';
 import { itineraries } from '@/config/itineraries.config';
 import { PRICE_GUIDES, PRICE_GUIDE_HUB_PATH, priceGuidePath } from '@/config/priceGuides.config';
 import { PROMOTED_COUNTRY_CODES } from '@/config/promoted-countries.config';
@@ -115,6 +116,7 @@ ${section('Destinations', destinations)}## Price guides
 
 - [Yacht charter prices](${baseUrl}${PRICE_GUIDE_HUB_PATH}): what a charter week costs by country, computed every night from live prices.
 ${PRICE_GUIDES.map(({ slug, name }) => `- [Yacht charter prices in ${name}](${baseUrl}${priceGuidePath(slug)}): typical weekly price by month and boat type, skipper, extras and deposit.`).join('\n')}
+- [Gulet charter with crew](${baseUrl}${GULET_CHARTER_PATH}): gulets in Türkiye, Greece, Croatia and Italy, always chartered with their crew.
 
 ${section('Boat models', models)}${section('Itineraries', itineraryLines)}## Core pages
 

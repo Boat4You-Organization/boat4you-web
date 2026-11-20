@@ -16,9 +16,9 @@ import type { VesselType } from '@/models/yacht.model';
  *     destination name (lower case, as in the sitemap <loc>) and optional
  *     boat type; linked only while the landing manifest lists it for the
  *     locale, through the sitemap's URL builder (searchLandingPath.ts);
- *   - `path` — an itinerary area, a price guide or a /yachts model page;
- *     linked only while that page exists (itineraries / price guide
- *     config, the model catalogue).
+ *   - `path` — an itinerary area, a price guide (or their hub), the gulet
+ *     page or a /yachts model page; linked only while that page exists
+ *     (itineraries / price guide / gulet config, the model catalogue).
  *
  * Anchors live in messages/<locale>/homeHub.json under `links.<id>`.
  * Keyword ownership (hard rule): no anchor or heading in any locale names a
@@ -97,6 +97,8 @@ export const HOME_HUB_TABS: readonly HomeHubTab[] = [
       { id: 'croatia-catamaran', kind: 'landing', destinations: 'croatia', boatType: 'CATAMARAN' },
       { id: 'croatia-motorboat', kind: 'landing', destinations: 'croatia', boatType: 'MOTORBOAT' },
       { id: 'croatia-motor-yacht', kind: 'landing', destinations: 'croatia', boatType: 'MOTOR_YACHT' },
+      // The general gulet page (Gap Finder 20.11.2026, B#2), next to the country gulet landings.
+      { id: 'gulet-charter', kind: 'path', path: '/gulet-charter' },
       { id: 'croatia-gulet', kind: 'landing', destinations: 'croatia', boatType: 'GULET' },
       { id: 'greece-sailing-yacht', kind: 'landing', destinations: 'greece', boatType: 'SAILING_YACHT' },
       { id: 'greece-catamaran', kind: 'landing', destinations: 'greece', boatType: 'CATAMARAN' },
@@ -288,6 +290,8 @@ export const HOME_HUB_TABS: readonly HomeHubTab[] = [
   {
     key: 'routesPrices',
     links: [
+      // The hub owns "yacht charter prices / cost / quote" (Gap Finder 20.11.2026, B#1).
+      { id: 'yacht-charter-prices', kind: 'path', path: '/yacht-charter-prices' },
       { id: 'yacht-charter-prices-croatia', kind: 'path', path: '/yacht-charter-prices/croatia' },
       { id: 'yacht-charter-prices-greece', kind: 'path', path: '/yacht-charter-prices/greece' },
       { id: 'yacht-charter-prices-italy', kind: 'path', path: '/yacht-charter-prices/italy' },

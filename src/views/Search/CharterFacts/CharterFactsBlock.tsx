@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
+import { GULET_CHARTER_PATH } from '@/config/guletCharter.config';
 import { priceGuideByDid, priceGuidePath } from '@/config/priceGuides.config';
 import { Link } from '@/i18n/navigation';
 import { Currency } from '@/models/user.model';
@@ -106,6 +107,14 @@ const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal 
       }))
     : null;
 
+  // A gulet landing links up to the general gulet page (Gap Finder 20.11.2026, B#2).
+  const guletLink = isGuletType(target.vesselType)
+    ? await getTranslations({ locale, namespace: 'guletCharter' }).then(tGulet => ({
+        href: GULET_CHARTER_PATH,
+        label: tGulet('landingLink'),
+      }))
+    : null;
+
   const tiles = factsTiles(
     facts,
     {
@@ -176,6 +185,13 @@ const CharterFactsBlock = async ({ target, locale, currency, rate, listingTotal 
         <p className={styles.guide}>
           <Link href={guideLink.href} prefetch={false} className={styles.link}>
             {guideLink.label} →
+          </Link>
+        </p>
+      )}
+      {guletLink && (
+        <p className={styles.guide}>
+          <Link href={guletLink.href} prefetch={false} className={styles.link}>
+            {guletLink.label} →
           </Link>
         </p>
       )}

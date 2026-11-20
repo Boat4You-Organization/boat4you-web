@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Brotkrümelnavigation",
+  "crumb": "Gulet-Charter",
+  "meta": {
+    "title": "Gulet-Charter mit Crew: Türkei, Griechenland, Kroatien",
+    "description": "Gulet-Charter mit Kapitän und Crew ({countries}), kein Bootsführerschein nötig. {count, plural, one {# Gulet} other {# Gulets}} mit Wochenpreisen im Vergleich.",
+    "descriptionNoCount": "Gulet-Charter mit Kapitän und Crew ({countries}), kein Bootsführerschein nötig. Vergleichen Sie Gulets nach Wochenpreis und fragen Sie ein Angebot an."
+  },
+  "h1": "Gulet-Charter mit Crew: Türkei, Griechenland, Kroatien",
+  "answer": "Ein Gulet-Charter ist eine Woche auf See an Bord eines traditionellen Holzschiffs mit eigener Crew. Kapitän und Crew kümmern sich um das Schiff, auf den meisten Gulets kocht ein Koch an Bord, und Ihre Tage gehören dem Schwimmen, gutem Essen und dem Nichtstun. Wir bieten {count, plural, one {# Gulet} other {# Gulets}} an ({countries}), immer mit Crew und nie als Bareboat.",
+  "answerNoCount": "Ein Gulet-Charter ist eine Woche auf See an Bord eines traditionellen Holzschiffs mit eigener Crew. Kapitän und Crew kümmern sich um das Schiff, auf den meisten Gulets kocht ein Koch an Bord, und Ihre Tage gehören dem Schwimmen, gutem Essen und dem Nichtstun. Unsere Gulets fahren in diesen Ländern: {countries}, immer mit Crew und nie als Bareboat.",
+  "experience": {
+    "heading": "Eine Woche auf einer Gulet",
+    "p1": "Der Morgen beginnt mit Kaffee an Deck, während die Crew den Anker lichtet. Zum Mittagessen liegen Sie schon in der nächsten Bucht, springen vom Heck ins Wasser, und im Schatten wird der Tisch gedeckt. An Bord muss niemand eine Seekarte lesen oder eine Leine bedienen, außer er möchte es.",
+    "p2": "Eine Gulet passt zu Familien, Freundesgruppen und mehreren Generationen auf Reisen. Jeder hat eine Kabine für sich, auf dem breiten Deck kommt die Gruppe zusammen, und die Abende enden vor Anker unter dem Sternenhimmel oder in einem Hafenstädtchen mit einem Spaziergang an der Uferpromenade."
+  },
+  "countriesHeading": "Wo Sie eine Gulet chartern",
+  "country": {
+    "TR": "Die Gulet stammt aus der Türkei. An der Türkisküste dauert die Saison von April bis November, und der Pinienwald reicht bis an die Buchten heran.",
+    "GR": "In Griechenland bringt Sie eine Gulet von Insel zu Insel, mit einem anderen Hafendorf an jedem Abend und klarem Wasser für lange Schwimmrunden.",
+    "HR": "In Kroatien kreuzen Gulets zwischen den dalmatinischen Inseln. Hvar, Brač, Vis und Korčula liegen nah beieinander, und die Abende enden in steinernen Hafenstädten.",
+    "IT": "Italien hat eine kleinere Gulet-Flotte, für eine ruhige Woche entlang der Küste mit langen Mittagessen vor Anker."
+  },
+  "countryFacts": "{count, plural, one {# Gulet} other {# Gulets}} · typische Woche {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# Gulet} other {# Gulets}}",
+  "countryBases": "Heimathäfen: {bases}",
+  "seeAll": "Alle Gulets {where}",
+  "faqHeading": "Fragen zum Gulet-Charter",
+  "faq": {
+    "whatQ": "Was ist eine Gulet?",
+    "whatA": "Eine Gulet ist ein traditionelles Holzschiff von der türkischen Küste rund um Bodrum, mit zwei oder drei Masten, einem breiten Deck zum Sonnen und einem schattigen Tisch achtern, an dem gegessen wird. Gulets fahren meist unter Motor und setzen Segel, wenn der Wind passt. Heute sind sie in der Türkei, in Griechenland, Kroatien und Italien unterwegs.",
+    "crewQ": "Ist die Crew beim Gulet-Charter dabei?",
+    "crewA": "Ja. Eine Gulet wird immer mit ihrer Crew gechartert, nie als Bareboat, deshalb braucht niemand in Ihrer Gruppe einen Bootsführerschein. Der Kapitän plant die Route jeden Tag mit Ihnen und nach dem Wetter. Was der Wochenpreis enthält und welche Extras dazukommen, steht auf der Seite jeder Gulet.",
+    "whereQ": "Türkei, Griechenland oder Kroatien: Wo ist ein Gulet-Charter am schönsten?",
+    "whereA": "Die Türkei ist die Heimat der Gulet, mit der längsten Saison und ruhigen, bewaldeten Buchten. In Griechenland liegen mehr Inseln innerhalb eines Tagestörns. Kroatien verbindet die Gulet-Woche mit dalmatinischen Städten wie Split, Hvar und Korčula.",
+    "whereCount": "Derzeit bieten wir an: {list}.",
+    "whereCountItem": "{count, plural, one {# Gulet} other {# Gulets}} {where}",
+    "costQ": "Was kostet ein Gulet-Charter?",
+    "costA": "Eine typische Gulet-Woche kostet je nach Monat {list} für das Schiff.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "Der Preis hängt von der Größe der Gulet, der Zahl der Kabinen und dem Monat ab. Auf der Seite jeder Gulet stehen der Wochenpreis und die Extras, die dazukommen."
+  },
+  "priceGuideLink": "Yachtcharter-Preise: Was eine Woche kostet",
+  "quoteLink": "Angebot für Ihren Gulet-Charter anfragen",
+  "landingLink": "Gulet-Charter mit Crew: So funktioniert es, das kostet es"
+}

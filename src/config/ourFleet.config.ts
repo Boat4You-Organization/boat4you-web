@@ -38,6 +38,9 @@ export const VESSEL_TYPE_CONFIG = {
       alt: 'fleet.gulets',
     },
     slug: VesselType.GULET,
+    // The type's own indexable page (Gap Finder 20.11.2026, B#2), linked
+    // instead of the noindex /search?boatTypes=GULET.
+    landingPath: '/gulet-charter',
   },
   [VesselType.LUXURY_MOTOR_YACHT]: {
     titleKey: 'fleet.luxuryMotorYachts',

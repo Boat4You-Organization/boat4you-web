@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Ruta de navegación",
+  "crumb": "Alquiler de gulet",
+  "meta": {
+    "title": "Alquiler de gulet con tripulación: Turquía, Grecia y Croacia",
+    "description": "Alquiler de gulet con capitán y tripulación ({countries}), sin titulación náutica. {count, plural, one {# gulet} other {# gulets}} con precios por semana para comparar.",
+    "descriptionNoCount": "Alquiler de gulet con capitán y tripulación ({countries}), sin titulación náutica. Compare gulets por precio semanal y pídanos presupuesto."
+  },
+  "h1": "Alquiler de gulet con tripulación: Turquía, Grecia y Croacia",
+  "answer": "Alquilar un gulet es pasar una semana en el mar a bordo de un barco tradicional de madera con su propia tripulación. El capitán y la tripulación llevan el barco, en la mayoría de los gulets un cocinero prepara las comidas, y sus días son para nadar, comer bien y hacer muy poco. Tenemos {count, plural, one {# gulet} other {# gulets}} ({countries}), siempre con tripulación y nunca sin patrón.",
+  "answerNoCount": "Alquilar un gulet es pasar una semana en el mar a bordo de un barco tradicional de madera con su propia tripulación. El capitán y la tripulación llevan el barco, en la mayoría de los gulets un cocinero prepara las comidas, y sus días son para nadar, comer bien y hacer muy poco. Nuestros gulets navegan en estos países: {countries}, siempre con tripulación y nunca sin patrón.",
+  "experience": {
+    "heading": "Una semana a bordo de un gulet",
+    "p1": "Las mañanas empiezan con un café en cubierta mientras la tripulación leva el ancla. A la hora de comer ya está en otra cala, bañándose desde la popa mientras ponen la mesa a la sombra. Nadie a bordo tiene que leer una carta náutica ni manejar un cabo, salvo que le apetezca.",
+    "p2": "Un gulet es ideal para familias, grupos de amigos y varias generaciones que viajan juntas. Cada uno tiene su camarote para retirarse, la amplia cubierta es donde se reúne el grupo, y las noches terminan fondeados bajo las estrellas o en un pueblo con puerto, paseando junto al mar."
+  },
+  "countriesHeading": "Dónde alquilar un gulet",
+  "country": {
+    "TR": "El gulet nació en Turquía. En la Costa Turquesa la temporada va de abril a noviembre, y los pinares bajan hasta el borde de las calas.",
+    "GR": "En Grecia un gulet le lleva de isla en isla, con un pueblo marinero distinto cada noche y agua transparente para nadar sin prisa.",
+    "HR": "En Croacia los gulets navegan entre las islas de Dalmacia. Hvar, Brač, Vis y Korčula están a poca distancia unas de otras, y las noches acaban en pueblos de piedra junto al puerto.",
+    "IT": "Italia tiene una flota de gulets más pequeña, para una semana tranquila por la costa con largas comidas fondeados."
+  },
+  "countryFacts": "{count, plural, one {# gulet} other {# gulets}} · semana típica {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# gulet} other {# gulets}}",
+  "countryBases": "puertos base: {bases}",
+  "seeAll": "Todos los gulets {where}",
+  "faqHeading": "Preguntas sobre el alquiler de gulet",
+  "faq": {
+    "whatQ": "¿Qué es un gulet?",
+    "whatA": "Un gulet es un barco tradicional de madera de la costa turca de Bodrum, con dos o tres mástiles, una cubierta amplia para tomar el sol y una mesa a la sombra en popa donde se sirven las comidas. Los gulets navegan sobre todo a motor y despliegan las velas cuando el viento acompaña. Hoy navegan en Turquía, Grecia, Croacia e Italia.",
+    "crewQ": "¿La tripulación está incluida en el alquiler de un gulet?",
+    "crewA": "Sí. Un gulet se alquila siempre con su tripulación, nunca sin patrón, así que nadie del grupo necesita titulación náutica. El capitán decide la ruta de cada día con ustedes y según el tiempo. Qué incluye el precio semanal y qué extras se pagan aparte figura en la página de cada gulet.",
+    "whereQ": "Turquía, Grecia o Croacia: ¿dónde es mejor alquilar un gulet?",
+    "whereA": "Turquía es la cuna del gulet, con la temporada más larga y calas tranquilas rodeadas de bosque. Grecia pone más islas a un día de navegación. Croacia combina la semana en gulet con ciudades dálmatas como Split, Hvar y Korčula.",
+    "whereCount": "Ahora mismo tenemos {list}.",
+    "whereCountItem": "{count, plural, one {# gulet} other {# gulets}} {where}",
+    "costQ": "¿Cuánto cuesta alquilar un gulet?",
+    "costA": "Una semana típica en gulet cuesta {list} por el barco, según el mes.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "El precio depende del tamaño del gulet, del número de camarotes y del mes. La página de cada gulet muestra su precio semanal y los extras que se pagan aparte."
+  },
+  "priceGuideLink": "Precios del alquiler de yates: cuánto cuesta una semana",
+  "quoteLink": "Pida presupuesto para su gulet",
+  "landingLink": "Alquiler de gulet con tripulación: cómo funciona y cuánto cuesta"
+}

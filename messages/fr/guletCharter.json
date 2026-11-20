@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Fil d’Ariane",
+  "crumb": "Location de goélette",
+  "meta": {
+    "title": "Location de goélette avec équipage : Turquie, Grèce, Croatie",
+    "description": "Location de goélette (gulet) avec capitaine et équipage ({countries}), sans permis bateau. {count, plural, one {# goélette} other {# goélettes}} avec prix à la semaine.",
+    "descriptionNoCount": "Location de goélette (gulet) avec capitaine et équipage ({countries}), sans permis bateau. Comparez les prix à la semaine et demandez un devis."
+  },
+  "h1": "Location de goélette avec équipage : Turquie, Grèce, Croatie",
+  "answer": "Louer une goélette, ou gulet, c’est passer une semaine en mer sur un bateau traditionnel en bois avec son propre équipage. Le capitaine et l’équipage mènent le bateau, sur la plupart des goélettes un cuisinier prépare les repas, et vos journées sont faites de baignades, de bons repas et de farniente. Nous proposons {count, plural, one {# goélette} other {# goélettes}} ({countries}), toujours avec équipage, jamais sans skipper.",
+  "answerNoCount": "Louer une goélette, ou gulet, c’est passer une semaine en mer sur un bateau traditionnel en bois avec son propre équipage. Le capitaine et l’équipage mènent le bateau, sur la plupart des goélettes un cuisinier prépare les repas, et vos journées sont faites de baignades, de bons repas et de farniente. Nos goélettes naviguent dans ces pays : {countries}, toujours avec équipage, jamais sans skipper.",
+  "experience": {
+    "heading": "Une semaine à bord d’une goélette",
+    "p1": "La journée commence par un café sur le pont pendant que l’équipage lève l’ancre. À l’heure du déjeuner, vous êtes déjà dans une autre crique, vous plongez depuis la poupe pendant qu’on dresse la table à l’ombre. Personne à bord n’a besoin de lire une carte ni de toucher un bout, sauf s’il en a envie.",
+    "p2": "Une goélette convient aux familles, aux groupes d’amis et à plusieurs générations qui voyagent ensemble. Chacun a sa cabine pour se retirer, le grand pont réunit tout le monde, et les soirées se terminent au mouillage sous les étoiles ou dans un petit port, le temps d’une promenade sur le quai."
+  },
+  "countriesHeading": "Où louer une goélette",
+  "country": {
+    "TR": "La goélette est née en Turquie. Sur la Côte turquoise, la saison va d’avril à novembre, et la pinède descend jusqu’au bord des criques.",
+    "GR": "En Grèce, une goélette vous emmène d’île en île, avec un village portuaire différent chaque soir et une eau limpide pour de longues baignades.",
+    "HR": "En Croatie, les goélettes naviguent entre les îles dalmates. Hvar, Brač, Vis et Korčula sont toutes proches, et les soirées se terminent dans des ports aux maisons de pierre.",
+    "IT": "L’Italie compte une flotte de goélettes plus réduite, pour une semaine paisible le long de la côte, avec de longs déjeuners au mouillage."
+  },
+  "countryFacts": "{count, plural, one {# goélette} other {# goélettes}} · semaine typique {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# goélette} other {# goélettes}}",
+  "countryBases": "ports d’attache : {bases}",
+  "seeAll": "Toutes les goélettes {where}",
+  "faqHeading": "Questions sur la location de goélette",
+  "faq": {
+    "whatQ": "Qu’est-ce qu’une goélette (gulet) ?",
+    "whatA": "Une goélette, ou gulet, est un bateau traditionnel en bois venu de la côte turque autour de Bodrum, avec deux ou trois mâts, un large pont pour se dorer au soleil et une table ombragée à l’arrière où l’on sert les repas. Elle navigue surtout au moteur et hisse les voiles quand le vent s’y prête. On en trouve aujourd’hui en Turquie, en Grèce, en Croatie et en Italie.",
+    "crewQ": "L’équipage est-il inclus dans la location d’une goélette ?",
+    "crewA": "Oui. Une goélette se loue toujours avec son équipage, jamais sans skipper, donc personne dans votre groupe n’a besoin de permis. Le capitaine prépare chaque jour l’itinéraire avec vous, selon la météo. Ce que comprend le prix de la semaine et les suppléments à régler en plus sont indiqués sur la page de chaque goélette.",
+    "whereQ": "Turquie, Grèce ou Croatie : où louer une goélette ?",
+    "whereA": "La Turquie est le berceau de la goélette, avec la plus longue saison et des criques calmes et boisées. La Grèce met davantage d’îles à une journée de navigation. La Croatie associe la semaine en goélette à des villes dalmates comme Split, Hvar et Korčula.",
+    "whereCount": "En ce moment, nous proposons {list}.",
+    "whereCountItem": "{count, plural, one {# goélette} other {# goélettes}} {where}",
+    "costQ": "Combien coûte la location d’une goélette ?",
+    "costA": "Une semaine typique en goélette coûte {list} pour le bateau, selon le mois.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "Le prix dépend de la taille de la goélette, du nombre de cabines et du mois. La page de chaque goélette indique son prix à la semaine et les suppléments à régler en plus."
+  },
+  "priceGuideLink": "Prix de location de yachts : ce que coûte une semaine",
+  "quoteLink": "Demander un devis pour une goélette",
+  "landingLink": "Location de goélette avec équipage : fonctionnement et prix"
+}

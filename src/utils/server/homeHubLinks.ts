@@ -1,9 +1,10 @@
 import { PHASE_PRODUCTION_BUILD } from 'next/constants';
 import 'server-only';
 
+import { GULET_CHARTER_PATH } from '@/config/guletCharter.config';
 import { HOME_HUB_TABS, HomeHubLink, HomeHubLinkId, HomeHubTabKey } from '@/config/homeHub.config';
 import { itineraries } from '@/config/itineraries.config';
-import { PRICE_GUIDES, priceGuidePath } from '@/config/priceGuides.config';
+import { PRICE_GUIDES, PRICE_GUIDE_HUB_PATH, priceGuidePath } from '@/config/priceGuides.config';
 import { loadDestinationIndex } from '@/utils/server/destinationDid';
 import { landingManifestWithin } from '@/utils/server/landingManifest';
 import { modelCatalogWithin } from '@/utils/server/modelCatalog';
@@ -16,7 +17,8 @@ import { buildSearchLandingPath, destinationSlug } from '@/utils/static/searchLa
  *   - a destination landing only while the landing manifest lists it for
  *     the locale (the same entries and the same URL builder as the location
  *     and category sitemaps, so the href is the sitemap <loc> byte for byte);
- *   - an itinerary area or a price guide only while its config has it;
+ *   - an itinerary area, a price guide (or their hub) or the gulet page
+ *     only while its config has it;
  *   - a /yachts model page only while the model catalogue has it (the
  *     catalogue already holds only models with >= MIN_LANDING_FLEET boats).
  *
@@ -109,7 +111,9 @@ const resolveTabs = async (locale: string): Promise<HomeHubResolvedTab[]> => {
 
   const paths = new Set<string>([
     ...itineraries.flatMap(group => group.itinerary.map(area => `/itineraries/${area.id}`)),
+    PRICE_GUIDE_HUB_PATH,
     ...PRICE_GUIDES.map(guide => priceGuidePath(guide.slug)),
+    GULET_CHARTER_PATH,
     ...(lastModelPaths ?? []),
   ]);
 

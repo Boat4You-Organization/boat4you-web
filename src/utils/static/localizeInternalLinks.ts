@@ -21,6 +21,8 @@ const LOCALIZED_ROUTES = [
   '/fleet',
   '/yachts',
   '/itineraries',
+  '/yacht-charter-prices',
+  '/gulet-charter',
   '/boat/',
   '/privacy-policy',
   '/terms-and-conditions',

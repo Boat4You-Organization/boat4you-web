@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Navigacijski put",
+  "crumb": "Najam guleta",
+  "meta": {
+    "title": "Najam guleta s posadom: Turska, Grčka, Hrvatska",
+    "description": "Najam guleta s kapetanom i posadom ({countries}), bez voditeljske dozvole. {count, plural, one {# gulet} few {# guleta} other {# guleta}} s tjednim cijenama za usporedbu.",
+    "descriptionNoCount": "Najam guleta s kapetanom i posadom ({countries}), bez voditeljske dozvole. Usporedite gulete po tjednoj cijeni i zatražite ponudu."
+  },
+  "h1": "Najam guleta s posadom: Turska, Grčka, Hrvatska",
+  "answer": "Najam guleta znači tjedan na moru na tradicionalnom drvenom brodu s vlastitom posadom. Kapetan i posada vode brod, na većini guleta kuhar priprema obroke, a vaši su dani za kupanje, dobru hranu i lijenčarenje. Nudimo {count, plural, one {# gulet} few {# guleta} other {# guleta}} ({countries}), uvijek s posadom, nikad bez nje.",
+  "answerNoCount": "Najam guleta znači tjedan na moru na tradicionalnom drvenom brodu s vlastitom posadom. Kapetan i posada vode brod, na većini guleta kuhar priprema obroke, a vaši su dani za kupanje, dobru hranu i lijenčarenje. Naši guleti plove u ovim zemljama: {countries}, uvijek s posadom, nikad bez nje.",
+  "experience": {
+    "heading": "Tjedan na guletu",
+    "p1": "Jutro počinje kavom na palubi dok posada diže sidro. Do ručka ste već u drugoj uvali, skačete u more s krme, a stol se postavlja u hladu. Nitko na brodu ne mora čitati kartu ni dirati konop, osim ako to želi.",
+    "p2": "Gulet je za obitelji, društvo prijatelja i više generacija na istom putovanju. Svatko ima kabinu za sebe, na širokoj palubi društvo se okuplja, a večeri završavaju na sidru pod zvijezdama ili u lučkom mjestu uz šetnju rivom."
+  },
+  "countriesHeading": "Gdje unajmiti gulet",
+  "country": {
+    "TR": "Gulet potječe iz Turske. Na Tirkiznoj obali sezona traje od travnja do studenoga, a borova šuma spušta se sve do uvala.",
+    "GR": "U Grčkoj vas gulet vodi od otoka do otoka, sa svakom večeri u drugom lučkom selu i bistrim morem za duga kupanja.",
+    "HR": "U Hrvatskoj guleti plove među dalmatinskim otocima. Hvar, Brač, Vis i Korčula blizu su jedni drugima, a večeri završavaju u kamenim lučkim gradićima.",
+    "IT": "Italija ima manju flotu guleta, za miran tjedan uz obalu i duge ručkove na sidru."
+  },
+  "countryFacts": "{count, plural, one {# gulet} few {# guleta} other {# guleta}} · tipičan tjedan {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# gulet} few {# guleta} other {# guleta}}",
+  "countryBases": "matične luke: {bases}",
+  "seeAll": "Svi guleti {where}",
+  "faqHeading": "Pitanja o najmu guleta",
+  "faq": {
+    "whatQ": "Što je gulet?",
+    "whatA": "Gulet je tradicionalni drveni brod s turske obale oko Bodruma, s dva ili tri jarbola, širokom palubom za sunčanje i stolom u hladu na krmi gdje se poslužuju obroci. Guleti uglavnom plove na motor, a jedra dižu kad vjetar to dopusti. Danas plove u Turskoj, Grčkoj, Hrvatskoj i Italiji.",
+    "crewQ": "Je li posada uključena u najam guleta?",
+    "crewA": "Da. Gulet se uvijek unajmljuje s posadom, nikad bez nje, pa nitko u vašoj skupini ne treba voditeljsku dozvolu. Kapetan svaki dan s vama dogovara rutu, ovisno o vremenu. Što tjedna cijena uključuje i koji se dodaci plaćaju posebno, piše na stranici svakog guleta.",
+    "whereQ": "Turska, Grčka ili Hrvatska: gdje je najam guleta najbolji?",
+    "whereA": "Turska je dom guleta, s najduljom sezonom i mirnim, šumovitim uvalama. Grčka nudi više otoka na dan plovidbe. Hrvatska spaja tjedan na guletu s dalmatinskim gradovima poput Splita, Hvara i Korčule.",
+    "whereCount": "Trenutno nudimo {list}.",
+    "whereCountItem": "{count, plural, one {# gulet} few {# guleta} other {# guleta}} {where}",
+    "costQ": "Koliko stoji najam guleta?",
+    "costA": "Tipičan tjedan na guletu stoji {list} za brod, ovisno o mjesecu.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "Cijena ovisi o veličini guleta, broju kabina i mjesecu. Na stranici svakog guleta vidi se tjedna cijena i dodaci koji se plaćaju posebno."
+  },
+  "priceGuideLink": "Cijene najma jahti: koliko stoji tjedan",
+  "quoteLink": "Zatražite ponudu za najam guleta",
+  "landingLink": "Najam guleta s posadom: kako funkcionira i koliko stoji"
+}

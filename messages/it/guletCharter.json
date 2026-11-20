@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Percorso di navigazione",
+  "crumb": "Noleggio caicco",
+  "meta": {
+    "title": "Noleggio caicco con equipaggio: Turchia, Grecia, Croazia",
+    "description": "Noleggio caicco (gulet) con capitano ed equipaggio ({countries}), senza patente nautica. {count, plural, one {# caicco} other {# caicchi}} con prezzi settimanali.",
+    "descriptionNoCount": "Noleggio caicco (gulet) con capitano ed equipaggio ({countries}), senza patente nautica. Confrontate i prezzi settimanali e chiedete un preventivo."
+  },
+  "h1": "Noleggio caicco con equipaggio: Turchia, Grecia, Croazia",
+  "answer": "Noleggiare un caicco, o gulet, significa passare una settimana in mare su una barca tradizionale in legno con il suo equipaggio. Capitano ed equipaggio conducono la barca, sulla maggior parte dei caicchi un cuoco prepara i pasti, e le vostre giornate sono fatte di bagni, buona cucina e dolce far niente. Abbiamo {count, plural, one {# caicco} other {# caicchi}} ({countries}), sempre con equipaggio e mai senza skipper.",
+  "answerNoCount": "Noleggiare un caicco, o gulet, significa passare una settimana in mare su una barca tradizionale in legno con il suo equipaggio. Capitano ed equipaggio conducono la barca, sulla maggior parte dei caicchi un cuoco prepara i pasti, e le vostre giornate sono fatte di bagni, buona cucina e dolce far niente. I nostri caicchi navigano in questi paesi: {countries}, sempre con equipaggio e mai senza skipper.",
+  "experience": {
+    "heading": "Una settimana in caicco",
+    "p1": "La mattina inizia con un caffè in coperta mentre l’equipaggio salpa l’ancora. All’ora di pranzo siete già in un’altra baia, vi tuffate dalla poppa mentre la tavola viene apparecchiata all’ombra. Nessuno a bordo deve leggere una carta nautica o toccare una cima, a meno che non ne abbia voglia.",
+    "p2": "Il caicco è perfetto per famiglie, gruppi di amici e più generazioni in viaggio insieme. Ognuno ha la sua cabina in cui ritirarsi, l’ampio ponte è il luogo dove il gruppo si ritrova, e le serate finiscono alla fonda sotto le stelle o in un paese di mare con una passeggiata sul lungomare."
+  },
+  "countriesHeading": "Dove noleggiare un caicco",
+  "country": {
+    "TR": "Il caicco nasce in Turchia. Sulla Costa Turchese la stagione va da aprile a novembre, e la pineta scende fino alle baie.",
+    "GR": "In Grecia un caicco vi porta di isola in isola, con un villaggio di pescatori diverso ogni sera e acqua limpida per lunghe nuotate.",
+    "HR": "In Croazia i caicchi navigano tra le isole della Dalmazia. Hvar, Brač, Vis e Korčula sono vicine tra loro, e le serate finiscono in borghi di pietra affacciati sul porto.",
+    "IT": "In Italia la flotta di caicchi è più piccola, per una settimana tranquilla lungo la costa con lunghi pranzi alla fonda."
+  },
+  "countryFacts": "{count, plural, one {# caicco} other {# caicchi}} · settimana tipica {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# caicco} other {# caicchi}}",
+  "countryBases": "porti di partenza: {bases}",
+  "seeAll": "Tutti i caicchi {where}",
+  "faqHeading": "Domande sul noleggio caicco",
+  "faq": {
+    "whatQ": "Che cos’è un caicco (gulet)?",
+    "whatA": "Il caicco, o gulet, è una barca tradizionale in legno nata sulla costa turca intorno a Bodrum, con due o tre alberi, un ampio ponte per prendere il sole e una tavola all’ombra a poppa dove si servono i pasti. Naviga soprattutto a motore e issa le vele quando il vento è giusto. Oggi i caicchi navigano in Turchia, Grecia, Croazia e Italia.",
+    "crewQ": "L’equipaggio è incluso nel noleggio di un caicco?",
+    "crewA": "Sì. Un caicco si noleggia sempre con il suo equipaggio, mai senza skipper, quindi nessuno nel vostro gruppo ha bisogno della patente nautica. Il capitano decide ogni giorno la rotta con voi, in base al meteo. Cosa comprende il prezzo settimanale e quali extra si pagano a parte è indicato nella pagina di ogni caicco.",
+    "whereQ": "Turchia, Grecia o Croazia: dove conviene noleggiare un caicco?",
+    "whereA": "La Turchia è la patria del caicco, con la stagione più lunga e baie calme e boscose. La Grecia offre più isole a un giorno di navigazione. La Croazia unisce la settimana in caicco a città dalmate come Spalato, Hvar e Korčula.",
+    "whereCount": "Al momento abbiamo {list}.",
+    "whereCountItem": "{count, plural, one {# caicco} other {# caicchi}} {where}",
+    "costQ": "Quanto costa noleggiare un caicco?",
+    "costA": "Una settimana tipica in caicco costa {list} per la barca, a seconda del mese.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "Il prezzo dipende dalle dimensioni del caicco, dal numero di cabine e dal mese. La pagina di ogni caicco mostra il prezzo settimanale e gli extra da pagare a parte."
+  },
+  "priceGuideLink": "Prezzi del noleggio yacht: quanto costa una settimana",
+  "quoteLink": "Chiedete un preventivo per un caicco",
+  "landingLink": "Noleggio caicco con equipaggio: come funziona e quanto costa"
+}

@@ -1,0 +1,46 @@
+{
+  "breadcrumbLabel": "Ścieżka nawigacji",
+  "crumb": "Czarter guleta",
+  "meta": {
+    "title": "Czarter guleta z załogą: Turcja, Grecja, Chorwacja",
+    "description": "Czarter guleta z kapitanem i załogą ({countries}), bez patentu żeglarskiego. {count, plural, one {# gulet} few {# gulety} many {# guletów} other {# guleta}} z cenami za tydzień.",
+    "descriptionNoCount": "Czarter guleta z kapitanem i załogą ({countries}), bez patentu żeglarskiego. Porównaj gulety według ceny za tydzień i poproś o ofertę."
+  },
+  "h1": "Czarter guleta z załogą: Turcja, Grecja, Chorwacja",
+  "answer": "Czarter guleta to tydzień na morzu na tradycyjnej drewnianej łodzi z własną załogą. Kapitan i załoga prowadzą łódź, na większości guletów kucharz przygotowuje posiłki, a Twoje dni to kąpiele, dobre jedzenie i błogie lenistwo. Mamy {count, plural, one {# gulet} few {# gulety} many {# guletów} other {# guleta}} ({countries}), zawsze z załogą, nigdy bez niej.",
+  "answerNoCount": "Czarter guleta to tydzień na morzu na tradycyjnej drewnianej łodzi z własną załogą. Kapitan i załoga prowadzą łódź, na większości guletów kucharz przygotowuje posiłki, a Twoje dni to kąpiele, dobre jedzenie i błogie lenistwo. Nasze gulety pływają w tych krajach: {countries}, zawsze z załogą, nigdy bez niej.",
+  "experience": {
+    "heading": "Tydzień na pokładzie guleta",
+    "p1": "Poranek zaczyna się od kawy na pokładzie, gdy załoga podnosi kotwicę. W porze lunchu jesteś już w innej zatoce, skaczesz do wody z rufy, a w cieniu nakrywa się stół. Nikt na pokładzie nie musi czytać mapy ani obsługiwać lin, chyba że ma na to ochotę.",
+    "p2": "Gulet sprawdzi się dla rodzin, grup przyjaciół i kilku pokoleń podróżujących razem. Każdy ma swoją kabinę, na szerokim pokładzie cała grupa spędza czas razem, a wieczory kończą się na kotwicy pod gwiazdami albo w portowym miasteczku, na spacerze nabrzeżem."
+  },
+  "countriesHeading": "Gdzie wyczarterować gulet",
+  "country": {
+    "TR": "Gulet pochodzi z Turcji. Na Turkusowym Wybrzeżu sezon trwa od kwietnia do listopada, a sosnowe lasy schodzą aż do zatok.",
+    "GR": "W Grecji gulet zabierze Cię od wyspy do wyspy, z inną portową wioską każdego wieczoru i przejrzystą wodą na długie pływanie.",
+    "HR": "W Chorwacji gulety pływają między wyspami Dalmacji. Hvar, Brač, Vis i Korčula leżą blisko siebie, a wieczory kończą się w kamiennych portowych miasteczkach.",
+    "IT": "Włochy mają mniejszą flotę guletów, na spokojny tydzień wzdłuż wybrzeża z długimi obiadami na kotwicy."
+  },
+  "countryFacts": "{count, plural, one {# gulet} few {# gulety} many {# guletów} other {# guleta}} · typowy tydzień {low} – {high}",
+  "countryFactsNoPrice": "{count, plural, one {# gulet} few {# gulety} many {# guletów} other {# guleta}}",
+  "countryBases": "porty macierzyste: {bases}",
+  "seeAll": "Wszystkie gulety {where}",
+  "faqHeading": "Pytania o czarter guleta",
+  "faq": {
+    "whatQ": "Czym jest gulet?",
+    "whatA": "Gulet to tradycyjna drewniana łódź z tureckiego wybrzeża w okolicach Bodrum, z dwoma lub trzema masztami, szerokim pokładem do opalania i stołem w cieniu na rufie, przy którym podaje się posiłki. Gulety pływają głównie na silniku, a żagle stawiają, gdy wiatr sprzyja. Dziś pływają w Turcji, Grecji, Chorwacji i we Włoszech.",
+    "crewQ": "Czy załoga jest wliczona w czarter guleta?",
+    "crewA": "Tak. Gulet czarteruje się zawsze z załogą, nigdy bez niej, więc nikt w Twojej grupie nie potrzebuje patentu żeglarskiego. Kapitan codziennie ustala z Tobą trasę, zależnie od pogody. Co obejmuje cena za tydzień i jakie dodatki płaci się osobno, podajemy na stronie każdego guleta.",
+    "whereQ": "Turcja, Grecja czy Chorwacja: gdzie najlepiej wyczarterować gulet?",
+    "whereA": "Turcja to ojczyzna guleta, z najdłuższym sezonem i spokojnymi, zalesionymi zatokami. Grecja oferuje więcej wysp w zasięgu dnia rejsu. Chorwacja łączy tydzień na gulecie z dalmatyńskimi miastami, takimi jak Split, Hvar i Korčula.",
+    "whereCount": "Obecnie mamy {list}.",
+    "whereCountItem": "{count, plural, one {# gulet} few {# gulety} many {# guletów} other {# guleta}} {where}",
+    "costQ": "Ile kosztuje czarter guleta?",
+    "costA": "Typowy tydzień na gulecie kosztuje {list} za łódź, zależnie od miesiąca.",
+    "costItem": "{low} – {high} {where}",
+    "costMore": "Cena zależy od wielkości guleta, liczby kabin i miesiąca. Na stronie każdego guleta podajemy cenę za tydzień i dodatki płatne osobno."
+  },
+  "priceGuideLink": "Ceny czarteru jachtów: ile kosztuje tydzień",
+  "quoteLink": "Poproś o ofertę czarteru guleta",
+  "landingLink": "Czarter guleta z załogą: jak to działa i ile kosztuje"
+}
