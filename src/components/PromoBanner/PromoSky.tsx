@@ -102,7 +102,7 @@ const skyNodes = (sky: PromoSkyConfig): ReactNode[] => {
       <div key={`tag${i}`} className={styles.tag} style={style}>
         <svg viewBox="0 0 26 16">
           <path d="M1 3a2 2 0 0 1 2-2h14l8 7-8 7H3a2 2 0 0 1-2-2z" fill="#FFB703" />
-          <circle cx="18" cy="8" r="1.8" fill="#3b2f70" />
+          <circle cx="18" cy="8" r="1.8" fill="#000000" />
         </svg>
       </div>
     );

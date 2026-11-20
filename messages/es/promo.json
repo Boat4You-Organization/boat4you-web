@@ -38,13 +38,13 @@
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
-      "subtitle": "Una semana, los precios más bajos del año: reserva la próxima temporada con hasta un {pct}% de descuento",
-      "subtitleNoPct": "Una semana, los precios más bajos del año: reserva la próxima temporada al mejor precio",
+      "subtitle": "Hasta el 30 de noviembre, los precios más bajos del año: reserva la próxima temporada con hasta un {pct}% de descuento",
+      "subtitleNoPct": "Hasta el 30 de noviembre, los precios más bajos del año: reserva la próxima temporada al mejor precio",
       "metaTitle": "Black Friday de Alquiler de Barcos",
-      "metaDescription": "El Black Friday reúne los mayores descuentos del año en alquiler de barcos para la próxima temporada. Solo una semana: rebajas reales y cancelación gratuita.",
+      "metaDescription": "El Black Friday reúne los mayores descuentos del año en alquiler de barcos para la próxima temporada. Solo hasta el 30 de noviembre: rebajas reales y cancelación gratuita.",
       "seoTitle": "Por qué el Black Friday es el mejor momento para reservar",
-      "seoText": "El Black Friday es, una sola semana al año, el momento en que los operadores de chárter aplican sus porcentajes más agresivos sobre la próxima temporada: el calendario acaba de abrirse, están todos los barcos, todas las marinas y todas las semanas de vacaciones, y las flotas quieren llenarlo cuanto antes. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. Es el precio más bajo que verá ese barco en todo el año, y la ventana se cierra en siete días. Cuando termine el Black Friday, las tarifas vuelven a subir.",
-      "cta": "Ver ofertas Black Friday"
+      "seoText": "El Black Friday es, una vez al año y solo hasta el 30 de noviembre, el momento en que los operadores de chárter aplican sus porcentajes más agresivos sobre la próxima temporada: el calendario acaba de abrirse, están todos los barcos, todas las marinas y todas las semanas de vacaciones, y las flotas quieren llenarlo cuanto antes. Los descuentos de esta página son rebajas reales de nuestros operadores asociados sobre su propia tarifa oficial para el mismo barco y la misma semana. Es el precio más bajo que verá ese barco en todo el año, y la ventana se cierra el 30 de noviembre. Cuando termine el Black Friday, las tarifas vuelven a subir.",
+      "cta": "Ofertas de chárter Black Friday"
     },
     "christmas": {
       "title": "NAVIDAD",

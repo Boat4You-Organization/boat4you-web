@@ -38,13 +38,13 @@
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
-      "subtitle": "Najveći popusti u godini, samo ovaj tjedan — osigurajte sljedeću sezonu uz sniženje do {pct}%",
-      "subtitleNoPct": "Najveći popusti u godini, samo ovaj tjedan — osigurajte sljedeću sezonu po najboljoj cijeni",
+      "subtitle": "Najveći popusti u godini, samo do 30. studenoga: osigurajte sljedeću sezonu uz sniženje do {pct}%",
+      "subtitleNoPct": "Najveći popusti u godini, samo do 30. studenoga: osigurajte sljedeću sezonu po najboljoj cijeni",
       "metaTitle": "Black Friday popusti na najam jahti",
-      "metaDescription": "Black Friday tjedan s najvećim popustima u godini na charter za sljedeću sezonu. Stvarna sniženja partnera, najširi izbor termina i rok besplatnog otkazivanja.",
+      "metaDescription": "Black Friday do 30. studenoga: najveći popusti u godini na charter za sljedeću sezonu. Stvarna sniženja partnera, najširi izbor termina i rok besplatnog otkazivanja.",
       "seoTitle": "Zašto je Black Friday najbolji trenutak za booking",
-      "seoText": "Black Friday dolazi jednom godišnje, a s njim i najveći popusti na charter koje ćete vidjeti u cijeloj sezoni. Ovaj tjedan operateri otvaraju kalendare za sljedeću godinu i ranu odluku nagrađuju svojim najdubljim sniženjima — dok je izbor brodova, marina i tjedana školskih praznika još potpun. Postotak na svakoj kartici stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan, nikada na napuhanu referentnu cijenu. Ponuda traje samo tjedan dana, a vaša rezervacija uključuje rok besplatnog otkazivanja.",
-      "cta": "Iskoristite Black Friday"
+      "seoText": "Black Friday dolazi jednom godišnje, a s njim i najveći popusti na charter koje ćete vidjeti u cijeloj sezoni. Do 30. studenoga operateri otvaraju kalendare za sljedeću godinu i ranu odluku nagrađuju svojim najdubljim sniženjima — dok je izbor brodova, marina i tjedana školskih praznika još potpun. Postotak na svakoj kartici stvarno je sniženje partnera u odnosu na njegov vlastiti cjenik za isti brod i isti tjedan, nikada na napuhanu referentnu cijenu. Ponuda traje samo do 30. studenoga, a vaša rezervacija uključuje rok besplatnog otkazivanja.",
+      "cta": "Black Friday ponude za charter"
     },
     "christmas": {
       "title": "BOŽIĆNA PONUDA",

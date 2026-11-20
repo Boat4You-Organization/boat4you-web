@@ -38,13 +38,13 @@
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
-      "subtitle": "Le plus gros rabais de l'année sur la saison prochaine — une semaine seulement, jusqu'à {pct}% de réduction",
-      "subtitleNoPct": "Le plus gros rabais de l'année sur la saison prochaine — une semaine seulement, au tarif le plus bas",
+      "subtitle": "Le plus gros rabais de l'année sur la saison prochaine : jusqu'à {pct}% de réduction, valable jusqu'au 30 novembre",
+      "subtitleNoPct": "Le plus gros rabais de l'année sur la saison prochaine : le tarif le plus bas, valable jusqu'au 30 novembre",
       "metaTitle": "Black Friday Location de Bateaux — Offres",
-      "metaDescription": "Black Friday : les plus fortes remises de l'année pour réserver votre bateau de la saison prochaine. Vraies remises opérateurs, annulation gratuite — une semaine seulement.",
+      "metaDescription": "Black Friday : les plus fortes remises de l'année pour réserver votre bateau de la saison prochaine. Vraies remises opérateurs, annulation gratuite, jusqu'au 30 novembre seulement.",
       "seoTitle": "Pourquoi le Black Friday est le meilleur moment pour réserver",
-      "seoText": "Une fois par an, les opérateurs de charter ouvrent grand leurs calendriers de la saison prochaine et consentent leurs pourcentages les plus élevés de l'année — le temps d'une seule semaine. C'est le moment où le choix est encore complet, de la Méditerranée aux Caraïbes et pour tous les types de bateaux : voiliers, catamarans, yachts à moteur. Chaque réduction affichée compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine — jamais à une référence gonflée. Votre réservation inclut une période d'annulation gratuite, et une fois la semaine passée, ces tarifs disparaissent jusqu'à l'an prochain.",
-      "cta": "Profitez du Black Friday"
+      "seoText": "Une fois par an, les opérateurs de charter ouvrent grand leurs calendriers de la saison prochaine et consentent leurs pourcentages les plus élevés de l'année, jusqu'au 30 novembre seulement. C'est le moment où le choix est encore complet, de la Méditerranée aux Caraïbes et pour tous les types de bateaux : voiliers, catamarans, yachts à moteur. Chaque réduction affichée compare le prix du jour au tarif catalogue de l'opérateur lui-même, pour le même bateau et la même semaine — jamais à une référence gonflée. Votre réservation inclut une période d'annulation gratuite, et après le 30 novembre, ces tarifs disparaissent jusqu'à l'an prochain.",
+      "cta": "Offres charter Black Friday"
     },
     "christmas": {
       "title": "NOËL",

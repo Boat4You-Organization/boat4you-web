@@ -107,12 +107,12 @@ export const PROMO_CAMPAIGNS: PromoCampaign[] = [
     window: { type: 'seasonStart', month: 5 },
     fallbackPct: 40,
     colors: {
-      bg: 'linear-gradient(100deg,#1f2233 0%,#3b2f70 55%,#8a45b0 100%)',
+      bg: '#000000',
       blob: '#FFB703',
       blobText: '#14171c',
       sun: '#fff4c2',
     },
-    art: { character: 'bf', boat: 'boat_last', wideBoat: true, sky: { seed: 209, glow: true, stars: 16, tags: 9 } },
+    art: { character: 'bf', boat: 'boat_last', wideBoat: true, sky: { seed: 209, stars: 16, tags: 9 } },
   },
   {
     slug: 'christmas',

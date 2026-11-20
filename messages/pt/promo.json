@@ -38,13 +38,13 @@
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
-      "subtitle": "O maior desconto do ano, só esta semana — reserve a próxima temporada com até {pct}% de desconto",
-      "subtitleNoPct": "O maior desconto do ano, só esta semana — reserve a próxima temporada aos preços mais baixos",
+      "subtitle": "O maior desconto do ano, só até 30 de novembro: reserve a próxima temporada com até {pct}% de desconto",
+      "subtitleNoPct": "O maior desconto do ano, só até 30 de novembro: reserve a próxima temporada aos preços mais baixos",
       "metaTitle": "Black Friday de Aluguer de Iates",
-      "metaDescription": "A Black Friday traz as maiores reduções do ano em aluguer de iates para a próxima temporada. Descontos reais dos operadores, só durante uma semana, com cancelamento gratuito.",
-      "seoTitle": "Porque a Black Friday é a semana para reservar",
-      "seoText": "Uma vez por ano, os operadores de charter abrem as tarifas de reserva antecipada mais agressivas da temporada — e concentram-nas numa única semana de Black Friday. É o momento em que a escolha de barcos, marinas e semanas de férias escolares ainda está completa e as percentagens vão ao mais fundo do ano. Cada desconto nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. A janela fecha em poucos dias e não volta a este nível; se um barco lhe agrada, esta é a semana para garantir a próxima temporada.",
-      "cta": "Aproveite a Black Friday"
+      "metaDescription": "A Black Friday traz as maiores reduções do ano em aluguer de iates para a próxima temporada. Descontos reais dos operadores, só até 30 de novembro, com cancelamento gratuito.",
+      "seoTitle": "Porque a Black Friday é a altura certa para reservar",
+      "seoText": "Uma vez por ano, os operadores de charter abrem as tarifas de reserva antecipada mais agressivas da temporada, e mantêm-nas só durante a Black Friday, até 30 de novembro. É o momento em que a escolha de barcos, marinas e semanas de férias escolares ainda está completa e as percentagens vão ao mais fundo do ano. Cada desconto nesta página é uma redução real do operador parceiro, comparada com o preço de tabela do próprio operador para o mesmo barco e a mesma semana, nunca com um valor inflacionado. A janela fecha a 30 de novembro e não volta a este nível; se um barco lhe agrada, este é o momento de garantir a próxima temporada.",
+      "cta": "Ofertas de charter Black Friday"
     },
     "christmas": {
       "title": "NATAL A NAVEGAR",

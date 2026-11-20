@@ -38,13 +38,13 @@
     },
     "blackFriday": {
       "title": "BLACK FRIDAY",
-      "subtitle": "De grootste kortingsweek van het jaar — leg volgend seizoen vast met tot {pct}% korting",
-      "subtitleNoPct": "De grootste kortingsweek van het jaar — leg volgend seizoen vast tegen onze scherpste vroegboektarieven",
+      "subtitle": "De grootste kortingsactie van het jaar, tot en met 30 november: leg volgend seizoen vast met tot {pct}% korting",
+      "subtitleNoPct": "De grootste kortingsactie van het jaar, tot en met 30 november: leg volgend seizoen vast tegen onze scherpste vroegboektarieven",
       "metaTitle": "Black Friday Jachtcharter Deals",
-      "metaDescription": "Één week per jaar, de diepste kortingen: boek nu je jachtcharter voor volgend seizoen tegen de scherpste vroegboektarieven. Inclusief gratis annuleringsperiode.",
+      "metaDescription": "Tot en met 30 november de diepste kortingen van het jaar: boek nu je jachtcharter voor volgend seizoen tegen de scherpste vroegboektarieven. Inclusief gratis annuleringsperiode.",
       "seoTitle": "Waarom Black Friday hét moment is om te boeken",
-      "seoText": "Black Friday is de enige week van het jaar waarin verhuurders hun diepste kortingen op tafel leggen — en ze doen dat op het nieuwe seizoen, wanneer de kalender nog volledig open ligt. Je kiest dus uit de complete vloot, de beste jachthavens en de gewilde vakantieweken, tegen tarieven die je later niet meer terugziet. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Het aanbod loopt maar zeven dagen, dus wie volgend jaar op het water wil, legt de week nu vast.",
-      "cta": "Bekijk Black Friday-deals"
+      "seoText": "Black Friday is het enige moment van het jaar waarop verhuurders hun diepste kortingen op tafel leggen — en ze doen dat op het nieuwe seizoen, wanneer de kalender nog volledig open ligt. Je kiest dus uit de complete vloot, de beste jachthavens en de gewilde vakantieweken, tegen tarieven die je later niet meer terugziet. De percentages op deze pagina zijn echte prijsverlagingen van onze partners ten opzichte van hun eigen catalogusprijs voor dezelfde boot en dezelfde week. Het aanbod loopt alleen tot en met 30 november, dus wie volgend jaar op het water wil, legt de week nu vast.",
+      "cta": "Black Friday charteraanbiedingen"
     },
     "christmas": {
       "title": "KERSTAANBIEDINGEN",
