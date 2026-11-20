@@ -38,6 +38,7 @@ const withNextIntl = createNextIntlPlugin({
       './messages/en/models.json',
       './messages/en/charterFacts.json',
       './messages/en/priceGuide.json',
+      './messages/en/guletCharter.json',
       './messages/en/review.json',
       './messages/en/pay.json',
       './messages/en/homeHub.json',
