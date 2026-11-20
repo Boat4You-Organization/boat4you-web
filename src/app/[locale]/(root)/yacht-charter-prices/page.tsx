@@ -14,8 +14,9 @@ import { buildMetadata, localizedUrl } from '@/utils/static/buildMetadata';
 import { serializeJsonLd } from '@/utils/static/jsonLd';
 import { fitDescription } from '@/utils/static/metaLength';
 import { Crumb } from '@/views/Models/ModelsBreadcrumb';
+import { modelsFaqSchema } from '@/views/Models/ModelsFaq';
 import PriceGuideHubView, { HubRow } from '@/views/PriceGuide/PriceGuideHubView';
-import { GUIDE_DESCRIPTION_MAX, buildGuideText, fitTitle } from '@/views/PriceGuide/guideText';
+import { GUIDE_DESCRIPTION_MAX, buildGuideText, buildHubText } from '@/views/PriceGuide/guideText';
 
 /** /yacht-charter-prices — the hub of the country price guides (same ISR window as the guides). */
 export const revalidate = 21600;
@@ -36,7 +37,9 @@ const loadHub = async (locale: string) => {
   const boats = guides.reduce((sum, g) => sum + (g.facts.boatsWithWeeklyPrices ?? g.facts.activeBoats), 0);
   const computedAt = guides.map(g => g.facts.computedAt).sort()[guides.length - 1];
 
-  return { guides, texts, list, boats, computedAt };
+  const hub = await buildHubText(guides, texts, locale);
+
+  return { guides, texts, list, boats, computedAt, hub };
 };
 
 export async function generateMetadata({ params }: PriceGuideHubPageProps): Promise<Metadata> {
@@ -46,11 +49,11 @@ export async function generateMetadata({ params }: PriceGuideHubPageProps): Prom
 
   setRequestLocale(locale);
 
-  const [{ list, boats }, t] = await Promise.all([
+  const [{ list, boats, hub }, t] = await Promise.all([
     loadHub(locale),
     getTranslations({ locale, namespace: 'priceGuide' }),
   ]);
-  const title = fitTitle([t('meta.hubTitle', { countries: list }), t('hub.h1')]);
+  const { title } = hub;
 
   return buildMetadata({
     locale: locale as LocaleType,
@@ -68,7 +71,7 @@ const PriceGuideHubPage = async ({ params }: PriceGuideHubPageProps) => {
 
   setRequestLocale(locale);
 
-  const [{ guides, texts, list, boats, computedAt }, t, tCommon] = await Promise.all([
+  const [{ guides, texts, list, boats, computedAt, hub }, t, tCommon] = await Promise.all([
     loadHub(locale),
     getTranslations({ locale, namespace: 'priceGuide' }),
     getTranslations({ locale, namespace: 'common' }),
@@ -92,7 +95,7 @@ const PriceGuideHubPage = async ({ params }: PriceGuideHubPageProps) => {
     '@type': 'CollectionPage',
     '@id': `${url}#webpage`,
     url,
-    name: t('hub.h1'),
+    name: hub.h1,
     description: fitDescription(t('meta.hubDescription', { countries: list, boats }), GUIDE_DESCRIPTION_MAX),
     inLanguage: locale,
     dateModified: computedAt,
@@ -105,11 +108,21 @@ const PriceGuideHubPage = async ({ params }: PriceGuideHubPageProps) => {
     })),
   };
 
+  const faqLd = modelsFaqSchema(hub.faq);
+
   return (
     <Layout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(webPageLd) }} />
-      <PriceGuideHubView locale={locale} rows={rows} boats={boats} computedAt={computedAt} breadcrumb={breadcrumb} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqLd) }} />}
+      <PriceGuideHubView
+        locale={locale}
+        rows={rows}
+        boats={boats}
+        computedAt={computedAt}
+        breadcrumb={breadcrumb}
+        hub={hub}
+      />
     </Layout>
   );
 };

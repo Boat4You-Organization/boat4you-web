@@ -82,8 +82,9 @@ export const buildGuideText = async (data: PriceGuideData, locale: string): Prom
       ? (tCommon.raw(VESSEL_TYPE_LABEL_MAP_PLURAL[type].replace(/^common\./, '') as never) as string)
       : t('allBoats');
 
-  const h1 = t('h1', { where });
-  const title = fitTitle([t('meta.title', { h1 }), h1]);
+  // Greece carries the "yacht charter cost Greece" wording (Gap Finder 20.11.2026, B#1).
+  const h1 = data.guide.costHeading ? t('h1Cost', { where }) : t('h1', { where });
+  const title = fitTitle([t(data.guide.costHeading ? 'meta.costTitle' : 'meta.title', { h1 }), h1]);
   const priced = facts.boatsWithWeeklyPrices ?? facts.activeBoats;
 
   const skipper = facts.skipperWeekly && facts.skipperWeekly.median > 0 ? facts.skipperWeekly : null;
@@ -235,4 +236,132 @@ export const buildGuideText = async (data: PriceGuideData, locale: string): Prom
     faq: faq.slice(0, 6),
     typeLabel,
   };
+};
+
+export interface HubText {
+  /** "Yacht charter prices 2027: what a week costs", the year of the guides' season when known. */
+  h1: string;
+  /** Absolute <title>: the H1, with the brand when it fits. */
+  title: string;
+  /** The direct answer at the top of the hub, every figure from the guides' facts rows. */
+  answer: string;
+  faq: ModelsFaqEntry[];
+}
+
+/** The values' span: one amount, or "low – high" when the countries differ. */
+const spanOf = (values: number[], fmt: FactsFormat, range: (low: string, high: string) => string): string | null => {
+  if (!values.length) return null;
+
+  const low = Math.min(...values);
+  const high = Math.max(...values);
+
+  return low === high ? fmt.money(low) : range(fmt.money(low), fmt.money(high));
+};
+
+/**
+ * The words of the hub (/yacht-charter-prices), the one page for "how much
+ * does a yacht charter cost" (Gap Finder 20.11.2026, B#1): the H1 and title
+ * with the phrase, a direct answer at the top and the FAQ. Every amount comes
+ * from the guides' nightly facts rows; a sentence whose figure is missing is
+ * left out.
+ */
+export const buildHubText = async (guides: PriceGuideData[], texts: GuideText[], locale: string): Promise<HubText> => {
+  const t = await getTranslations({ locale, namespace: 'priceGuide' });
+  const { fmt } = texts[0];
+  const { money } = fmt;
+  const range = (low: string, high: string) => t('rangeValue', { low, high });
+  const list = (items: string[]) => new Intl.ListFormat(locale, { type: 'conjunction' }).format(items);
+  const countries = list(texts.map(text => text.countryName));
+
+  // The season the figures describe: the year of the priciest month (summer of the coming season).
+  const season =
+    guides
+      .map(g => g.all?.ranking?.priciest)
+      .find(Boolean)
+      ?.slice(0, 4) ?? null;
+  const h1 = season ? t('hub.h1Year', { year: season }) : t('hub.h1');
+  const title = fitTitle([h1]);
+
+  const priced = guides.map((g, i) => ({ g, text: texts[i] })).filter(({ g }) => !!g.all);
+  const low = priced.length ? Math.min(...priced.map(({ g }) => g.all!.low)) : null;
+  const high = priced.length ? Math.max(...priced.map(({ g }) => g.all!.high)) : null;
+  const rangeSentence =
+    low != null && high != null ? t('hub.answer.range', { low: money(low), high: money(high), countries }) : null;
+
+  const skippers = guides
+    .map((g, i) => ({ value: g.facts.skipperWeekly?.median ?? 0, text: texts[i] }))
+    .filter(s => s.value > 0);
+  const extras = guides
+    .map((g, i) => ({ value: g.facts.obligatoryExtrasWeekly?.median ?? 0, text: texts[i] }))
+    .filter(e => e.value > 0);
+  const deposits = guides.map(g => g.facts.deposit?.median ?? 0).filter(d => d > 0);
+
+  const skipperSpan = spanOf(
+    skippers.map(s => s.value),
+    fmt,
+    range
+  );
+  const extrasSpan = spanOf(
+    extras.map(e => e.value),
+    fmt,
+    range
+  );
+  const depositSpan = spanOf(deposits, fmt, range);
+
+  let costsSentence: string | null = null;
+
+  if (skipperSpan && extrasSpan) {
+    costsSentence = t('hub.answer.skipperExtras', { skipper: skipperSpan, extras: extrasSpan });
+  } else if (skipperSpan) {
+    costsSentence = t('hub.answer.skipper', { skipper: skipperSpan });
+  } else if (extrasSpan) {
+    costsSentence = t('hub.answer.extras', { extras: extrasSpan });
+  }
+
+  const depositSentence = depositSpan ? t('hub.answer.deposit', { deposit: depositSpan }) : null;
+  const answer = joinSentences([rangeSentence, costsSentence, depositSentence]);
+
+  // "2.100 € in Croatia" — one amount per country, in the guides' order.
+  const perCountry = (rows: Array<{ value: number; text: GuideText }>) =>
+    list(rows.map(row => t('hub.faq.perCountry', { amount: money(row.value), where: row.text.where })));
+
+  const faq: ModelsFaqEntry[] = [];
+
+  if (rangeSentence) {
+    faq.push({
+      question: t('hub.faq.costQ'),
+      answer: joinSentences([
+        rangeSentence,
+        t('hub.faq.costPerCountry', {
+          list: list(
+            priced.map(({ g, text }) =>
+              t('hub.faq.perCountry', { amount: range(money(g.all!.low), money(g.all!.high)), where: text.where })
+            )
+          ),
+        }),
+        t('hub.faq.costOnTop'),
+      ]),
+    });
+  }
+
+  if (skippers.length) {
+    faq.push({
+      question: t('hub.faq.skipperQ'),
+      answer: joinSentences([t('hub.faq.skipperA', { list: perCountry(skippers) }), t('hub.faq.skipperNote')]),
+    });
+  }
+
+  faq.push({
+    question: t('hub.faq.extrasQ'),
+    answer: joinSentences([
+      t('hub.faq.extrasA'),
+      extras.length ? t('hub.faq.extrasFigures', { list: perCountry(extras) }) : null,
+      t('hub.faq.extrasPerPerson'),
+      depositSpan ? t('hub.faq.extrasDeposit', { deposit: depositSpan }) : null,
+    ]),
+  });
+
+  faq.push({ question: t('hub.faq.quoteQ'), answer: t('hub.faq.quoteA') });
+
+  return { h1, title, answer, faq };
 };

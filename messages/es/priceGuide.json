@@ -3,12 +3,13 @@
   "hubCrumb": "Precios de alquiler de yates",
   "landingLink": "Precios del alquiler de yates {where}, mes a mes",
   "h1": "Precios del alquiler de yates {where}",
+  "h1Cost": "Coste del alquiler de yates {where}",
   "meta": {
     "title": "{h1}, mes a mes",
+    "costTitle": "{h1}: precios por mes",
     "descRange": "Cuánto cuesta una semana de alquiler {where}: una semana típica sale por {low} – {high} el barco, según el mes.",
     "descTypes": "Precios mensuales de {types}.",
     "descSkipper": "Patrón: unos {skipper} por semana.",
-    "hubTitle": "Precios de alquiler de yates: {countries}",
     "hubDescription": "Precios semanales del alquiler de yates por mes y tipo de barco, con patrón, extras y fianza: {countries}. Calculados cada noche con {boats, number} barcos."
   },
   "updated": "Actualizado el {date} · calculado a partir de {boats, plural, one {# barco} other {# barcos}} con precios publicados",
@@ -61,7 +62,15 @@
     "checkInSecond": "Le sigue el {day} ({share})."
   },
   "hub": {
-    "h1": "Precios del alquiler de yates por país",
+    "h1": "Precios del alquiler de yates: cuánto cuesta una semana",
+    "h1Year": "Precios del alquiler de yates {year}: cuánto cuesta una semana",
+    "answer": {
+      "range": "Una semana típica de alquiler cuesta entre {low} y {high} por el barco, según el país ({countries}) y el mes.",
+      "skipperExtras": "Un patrón añade {skipper} por semana, y los extras obligatorios otros {extras}.",
+      "skipper": "Un patrón añade {skipper} por semana.",
+      "extras": "Los extras obligatorios añaden {extras} por semana.",
+      "deposit": "Al embarcar se bloquea en su tarjeta una fianza reembolsable de {deposit}."
+    },
     "lede": "Lo que cuesta de verdad una semana de alquiler de yate, calculado cada noche con los precios actuales de {boats, number} barcos. Cada guía muestra el precio semanal típico mes a mes y por tipo de barco, con patrón, extras y fianza.",
     "cardFacts": "{boats, number} barcos · semana típica {low} – {high}",
     "glanceHeading": "Los precios de un vistazo",
@@ -83,6 +92,23 @@
     "saveHeading": "Cuándo una semana de alquiler cuesta menos",
     "save1": "Los precios dependen de la época del año. Por lo general, en julio y agosto son mucho más altos. En cambio, en mayo, junio, septiembre y principios de octubre el mismo barco sale bastante más barato. El tiempo sigue siendo fiable y los puertos están menos llenos. En los países con otras temporadas, puede verlo en la tabla de precios por mes.",
     "save2": "Reservar pronto conserva la elección, reservar tarde puede bajar el precio. Los modelos populares y las fechas más buscadas se agotan con muchos meses de antelación. Si reserva pronto, en otoño o invierno, puede obtener descuentos por reserva anticipada. Si algunas semanas siguen libres pocas semanas antes de su viaje, puede conseguir muy buenos descuentos de última hora. Si sus fechas son flexibles, ¡merece la pena mirarlo!",
-    "save3": "El tipo de barco influye en el precio. Los catamaranes son más caros que los monocascos de la misma eslora, pero tienen más plazas para dormir, así que el precio por camarote puede ser parecido. Los barcos de 5 años son más baratos que las versiones nuevas del mismo modelo. Los yates a motor suponen además el coste del combustible. Por eso, comparar el precio por camarote entre distintos tipos de barco suele ser la forma más justa de decidir."
+    "save3": "El tipo de barco influye en el precio. Los catamaranes son más caros que los monocascos de la misma eslora, pero tienen más plazas para dormir, así que el precio por camarote puede ser parecido. Los barcos de 5 años son más baratos que las versiones nuevas del mismo modelo. Los yates a motor suponen además el coste del combustible. Por eso, comparar el precio por camarote entre distintos tipos de barco suele ser la forma más justa de decidir.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "¿Cuánto cuesta alquilar un yate?",
+      "costPerCountry": "Por países, una semana típica cuesta {list}.",
+      "costOnTop": "Son precios por el barco. El patrón, los extras obligatorios y la fianza van aparte.",
+      "skipperQ": "¿Cuánto cuesta un patrón por semana?",
+      "skipperA": "Un patrón suele costar {list} por semana.",
+      "skipperNote": "La cifra es la mediana de los barcos que publican el precio del patrón. Los gulets y los yates con tripulación navegan con su propia tripulación.",
+      "extrasQ": "¿Qué extras son obligatorios en un alquiler de yate?",
+      "extrasA": "La mayoría de los barcos cobran algunas tasas obligatorias por barco y semana, como la limpieza final, la ropa de cama y el tránsito, que se suelen pagar en la base.",
+      "extrasFigures": "En conjunto suelen sumar {list} por semana.",
+      "extrasPerPerson": "La tasa turística se cobra aparte, por persona.",
+      "extrasDeposit": "La fianza reembolsable, normalmente de {deposit}, se bloquea en su tarjeta al embarcar.",
+      "quoteQ": "¿Cómo consigo un presupuesto de alquiler de yate?",
+      "quoteA": "Envíe una solicitud desde la página de cualquier barco que le guste, o escríbanos con sus fechas, el país o la base de salida, el número de personas y si necesita patrón. Cada solicitud la lee una persona, y normalmente respondemos el mismo día laborable con barcos libres en sus fechas y el precio completo: tarifa semanal, extras obligatorios y fianza."
+    },
+    "quoteLink": "Pida presupuesto para su alquiler de yate"
   }
 }

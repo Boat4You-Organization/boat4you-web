@@ -3,12 +3,13 @@
   "hubCrumb": "Prezzi del noleggio yacht",
   "landingLink": "Prezzi del noleggio yacht {where}, mese per mese",
   "h1": "Prezzi del noleggio yacht {where}",
+  "h1Cost": "Costo del noleggio yacht {where}",
   "meta": {
     "title": "{h1}, mese per mese",
+    "costTitle": "{h1}: prezzi per mese",
     "descRange": "Quanto costa una settimana di noleggio {where}: una settimana tipo costa {low} – {high} per la barca, a seconda del mese.",
     "descTypes": "Prezzi mensili per {types}.",
     "descSkipper": "Skipper circa {skipper} a settimana.",
-    "hubTitle": "Prezzi del noleggio yacht: {countries}",
     "hubDescription": "Prezzi settimanali del noleggio yacht per mese e tipo di barca, con skipper, extra e cauzione: {countries}. Calcolati ogni notte su {boats, number} barche."
   },
   "updated": "Aggiornato il {date} · calcolato su {boats, plural, one {# barca} other {# barche}} con prezzi pubblicati",
@@ -61,7 +62,15 @@
     "checkInSecond": "Al secondo posto: {day} ({share})."
   },
   "hub": {
-    "h1": "Prezzi del noleggio yacht per paese",
+    "h1": "Prezzi del noleggio yacht: quanto costa una settimana",
+    "h1Year": "Prezzi del noleggio yacht {year}: quanto costa una settimana",
+    "answer": {
+      "range": "Una settimana tipica di noleggio costa tra {low} e {high} per la barca, a seconda del paese ({countries}) e del mese.",
+      "skipperExtras": "Uno skipper aggiunge {skipper} a settimana, e gli extra obbligatori altri {extras}.",
+      "skipper": "Uno skipper aggiunge {skipper} a settimana.",
+      "extras": "Gli extra obbligatori aggiungono {extras} a settimana.",
+      "deposit": "All’imbarco viene bloccata sulla vostra carta una cauzione rimborsabile di {deposit}."
+    },
     "lede": "Quanto costa davvero una settimana di noleggio yacht, calcolato ogni notte dai prezzi aggiornati di {boats, number} barche. Ogni guida mostra il prezzo settimanale tipo mese per mese e per tipo di barca, con skipper, extra e cauzione.",
     "cardFacts": "{boats, number} barche · settimana tipo {low} – {high}",
     "glanceHeading": "I prezzi a colpo d’occhio",
@@ -83,6 +92,23 @@
     "saveHeading": "Quando una settimana di noleggio costa meno",
     "save1": "I prezzi dipendono dal periodo dell'anno. In genere a luglio e agosto sono molto più alti. A maggio, giugno, settembre e inizio ottobre, invece, la stessa barca costa sensibilmente meno. Il tempo è ancora affidabile e i porti sono meno affollati. Per i paesi con stagioni diverse, lo mostra la tabella dei prezzi mensili.",
     "save2": "Prenotare presto conserva la scelta, prenotare tardi può abbassare il prezzo. I modelli più richiesti e i periodi più ambiti vanno esauriti con molti mesi di anticipo. Se prenotate presto, in autunno o in inverno, potete ottenere sconti prenota-prima. Se alcune settimane sono ancora libere poche settimane prima del viaggio, potete trovare ottimi sconti last minute. Se le vostre date sono flessibili, vale la pena dare un'occhiata!",
-    "save3": "Il tipo di barca incide sul prezzo. I catamarani costano più dei monoscafi della stessa lunghezza, ma hanno più posti letto, quindi il prezzo per cabina può essere simile. Le barche di 5 anni costano meno delle versioni nuove dello stesso modello. Gli yacht a motore comportano anche il costo del carburante. Per questo confrontare il prezzo per cabina tra diversi tipi di barca è di solito il modo più equo per decidere."
+    "save3": "Il tipo di barca incide sul prezzo. I catamarani costano più dei monoscafi della stessa lunghezza, ma hanno più posti letto, quindi il prezzo per cabina può essere simile. Le barche di 5 anni costano meno delle versioni nuove dello stesso modello. Gli yacht a motore comportano anche il costo del carburante. Per questo confrontare il prezzo per cabina tra diversi tipi di barca è di solito il modo più equo per decidere.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "Quanto costa noleggiare uno yacht?",
+      "costPerCountry": "Paese per paese, una settimana tipica costa {list}.",
+      "costOnTop": "Sono prezzi per la barca. Skipper, extra obbligatori e cauzione sono a parte.",
+      "skipperQ": "Quanto costa uno skipper per una settimana?",
+      "skipperA": "Uno skipper costa di solito {list} a settimana.",
+      "skipperNote": "Il dato è la mediana delle barche che pubblicano un prezzo per lo skipper. I caicchi (gulet) e gli yacht con equipaggio navigano con il proprio equipaggio.",
+      "extrasQ": "Quali extra sono obbligatori nel noleggio di uno yacht?",
+      "extrasA": "La maggior parte delle barche applica alcune spese obbligatorie per barca e per settimana, come la pulizia finale, la biancheria e il transit log, di solito pagate alla base.",
+      "extrasFigures": "Insieme arrivano di solito a {list} a settimana.",
+      "extrasPerPerson": "La tassa di soggiorno si paga a parte, a persona.",
+      "extrasDeposit": "La cauzione rimborsabile, di solito {deposit}, viene bloccata sulla vostra carta all’imbarco.",
+      "quoteQ": "Come ottengo un preventivo per il noleggio di uno yacht?",
+      "quoteA": "Inviate una richiesta dalla pagina di una barca che vi piace, oppure scriveteci le date, il paese o la base di partenza, il numero di ospiti e se vi serve uno skipper. Ogni richiesta la legge una persona, e di solito rispondiamo nello stesso giorno lavorativo con barche libere nelle vostre date e il prezzo completo: tariffa settimanale, extra obbligatori e cauzione."
+    },
+    "quoteLink": "Chiedete un preventivo per il noleggio yacht"
   }
 }

@@ -14,11 +14,17 @@ export interface PriceGuideCountry {
   did: string;
   /** ISO code: the sailing season a month ranking must fit (factsMath.ts) and the landing links. */
   countryCode: string;
+  /**
+   * H1 and title say "Yacht charter cost {where}" instead of "Yacht charter
+   * prices {where}": Greece is searched as "yacht charter cost greece"
+   * (Gap Finder 20.11.2026, B#1).
+   */
+  costHeading?: boolean;
 }
 
 export const PRICE_GUIDES: readonly PriceGuideCountry[] = [
   { slug: 'croatia', name: 'Croatia', did: 'c-54', countryCode: 'HR' },
-  { slug: 'greece', name: 'Greece', did: 'c-86', countryCode: 'GR' },
+  { slug: 'greece', name: 'Greece', did: 'c-86', countryCode: 'GR', costHeading: true },
   { slug: 'italy', name: 'Italy', did: 'c-110', countryCode: 'IT' },
 ];
 

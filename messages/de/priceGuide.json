@@ -3,12 +3,13 @@
   "hubCrumb": "Yachtcharter-Preise",
   "landingLink": "Yachtcharter-Preise {where} nach Monat",
   "h1": "Yachtcharter-Preise {where}",
+  "h1Cost": "Yachtcharter-Kosten {where}",
   "meta": {
     "title": "{h1}: Wochenpreise nach Monat",
+    "costTitle": "{h1}: Preise nach Monat",
     "descRange": "Was eine Charterwoche {where} kostet: typisch {low} – {high} für das Boot, je nach Monat.",
     "descTypes": "Monatspreise für {types}.",
     "descSkipper": "Skipper rund {skipper} pro Woche.",
-    "hubTitle": "Yachtcharter-Preise: {countries}",
     "hubDescription": "Wochenpreise für den Yachtcharter nach Monat und Bootstyp, mit Skipper, Pflichtextras und Kaution: {countries}. Jede Nacht aus {boats, number} Booten berechnet."
   },
   "updated": "Stand: {date} · berechnet aus {boats, plural, one {# Boot} other {# Booten}} mit veröffentlichten Preisen",
@@ -61,7 +62,15 @@
     "checkInSecond": "Danach folgt der {day} ({share})."
   },
   "hub": {
-    "h1": "Yachtcharter-Preise nach Land",
+    "h1": "Yachtcharter-Preise: Was eine Woche kostet",
+    "h1Year": "Yachtcharter-Preise {year}: Was eine Woche kostet",
+    "answer": {
+      "range": "Eine typische Charterwoche kostet je nach Land ({countries}) und Monat zwischen {low} und {high} für das Boot.",
+      "skipperExtras": "Ein Skipper kostet {skipper} pro Woche, die Pflichtextras kommen mit {extras} hinzu.",
+      "skipper": "Ein Skipper kostet {skipper} pro Woche.",
+      "extras": "Die Pflichtextras kommen mit {extras} pro Woche hinzu.",
+      "deposit": "Beim Check-in wird eine rückzahlbare Kaution von {deposit} auf Ihrer Karte blockiert."
+    },
     "lede": "Was eine Woche Yachtcharter wirklich kostet – jede Nacht aus den aktuellen Preisen von {boats, number} Booten berechnet. Jeder Ratgeber zeigt den typischen Wochenpreis nach Monat und Bootstyp, mit Skipper, Pflichtextras und Kaution.",
     "cardFacts": "{boats, number} Boote · typische Woche {low} – {high}",
     "glanceHeading": "Die Preise im Überblick",
@@ -83,6 +92,23 @@
     "saveHeading": "Wann eine Charterwoche weniger kostet",
     "save1": "Die Preise hängen von der Jahreszeit ab. Im Juli und August sind sie in der Regel deutlich höher. Im Mai, Juni, September und Anfang Oktober ist dasselbe Boot dagegen spürbar günstiger. Das Wetter ist dann noch verlässlich, und die Marinas sind weniger voll. Für Länder mit anderen Saisonzeiten zeigt das die Tabelle der Monatspreise.",
     "save2": "Früh buchen sichert die Auswahl, spät buchen kann den Preis senken. Beliebte Modelle und beliebte Reisezeiten sind viele Monate im Voraus ausgebucht. Wenn Sie früh buchen, im Herbst oder Winter, erhalten Sie eventuell Frühbucherrabatte. Sind einige Wochen kurz vor Ihrer Reise noch frei, gibt es oft sehr gute Last-Minute-Rabatte. Wenn Ihre Reisedaten flexibel sind, lohnt sich ein Blick!",
-    "save3": "Der Bootstyp beeinflusst den Preis. Katamarane sind teurer als Einrumpfyachten gleicher Länge, bieten aber mehr Schlafplätze, sodass der Preis pro Kabine ähnlich sein kann. 5 Jahre alte Boote sind günstiger als neue Ausführungen desselben Modells. Bei Motoryachten kommen außerdem Treibstoffkosten hinzu. Deshalb ist der Vergleich des Preises pro Kabine zwischen verschiedenen Bootstypen meist der fairste Weg zur Entscheidung."
+    "save3": "Der Bootstyp beeinflusst den Preis. Katamarane sind teurer als Einrumpfyachten gleicher Länge, bieten aber mehr Schlafplätze, sodass der Preis pro Kabine ähnlich sein kann. 5 Jahre alte Boote sind günstiger als neue Ausführungen desselben Modells. Bei Motoryachten kommen außerdem Treibstoffkosten hinzu. Deshalb ist der Vergleich des Preises pro Kabine zwischen verschiedenen Bootstypen meist der fairste Weg zur Entscheidung.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "Was kostet es, eine Yacht zu chartern?",
+      "costPerCountry": "Nach Ländern kostet eine typische Woche {list}.",
+      "costOnTop": "Das sind Preise für das Boot. Skipper, Pflichtextras und Kaution kommen hinzu.",
+      "skipperQ": "Was kostet ein Skipper pro Woche?",
+      "skipperA": "Ein Skipper kostet typischerweise {list} pro Woche.",
+      "skipperNote": "Der Wert ist der Median der Boote, die einen Skipperpreis angeben. Gulets und Crew-Yachten fahren mit eigener Crew.",
+      "extrasQ": "Welche Extras sind beim Yachtcharter Pflicht?",
+      "extrasA": "Die meisten Boote berechnen einige Pflichtgebühren pro Boot und Woche, etwa Endreinigung, Bettwäsche und Transitlog, meist zahlbar an der Basis.",
+      "extrasFigures": "Zusammen sind das typischerweise {list} pro Woche.",
+      "extrasPerPerson": "Die Kurtaxe wird zusätzlich pro Person berechnet.",
+      "extrasDeposit": "Die rückzahlbare Kaution, meist {deposit}, wird beim Check-in auf Ihrer Karte blockiert.",
+      "quoteQ": "Wie bekomme ich ein Angebot für einen Yachtcharter?",
+      "quoteA": "Senden Sie eine Anfrage von der Seite eines Boots, das Ihnen gefällt, oder schreiben Sie uns Ihre Reisedaten, das Land oder den Starthafen, die Zahl der Gäste und ob Sie einen Skipper brauchen. Jede Anfrage liest ein Mensch, und meist antworten wir noch am selben Werktag mit Booten, die zu Ihren Daten frei sind, und dem vollen Preis: Wochenpreis, Pflichtextras und Kaution."
+    },
+    "quoteLink": "Angebot für Ihren Yachtcharter anfragen"
   }
 }

@@ -3,12 +3,13 @@
   "hubCrumb": "Prijzen jachtcharter",
   "landingLink": "Prijzen voor jachtcharter {where}, per maand",
   "h1": "Prijzen voor jachtcharter {where}",
+  "h1Cost": "Kosten jachtcharter {where}",
   "meta": {
     "title": "{h1} per maand",
+    "costTitle": "{h1}: prijzen per maand",
     "descRange": "Wat een charterweek {where} kost: een gangbare week kost {low} – {high} voor de boot, afhankelijk van de maand.",
     "descTypes": "Maandprijzen voor {types}.",
     "descSkipper": "Schipper ca. {skipper} per week.",
-    "hubTitle": "Prijzen jachtcharter: {countries}",
     "hubDescription": "Weekprijzen voor jachtcharter per maand en boottype, met schipper, extra’s en borg: {countries}. Elke nacht berekend uit {boats, number} boten."
   },
   "updated": "Bijgewerkt op {date} · berekend uit {boats, plural, one {# boot} other {# boten}} met gepubliceerde prijzen",
@@ -61,7 +62,15 @@
     "checkInSecond": "Daarna volgt {day} ({share})."
   },
   "hub": {
-    "h1": "Prijzen voor jachtcharter per land",
+    "h1": "Prijzen voor jachtcharter: wat een week kost",
+    "h1Year": "Prijzen voor jachtcharter {year}: wat een week kost",
+    "answer": {
+      "range": "Een gemiddelde charterweek kost tussen {low} en {high} voor de boot, afhankelijk van het land ({countries}) en de maand.",
+      "skipperExtras": "Een schipper kost {skipper} per week, en verplichte extra’s komen er met {extras} bij.",
+      "skipper": "Een schipper kost {skipper} per week.",
+      "extras": "Verplichte extra’s komen er met {extras} per week bij.",
+      "deposit": "Bij het inchecken wordt een terugbetaalbare borg van {deposit} op je kaart geblokkeerd."
+    },
     "lede": "Wat een week jachtcharter echt kost, elke nacht berekend uit de actuele prijzen van {boats, number} boten. Elke gids toont de gangbare weekprijs per maand en per boottype, met schipper, extra’s en borg.",
     "cardFacts": "{boats, number} boten · gangbare week {low} – {high}",
     "glanceHeading": "De prijzen in één oogopslag",
@@ -83,6 +92,23 @@
     "saveHeading": "Wanneer een charterweek minder kost",
     "save1": "De prijzen hangen af van de tijd van het jaar. In juli en augustus liggen ze meestal veel hoger. In mei, juni, september en begin oktober is dezelfde boot daarentegen flink goedkoper. Het weer is dan nog betrouwbaar en de havens zijn minder druk. Voor landen met een ander seizoen zie je dat in de prijstabel per maand.",
     "save2": "Vroeg boeken houdt de keuze open, laat boeken kan de prijs drukken. Populaire modellen en populaire periodes zijn vele maanden vooruit uitverkocht. Boek je vroeg, in de herfst of winter, dan krijg je mogelijk vroegboekkorting. Zijn er een paar weken voor je reis nog weken vrij, dan kun je zeer goede lastminutekortingen krijgen. Ben je flexibel met je reisdata, dan is het de moeite waard om te kijken!",
-    "save3": "Het boottype bepaalt mee de prijs. Catamarans zijn duurder dan eenrompsjachten van dezelfde lengte, maar hebben meer slaapplaatsen, zodat de prijs per hut vergelijkbaar kan zijn. Boten van 5 jaar oud zijn goedkoper dan nieuwe uitvoeringen van hetzelfde model. Bij motorjachten komen er ook brandstofkosten bij. De prijs per hut vergelijken tussen verschillende boottypen is daarom meestal de eerlijkste manier om te kiezen."
+    "save3": "Het boottype bepaalt mee de prijs. Catamarans zijn duurder dan eenrompsjachten van dezelfde lengte, maar hebben meer slaapplaatsen, zodat de prijs per hut vergelijkbaar kan zijn. Boten van 5 jaar oud zijn goedkoper dan nieuwe uitvoeringen van hetzelfde model. Bij motorjachten komen er ook brandstofkosten bij. De prijs per hut vergelijken tussen verschillende boottypen is daarom meestal de eerlijkste manier om te kiezen.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "Hoeveel kost het om een jacht te charteren?",
+      "costPerCountry": "Per land kost een gemiddelde week {list}.",
+      "costOnTop": "Dit zijn prijzen voor de boot. Schipper, verplichte extra’s en borg komen erbij.",
+      "skipperQ": "Wat kost een schipper per week?",
+      "skipperA": "Een schipper kost doorgaans {list} per week.",
+      "skipperNote": "Het bedrag is de mediaan van de boten die een schippersprijs vermelden. Gulets en jachten met bemanning varen met hun eigen bemanning.",
+      "extrasQ": "Welke extra’s zijn verplicht bij een jachtcharter?",
+      "extrasA": "De meeste boten rekenen een paar verplichte kosten per boot en per week, zoals eindschoonmaak, beddengoed en het transitlog, meestal te betalen op de basis.",
+      "extrasFigures": "Samen komen die doorgaans op {list} per week.",
+      "extrasPerPerson": "Toeristenbelasting komt er per persoon nog bij.",
+      "extrasDeposit": "De terugbetaalbare borg, meestal {deposit}, wordt bij het inchecken op je kaart geblokkeerd.",
+      "quoteQ": "Hoe krijg ik een offerte voor een jachtcharter?",
+      "quoteA": "Stuur een aanvraag vanaf de pagina van een boot die je aanspreekt, of mail ons je data, het land of de vertrekhaven, het aantal gasten en of je een schipper nodig hebt. Elke aanvraag wordt door een mens gelezen, en meestal antwoorden we nog dezelfde werkdag met boten die op jouw data vrij zijn en de volledige prijs: weekprijs, verplichte extra’s en borg."
+    },
+    "quoteLink": "Vraag een offerte aan voor je jachtcharter"
   }
 }

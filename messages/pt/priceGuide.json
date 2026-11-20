@@ -3,12 +3,13 @@
   "hubCrumb": "Preços de aluguer de iates",
   "landingLink": "Preços de aluguer de iates {where}, mês a mês",
   "h1": "Preços de aluguer de iates {where}",
+  "h1Cost": "Custo do aluguer de iates {where}",
   "meta": {
     "title": "{h1}, mês a mês",
+    "costTitle": "{h1}: preços por mês",
     "descRange": "Quanto custa uma semana de aluguer {where}: uma semana típica fica entre {low} e {high} pelo barco, conforme o mês.",
     "descTypes": "Preços mensais de {types}.",
     "descSkipper": "Skipper: cerca de {skipper} por semana.",
-    "hubTitle": "Preços de aluguer de iates: {countries}",
     "hubDescription": "Preços semanais do aluguer de iates por mês e tipo de barco, com skipper, extras e caução: {countries}. Calculados todas as noites a partir de {boats, number} barcos."
   },
   "updated": "Atualizado a {date} · calculado a partir de {boats, plural, one {# barco} other {# barcos}} com preços publicados",
@@ -61,7 +62,15 @@
     "checkInSecond": "Segue-se {day} ({share})."
   },
   "hub": {
-    "h1": "Preços de aluguer de iates por país",
+    "h1": "Preços de aluguer de iates: quanto custa uma semana",
+    "h1Year": "Preços de aluguer de iates {year}: quanto custa uma semana",
+    "answer": {
+      "range": "Uma semana típica de aluguer custa entre {low} e {high} pelo barco, conforme o país ({countries}) e o mês.",
+      "skipperExtras": "Um skipper acrescenta {skipper} por semana, e os extras obrigatórios mais {extras}.",
+      "skipper": "Um skipper acrescenta {skipper} por semana.",
+      "extras": "Os extras obrigatórios acrescentam {extras} por semana.",
+      "deposit": "No check-in é bloqueada no seu cartão uma caução reembolsável de {deposit}."
+    },
     "lede": "Quanto custa realmente uma semana de aluguer de iate, calculado todas as noites a partir dos preços atuais de {boats, number} barcos. Cada guia mostra o preço semanal típico mês a mês e por tipo de barco, com skipper, extras e caução.",
     "cardFacts": "{boats, number} barcos · semana típica {low} – {high}",
     "glanceHeading": "Resumo dos preços",
@@ -83,6 +92,23 @@
     "saveHeading": "Quando uma semana de aluguer custa menos",
     "save1": "Os preços dependem da época do ano. Em geral, em julho e agosto são muito mais altos. Já em maio, junho, setembro e início de outubro, o mesmo barco fica bastante mais barato. O tempo ainda é fiável e as marinas estão menos cheias. Nos países com épocas diferentes, isso vê-se na tabela de preços por mês.",
     "save2": "Reservar cedo preserva a escolha, reservar tarde pode baixar o preço. Os modelos procurados e as datas mais populares esgotam-se com muitos meses de antecedência. Se reservar cedo, no outono ou no inverno, pode obter descontos de reserva antecipada. Se algumas semanas ainda estiverem livres poucas semanas antes da viagem, pode conseguir descontos de última hora muito bons. Se as suas datas forem flexíveis, vale a pena espreitar!",
-    "save3": "O tipo de barco influencia o preço. Os catamarãs são mais caros do que os monocascos do mesmo comprimento, mas têm mais lugares para dormir, pelo que o preço por cabine pode ser semelhante. Os barcos com 5 anos são mais baratos do que as versões novas do mesmo modelo. Os iates a motor implicam também custos de combustível. Por isso, comparar o preço por cabine entre diferentes tipos de barco é normalmente a forma mais justa de decidir."
+    "save3": "O tipo de barco influencia o preço. Os catamarãs são mais caros do que os monocascos do mesmo comprimento, mas têm mais lugares para dormir, pelo que o preço por cabine pode ser semelhante. Os barcos com 5 anos são mais baratos do que as versões novas do mesmo modelo. Os iates a motor implicam também custos de combustível. Por isso, comparar o preço por cabine entre diferentes tipos de barco é normalmente a forma mais justa de decidir.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "Quanto custa alugar um iate?",
+      "costPerCountry": "País a país, uma semana típica custa {list}.",
+      "costOnTop": "São preços pelo barco. O skipper, os extras obrigatórios e a caução são à parte.",
+      "skipperQ": "Quanto custa um skipper por semana?",
+      "skipperA": "Um skipper custa normalmente {list} por semana.",
+      "skipperNote": "O valor é a mediana dos barcos que publicam o preço do skipper. As gulets e os iates com tripulação navegam com a sua própria tripulação.",
+      "extrasQ": "Que extras são obrigatórios num aluguer de iate?",
+      "extrasA": "A maioria dos barcos cobra algumas taxas obrigatórias por barco e por semana, como a limpeza final, a roupa de cama e o transit log, normalmente pagas na base.",
+      "extrasFigures": "No conjunto, ficam normalmente em {list} por semana.",
+      "extrasPerPerson": "A taxa turística é cobrada à parte, por pessoa.",
+      "extrasDeposit": "A caução reembolsável, normalmente de {deposit}, é bloqueada no seu cartão no check-in.",
+      "quoteQ": "Como obtenho um orçamento para alugar um iate?",
+      "quoteA": "Envie um pedido a partir da página de qualquer barco de que goste, ou escreva-nos com as suas datas, o país ou a base de partida, o número de pessoas e se precisa de skipper. Cada pedido é lido por uma pessoa e normalmente respondemos no mesmo dia útil com barcos livres nas suas datas e o preço completo: tarifa semanal, extras obrigatórios e caução."
+    },
+    "quoteLink": "Peça um orçamento para o seu aluguer de iate"
   }
 }

@@ -3,12 +3,13 @@
   "hubCrumb": "Ceny czarteru jachtów",
   "landingLink": "Ceny czarteru jachtów {where} według miesięcy",
   "h1": "Ceny czarteru jachtów {where}",
+  "h1Cost": "Koszt czarteru jachtu {where}",
   "meta": {
     "title": "{h1} według miesięcy",
+    "costTitle": "{h1}: ceny według miesięcy",
     "descRange": "Ile kosztuje tydzień czarteru {where}: typowy tydzień to {low} – {high} za jacht, zależnie od miesiąca.",
     "descTypes": "Ceny miesięczne w kategoriach: {types}.",
     "descSkipper": "Skipper ok. {skipper} za tydzień.",
-    "hubTitle": "Ceny czarteru jachtów: {countries}",
     "hubDescription": "Tygodniowe ceny czarteru jachtów według miesięcy i typów jachtów, ze skipperem, dodatkami i kaucją: {countries}. Liczone co noc na podstawie {boats, plural, one {# jachtu} few {# jachtów} many {# jachtów} other {# jachtu}}."
   },
   "updated": "Aktualizacja: {date} · na podstawie {boats, plural, one {# jachtu} few {# jachtów} many {# jachtów} other {# jachtu}} z opublikowanymi cenami",
@@ -61,7 +62,15 @@
     "checkInSecond": "Na drugim miejscu jest {day} ({share})."
   },
   "hub": {
-    "h1": "Ceny czarteru jachtów według krajów",
+    "h1": "Ceny czarteru jachtów: ile kosztuje tydzień",
+    "h1Year": "Ceny czarteru jachtów {year}: ile kosztuje tydzień",
+    "answer": {
+      "range": "Typowy tydzień czarteru kosztuje od {low} do {high} za jacht, zależnie od kraju ({countries}) i miesiąca.",
+      "skipperExtras": "Skipper to dodatkowo {skipper} za tydzień, a obowiązkowe dodatki kolejne {extras}.",
+      "skipper": "Skipper to dodatkowo {skipper} za tydzień.",
+      "extras": "Obowiązkowe dodatki to {extras} za tydzień.",
+      "deposit": "Przy odbiorze jachtu na Twojej karcie blokowana jest zwrotna kaucja w wysokości {deposit}."
+    },
     "lede": "Ile naprawdę kosztuje tydzień czarteru jachtu – liczone co noc na podstawie aktualnych cen {boats, plural, one {# jachtu} few {# jachtów} many {# jachtów} other {# jachtu}}. Każdy przewodnik pokazuje typowy tydzień według miesięcy i typów jachtów, ze skipperem, dodatkami i kaucją.",
     "cardFacts": "{boats, plural, one {# jacht} few {# jachty} many {# jachtów} other {# jachtu}} · typowy tydzień {low} – {high}",
     "glanceHeading": "Ceny w skrócie",
@@ -83,6 +92,23 @@
     "saveHeading": "Kiedy tydzień czarteru kosztuje mniej",
     "save1": "Ceny zależą od pory roku. Zwykle w lipcu i sierpniu są znacznie wyższe. Natomiast w maju, czerwcu, wrześniu i na początku października ten sam jacht jest wyraźnie tańszy. Pogoda jest wtedy wciąż pewna, a w marinach jest mniej tłoczno. W krajach o innym sezonie widać to w tabeli cen według miesięcy.",
     "save2": "Wczesna rezerwacja zachowuje wybór, późna może obniżyć cenę. Popularne modele i popularne terminy wyprzedają się wiele miesięcy wcześniej. Jeśli zarezerwujesz wcześnie, jesienią lub zimą, możesz dostać rabat za wczesną rezerwację. Jeśli niektóre tygodnie są wciąż wolne na kilka tygodni przed wyjazdem, możesz trafić na bardzo dobre rabaty last minute. Jeśli masz elastyczne terminy, warto sprawdzić!",
-    "save3": "Typ jachtu wpływa na cenę. Katamarany są droższe od jednokadłubowców tej samej długości, ale mają więcej miejsc do spania, więc cena za kabinę może być podobna. Jachty 5-letnie są tańsze od nowych egzemplarzy tego samego modelu. Jachty motorowe oznaczają też dodatkowe koszty paliwa. Dlatego porównanie ceny za kabinę między różnymi typami jachtów jest zwykle najuczciwszym sposobem na podjęcie decyzji."
+    "save3": "Typ jachtu wpływa na cenę. Katamarany są droższe od jednokadłubowców tej samej długości, ale mają więcej miejsc do spania, więc cena za kabinę może być podobna. Jachty 5-letnie są tańsze od nowych egzemplarzy tego samego modelu. Jachty motorowe oznaczają też dodatkowe koszty paliwa. Dlatego porównanie ceny za kabinę między różnymi typami jachtów jest zwykle najuczciwszym sposobem na podjęcie decyzji.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "Ile kosztuje czarter jachtu?",
+      "costPerCountry": "W poszczególnych krajach typowy tydzień kosztuje {list}.",
+      "costOnTop": "To ceny za jacht. Skipper, obowiązkowe dodatki i kaucja są osobno.",
+      "skipperQ": "Ile kosztuje skipper na tydzień?",
+      "skipperA": "Skipper kosztuje zwykle {list} za tydzień.",
+      "skipperNote": "Kwota to mediana jachtów, które podają cenę skippera. Gulety i jachty z załogą pływają z własną załogą.",
+      "extrasQ": "Jakie dodatki są obowiązkowe przy czarterze jachtu?",
+      "extrasA": "Większość jachtów pobiera kilka obowiązkowych opłat za jacht i tydzień, na przykład za sprzątanie końcowe, pościel i transit log, zwykle płatnych w bazie.",
+      "extrasFigures": "Razem wynoszą zwykle {list} za tydzień.",
+      "extrasPerPerson": "Taksa turystyczna jest doliczana osobno, od osoby.",
+      "extrasDeposit": "Zwrotna kaucja, zwykle {deposit}, jest blokowana na Twojej karcie przy odbiorze jachtu.",
+      "quoteQ": "Jak dostać ofertę czarteru jachtu?",
+      "quoteA": "Wyślij zapytanie ze strony dowolnego jachtu, który Ci się podoba, albo napisz do nas, podając daty, kraj lub port startowy, liczbę osób i to, czy potrzebujesz skippera. Każde zapytanie czyta człowiek i zwykle odpowiadamy jeszcze tego samego dnia roboczego, podając jachty wolne w Twoim terminie i pełną cenę: stawkę tygodniową, obowiązkowe dodatki i kaucję."
+    },
+    "quoteLink": "Poproś o ofertę czarteru jachtu"
   }
 }

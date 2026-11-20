@@ -3,12 +3,13 @@
   "hubCrumb": "Prix de location de yachts",
   "landingLink": "Prix de la location de yacht {where}, mois par mois",
   "h1": "Prix de la location de yacht {where}",
+  "h1Cost": "Coût de la location de yacht {where}",
   "meta": {
     "title": "{h1} : tarifs par mois",
+    "costTitle": "{h1} : prix par mois",
     "descRange": "Ce que coûte une semaine de location {where} : une semaine type revient à {low} – {high} pour le bateau, selon le mois.",
     "descTypes": "Prix mensuels pour les {types}.",
     "descSkipper": "Skipper : environ {skipper} par semaine.",
-    "hubTitle": "Prix de location de yachts : {countries}",
     "hubDescription": "Prix hebdomadaires de la location de yacht par mois et par type de bateau, avec skipper, suppléments et caution : {countries}. Calculés chaque nuit sur {boats, number} bateaux."
   },
   "updated": "Mis à jour le {date} · calculé sur {boats, plural, one {# bateau} other {# bateaux}} aux prix publiés",
@@ -61,7 +62,15 @@
     "checkInSecond": "Vient ensuite le {day} ({share})."
   },
   "hub": {
-    "h1": "Prix de location de yachts par pays",
+    "h1": "Prix de location de yachts : ce que coûte une semaine",
+    "h1Year": "Prix de location de yachts {year} : ce que coûte une semaine",
+    "answer": {
+      "range": "Une semaine de location typique coûte entre {low} et {high} pour le bateau, selon le pays ({countries}) et le mois.",
+      "skipperExtras": "Un skipper ajoute {skipper} par semaine, et les suppléments obligatoires encore {extras}.",
+      "skipper": "Un skipper ajoute {skipper} par semaine.",
+      "extras": "Les suppléments obligatoires ajoutent {extras} par semaine.",
+      "deposit": "Une caution remboursable de {deposit} est bloquée sur votre carte à l’embarquement."
+    },
     "lede": "Ce que coûte vraiment une semaine de location de yacht, calculé chaque nuit à partir des prix en ligne de {boats, number} bateaux. Chaque guide présente le prix hebdomadaire type mois par mois et par type de bateau, avec skipper, suppléments et caution.",
     "cardFacts": "{boats, number} bateaux · semaine type {low} – {high}",
     "glanceHeading": "Les prix en un coup d’œil",
@@ -83,6 +92,23 @@
     "saveHeading": "Quand une semaine de location coûte moins cher",
     "save1": "Les prix dépendent de la période de l'année. En général, ils sont bien plus élevés en juillet et en août. En mai, juin, septembre et début octobre, en revanche, le même bateau coûte nettement moins cher. La météo reste fiable et les ports sont moins fréquentés. Pour les pays dont la saison est différente, le tableau des prix par mois le montre.",
     "save2": "Réserver tôt préserve le choix, réserver tard peut faire baisser le prix. Les modèles recherchés et les périodes les plus demandées sont complets plusieurs mois à l'avance. Si vous réservez tôt, en automne ou en hiver, vous pouvez obtenir des remises de réservation anticipée. Si certaines semaines sont encore libres quelques semaines avant votre départ, vous pouvez obtenir de très bonnes remises de dernière minute. Si vos dates sont flexibles, cela vaut la peine de regarder !",
-    "save3": "Le type de bateau influe sur le prix. Les catamarans sont plus chers que les monocoques de même longueur, mais offrent plus de couchages, si bien que le prix par cabine peut être proche. Les bateaux de 5 ans sont moins chers que les versions neuves du même modèle. Les yachts à moteur ajoutent aussi des frais de carburant. Comparer le prix par cabine entre les différents types de bateaux est donc en général la façon la plus juste de décider."
+    "save3": "Le type de bateau influe sur le prix. Les catamarans sont plus chers que les monocoques de même longueur, mais offrent plus de couchages, si bien que le prix par cabine peut être proche. Les bateaux de 5 ans sont moins chers que les versions neuves du même modèle. Les yachts à moteur ajoutent aussi des frais de carburant. Comparer le prix par cabine entre les différents types de bateaux est donc en général la façon la plus juste de décider.",
+    "faq": {
+      "perCountry": "{amount} {where}",
+      "costQ": "Combien coûte la location d’un yacht ?",
+      "costPerCountry": "Pays par pays, une semaine typique coûte {list}.",
+      "costOnTop": "Ce sont des prix pour le bateau. Le skipper, les suppléments obligatoires et la caution s’y ajoutent.",
+      "skipperQ": "Combien coûte un skipper pour une semaine ?",
+      "skipperA": "Un skipper coûte généralement {list} par semaine.",
+      "skipperNote": "Le chiffre est la médiane des bateaux qui publient un tarif de skipper. Les goélettes (gulets) et les yachts avec équipage naviguent avec leur propre équipage.",
+      "extrasQ": "Quels suppléments sont obligatoires pour une location de yacht ?",
+      "extrasA": "La plupart des bateaux facturent quelques frais obligatoires par bateau et par semaine, comme le nettoyage final, le linge de lit et le transit log, le plus souvent réglés à la base.",
+      "extrasFigures": "Ensemble, ils représentent généralement {list} par semaine.",
+      "extrasPerPerson": "La taxe de séjour est facturée en plus, par personne.",
+      "extrasDeposit": "La caution remboursable, généralement de {deposit}, est bloquée sur votre carte à l’embarquement.",
+      "quoteQ": "Comment obtenir un devis de location de yacht ?",
+      "quoteA": "Envoyez une demande depuis la page d’un bateau qui vous plaît, ou écrivez-nous avec vos dates, le pays ou la base de départ, le nombre de personnes et si vous avez besoin d’un skipper. Chaque demande est lue par une personne, et nous répondons en général le jour ouvré même avec des bateaux libres à vos dates et le prix complet : tarif de la semaine, suppléments obligatoires et caution."
+    },
+    "quoteLink": "Demander un devis de location de yacht"
   }
 }

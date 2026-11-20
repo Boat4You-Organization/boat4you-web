@@ -6,8 +6,10 @@ import { displayPlaceName } from '@/utils/static/croatianPlaceNames';
 import { isOperatorName } from '@/utils/static/operatorNames';
 import styles from '@/views/Models/Models.module.scss';
 import ModelsBreadcrumb, { Crumb } from '@/views/Models/ModelsBreadcrumb';
+import ModelsFaq from '@/views/Models/ModelsFaq';
 
-import { GuideText } from './guideText';
+import guideStyles from './PriceGuide.module.scss';
+import { GuideText, HubText } from './guideText';
 
 /** Bases named in a country teaser. */
 const TEASER_BASES = 3;
@@ -26,6 +28,8 @@ interface PriceGuideHubViewProps {
   boats: number;
   computedAt: string;
   breadcrumb: Crumb[];
+  /** H1, the direct answer and the FAQ (buildHubText). */
+  hub: HubText;
 }
 
 /**
@@ -36,7 +40,7 @@ interface PriceGuideHubViewProps {
  * facts (boats, typical week, cheapest / priciest month, skipper, deposit,
  * main bases) and when a charter week costs less.
  */
-const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }: PriceGuideHubViewProps) => {
+const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb, hub }: PriceGuideHubViewProps) => {
   const [t, tFacts] = await Promise.all([
     getTranslations({ locale, namespace: 'priceGuide' }),
     getTranslations({ locale, namespace: 'charterFacts' }),
@@ -73,7 +77,9 @@ const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }
       sentences.push(t('hub.countryTeaserNoPrices', { where, boats: facts.activeBoats }));
     }
 
-    if (facts.skipperWeekly?.median) sentences.push(t('hub.countryTeaserSkipper', { skipper: money(facts.skipperWeekly.median) }));
+    if (facts.skipperWeekly?.median) {
+      sentences.push(t('hub.countryTeaserSkipper', { skipper: money(facts.skipperWeekly.median) }));
+    }
 
     if (facts.deposit?.median) sentences.push(t('hub.countryTeaserDeposit', { deposit: money(facts.deposit.median) }));
 
@@ -92,10 +98,11 @@ const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }
   return (
     <article className={styles.root}>
       <ModelsBreadcrumb items={breadcrumb} label={t('breadcrumbLabel')} />
-      <h1 className={styles.title}>{t('hub.h1')}</h1>
+      <h1 className={styles.title}>{hub.h1}</h1>
+      {hub.answer && <p className={styles.lede}>{hub.answer}</p>}
       <p className={styles.lede}>{t('hub.lede', { boats })}</p>
 
-      <section className={styles.section} aria-label={t('hub.h1')}>
+      <section className={styles.section} aria-label={hub.h1}>
         <ul className={styles.modelList}>
           {rows.map(({ data, text, href }) => (
             <li key={href} className={styles.modelItem}>
@@ -195,6 +202,13 @@ const PriceGuideHubView = async ({ locale, rows, boats, computedAt, breadcrumb }
           <p className={styles.body}>{t('hub.save3')}</p>
         </div>
       </section>
+
+      <ModelsFaq heading={t('faqHeading')} entries={hub.faq} />
+      <p className={guideStyles.cta}>
+        <Link href="/contact-us" prefetch={false} className={styles.tableLink}>
+          {t('hub.quoteLink')} →
+        </Link>
+      </p>
     </article>
   );
 };
