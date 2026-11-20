@@ -31,11 +31,12 @@ const boatQueryPattern = '/boat/*?';
 // standard (RFC 9309); the canonical host is the one every canonical tag and
 // sitemap URL already names (audit 15.11.2026).
 export default function robots(): MetadataRoute.Robots {
-  const disallow = routing.locales.flatMap(locale => {
-    const prefix = locale === routing.defaultLocale ? '' : `/${locale}`;
-
-    return [...protectedPaths.map(path => `${prefix}${path}`), `${prefix}${boatQueryPattern}`];
-  });
+  const prefixes = routing.locales.map(locale => (locale === routing.defaultLocale ? '' : `/${locale}`));
+  const privateDisallow = prefixes.flatMap(prefix => protectedPaths.map(path => `${prefix}${path}`));
+  const disallow = prefixes.flatMap(prefix => [
+    ...protectedPaths.map(path => `${prefix}${path}`),
+    `${prefix}${boatQueryPattern}`,
+  ]);
 
   return {
     rules: [
@@ -43,6 +44,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
         disallow,
+      },
+      // Link previews: a shared boat link usually carries ?fbclid= or ?utm_…, which the
+      // `/boat/*?` rule above would close to Facebook's preview fetcher (a crawler obeys
+      // only its own group, so the private paths are repeated here). 20.11.2026.
+      {
+        userAgent: 'facebookexternalhit',
+        allow: '/',
+        disallow: privateDisallow,
       },
     ],
     sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
